@@ -67,6 +67,6 @@ Or in Unity Editor: **Window > General > Test Runner > EditMode > Run All**.
 - **Paper files:** Individual papers live under `docs/maths/`, `docs/reading/`, `docs/thinking/`, `docs/curated/`.
 - **Build:** Run `uv run scripts/build_question_bank.py` to consolidate papers into `UnityProject/BrainAcademy/Assets/Resources/question_bank.json`.
 - Each paper JSON has a `meta.question_type` field (`"short"` or `"long"`).
-- When adding new papers, add an entry to the manifest's `papers` array and run the build script.
+- **Adding new papers:** Add an entry to the manifest's `papers` array in `docs/question_bank.json`, then run `uv run scripts/build_question_bank.py` to regenerate the runtime JSON. Always run the build script after any question data changes.
 - Difficulty levels for curated questions: `easy`, `medium`, `hard`, `super_hard`.
 - Reading papers use passage-based structure. Only `comprehension` and `poem` passage types produce standard MCQ questions in the runtime build.
