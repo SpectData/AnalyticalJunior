@@ -1,0 +1,389 @@
+{
+  "meta": {
+    "paper": "Practice Paper 1",
+    "section": "reading",
+    "description": "NSW Opportunity Class Placement Test — Reading Comprehension",
+    "total_questions": 14
+  },
+  "passages": [
+    {
+      "id": "P1_PASSAGE_1",
+      "title": "Nhamo goes for firewood",
+      "type": "comprehension",
+      "text": "Nhamo is a twelve-year-old girl who lives with her aunt and uncle in a remote village in East Africa.\n\nMost girls were afraid to gather firewood by themselves. The village was surrounded by a forest where almost anything might hide. Nhamo was afraid, too, but she had a compelling reason to venture out alone. She didn't expect to meet elephants - although they migrated to the river at certain times of the year. She wasn't likely to run into a buffalo - although someone had done so a few months earlier.\n\nHer most persistent worry was leopards. She feared leopards with a terror so complete that she couldn't breathe when she thought of them. Her mother had been killed by one when Nhamo was only three. Nhamo couldn't remember the tragedy, yet somewhere inside her was a memory of flowing, spotted skin and terrible claws.\n\nNow she followed a broad path from the village to the stream. There was an area of yellow sand where she could see the bottom clearly. No crocodile could creep up on her here. She waded across. The water came up to her shoulders.\n\nShe always experienced a moment of panic in the middle because she couldn't swim, but she planted her feet firmly in the coarse sand and struggled on. When she got to the other side, she scrambled up a rock and picked off a leech that had managed to fasten onto her ankle.\n\nThe wetness of her dress-cloth against her skin was very pleasant, but she couldn't waste time enjoying it. Aunt Chipo would be waiting for her firewood. Even more important, Nhamo had to return before dusk.\n\nDusk was when the leopards came out to hunt.\n\nShe followed an old, overgrown trail for a long time until she came out into a clearing. A few poles remained of the village that had once been there, and a few pumpkin mounds with vegetables gone wild. Nhamo wasn't sure who had lived here. Her own people no longer visited the site. Some said the place was haunted.\n\nWith a nervous look at the shadows under the trees, Nhamo quickly gathered firewood. That was the good thing about this place: the wood was easy to find. It took her far less time than Aunt Chipo suspected. She tied the wood into a bundle and deposited it by the trail.\n\nShe climbed a hill at the edge of the deserted village.\n\nNow came the moment she was waiting for. She dragged aside a slab of stone from a hole in the rock. Inside were the treasures Nhamo had managed to collect. She removed pots, wooden spoons, a drinking gourd, an old cloth Aunt Chipo once used to cover her hair, and a knife Uncle Kufa had hurled into a bush when the tip broke off. (He was even angrier when he couldn't find it again later.)\n\nReverently, Nhamo smoothed out the cloth and put the utensils on it. Last of all, she reached into a pot and removed - a roll of paper.\n\nShe weighted the edges down with stones. It was a picture torn out of a magazine.\n\nBooks were unheard of in Nhamo's village, but very occasionally a magazine found its way there. Only two men in the village could read. They retold the stories to everyone's enjoyment. The women studied the pictures of clothes and houses, gardens and cars with great interest. They tried to copy the hairstyles in the photographs. Eventually, the magazines fell apart and were used to light fires.\n\nThis picture had been on the cover, so it was of sturdier paper. The minute Nhamo had seen it, her heart beat so fast it hurt. The picture showed a beautiful woman with braided hair decorated with beads. She wore a flowered dress and a white, white apron. She was cutting a slice of white, white bread, and next to her was a block of yellow margarine.\n\nThe room behind the woman was full of wonderful things, but what interested Nhamo most was the little girl. She was wearing a blue dress, and her hair was gathered into two fat puffs over her ears. The woman smiled at her in the kindest way, and Nhamo knew the white bread and yellow margarine were meant for the little girl.\n\nShe thought the woman looked like Mother.\n\nShe couldn't remember Mother, and of course no one had a picture of her, but the way her spirit leapt when she saw that picture told her this was how Mother had looked.\n\nNhamo hadn't waited for the magazine to get old. Right away, when Aunt Chipo wasn't looking, she'd torn off the cover and hidden it. Aunt Chipo was terribly cross. She accused her sister of doing it, but it never crossed her mind that Nhamo was responsible.\n\nNhamo pretended to pour tea into the pots. She cut bread and covered it with margarine. 'I climbed the mukuyu tree and got so many figs, Mai,' she said. 'But they were full of worms. Then I saw a yellow bird \u2013 the kind that builds a basket over the water \u2013 and it ate the worms. Do you think they grow inside?'\n\nNhamo paused to let Mother answer.\n\nNhamo suddenly realized the light was going. Maiwee! She had been so absorbed, she had forgotten the time. Scrambling, she packed everything and dragged the lid over the hole. She slid down the hill and tied the firewood to her back.\n\nIn this light, the trail was almost invisible! The air was a strange, silvery colour. It was the moment when the day animals passed the night animals on their way to hunt. Leopards.",
+      "questions": [
+        {
+          "id": "P1_Q1",
+          "number": 1,
+          "question": "When the writer mentions elephants and buffalo, she is making the point that",
+          "options": [
+            "they could possibly be a threat to Nhamo.",
+            "Nhamo does not believe stories she has heard about them.",
+            "the villagers are unaware of the danger in the forest.",
+            "a girl on her own is more likely to be attacked by them."
+          ],
+          "reasoning": "The text uses 'although' clauses to concede both animals are present: elephants 'migrated to the river at certain times of the year' and 'someone had' run into a buffalo 'a few months earlier'. The phrasing 'She didn't expect to... She wasn't likely to...' downplays but does not dismiss the danger — the writer is acknowledging they could possibly be a threat, even if unlikely. Option B is wrong because Nhamo doesn't disbelieve the stories. Option C is wrong because the villagers clearly know about the dangers. Option D is unsupported — the text doesn't compare danger for girls versus others.",
+          "correct_index": 0,
+          "correct_answer": "they could possibly be a threat to Nhamo."
+        },
+        {
+          "id": "P1_Q2",
+          "number": 2,
+          "question": "When she crosses the stream, Nhamo is most worried by",
+          "options": [
+            "the uneven river bed.",
+            "the presence of leeches.",
+            "the deep water.",
+            "the risk of crocodiles."
+          ],
+          "reasoning": "The key word is 'most worried'. During the crossing itself, the text says 'She always experienced a moment of panic in the middle because she couldn't swim' and 'The water came up to her shoulders.' Her panic comes from the depth of the water combined with her inability to swim. Crocodiles are checked for before she enters (she picks a spot with clear yellow sand). Leeches are dealt with after she crosses — an annoyance, not a worry during crossing. The river bed is described as 'coarse sand', not uneven.",
+          "correct_index": 2,
+          "correct_answer": "the deep water."
+        },
+        {
+          "id": "P1_Q3",
+          "number": 3,
+          "question": "One advantage of the deserted village for Nhamo is that",
+          "options": [
+            "it is near to the river.",
+            "no one else knows about it.",
+            "she can find vegetables there.",
+            "she can collect wood without any trouble."
+          ],
+          "reasoning": "The text states directly: 'That was the good thing about this place: the wood was easy to find. It took her far less time than Aunt Chipo suspected.' This is the explicitly named advantage. Option A is not stated — she crosses the stream to reach it, but 'near' is not mentioned. Option B is partly true (her people don't visit), but the text says 'some said the place was haunted' — people know about it. Option C: vegetables have 'gone wild', but she doesn't gather them; her purpose is firewood and her secret treasures.",
+          "correct_index": 3,
+          "correct_answer": "she can collect wood without any trouble."
+        },
+        {
+          "id": "P1_Q4",
+          "number": 4,
+          "question": "The word 'reverently' tells us",
+          "options": [
+            "that Nhamo believes the possessions have supernatural powers.",
+            "how precious the articles hidden in the hole are to Nhamo.",
+            "that Nhamo is careful in the way she handles the possessions of others.",
+            "how valuable some everyday articles are in Nhamo's village."
+          ],
+          "reasoning": "'Reverently' means with deep respect or devotion. The items are called 'treasures' and are hidden in a secret hole — they are precious to Nhamo personally. She smooths out the cloth and arranges the utensils with care because they matter deeply to her. Option A is wrong — there's no suggestion of supernatural belief. Option C is misleading — some items originally belonged to others (Aunt Chipo's cloth, Uncle Kufa's knife), but she treats them reverently because they are precious to her, not out of respect for their original owners. Option D broadens the point too much — the question is about what 'reverently' tells us about Nhamo specifically.",
+          "correct_index": 1,
+          "correct_answer": "how precious the articles hidden in the hole are to Nhamo."
+        },
+        {
+          "id": "P1_Q5",
+          "number": 5,
+          "question": "When the writer tells us about how magazines were used in Nhamo's village, we learn that",
+          "options": [
+            "most people are only interested in the pictures.",
+            "they are a window to the world outside the village.",
+            "most people laugh at the stories they contain.",
+            "they are more valued as fuel than as reading matter."
+          ],
+          "reasoning": "The passage describes multiple uses: men read and retell stories 'to everyone's enjoyment', women study pictures of 'clothes and houses, gardens and cars' and copy hairstyles. The magazines show the villagers things from the outside world they would never otherwise see. Option A is wrong — the men retell the stories and everyone enjoys them, so it's not only the pictures. Option C is wrong — they enjoy the stories, they don't laugh at them. Option D is wrong — the magazines are eventually used as fire-starters only after they 'fell apart', not because they were more valued as fuel. The overall picture is that magazines bring glimpses of the wider world.",
+          "correct_index": 1,
+          "correct_answer": "they are a window to the world outside the village."
+        },
+        {
+          "id": "P1_Q6",
+          "number": 6,
+          "question": "The main reason why Nhamo is attracted to the magazine photograph is that",
+          "options": [
+            "it is the only picture she has of her mother.",
+            "it includes a child who looks just like her.",
+            "it shows a loving relationship.",
+            "it suggests a luxurious lifestyle."
+          ],
+          "reasoning": "The text says 'what interested Nhamo most was the little girl' and 'The woman smiled at her in the kindest way, and Nhamo knew the white bread and yellow margarine were meant for the little girl.' Nhamo then thinks 'the woman looked like Mother' and uses the picture to play-act conversations with 'Mother'. The core attraction is the warm, loving mother-daughter relationship depicted — which Nhamo lost at age three. Option A is wrong — it's not actually her mother, she just imagines it is. Option B is unsupported — the text doesn't say the child looks like Nhamo. Option D: while the room has 'wonderful things', the text explicitly says what interested her 'most' was the relationship between the woman and child.",
+          "correct_index": 2,
+          "correct_answer": "it shows a loving relationship."
+        }
+      ]
+    },
+    {
+      "id": "P1_PASSAGE_2",
+      "title": "Norman Day at the bookstore",
+      "type": "cloze",
+      "text": "The first time Norman Day walked into the big bookstore in town as a newly-published author, he could barely [blank 1] himself with excitement. His first book, The Friendship Triangle: Three Sporting Legends was finally out there in the shop window \u2013 the [blank 2] of fifteen years of research and writing. It was about three famous sportspeople and the fascinating ways in which their lives gradually [blank 3] together. A national newspaper had called it 'a truly inspirational tale, full of remarkable [blank 4] and turns'.\n\nNorman approached the 'new titles' section and there it was, its familiar (to him) red cover [blank 5] 'buy me, buy me!'. Tantalisingly, several people paused at the table and seemed to glance at the book. Finally, one lady picked the book up and [blank 6] through it before going to the counter to pay for it. Then came the moment Norman had been waiting for. He [blank 7] up enough courage to approach the counter. \"Excuse me,\" he said to the assistant, \"I'm here to collect a book you said you'd reserve for me. It's The Friendship Triangle.\" \"Ah yes, that's in now, Sir,\" she said. \"What's your name please?\" \"It's Norman Day,\" said Norman, [blank 8]",
+      "blanks": [
+        {
+          "id": "P1_Q7_B1",
+          "blank_number": 1,
+          "options": ["resist", "contain", "keep", "hold"],
+          "reasoning": "The phrase is 'he could barely ___ himself with excitement'. The idiom 'contain oneself' means to restrain one's emotions. 'Resist himself' is not a standard reflexive phrase. 'Keep himself' and 'hold himself' don't collocate naturally with 'with excitement'.",
+          "correct_index": 1,
+          "correct_answer": "contain"
+        },
+        {
+          "id": "P1_Q7_B2",
+          "blank_number": 2,
+          "options": ["culmination", "crown", "pinnacle", "peak"],
+          "reasoning": "The phrase is 'the ___ of fifteen years of research and writing'. 'Culmination' means the final result or climax of a long process — 'the culmination of years of work' is the standard collocation. 'Crown', 'pinnacle', and 'peak' all suggest a high point, but they don't naturally follow 'the ___ of fifteen years of...' in standard usage. 'Culmination' specifically implies the endpoint of a sustained effort.",
+          "correct_index": 0,
+          "correct_answer": "culmination"
+        },
+        {
+          "id": "P1_Q7_B3",
+          "blank_number": 3,
+          "options": ["crossed", "woved", "coiled", "flexed"],
+          "reasoning": "The phrase is 'their lives gradually ___ together'. 'Wove together' (past tense of weave) would be the natural metaphor for lives intertwining, but the option given is 'woved', which is not a real English word — the correct past tense is 'wove'. 'Coiled together' suggests physical winding like a rope. 'Flexed together' doesn't make sense. 'Crossed' is weak with 'together' but is a real word. The test may be checking whether students recognise that 'woved' is an incorrect form.",
+          "correct_index": 1,
+          "correct_answer": "woved"
+        },
+        {
+          "id": "P1_Q7_B4",
+          "blank_number": 4,
+          "options": ["twists", "twiddles", "twirls", "twines"],
+          "reasoning": "The phrase is 'full of remarkable ___ and turns'. 'Twists and turns' is a fixed English idiom meaning unexpected changes in a story. 'Twiddles and turns', 'twirls and turns', and 'twines and turns' are not established phrases.",
+          "correct_index": 0,
+          "correct_answer": "twists"
+        },
+        {
+          "id": "P1_Q7_B5",
+          "blank_number": 5,
+          "options": ["craving", "pleading", "appealing", "hastening"],
+          "reasoning": "The phrase is 'its familiar red cover ___ \"buy me, buy me!\"'. The cover is personified as begging to be bought. 'Pleading' means begging earnestly, which matches the desperate repeated cry 'buy me, buy me!'. 'Craving' means desiring something — you crave an object, you don't crave a message at someone. 'Appealing' could work but is weaker — it means attracting rather than begging. 'Hastening' means hurrying and doesn't fit the context of calling out.",
+          "correct_index": 1,
+          "correct_answer": "pleading"
+        },
+        {
+          "id": "P1_Q7_B6",
+          "blank_number": 6,
+          "options": ["paged", "leafed", "handled", "cast"],
+          "reasoning": "The phrase is 'picked the book up and ___ through it'. 'Leafed through' is the standard idiom meaning to turn pages quickly, browsing a book. 'Paged through' is also possible but less common in British English. 'Handled through' and 'cast through' are not natural collocations with a book.",
+          "correct_index": 1,
+          "correct_answer": "leafed"
+        },
+        {
+          "id": "P1_Q7_B7",
+          "blank_number": 7,
+          "options": ["called", "summoned", "took", "beckoned"],
+          "reasoning": "The phrase is 'He ___ up enough courage to approach the counter'. 'Summoned up courage' is the standard collocation meaning to gather one's nerve. 'Called up courage' is less natural. 'Took up courage' is not idiomatic. 'Beckoned up courage' doesn't work — you beckon a person, not an abstract quality.",
+          "correct_index": 1,
+          "correct_answer": "summoned"
+        },
+        {
+          "id": "P1_Q7_B8",
+          "blank_number": 8,
+          "options": ["gloriously", "triumphantly", "successfully", "winningly"],
+          "reasoning": "Norman is revealing that his name matches the author's name on the book — it's a proud, victorious moment. 'Triumphantly' means with a feeling of triumph or victory, perfectly capturing his pride at being recognised as the author. 'Gloriously' is too grandiose for the quiet moment. 'Successfully' is flat and neutral. 'Winningly' relates to charm rather than victory.",
+          "correct_index": 1,
+          "correct_answer": "triumphantly"
+        }
+      ]
+    },
+    {
+      "id": "P1_PASSAGE_3",
+      "title": "Observing the Mute Cat",
+      "type": "comprehension",
+      "text": "Observing the Mute Cat\n\nClean water in the house\nbut the cat laps up clay water\noutside. Drinking the earth.\n\nHis pile, being perfect,\nignores the misting rain.\n\nA charcoal Russian\nhe opens his mouth like other cats\nand mimes a greeting mew.\n\nAt one bound top-speed across\nthe lawn and halfway up\nthe zippy pear tree. Why? Branches?\nStopping puzzles him.\n\nEloquent of purr\nor indignant tail\nhe politely hates to be picked up.\nHis human friend never does it.\n\nHe finds a voice\nin the flyscreen, rattling it,\nhanging cruciform on it,\nall to be let in\nto walk on his man.\n\nHe can fish food pellets\nout of the dispenser, but waits,\npreferring to be served.\n\nA mouse he was playing\non the grass ran in under him.\nDisconsolate, at last he wandered\noff \u2013 and drew and fired\nhimself in one motion.\n\nHe is often above you\nand appears where you will go.\nHe swallows his scent, and\ndiscreet with his few stained birds\nhe carries them off to read.",
+      "questions": [
+        {
+          "id": "P1_Q8",
+          "number": 8,
+          "question": "The title of the poem",
+          "options": [
+            "hints that what follows will be from the cat's perspective.",
+            "encourages the reader to admire the cat.",
+            "is reflected in the senses that are described.",
+            "prepares the reader for a surprising event."
+          ],
+          "reasoning": "The title is 'Observing the Mute Cat'. 'Observing' relates to the sense of sight, and 'Mute' relates to the sense of hearing (or its absence). The poem then describes the cat through sight (watching him run, climb, hunt), sound (he 'mimes a greeting mew', 'rattling' the flyscreen, 'eloquent of purr'), and touch ('walk on his man'). The title's two key words — observing and mute — are directly reflected in the senses explored throughout. Option A is wrong — it's from the human's perspective observing the cat. Option B is too narrow. Option D is wrong — there is no single surprising event.",
+          "correct_index": 2,
+          "correct_answer": "is reflected in the senses that are described."
+        },
+        {
+          "id": "P1_Q9",
+          "number": 9,
+          "question": "What do we learn about the person in the poem?",
+          "options": [
+            "He prefers to spend time with the cat outdoors.",
+            "He respects the wishes of the cat.",
+            "He forgets to leave the cat enough food.",
+            "He is impressed by what the cat catches."
+          ],
+          "reasoning": "The poem directly states: 'he politely hates to be picked up. His human friend never does it.' The human knows the cat dislikes being picked up and respects that wish by never doing it. Option A is unsupported — indoor and outdoor preference isn't discussed. Option C is wrong — the cat has a food dispenser and 'preferring to be served' implies the human does serve him. Option D is wrong — the birds are mentioned as being carried off 'discreetly', suggesting the human barely notices rather than being impressed.",
+          "correct_index": 1,
+          "correct_answer": "He respects the wishes of the cat."
+        },
+        {
+          "id": "P1_Q10",
+          "number": 10,
+          "question": "The cat makes a sound using",
+          "options": [
+            "his tail.",
+            "the zippy pear tree.",
+            "the dispenser.",
+            "the flyscreen."
+          ],
+          "reasoning": "The poem says: 'He finds a voice / in the flyscreen, rattling it'. The cat is described as mute — he 'mimes a greeting mew' (no sound). But he 'finds a voice' by rattling the flyscreen to communicate that he wants to be let in. The tail is described as 'indignant' but doesn't make a sound. The pear tree and dispenser are not associated with sound-making.",
+          "correct_index": 3,
+          "correct_answer": "the flyscreen."
+        },
+        {
+          "id": "P1_Q11",
+          "number": 11,
+          "question": "What does the cat take away?",
+          "options": [
+            "birds",
+            "pellets",
+            "a mouse",
+            "a fish"
+          ],
+          "reasoning": "The final stanza says: 'discreet with his few stained birds / he carries them off to read.' The cat carries away birds. The mouse 'ran in under him' and escaped — the stanza describes him losing the mouse, then pouncing. Pellets are in the dispenser but he waits to be served. 'A fish' is not mentioned as something he takes away — 'fish' appears only as a verb ('He can fish food pellets out').",
+          "correct_index": 0,
+          "correct_answer": "birds"
+        },
+        {
+          "id": "P1_Q12",
+          "number": 12,
+          "question": "The cat acts independently when he",
+          "options": [
+            "rejects the food provided.",
+            "enters the house.",
+            "accesses drinking water.",
+            "finds shelter from the rain."
+          ],
+          "reasoning": "The opening stanza shows the cat making his own choice: 'Clean water in the house / but the cat laps up clay water / outside. Drinking the earth.' He independently chooses to drink muddy water outside rather than the clean water provided indoors. Option A is partially true (he waits to be served rather than using the dispenser) but that's more about being demanding than independent. Option B: he needs the flyscreen rattled to be let in — not independent. Option D: 'His pile, being perfect, ignores the misting rain' — he stays put in rain, but this describes his fur rather than an active independent choice.",
+          "correct_index": 2,
+          "correct_answer": "accesses drinking water."
+        }
+      ]
+    },
+    {
+      "id": "P1_PASSAGE_4",
+      "title": "Drumming Cockatoos",
+      "type": "sentence_insertion",
+      "text": "Whales and songbirds produce sounds resembling human music, and chimpanzees and crows use tools. But only one nonhuman animal is known to combine these two skills. According to new research, palm cockatoos from northern Australia modify sticks and seed pods and use them to drum regular rhythms on tree branches. In most cases, males drop beats in the presence of females, suggesting they perform to show off to mates. The birds even have their own signature sequences, not unlike human musicians.\n\nThis example is the closest we have so far to musical instrument use in humans, said Robert Heinsohn, a professor of evolutionary and conservation biology at the Australian National University. A palm cockatoo drumming performance starts with instrument fashioning. (A) ............ . Often, as a female is watching, a male will ostentatiously break a hefty stick off a tree and trim it to about the length of a pencil.\n\nHolding the stick, or occasionally a hard seedpod, with his left foot (parrots are typically left-footed), the male taps a beat on his tree perch. (B) ............ . Spreading his wings, he pirouettes and bobs his head deeply, like an expressive pianist, uncovering his red cheek patches \u2014 the only swaths of color on his otherwise black body.\n\nOver seven years, Dr. Heinsohn and his collaborators collected audio and video recordings of 18 male palm cockatoos exhibiting such behaviors in Australia's Cape York Peninsula. (C) ............ . Though palm cockatoos also live in Papua New Guinea and Indonesia, they have been observed drumming only in Cape York Peninsula, which suggests the habit is cultural. 'Presumably some bright spark of a male stumbled across this behavior, females found it pleasing and it took off in the population', Dr. Heinsohn said.\n\n(D) ............ . Trekking through the dense rain forest, they painstakingly searched for palm cockatoos hidden away in hollow eucalyptus trees. Analyzing 131 drumming sequences, the scientists found that the birds produced regular, predictable rhythms, rather than random thumps. (E) ............ . One that the researchers named Ringo Starr liked to start with a rapid flourish, then settle into a consistent beat, occasionally going on for as long as 14 minutes. Nearly 70 percent of the time, males drummed with a female present. Palm cockatoos are mostly monogamous, but males have to keep proving themselves to choosy females. On average, palm cockatoo pairs successfully fledge a chick only once every decade, so the stakes are high.\n\nThe researchers don't yet know whether females prefer certain rhythms over others. But if a male is delivering an effective performance, the female comes over and mirrors his movements. (F) ............ .\n\nThe findings make Dr. Heinsohn wonder whether human rhythm also originated as a courtship display. Maybe that's how it got started, he speculates, and then later evolved into the love of humans for group-based dancing and music.",
+      "footnote": "The palm cockatoo occurs across the country of many different Indigenous groups on Cape York Peninsula. On the east of the cape the species is revered as a 'spirit bird' by members of the Uutaalnganu, Kanthanampu, and Kuuku Ya'u language groups in the Lockhart River region, many of whom tell cultural stories relating to the species and consider it bad luck to harm or injure the birds (Zdenek, pers comm., 2015). The palm cockatoo (Australian) occurs on the homeland (Ngaachi) of the Kuuku I'yu (northern Kaanju) indigenous peoples. The Kuuku I'yu people have important social, cultural, spiritual, historical and ecological connections to their homeland and they recognise the rich biodiversity it supports, including habitat for rare and threatened species such as this palm cockatoo (Kila) (Chuulangun Aboriginal Corporation, 2010).",
+      "gaps": ["A", "B", "C", "D", "E", "F"],
+      "sentences": [
+        {
+          "number": 1,
+          "text": "The researchers found palm cockatoos a difficult subject to study because they are very shy."
+        },
+        {
+          "number": 2,
+          "text": "And this suggested that actually they use their drumming, along with a complex array of calls and wing-flapping, to attract female birds."
+        },
+        {
+          "number": 3,
+          "text": "The birds here are considered vulnerable because of aluminium ore mining in the area."
+        },
+        {
+          "number": 4,
+          "text": "This is an opportunity to show off beak strength and cleverness -- the birds are incredibly intelligent."
+        },
+        {
+          "number": 5,
+          "text": "The birds sway together and gently preen each other's features, an act of pair-bonding that helps them prepare for breeding."
+        },
+        {
+          "number": 6,
+          "text": "Occasionally he mixes in a whistle or other sounds from an impressive repertoire of around 20 syllables."
+        },
+        {
+          "number": 7,
+          "text": "Individual males differed significantly in percussive styles."
+        }
+      ],
+      "gap_reasoning": {
+        "A": "Gap A follows 'A palm cockatoo drumming performance starts with instrument fashioning.' The next sentence describes a male breaking a stick off a tree. Sentence 4 ('This is an opportunity to show off beak strength and cleverness') connects instrument fashioning to the display of breaking sticks — 'this' refers back to the fashioning process.",
+        "B": "Gap B follows 'the male taps a beat on his tree perch' and precedes 'Spreading his wings, he pirouettes and bobs his head deeply'. Sentence 6 ('Occasionally he mixes in a whistle or other sounds from an impressive repertoire of around 20 syllables') adds detail about the sounds produced during the tapping performance, before the visual display description continues.",
+        "C": "Gap C follows the mention of collecting recordings in 'Cape York Peninsula' and precedes 'Though palm cockatoos also live in Papua New Guinea and Indonesia, they have been observed drumming only in Cape York Peninsula'. Sentence 3 ('The birds here are considered vulnerable because of aluminium ore mining in the area') provides additional context about the Cape York birds before the text broadens to discuss their geographic range.",
+        "D": "Gap D precedes 'Trekking through the dense rain forest, they painstakingly searched for palm cockatoos hidden away in hollow eucalyptus trees.' Sentence 1 ('The researchers found palm cockatoos a difficult subject to study because they are very shy') introduces the difficulty of the research, directly leading into the description of painstaking searching.",
+        "E": "Gap E follows 'the birds produced regular, predictable rhythms, rather than random thumps' and precedes 'One that the researchers named Ringo Starr liked to start with a rapid flourish'. Sentence 7 ('Individual males differed significantly in percussive styles') bridges from the general finding of regularity to the specific example of individual variation.",
+        "F": "Gap F follows 'the female comes over and mirrors his movements' at the end of the passage. Sentence 5 ('The birds sway together and gently preen each other's features, an act of pair-bonding that helps them prepare for breeding') describes what happens when the pair comes together, completing the courtship sequence."
+      },
+      "extra_sentence_reasoning": "Sentence 2 ('And this suggested that actually they use their drumming... to attract female birds') is the extra sentence. The information it conveys — that drumming attracts females — is already established earlier in the passage ('males drop beats in the presence of females, suggesting they perform to show off to mates') and doesn't fit neatly into any gap.",
+      "correct_mapping": {
+        "A": 4,
+        "B": 6,
+        "C": 3,
+        "D": 1,
+        "E": 7,
+        "F": 5
+      },
+      "extra_sentence": 2
+    },
+    {
+      "id": "P1_PASSAGE_5",
+      "title": "The Sea",
+      "type": "extract_matching",
+      "extracts": [
+        {
+          "label": "A",
+          "text": "There's something about going for an ocean swim that makes your problems shrink. I have often entered the biting cold water feeling weighed down by concerns that I can't seem to shake. It never ceases to amaze me that when I come out they somehow seem to occupy less headspace. You look out at the vastness all around you and realise that you are a tiny speck in a huge, swirling ocean.\n\nWhen I first started open water swimming, I spoke to an expert about getting over a fear of what might be in there with you. He said that it's a privilege to enter a space with wild creatures \u2013 just think how different our planet would be if they weren't there. While that may not be a comforting thought for everyone, it is for me.\n\nKnowing your limits and being fully respectful of the ocean are paramount when you go swimming. I have turned back on occasion when the water looks too rough. You always have to remember this is not your habitat."
+        },
+        {
+          "label": "B",
+          "text": "The Black Sea is the world's biggest single reservoir of hydrogen sulphide, or H2S, one of the deadliest substances in the natural world. Below a fluctuating depth of between 150 and 200 metres, there is no life. The water is anoxic, without dissolved oxygen, and impregnated with H2S; because much of the Black Sea is deep, this means that some 90 per cent of its volume is sterile.\n\nAnd yet, until the last hundred years, the Black Sea has seemed to human beings a place of almost monstrous abundance. The poisonous darkness lay far below, unknown to anyone. Above the hundred-fathom line, the 'halocline' or 'oxycline' which marks the upper limit of anoxia, the water boiled with life. Salmon and huge sturgeon \u2013 the beluga can reach the weight of a small whale \u2013 crowded up the big rivers to spawn. Caviar was so plentiful that it was once given to the poor."
+        },
+        {
+          "label": "C",
+          "text": "Between hurricane surf, rainy weather, and a cold, I've had some time on my hands to read. I picked up three surf books, naturally. My favourite, by far, was Surf's Up: The Girl's Guide to Surfing. Every night, for the past three weeks, my husband has found me in bed, nose in the book, memorising surfing vocabulary. He just laughs. You can't learn to surf from a book, but you can learn a lot of things that will help make surfing easier, and make interacting with other surfers easier. For example, knowing what the terms rails, mushy, goofy, drop in, etc. mean not only makes you seem like you know more about what you are doing, it also makes you less likely to incur the wrath of surfers. (From my limited experience, surfers don't really have wrath, unless you drop in on them during a really good wave.) Note \u2013 dropping in essentially means cutting off another surfer who has already started surfing a wave, effectively ending their ride. Not cool."
+        },
+        {
+          "label": "D",
+          "text": "I confess I hope never to experience a full Australian summer again. I blame my childhood. I grew up in the Clare Valley of South Australia, where the closest natural body of water was a mostly dry creek. For a week a year our family would decamp to a holiday house by the beach in Adelaide, where we would live a lie, pretending to be proper outdoor-loving, sun-baking Australians rather than the white-skinned, red-nosed Irish-descended bunch we really were. My six brothers and sisters and I would spend all day in our bathers, attempt and mostly fail to bodysurf, build sandcastles and sand traps, get furiously sunburned and spend the final part of the holiday lying inside on the cool lino floor, watching TV and peeling patches of dead skin off each other's shoulders."
+        }
+      ],
+      "statements": [
+        {
+          "id": "P1_Q14_S1",
+          "number": 1,
+          "text": "refers to a dangerous constituent of some seawater?",
+          "reasoning": "Extract B discusses hydrogen sulphide (H2S), described as 'one of the deadliest substances in the natural world' found in the Black Sea. H2S is a specific dangerous chemical constituent of that seawater.",
+          "correct_extract": "B"
+        },
+        {
+          "id": "P1_Q14_S2",
+          "number": 2,
+          "text": "says that the power of the sea should not be underestimated?",
+          "reasoning": "Extract A states: 'Knowing your limits and being fully respectful of the ocean are paramount' and 'You always have to remember this is not your habitat.' The writer has 'turned back on occasion when the water looks too rough' — all emphasising that the sea's power should not be underestimated.",
+          "correct_extract": "A"
+        },
+        {
+          "id": "P1_Q14_S3",
+          "number": 3,
+          "text": "suggests that newcomers are not always welcomed by veterans out on the water?",
+          "reasoning": "Extract C discusses how beginners can 'incur the wrath of surfers' by breaking etiquette, particularly by 'dropping in' on experienced surfers during a good wave. The writer is learning vocabulary partly to avoid conflict with veteran surfers.",
+          "correct_extract": "C"
+        },
+        {
+          "id": "P1_Q14_S4",
+          "number": 4,
+          "text": "suggests that the sea can be a rich food resource?",
+          "reasoning": "Extract B describes the Black Sea's abundance: 'Salmon and huge sturgeon crowded up the big rivers to spawn. Caviar was so plentiful that it was once given to the poor.' This directly presents the sea as a rich food resource.",
+          "correct_extract": "B"
+        },
+        {
+          "id": "P1_Q14_S5",
+          "number": 5,
+          "text": "explains the positive effect that the sea can have on one's mental outlook?",
+          "reasoning": "Extract A opens with: 'There's something about going for an ocean swim that makes your problems shrink' and continues 'when I come out they somehow seem to occupy less headspace.' The writer explicitly describes swimming in the sea as improving their mental state by shrinking worries.",
+          "correct_extract": "A"
+        },
+        {
+          "id": "P1_Q14_S6",
+          "number": 6,
+          "text": "reveals that the writer was out of place in a seaside environment?",
+          "reasoning": "Extract D describes the family 'pretending to be proper outdoor-loving, sun-baking Australians rather than the white-skinned, red-nosed Irish-descended bunch we really were'. They 'attempt and mostly fail to bodysurf', get 'furiously sunburned', and end up lying inside. Everything about the description shows they were out of place at the seaside.",
+          "correct_extract": "D"
+        },
+        {
+          "id": "P1_Q14_S7",
+          "number": 7,
+          "text": "mentions some words of wisdom about the sea which proved helpful to the writer?",
+          "reasoning": "Extract A describes advice from an expert: 'He said that it's a privilege to enter a space with wild creatures — just think how different our planet would be if they weren't there.' The writer then confirms it was helpful: 'While that may not be a comforting thought for everyone, it is for me.' These words of wisdom helped the writer overcome fear of open water swimming.",
+          "correct_extract": "A"
+        },
+        {
+          "id": "P1_Q14_S8",
+          "number": 8,
+          "text": "mentions some specific jargon connected to being in the sea?",
+          "reasoning": "Extract C explicitly lists surfing jargon: 'rails, mushy, goofy, drop in, etc.' The writer is 'memorising surfing vocabulary' from a book and explains the specific term 'dropping in'. Extract B also uses technical terms ('anoxic', 'halocline', 'oxycline') but these are scientific vocabulary, not jargon 'connected to being in the sea' in the active sense the question implies.",
+          "correct_extract": "C"
+        }
+      ]
+    }
+  ]
+}

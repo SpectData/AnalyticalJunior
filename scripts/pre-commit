@@ -1,23 +1,79 @@
 #!/bin/bash
 echo "Running pre-commit checks..."
 
-echo "=== ktlint ==="
-./gradlew ktlintCheck --daemon 2>&1
-KTLINT_STATUS=$?
+EXIT_CODE=0
 
-echo "=== detekt ==="
-./gradlew detekt --daemon 2>&1
-DETEKT_STATUS=$?
+# ── Check 1: No secrets or credentials staged ──
+echo "=== Secret file check ==="
+FORBIDDEN=$(git diff --cached --name-only | grep -iE '\.(env|pem|key)$|secrets/|credentials')
+if [ -n "$FORBIDDEN" ]; then
+    echo "  BLOCKED: Potentially sensitive files staged:"
+    echo "$FORBIDDEN"
+    EXIT_CODE=1
+else
+    echo "  PASSED"
+fi
 
-if [ $KTLINT_STATUS -ne 0 ] || [ $DETEKT_STATUS -ne 0 ]; then
+# ── Check 2: No trailing whitespace in staged C# files ──
+echo "=== Trailing whitespace check ==="
+CS_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep '\.cs$')
+if [ -n "$CS_FILES" ]; then
+    TRAILING=$(echo "$CS_FILES" | xargs grep -nP '\s+$' 2>/dev/null)
+    if [ -n "$TRAILING" ]; then
+        echo "  WARNING: Trailing whitespace found:"
+        echo "$TRAILING" | head -10
+    else
+        echo "  PASSED"
+    fi
+else
+    echo "  No C# files staged, skipping."
+fi
+
+# ── Check 3: No large files accidentally staged (>2MB, excludes known asset types) ──
+echo "=== Large file check ==="
+LARGE_FILES=$(git diff --cached --name-only --diff-filter=ACM | while read f; do
+    # Skip known large asset types
+    case "$f" in *.png|*.jpg|*.wav|*.mp3|*.ogg|*.asset|*.unity|*.prefab) continue ;; esac
+    if [ -f "$f" ]; then
+        SIZE=$(wc -c < "$f" 2>/dev/null)
+        if [ "$SIZE" -gt 2097152 ] 2>/dev/null; then
+            echo "  $f ($(( SIZE / 1024 ))KB)"
+        fi
+    fi
+done)
+if [ -n "$LARGE_FILES" ]; then
+    echo "  WARNING: Large files staged (>2MB):"
+    echo "$LARGE_FILES"
+else
+    echo "  PASSED"
+fi
+
+# ── Check 4: Unity compilation (optional, set UNITY_EXE to enable) ──
+echo "=== Unity compilation check ==="
+if [ -n "$UNITY_EXE" ] && [ -f "$UNITY_EXE" ]; then
+    REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+    PROJECT="$REPO_ROOT/UnityProject/BrainAcademy"
+    LOG="$PROJECT/Logs/precommit_compile.log"
+
+    "$UNITY_EXE" \
+        -projectPath "$PROJECT" \
+        -batchmode -quit -nographics \
+        -logFile "$LOG" 2>&1
+
+    if [ $? -ne 0 ]; then
+        echo "  FAILED: Unity compilation errors detected."
+        echo "  Check log: $LOG"
+        EXIT_CODE=1
+    else
+        echo "  PASSED"
+    fi
+else
+    echo "  Skipped (set UNITY_EXE env var to enable)"
+fi
+
+if [ $EXIT_CODE -ne 0 ]; then
     echo ""
     echo "Pre-commit checks FAILED."
-    if [ $KTLINT_STATUS -ne 0 ]; then
-        echo "  ktlint: FAILED (run './gradlew ktlintFormat' to auto-fix)"
-    fi
-    if [ $DETEKT_STATUS -ne 0 ]; then
-        echo "  detekt: FAILED (review issues above)"
-    fi
     exit 1
 fi
 

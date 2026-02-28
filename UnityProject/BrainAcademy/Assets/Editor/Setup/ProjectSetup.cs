@@ -23,6 +23,7 @@ public static class ProjectSetup
         Debug.Log("=== Brain Academy Project Setup ===");
 
         EnsureDirectories();
+        ImportTMPEssentials();
         CopyQuestionBank();
         ConfigurePlayerSettings();
 
@@ -57,6 +58,49 @@ public static class ProjectSetup
         {
             if (!AssetDatabase.IsValidFolder($"Assets/{dir}"))
                 AssetDatabase.CreateFolder("Assets", dir);
+        }
+    }
+
+    // ── TMP Essential Resources ────────────────────────────────────────
+
+    private static void ImportTMPEssentials()
+    {
+        // Check if already imported (font asset exists in project)
+        var existing = AssetDatabase.FindAssets("t:TMP_FontAsset");
+        if (existing.Length > 0)
+        {
+            Debug.Log("[Setup] TMP fonts already present, skipping import");
+            return;
+        }
+
+        // Find the .unitypackage inside the ugui package cache
+        string packageCache = Path.Combine(Application.dataPath, "..", "Library", "PackageCache");
+        string essentialsPath = null;
+
+        if (Directory.Exists(packageCache))
+        {
+            foreach (var dir in Directory.GetDirectories(packageCache, "com.unity.ugui*"))
+            {
+                string candidate = Path.Combine(dir, "Package Resources",
+                    "TMP Essential Resources.unitypackage");
+                if (File.Exists(candidate))
+                {
+                    essentialsPath = candidate;
+                    break;
+                }
+            }
+        }
+
+        if (essentialsPath != null)
+        {
+            Debug.Log("[Setup] Importing TMP Essential Resources...");
+            AssetDatabase.ImportPackage(essentialsPath, false);
+            AssetDatabase.Refresh();
+            Debug.Log("[Setup] TMP Essential Resources imported");
+        }
+        else
+        {
+            Debug.LogWarning("[Setup] TMP Essential Resources.unitypackage not found");
         }
     }
 
