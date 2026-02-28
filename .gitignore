@@ -15,3 +15,15 @@ local.properties
 __pycache__/
 *.pyc
 uv.lock
+
+# Unity
+UnityProject/BrainAcademy/[Ll]ibrary/
+UnityProject/BrainAcademy/[Tt]emp/
+UnityProject/BrainAcademy/[Oo]bj/
+UnityProject/BrainAcademy/[Bb]uild/
+UnityProject/BrainAcademy/[Bb]uilds/
+UnityProject/BrainAcademy/[Ll]ogs/
+UnityProject/BrainAcademy/[Uu]ser[Ss]ettings/
+UnityProject/BrainAcademy/[Mm]emoryCaptures/
+*.unitypackage
+*.apk
