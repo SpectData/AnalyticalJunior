@@ -1,0 +1,154 @@
+Thinking Skills — Practice Test 3 — Questions 11–20
+
+
+Q11
+A gardener is giving advice about taking care of plants. He says: "Some people think talking to plants is strange, but it's actually a really good idea. After all, you're more likely to remember to water them if you treat them like friends!"
+
+Which one of these statements, if true, best supports the gardener's claim?
+
+A People often notice details about a plant's health when they are talking to it.
+B Some people believe that plants can understand what people say to them.
+C Talking to plants won't help people avoid overwatering them.
+D Talking to plants is a very old tradition.
+
+
+Q12
+Four friends are in a car together. There are two seats in the front and two in the back. Katelyn is either driving or sitting beside Talia. Talia is sitting behind the driver. Jimmy is not sitting in the back, and he is not sitting beside Andrea.
+
+Who is driving the car?
+
+A Andrea
+B Jimmy
+C Katelyn
+D Talia
+
+
+Q13
+In a word game, players make words out of letters. Each letter has a value that is a whole number that is at least 1. The score for the word is the total of the values of all the letters in the word.
+
+For example: The word TOO scores 4.
+             The word TWO scores 6.
+             The word HOOT also scores 6.
+             The word THAT scores 7.
+
+What is the score for the word THAW?
+
+A 6
+B 7
+C 8
+D 9
+
+
+Q14
+Iluka wants to buy a sandwich. He is currently waiting in the queue at Sliced Bread Sangers.
+
+Iluka: "Sliced Bread Sangers always take 15 minutes to make my favourite sandwich. But the Loafing Around bakery down the road always take 10 minutes. It takes less than five minutes to walk there — so I should head to Loafing Around and then I'll get my sandwich sooner."
+Which one of the following sentences shows that Iluka has made a mistake?
+
+A Sliced Bread Sangers may make better sandwiches than Loafing Around.
+B Sliced Bread Sangers may have a wider range of sandwiches than Loafing Around.
+C The sandwiches at Loafing Around may be more expensive than those at Sliced Bread Sangers.
+D The queue at Loafing Around may be longer than the one at Sliced Bread Sangers.
+
+
+Q15
+Mei and Kirra's class is due to go on an excursion to an observatory so they can look at the stars through the big telescope. The only children in the class who are not going on the excursion are the ones who need to play in the soccer match.
+
+Maliyan: "Mei does not play soccer, so she must be going to the observatory."
+Robyn: "Kirra is not going to the observatory, so she must be playing in the soccer match."
+If the information in the box is true, whose reasoning is correct?
+
+A Maliyan only
+B Robyn only
+C both Maliyan and Robyn
+D neither Maliyan nor Robyn
+
+
+Q16
+Anna, Nina, Veronika and Timur sit at a square table which has four wooden blocks arranged on its top. The types of block are shown below.
+
+[IMAGE: Four 3D wooden block shapes shown:
+1. Sphere (round ball shape)
+2. Rectangular prism / cuboid (tall, like a box standing upright)
+3. Cylinder (round with flat top and bottom)
+4. Cone / triangular pyramid (pointed top, wide base)]
+
+The friends sit at the table as shown in this view from above.
+
+[IMAGE: A square table viewed from above. Timur sits at the top edge, Anna at the left edge, Nina at the right edge, and Veronika at the bottom edge. On the table are four shapes arranged in a 2×2 grid:
+- Top-left (near Anna/Timur corner): a square shape (the cuboid seen from above)
+- Top-right (near Timur/Nina corner): a circle with a ring inside (the cylinder seen from above)
+- Bottom-left (near Anna/Veronika corner): a small dot/circle (the sphere seen from above — appears as a point/small circle)
+- Bottom-right (near Nina/Veronika corner): a plain circle (the cone seen from above — circular base)]
+
+One of the friends has the following view.
+
+[IMAGE: A front-facing view showing two shapes side by side on a flat surface:
+- Left: a triangle shape (the cone seen from the side)
+- Right: a rectangle/square shape (the cuboid seen from the side)]
+
+Which one of the friends has the view shown above?
+
+A Anna
+B Nina
+C Timur
+D Veronika
+
+
+Q17
+To win a soccer match you have to score more goals than the other team.
+Grant Valley High School plays soccer in a competition with a group of other schools. They are awarded points for winning and drawing matches but no points for losing. The team with the most points at the end of the season comes top of the competition.
+At the end of the season, Grant Valley High School had sadly failed to score a single goal.
+
+Which one of the following must also be true?
+
+A Grant Valley High School came bottom of the competition.
+B Grant Valley High School lost more matches than any of the other teams.
+C Grant Valley High School won fewer matches than any of the other teams.
+D Grant Valley High School failed to win any matches.
+
+
+Q18
+The students in Tahnee's class must choose either Jacob or Nicole to represent their class in the school chess competition.
+Jacob won 3 of his last 14 games in the chess club.
+Nicole won 11 of her last 12 games in the chess club.
+
+Tahnee: "Nicole has won a higher fraction of her recent games at the club, so she must be the better player. She should represent our class."
+Which one of the following sentences shows that Tahnee has made a mistake?
+
+A There may be another player in the class who is better than Nicole.
+B Jacob might have played against better opponents in his games.
+C Nicole has not played as many games as Jacob.
+D They may have played lots of other games outside of the chess club.
+
+
+Q19
+In a school for young magicians, the weekly timetable is the following:
+
+              Monday        Tuesday          Wednesday      Thursday
+9:00–10:00    stars & sky   potions &        spells         herbs
+                            poisons
+10:00–11:00   farsight      herbs            broom flight   stars & sky
+11:00–12:00   spells        charms           farsight       broom flight
+
+The young magicians need their magic wand for three classes: spells, charms, and herbs. There are no classes on Fridays.
+
+This week, the classes on Wednesday are cancelled due to a competition.
+
+For how many classes do the young magicians need their wands this week?
+
+A 2
+B 3
+C 4
+D 5
+
+
+Q20
+Chris is making a sandwich for his younger sister Sally. Sally knows that Chris likes puzzles, so she challenges him to arrange the four ingredients in her sandwich in a specific way. She tells him that the lettuce must not touch the mayonnaise, the cheese must not touch the lettuce, and the mayonnaise must go directly on top of the chicken.
+
+If Chris makes the sandwich following Sally's rules, which ingredient will be on top?
+
+A cheese
+B chicken
+C lettuce
+D mayonnaise
