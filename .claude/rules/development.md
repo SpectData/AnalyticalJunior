@@ -52,6 +52,14 @@ Or in Unity Editor: **Window > General > Test Runner > EditMode > Run All**.
 - Never merge PRs. Raise the PR, and the user manually merges after CI passes.
 - Use `gh` CLI for GitHub operations.
 
+## Worktrees (Parallel Agents)
+
+- Every Claude Code agent session **must work in its own git worktree** to avoid collisions.
+- Start with: `claude --worktree <name>` (e.g., `claude --worktree feature-auth`). This creates `.claude/worktrees/<name>/` with a branch `worktree-<name>`.
+- When claiming a ticket, **indicate your worktree name** in the ticket/issue so other agents know which worktree is working on it.
+- Worktrees branch from the default remote branch and share repository history.
+- Do not modify files in another agent's worktree.
+
 ## Safety Rules
 
 - Never commit `.env*`, `**/secrets/**`, `*credentials*`, `*.pem`, `*.key` files.
