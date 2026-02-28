@@ -30,6 +30,14 @@ The wizard stands at the centre of a circular battlefield. Snakes approach from 
 - Wrong answer = no lightning bolt; the next wave starts without the bonus.
 - **Supported question types:** comprehension, poem (MCQ), and in future: cloze, sentence insertion, extract matching.
 
+## Review Session
+
+- After each **Wave Phase** and each **Inter-Wave Phase**, a review screen is shown summarising the questions the student got wrong.
+- Each incorrectly answered question displays: the question text, the student's chosen answer, the correct answer, and the **reasoning/explanation** for the correct answer.
+- Correctly answered questions are not shown (keep the review focused on learning gaps).
+- The student taps a "Continue" button to proceed to the next phase.
+- If the student answered all questions correctly, the review is skipped and the next phase starts immediately.
+
 ## Adaptive Difficulty
 
 - **No difficulty selection.** The game adapts to the player automatically.
