@@ -6,9 +6,7 @@ public static class AppColors
     public static readonly Color Purple60 = HexToColor("667EEA");
     public static readonly Color Purple80 = HexToColor("764BA2");
 
-    // Category accents
-    public static readonly Color MathBlue = HexToColor("4A90D9");
-    public static readonly Color LogicOrange = HexToColor("E67E22");
+    // Game accent
     public static readonly Color SnakeGreen = HexToColor("2ECC71");
 
     // Difficulty colors
@@ -51,16 +49,6 @@ public static class AppColors
             case Difficulty.Hard: return HardRed;
             case Difficulty.SuperHard: return SuperHardPurple;
             default: return EasyGreen;
-        }
-    }
-
-    public static Color GetCategoryColor(Category c)
-    {
-        switch (c)
-        {
-            case Category.Math: return MathBlue;
-            case Category.Logic: return LogicOrange;
-            default: return MathBlue;
         }
     }
 }

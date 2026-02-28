@@ -27,19 +27,9 @@ public class SceneTransitionManager : MonoBehaviour
         SceneManager.LoadScene("DifficultySelectScene");
     }
 
-    public void LoadQuizGame()
-    {
-        SceneManager.LoadScene("QuizGameScene");
-    }
-
     public void LoadSnakeSpell()
     {
         SceneManager.LoadScene("SnakeSpellScene");
-    }
-
-    public void LoadResults()
-    {
-        SceneManager.LoadScene("ResultsScene");
     }
 
     public void LoadSnakeResults()

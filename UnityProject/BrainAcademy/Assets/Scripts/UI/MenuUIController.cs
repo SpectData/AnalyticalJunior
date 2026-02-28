@@ -9,17 +9,12 @@ public class MenuUIController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI gamesPlayedText;
     [SerializeField] private TextMeshProUGUI bestStreakText;
 
-    [Header("Category Buttons")]
-    [SerializeField] private Button mathButton;
-    [SerializeField] private Button logicButton;
+    [Header("Game Button")]
     [SerializeField] private Button snakeSpellButton;
 
     void Start()
     {
         RefreshStats();
-
-        mathButton.onClick.AddListener(OnMathClicked);
-        logicButton.onClick.AddListener(OnLogicClicked);
         snakeSpellButton.onClick.AddListener(OnSnakeSpellClicked);
     }
 
@@ -38,23 +33,8 @@ public class MenuUIController : MonoBehaviour
         if (bestStreakText != null) bestStreakText.text = stats.bestStreak.ToString();
     }
 
-    private void OnMathClicked()
-    {
-        GameManager.Instance.SelectedCategory = Category.Math;
-        GameManager.Instance.SelectedFlow = GameFlow.Quiz;
-        SceneTransitionManager.Instance.LoadDifficultySelect();
-    }
-
-    private void OnLogicClicked()
-    {
-        GameManager.Instance.SelectedCategory = Category.Logic;
-        GameManager.Instance.SelectedFlow = GameFlow.Quiz;
-        SceneTransitionManager.Instance.LoadDifficultySelect();
-    }
-
     private void OnSnakeSpellClicked()
     {
-        GameManager.Instance.SelectedFlow = GameFlow.SnakeSpell;
         SceneTransitionManager.Instance.LoadDifficultySelect();
     }
 }

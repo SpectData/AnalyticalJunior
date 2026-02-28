@@ -1,9 +1,3 @@
-public enum Category
-{
-    Math,
-    Logic
-}
-
 public enum Difficulty
 {
     Easy,
@@ -26,10 +20,4 @@ public enum GameStatus
     Playing,
     WaveTransition,
     GameOver
-}
-
-public enum GameFlow
-{
-    Quiz,
-    SnakeSpell
 }

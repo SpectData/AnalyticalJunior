@@ -10,30 +10,6 @@ public class QuestionProvider
         bankLoader.Load();
     }
 
-    public GameQuestion GetQuizQuestion(Category category, Difficulty difficulty)
-    {
-        if (category == Category.Math)
-        {
-            int choice = Random.Range(0, 3);
-            switch (choice)
-            {
-                case 0: return MathQuestionGenerator.GenerateQuickCalc(difficulty);
-                case 1: return MathQuestionGenerator.GenerateSequence(difficulty);
-                default: return MathQuestionGenerator.GenerateCompare(difficulty);
-            }
-        }
-        else // Logic
-        {
-            int choice = Random.Range(0, 3);
-            switch (choice)
-            {
-                case 0: return LogicQuestionGenerator.GeneratePatternMatch(difficulty);
-                case 1: return LogicQuestionGenerator.GenerateOddOneOut(difficulty);
-                default: return LogicQuestionGenerator.GenerateMemoryGrid(difficulty);
-            }
-        }
-    }
-
     public GameQuestion.Standard GetSnakeSpellQuestion(Difficulty difficulty)
     {
         // Primary: question bank. Fallback: procedural generation.
