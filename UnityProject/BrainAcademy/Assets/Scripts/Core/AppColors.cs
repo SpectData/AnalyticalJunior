@@ -17,11 +17,11 @@ public static class AppColors
     public static readonly Color HardRed = HexToColor("E74C3C");
     public static readonly Color SuperHardPurple = HexToColor("8E44AD");
 
-    // Battlefield
-    public static readonly Color SpellGold = HexToColor("E8D44D");
-    public static readonly Color GrassLight = HexToColor("7EC850");
-    public static readonly Color GrassDark = HexToColor("5DAE3B");
-    public static readonly Color DirtRoad = new Color(0.545f, 0.451f, 0.333f, 0.25f);
+    // Battlefield (PvZ-style palette)
+    public static readonly Color SpellGold = HexToColor("FFD700");
+    public static readonly Color GrassLight = HexToColor("5DBF2D");
+    public static readonly Color GrassDark = HexToColor("4A9E23");
+    public static readonly Color DirtRoad = HexToColor("8B6914");
 
     // UI
     public static readonly Color Background = HexToColor("F0F4F8");

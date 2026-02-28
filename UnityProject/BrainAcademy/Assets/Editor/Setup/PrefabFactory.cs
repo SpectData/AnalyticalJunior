@@ -9,16 +9,29 @@ using UnityEngine.UI;
 public static class PrefabFactory
 {
     private const string PrefabDir = "Assets/Prefabs";
+    private const string SpriteDir = "Assets/Sprites";
 
     public static GameObject AnswerButtonPrefab { get; private set; }
     public static GameObject MemoryCellPrefab { get; private set; }
     public static GameObject SnakePrefab { get; private set; }
     public static GameObject SpellPrefab { get; private set; }
 
+    // Loaded sprites (null if files don't exist yet)
+    public static Sprite WizardSprite { get; private set; }
+    public static Sprite SnakeGreenSprite { get; private set; }
+    public static Sprite SnakeYellowSprite { get; private set; }
+    public static Sprite SnakeRedSprite { get; private set; }
+    public static Sprite SnakePurpleSprite { get; private set; }
+    public static Sprite SpellSprite { get; private set; }
+    public static Sprite GrassLightSprite { get; private set; }
+    public static Sprite GrassDarkSprite { get; private set; }
+
     public static void CreateAll()
     {
         if (!AssetDatabase.IsValidFolder(PrefabDir))
             AssetDatabase.CreateFolder("Assets", "Prefabs");
+
+        LoadSprites();
 
         AnswerButtonPrefab = CreateAnswerButton();
         MemoryCellPrefab = CreateMemoryCell();
@@ -27,6 +40,35 @@ public static class PrefabFactory
 
         AssetDatabase.SaveAssets();
         Debug.Log("[Setup] Prefabs created in Assets/Prefabs/");
+    }
+
+    private static void LoadSprites()
+    {
+        WizardSprite = LoadSprite("wizard");
+        SnakeGreenSprite = LoadSprite("snake_green");
+        SnakeYellowSprite = LoadSprite("snake_yellow");
+        SnakeRedSprite = LoadSprite("snake_red");
+        SnakePurpleSprite = LoadSprite("snake_purple");
+        SpellSprite = LoadSprite("spell");
+        GrassLightSprite = LoadSprite("grass_light");
+        GrassDarkSprite = LoadSprite("grass_dark");
+
+        int loaded = 0;
+        if (WizardSprite != null) loaded++;
+        if (SnakeGreenSprite != null) loaded++;
+        if (SnakeYellowSprite != null) loaded++;
+        if (SnakeRedSprite != null) loaded++;
+        if (SnakePurpleSprite != null) loaded++;
+        if (SpellSprite != null) loaded++;
+        if (GrassLightSprite != null) loaded++;
+        if (GrassDarkSprite != null) loaded++;
+        Debug.Log($"[Setup] Loaded {loaded}/8 sprites from {SpriteDir}/");
+    }
+
+    private static Sprite LoadSprite(string name)
+    {
+        string path = $"{SpriteDir}/{name}.png";
+        return AssetDatabase.LoadAssetAtPath<Sprite>(path);
     }
 
     // ── AnswerButton ────────────────────────────────────────────────────
@@ -99,8 +141,15 @@ public static class PrefabFactory
         rt.sizeDelta = new Vector2(40, 40);
 
         var img = root.GetComponent<Image>();
-        img.color = Color.green;
-        // Circle sprite will be assigned at runtime by BattlefieldRenderer
+        if (SnakeGreenSprite != null)
+        {
+            img.sprite = SnakeGreenSprite;
+            img.color = Color.white;
+        }
+        else
+        {
+            img.color = Color.green;
+        }
 
         // HP bar child
         var hpBar = new GameObject("HPBar", typeof(Image));
@@ -133,7 +182,15 @@ public static class PrefabFactory
         rt.sizeDelta = new Vector2(20, 20);
 
         var img = root.GetComponent<Image>();
-        img.color = spellGold;
+        if (SpellSprite != null)
+        {
+            img.sprite = SpellSprite;
+            img.color = Color.white;
+        }
+        else
+        {
+            img.color = spellGold;
+        }
 
         // Glow child (larger, semi-transparent)
         var glow = new GameObject("Glow", typeof(Image));

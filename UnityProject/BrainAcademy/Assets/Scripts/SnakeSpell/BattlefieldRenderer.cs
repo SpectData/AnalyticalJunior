@@ -18,6 +18,16 @@ public class BattlefieldRenderer : MonoBehaviour
     [SerializeField] private GameObject snakePrefab;
     [SerializeField] private GameObject spellPrefab;
 
+    [Header("Sprites")]
+    [SerializeField] private Sprite wizardSprite;
+    [SerializeField] private Sprite snakeGreenSprite;
+    [SerializeField] private Sprite snakeYellowSprite;
+    [SerializeField] private Sprite snakeRedSprite;
+    [SerializeField] private Sprite snakePurpleSprite;
+    [SerializeField] private Sprite spellSprite;
+    [SerializeField] private Sprite grassLightSprite;
+    [SerializeField] private Sprite grassDarkSprite;
+
     [Header("Overlays")]
     [SerializeField] private GameObject waveTransitionOverlay;
     [SerializeField] private TMPro.TextMeshProUGUI waveTransitionText;
@@ -37,15 +47,40 @@ public class BattlefieldRenderer : MonoBehaviour
         controller = FindObjectOfType<SnakeSpellController>();
         GenerateCircleSprite();
 
-        // Set lane colors
+        // Set lane backgrounds (use sprites if available, otherwise colors)
         for (int i = 0; i < laneBackgrounds.Count && i < SnakeSpellConstants.NumLanes; i++)
         {
-            laneBackgrounds[i].color = (i % 2 == 0) ? AppColors.GrassLight : AppColors.GrassDark;
+            bool even = i % 2 == 0;
+            var laneImg = laneBackgrounds[i];
+            Sprite grassSprite = even ? grassLightSprite : grassDarkSprite;
+            if (grassSprite != null)
+            {
+                laneImg.sprite = grassSprite;
+                laneImg.color = Color.white;
+            }
+            else
+            {
+                laneImg.color = even ? AppColors.GrassLight : AppColors.GrassDark;
+            }
         }
 
         // Set dirt road colors
         foreach (var road in dirtRoads)
             road.color = AppColors.DirtRoad;
+
+        // Set wizard sprites if available
+        for (int i = 0; i < wizardObjects.Count; i++)
+        {
+            if (wizardSprite != null)
+            {
+                var wImg = wizardObjects[i].GetComponent<Image>();
+                if (wImg != null)
+                {
+                    wImg.sprite = wizardSprite;
+                    wImg.color = Color.white;
+                }
+            }
+        }
     }
 
     void Update()
@@ -78,10 +113,21 @@ public class BattlefieldRenderer : MonoBehaviour
             Vector2 pos = GameToScreenPosition(snake.xPosition, snake.lane);
             snakeRT.anchoredPosition = pos;
 
-            // Set color based on snake type
+            // Set sprite/color based on snake type
             Image snakeImage = snakeRT.GetComponent<Image>();
             if (snakeImage != null)
-                snakeImage.color = SnakeTypeData.GetBodyColor(snake.type);
+            {
+                Sprite typeSprite = GetSnakeSprite(snake.type);
+                if (typeSprite != null)
+                {
+                    snakeImage.sprite = typeSprite;
+                    snakeImage.color = Color.white;
+                }
+                else
+                {
+                    snakeImage.color = SnakeTypeData.GetBodyColor(snake.type);
+                }
+            }
 
             // Update HP bar if present
             Image hpBar = snakeRT.Find("HPBar")?.GetComponent<Image>();
@@ -131,7 +177,17 @@ public class BattlefieldRenderer : MonoBehaviour
 
             Image spellImage = spellRT.GetComponent<Image>();
             if (spellImage != null)
-                spellImage.color = AppColors.SpellGold;
+            {
+                if (spellSprite != null)
+                {
+                    spellImage.sprite = spellSprite;
+                    spellImage.color = Color.white;
+                }
+                else
+                {
+                    spellImage.color = AppColors.SpellGold;
+                }
+            }
 
             spellRT.gameObject.SetActive(true);
         }
@@ -173,10 +229,24 @@ public class BattlefieldRenderer : MonoBehaviour
         float scaleX = panelWidth / SnakeSpellConstants.FieldWidth;
         float laneHeight = panelHeight / SnakeSpellConstants.NumLanes;
 
-        float screenX = gameX * scaleX;
-        float screenY = -(lane * laneHeight + laneHeight / 2f);
+        float screenX = gameX * scaleX - panelWidth / 2f;
+        float screenY = panelHeight / 2f - (lane + 0.5f) * laneHeight;
 
         return new Vector2(screenX, screenY);
+    }
+
+    // ── Sprite Lookup ──
+
+    private Sprite GetSnakeSprite(SnakeType type)
+    {
+        switch (type)
+        {
+            case SnakeType.Green: return snakeGreenSprite;
+            case SnakeType.Yellow: return snakeYellowSprite;
+            case SnakeType.Red: return snakeRedSprite;
+            case SnakeType.Purple: return snakePurpleSprite;
+            default: return null;
+        }
     }
 
     // ── Object Pooling ──
@@ -192,7 +262,14 @@ public class BattlefieldRenderer : MonoBehaviour
 
         if (prefab == null) return null;
         GameObject newObj = Instantiate(prefab, battlefieldPanel);
-        return newObj.GetComponent<RectTransform>();
+        var rt = newObj.GetComponent<RectTransform>();
+
+        // Assign circle sprite so the object is visible
+        var img = newObj.GetComponent<Image>();
+        if (img != null && img.sprite == null)
+            img.sprite = GetCircleSprite();
+
+        return rt;
     }
 
     private void ReturnToPool(Queue<RectTransform> pool, RectTransform obj)
