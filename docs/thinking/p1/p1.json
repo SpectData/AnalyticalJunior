@@ -1,0 +1,345 @@
+{
+  "meta": {
+    "paper": "Practice Paper 1",
+    "section": "thinking_skills",
+    "description": "NSW Opportunity Class Placement Test — Thinking Skills",
+    "total_questions": 30
+  },
+  "questions": [
+    {
+      "id": "TS1_Q1",
+      "number": 1,
+      "question": "A slow train departed from Lode at 1:00 pm and arrived at Braxton at 7:00 pm. An express train departed from Lode later and arrived at Braxton at the same time as the slow train. The express train was four times as fast as the slow train. Each train travelled at a constant speed and did not stop along the way.\nWhen did the express train depart from Lode?",
+      "options": ["2:30 pm", "3:00 pm", "4:00 pm", "5:30 pm"],
+      "reasoning": "The slow train takes 6 hours (1pm to 7pm). Since the express train is 4 times as fast, it covers the same distance in 6 ÷ 4 = 1.5 hours. Arriving at 7:00 pm, it must have departed at 7:00 pm − 1.5 hours = 5:30 pm.",
+      "correct_index": 3,
+      "correct_answer": "5:30 pm"
+    },
+    {
+      "id": "TS1_Q2",
+      "number": 2,
+      "question": "A health specialist has suggested that dance lessons should be an important part of school life, and that school children should spend as much time learning to dance as they do playing sport.\nWhich one of these statements, if true, best supports the health specialist's claim?",
+      "options": [
+        "Dancing improves children's mental abilities.",
+        "Some children cannot afford equipment to participate in sports.",
+        "Some children dream of becoming professional sportspeople.",
+        "Dancing has been taught in schools in the past."
+      ],
+      "reasoning": "The claim is that dance should be as important as sport in schools. The best support gives a strong reason WHY dance is beneficial. Option A provides a concrete benefit (mental abilities) that strengthens the case for dance in schools. Option B is about affordability of sport, not the value of dance. Option C supports sport, not dance. Option D merely says dance was taught before, which doesn't explain why it should be now.",
+      "correct_index": 0,
+      "correct_answer": "Dancing improves children's mental abilities."
+    },
+    {
+      "id": "TS1_Q3",
+      "number": 3,
+      "question": "Alex, Ben and Carlos all keep pets. Alex has snakes, fish, lizards, rats and frogs. Ben keeps cats, frogs and rats. Carlos keeps fish, parrots, rats, grasshoppers and frogs.\nWhich pets does Alex keep that neither Ben nor Carlos keep?",
+      "options": [
+        "fish and snakes",
+        "lizards and rats",
+        "grasshoppers and cats",
+        "snakes and lizards"
+      ],
+      "reasoning": "Alex's pets: snakes, fish, lizards, rats, frogs. Ben's: cats, frogs, rats. Carlos's: fish, parrots, rats, grasshoppers, frogs. Check each of Alex's pets: snakes — not kept by Ben or Carlos ✓. Fish — kept by Carlos ✗. Lizards — not kept by Ben or Carlos ✓. Rats — kept by both Ben and Carlos ✗. Frogs — kept by both ✗. So Alex uniquely keeps snakes and lizards.",
+      "correct_index": 3,
+      "correct_answer": "snakes and lizards"
+    },
+    {
+      "id": "TS1_Q4",
+      "number": 4,
+      "question": "Next year at school I need to choose four subjects to study. I have to choose one subject from each of the following lists:\nList 1: arts, geography, history, PE\nList 2: English, maths, design, health\nList 3: English, geography, science, technologies\nList 4: maths, science, PE, technologies\nI know that I want to study English, history and science.\nWhich one of the following can I not choose as my final subject?",
+      "options": ["arts", "geography", "health", "PE"],
+      "reasoning": "History is only available in List 1, so List 1 must be history. English appears in Lists 2 and 3; science appears in Lists 3 and 4. Trying all valid assignments: English from List 2 + science from List 3 → List 4 remains (maths, PE, technologies). English from List 2 + science from List 4 → List 3 remains (geography, technologies). English from List 3 + science from List 4 → List 2 remains (maths, design, health). The possible 4th subjects across all cases are: maths, PE, technologies, geography, design, health. Arts is only in List 1, which is already taken by history. So arts cannot be chosen.",
+      "correct_index": 0,
+      "correct_answer": "arts"
+    },
+    {
+      "id": "TS1_Q5",
+      "number": 5,
+      "question": "Only those students who attend the meeting at lunchtime today will be allowed to go on the excursion to the museum next week.\n\nMia: \"Jayden is going to the meeting today, so he'll definitely be able to go on the excursion.\"\nTyler: \"Noah's going to cricket practice at lunchtime today, so he won't be able to go on the excursion.\"\nIf the information in the box is true, whose reasoning is correct?",
+      "options": ["Mia only", "Tyler only", "Both Mia and Tyler", "Neither Mia nor Tyler"],
+      "reasoning": "The rule says attending the meeting is NECESSARY for the excursion — 'only those who attend.' Mia treats attendance as SUFFICIENT ('he'll definitely be able to go'), but there could be other conditions. Mia's reasoning is flawed. Tyler reasons that Noah can't attend (he's at cricket), so he can't go on the excursion. Since attendance is necessary and Noah won't attend, Tyler's reasoning is correct.",
+      "correct_index": 1,
+      "correct_answer": "Tyler only"
+    },
+    {
+      "id": "TS1_Q6",
+      "number": 6,
+      "question": "Archie, Beau and Carter are standing in a row. If Archie is to the right of Beau and Carter is to the left of Archie, which one of the following statements must be true?",
+      "options": [
+        "Beau is furthest to the right.",
+        "Carter is furthest to the left.",
+        "Archie is in the middle.",
+        "Archie is furthest to the right."
+      ],
+      "reasoning": "Archie is right of Beau: ...Beau...Archie. Carter is left of Archie: ...Carter...Archie. Two possible arrangements satisfy both: Beau-Carter-Archie or Carter-Beau-Archie. In both cases, Archie is furthest to the right. Options A and B are only true in one arrangement each. Option C is never true (Archie is always rightmost).",
+      "correct_index": 3,
+      "correct_answer": "Archie is furthest to the right."
+    },
+    {
+      "id": "TS1_Q7",
+      "number": 7,
+      "question": "A show is to be performed from Wednesday 12th to Saturday 29th of the same month. There will be a performance every evening. On Wednesdays and Saturdays there will be an afternoon performance as well.\nHow many performances of the show will there be?",
+      "options": ["21", "22", "23", "24"],
+      "reasoning": "From 12th to 29th inclusive = 18 days, so 18 evening performances. Now count Wednesdays and Saturdays for extra afternoon shows: Wed 12, Sat 15, Wed 19, Sat 22, Wed 26, Sat 29 = 6 extra afternoon performances. Total: 18 + 6 = 24.",
+      "correct_index": 3,
+      "correct_answer": "24"
+    },
+    {
+      "id": "TS1_Q8",
+      "number": 8,
+      "question": "Darryl and Jim are in the corridor.\n\nDarryl: \"Jane asked me to fetch her jacket, but I can't seem to find it here. It's blue, with a hood, she says.\"\nJim: \"Here's a blue jacket with a hood — it must be hers!\"\nWhich one of the following sentences shows the mistake Jim has made?",
+      "options": [
+        "Jane might prefer a different jacket.",
+        "Darryl might be looking for someone else's jacket.",
+        "There might be more than one blue jacket with a hood.",
+        "Even if the jacket is blue, it might not have a hood."
+      ],
+      "reasoning": "Jim assumes that because the jacket matches the description (blue, with a hood), it must be Jane's. But the description isn't unique — there could be multiple blue hooded jackets. Jim's mistake is assuming that one matching jacket must be the right one, without considering that other jackets could also fit the same description.",
+      "correct_index": 2,
+      "correct_answer": "There might be more than one blue jacket with a hood."
+    },
+    {
+      "id": "TS1_Q9",
+      "number": 9,
+      "question": "A police officer says: \"Anyone riding a motorcycle should wear a helmet.\"\nWhich one of these statements, if true, best supports the police officer's claim?",
+      "options": [
+        "Good helmets are cheaper and lighter than they used to be.",
+        "You are much less likely to suffer a serious injury if you are wearing a helmet.",
+        "People riding horses normally wear some sort of head protection.",
+        "Motorcycles can travel a lot faster than bicycles."
+      ],
+      "reasoning": "The claim is that motorcycle riders should wear helmets. The best support directly explains WHY helmets are beneficial. Option B states helmets significantly reduce serious injury — this is the strongest reason to wear one. Option A makes helmets more accessible but doesn't explain why they're needed. Option C is about horses, not motorcycles. Option D explains motorcycle speed but doesn't connect it to helmets.",
+      "correct_index": 1,
+      "correct_answer": "You are much less likely to suffer a serious injury if you are wearing a helmet."
+    },
+    {
+      "id": "TS1_Q10",
+      "number": 10,
+      "question": "On a normal dice the numbers on each pair of opposite sides add up to 7.\nWhich one of the following nets shown below is the only one which makes a normal dice when folded?\n\n[IMAGE: Four dice nets A–D with different shapes and pip arrangements. See p1q1.txt for full ASCII descriptions of each net layout.]",
+      "options": ["Net A", "Net B", "Net C", "Net D"],
+      "reasoning": "For a normal dice, opposite faces must sum to 7: 1↔6, 2↔5, 3↔4. For each net, determine which faces would be opposite when folded, then check if all three pairs sum to 7. In a cross-shaped net, the top face is opposite the 3rd face down, the left arm is opposite the right arm, and the centre is opposite the bottom face. Only one net will have all three opposite pairs summing to 7. This requires careful reading of the pip counts on each face and understanding how each specific net shape folds into a cube.",
+      "correct_index": 2,
+      "correct_answer": "Net C"
+    },
+    {
+      "id": "TS1_Q11",
+      "number": 11,
+      "question": "When Kinta was learning to drive his instructor told him: \"To have even a chance of passing your driving test you must have had at least 20 hours of driving practice.\"\nIf Kinta's instructor is correct, which one of these statements will be true?",
+      "options": [
+        "All the learner drivers who have had 20 hours or more of practice will pass their test.",
+        "None of the learner drivers who have had less than 20 hours of practice will pass their test.",
+        "Some of the learner drivers who have had less than 20 hours of practice will pass their test.",
+        "Only the learner drivers who have had less than 20 hours of practice will pass their test."
+      ],
+      "reasoning": "The instructor says 20 hours is the minimum to have 'even a chance' of passing. This means <20 hours = zero chance = guaranteed failure. Option A is wrong — 20+ hours gives a chance but doesn't guarantee passing. Option B follows directly: with less than 20 hours, there's no chance, so none will pass. Option C contradicts the statement. Option D is nonsensical (those with less practice surely won't pass).",
+      "correct_index": 1,
+      "correct_answer": "None of the learner drivers who have had less than 20 hours of practice will pass their test."
+    },
+    {
+      "id": "TS1_Q12",
+      "number": 12,
+      "question": "An emu's egg is dark green, speckled with white spots, and can measure up to 13 cm long. Only an ostrich's egg is larger.\n\nCharlotte: \"This egg is dark green, and fairly large, so it must be an emu's.\"\nOliver: \"But it's only about 10 cm long, so it can't be!\"\nIf the information in the box is true, whose reasoning is correct?",
+      "options": ["Charlotte only", "Oliver only", "Both Charlotte and Oliver", "Neither Charlotte nor Oliver"],
+      "reasoning": "Charlotte assumes that being dark green and fairly large is sufficient to identify an emu egg — but other eggs could share those characteristics. Her reasoning is flawed. Oliver assumes that at 10 cm it can't be an emu egg — but the fact says emu eggs 'can measure UP TO 13 cm', meaning they can be shorter. A 10 cm emu egg is possible. Oliver's reasoning is also flawed. Neither reasons correctly.",
+      "correct_index": 3,
+      "correct_answer": "Neither Charlotte nor Oliver"
+    },
+    {
+      "id": "TS1_Q13",
+      "number": 13,
+      "question": "A piece of string is initially held end-to-end in a straight line. A mark is made in the middle of the string. The string is then folded in half and the new ends again pulled tight. A mark is made in the middle of the strands of folded string. This process is then repeated a third time.\nThe string is then unfolded and its ends pulled so that it is once again in its initial straight line.\nThe distance between marks on the string is found to be 4 cm.\nHow long is the piece of string?",
+      "options": ["16 cm", "24 cm", "28 cm", "32 cm"],
+      "reasoning": "Let the string length be L. First mark at L/2. Fold in half → folded length L/2. Second mark at the middle of the fold creates marks at L/4 and 3L/4 on the original. Fold again → folded length L/4. Third mark creates marks at L/8, 3L/8, 5L/8, 7L/8. All marks on the unfolded string: L/8, L/4, 3L/8, L/2, 5L/8, 3L/4, 7L/8. These are evenly spaced at L/8 apart. Given spacing = 4 cm: L/8 = 4, so L = 32 cm.",
+      "correct_index": 3,
+      "correct_answer": "32 cm"
+    },
+    {
+      "id": "TS1_Q14",
+      "number": 14,
+      "question": "Mrs Hughes: \"I know that ten of the children in my class are short-sighted, but I only saw seven wearing glasses this morning. So some of the class must have been wearing contact lenses.\"\nWhich one of the following sentences shows the mistake Mrs Hughes has made?",
+      "options": [
+        "She did not include the children in other classes.",
+        "She did not say which children must have been wearing contact lenses.",
+        "Some of the short-sighted children might not have been wearing either glasses or contact lenses.",
+        "Some of the children who have normal eyesight now might need glasses in the future."
+      ],
+      "reasoning": "Mrs Hughes assumes the 3 short-sighted children not wearing glasses must be wearing contact lenses. But she overlooks the possibility that some short-sighted children might choose not to wear any correction at all — neither glasses nor contact lenses. Option A is irrelevant (she's only talking about her class). Option B identifies no logical flaw. Option D is about the future, not the current situation.",
+      "correct_index": 2,
+      "correct_answer": "Some of the short-sighted children might not have been wearing either glasses or contact lenses."
+    },
+    {
+      "id": "TS1_Q15",
+      "number": 15,
+      "question": "Jess, Kamilla, Lucy, and Max are seated around a table on a train. Two of them are facing forwards (in the direction of travel) and two are facing backwards. Two have window seats and the other two have aisle seats.\nI know that:\nJess is sitting diagonally opposite Lucy;\nMax is facing forwards;\nKamilla is next to Jess.\nWhich one of the following do I also know?",
+      "options": [
+        "Lucy is travelling backwards.",
+        "Lucy has a window seat.",
+        "Kamilla has an aisle seat.",
+        "Jess is sitting opposite Max."
+      ],
+      "reasoning": "A train table has 4 seats: 2 forward-facing (window + aisle) and 2 backward-facing (window + aisle). People across the table face opposite directions; diagonal pairs also face opposite directions and have opposite seat types. Jess and Lucy are diagonal → different direction, different seat type. Kamilla sits next to Jess (same side). Max faces forward. Testing arrangements: Jess must face backward (since if Jess faced forward, both forward seats would be taken by Jess and Max, leaving no room for Kamilla next to Jess facing forward). With Jess backward and Kamilla next to Jess (also backward), Max and Lucy face forward. In all valid arrangements, Jess ends up directly opposite Max (across the table).",
+      "correct_index": 3,
+      "correct_answer": "Jess is sitting opposite Max."
+    },
+    {
+      "id": "TS1_Q16",
+      "number": 16,
+      "question": "The diagram shows one of a number of ways that five different shapes can be arranged together to form a square.\nWhich one of the following squares consists of the same five shapes as the square above? (They may be turned over.)\n\n[IMAGE: Original square and four options A–D, each divided into 5 pieces on a 4×4 grid. See p1q11.txt for full grid descriptions.]",
+      "options": ["Option A", "Option B", "Option C", "Option D"],
+      "reasoning": "This is a visual spatial reasoning question. The approach is to identify the five piece shapes in the original square by counting cells and tracing outlines, then compare with each option. Pieces may be rotated or flipped. Count the number of cells per piece and compare the shapes (tromino, tetromino, etc.). The original has specific piece shapes — only one option contains the exact same five shapes rearranged.",
+      "correct_index": 1,
+      "correct_answer": "Option B"
+    },
+    {
+      "id": "TS1_Q17",
+      "number": 17,
+      "question": "An environmentalist says: \"Plastic pollution in our oceans is not just a problem for the creatures that live there — it affects us too.\"\nWhich one of these statements, if true, best supports the environmentalist's claim?",
+      "options": [
+        "Only a small proportion of plastic is recycled.",
+        "Many things made of plastic could be made from environmentally friendly alternatives.",
+        "Plastics are durable and can last for over 500 years.",
+        "Plastics have been found in fish sold in supermarkets."
+      ],
+      "reasoning": "The claim is that ocean plastic pollution affects humans, not just marine life. The best support shows a direct link between ocean plastic and humans. Option D states plastics have been found in fish sold in supermarkets — this directly shows ocean pollution entering the human food chain, affecting us. Options A, B, and C discuss plastic properties or recycling but don't show how ocean plastic specifically affects people.",
+      "correct_index": 3,
+      "correct_answer": "Plastics have been found in fish sold in supermarkets."
+    },
+    {
+      "id": "TS1_Q18",
+      "number": 18,
+      "question": "When the fire alarm goes off, it could either be a real fire, or it could be a fire drill. Fire drills can be scheduled for any day of the week, but they always happen at exactly 2 o'clock in the afternoon.\n\nYuri: \"If the fire alarm goes off during the morning, you know it must be a real fire!\"\nBindi: \"Even if the fire alarm is not going off, it doesn't mean that there isn't a fire.\"\nIf the information in the box is true, whose reasoning is correct?",
+      "options": ["Yuri only", "Bindi only", "Both Yuri and Bindi", "Neither Yuri nor Bindi"],
+      "reasoning": "Yuri: Fire drills always happen at exactly 2pm (afternoon). So a morning alarm cannot be a drill — it must be a real fire. Yuri is correct. Bindi: The alarm system may not detect every fire, or there could be a fire before the alarm triggers. The absence of an alarm doesn't prove the absence of fire. Bindi is also correct. Both reason correctly.",
+      "correct_index": 2,
+      "correct_answer": "Both Yuri and Bindi"
+    },
+    {
+      "id": "TS1_Q19",
+      "number": 19,
+      "question": "At a school, exams are held at the end of each year. A prize is awarded in each subject to the student who has made the biggest improvement in his/her exam mark since the previous year.\nYear 9 marks: Uma 84, Finn 82, Lily 75, Arlo 73, Leon 73, Sophie 69.\nYear 10 marks: Finn 88, Lily 86, Uma 79, Arlo 78, Sophie 78, Leon 73.\nWhich student won the Year 10 prize for mathematics?",
+      "options": ["Finn", "Lily", "Uma", "Sophie"],
+      "reasoning": "Calculate each student's improvement (Year 10 − Year 9): Finn: 88−82 = +6. Lily: 86−75 = +11. Uma: 79−84 = −5. Arlo: 78−73 = +5. Sophie: 78−69 = +9. Leon: 73−73 = 0. The biggest improvement is Lily at +11.",
+      "correct_index": 1,
+      "correct_answer": "Lily"
+    },
+    {
+      "id": "TS1_Q20",
+      "number": 20,
+      "question": "Arthur, Bilal, Conor, and David play regularly in a sports team. The coach has just told them: \"If Arthur does not play tomorrow, then Bilal will play. If Arthur does play, then Conor will play in place of David.\"\nSo, if Bilal does not play tomorrow, which of the other three will be in the team?",
+      "options": ["Arthur only", "David only", "Arthur and Conor", "Conor and David"],
+      "reasoning": "Rule 1: If Arthur doesn't play → Bilal plays. Contrapositive: If Bilal doesn't play → Arthur plays. Rule 2: If Arthur plays → Conor replaces David. Given Bilal doesn't play: from the contrapositive, Arthur must play. Since Arthur plays, rule 2 applies: Conor plays in place of David. So Arthur and Conor are in the team.",
+      "correct_index": 2,
+      "correct_answer": "Arthur and Conor"
+    },
+    {
+      "id": "TS1_Q21",
+      "number": 21,
+      "question": "Faisal: \"To have any chance of passing your piano exam, you will need to practise for at least fifteen minutes, four times a week.\"\nSajid: \"I practise every day for twenty minutes or more, so I'm sure to pass the exam.\"\nWhich one of these sentences shows the mistake Sajid has made?",
+      "options": [
+        "Taking an exam can be a stressful experience.",
+        "Learning to play an instrument well requires many years of practice.",
+        "Practising alone is not as useful as having a lesson with your teacher.",
+        "Doing the minimum practice required does not guarantee success in the exam."
+      ],
+      "reasoning": "Faisal says the practice is needed to have 'any chance' — it's a necessary condition, not a sufficient one. Sajid exceeds the minimum practice and concludes he is 'sure to pass.' His mistake is treating a necessary condition as a guarantee. Meeting (or exceeding) the minimum requirement gives a chance of passing but doesn't ensure success. Option D identifies this flaw precisely.",
+      "correct_index": 3,
+      "correct_answer": "Doing the minimum practice required does not guarantee success in the exam."
+    },
+    {
+      "id": "TS1_Q22",
+      "number": 22,
+      "question": "Dominoes are to be arranged in a square, on a table, face up, as shown below. New dominoes are placed so that neither of the numbers on them is placed next to the same number on another tile.\n\n[IMAGE: A grid of dominoes with two empty positions. Five available dominoes numbered 1–5. See p1q21.txt for grid and domino descriptions.]\n\nThe dominoes numbered 1–5 shown above may be used only once.\nWhich of the two-domino combinations shown below will NOT complete the square?",
+      "options": ["1 and 3", "2 and 5", "3 and 4", "4 and 5"],
+      "reasoning": "This is a visual constraint-satisfaction problem. Two domino positions in the grid are empty. For each candidate pair, place the two dominoes in the empty spots and check whether any number ends up adjacent to the same number on a neighbouring tile. The pair that violates this adjacency rule — no matter how the two dominoes are oriented or assigned to the two gaps — is the one that will NOT complete the square. This requires careful reading of the existing grid values surrounding each empty position.",
+      "correct_index": 2,
+      "correct_answer": "3 and 4"
+    },
+    {
+      "id": "TS1_Q23",
+      "number": 23,
+      "question": "There are six towns (A, B, C, D, E and F) in a region.\nTown B is north of Town C and northeast of Town A. Town C is north of Town D and west of Town E. Town F is east of Town E.\nWhich town is northwest of Town D?",
+      "options": ["Town A", "Town B", "Town E", "Town F"],
+      "reasoning": "Mapping the towns: D is the reference point. C is north of D. B is north of C (so further north of D). E is east of C (so northeast of D). F is east of E (further east). B is northeast of A, so A is southwest of B. Since B is roughly due north of D and A is southwest of B, A is northwest of D. Town E is northeast of D, not northwest. Town F is further east.",
+      "correct_index": 0,
+      "correct_answer": "Town A"
+    },
+    {
+      "id": "TS1_Q24",
+      "number": 24,
+      "question": "A politician said in a television interview: \"The more trade that countries do with each other, the better it is for everyone.\"\nWhich one of these statements, if true, best supports the politician's claim?",
+      "options": [
+        "It is important for a country to have strong businesses.",
+        "Businesses do better when more people are buying their goods or services.",
+        "Countries that trade with each other are less likely to go to war against each other.",
+        "Different countries can sometimes make particular goods more cheaply than others."
+      ],
+      "reasoning": "The claim is that more trade between countries is 'better for everyone.' Option C states trading countries are less likely to go to war — war affects everyone, so reduced conflict is a universal benefit that directly supports the 'better for everyone' aspect. Option B explains why businesses benefit from trade but doesn't show it benefits EVERYONE. Option A is general and doesn't connect to trade. Option D explains why trade happens but not why it's universally beneficial.",
+      "correct_index": 2,
+      "correct_answer": "Countries that trade with each other are less likely to go to war against each other."
+    },
+    {
+      "id": "TS1_Q25",
+      "number": 25,
+      "question": "Daniel wants to make as many cupcakes as possible from the ingredients he has at home.\nThe recipe to make 8 cupcakes needs 100 g of flour, 100 g of sugar, 100 g of butter and 2 eggs.\nAt home, he has 600 g of flour, 500 g of sugar, 300 g of butter and 5 eggs.\nWhat is the maximum number of cupcakes Daniel can make?",
+      "options": ["12", "16", "20", "24"],
+      "reasoning": "Scale each ingredient to find the limiting factor. Per cupcake: 12.5g flour, 12.5g sugar, 12.5g butter, 0.25 eggs. Maximum cupcakes per ingredient: flour 600÷12.5 = 48, sugar 500÷12.5 = 40, butter 300÷12.5 = 24, eggs 5÷0.25 = 20. The limiting ingredient is eggs at 20 cupcakes. Check butter: 20 cupcakes need 250g butter (have 300g ✓). Eggs: 20 cupcakes need 5 eggs (have 5 ✓).",
+      "correct_index": 2,
+      "correct_answer": "20"
+    },
+    {
+      "id": "TS1_Q26",
+      "number": 26,
+      "question": "Whenever Mr Rudd's favourite team loses, it always puts him in a bad mood. And when Mr Rudd is in a bad mood, he always gives us extra homework.\n\nWei: \"We got extra homework last week — Mr Rudd's team must have lost!\"\nDylan: \"If they lose this week, we're sure to get extra homework again!\"\nIf the information in the box is true, whose reasoning is correct?",
+      "options": ["Wei only", "Dylan only", "Both Wei and Dylan", "Neither Wei and Dylan"],
+      "reasoning": "The chain is: team loses → bad mood → extra homework. Wei reasons backwards: extra homework → team lost. This is the fallacy of affirming the consequent — Mr Rudd could be in a bad mood for other reasons, or give extra homework for other reasons. Wei is wrong. Dylan reasons forward: if they lose → bad mood → extra homework. This follows the chain directly and is logically valid. Dylan is correct.",
+      "correct_index": 1,
+      "correct_answer": "Dylan only"
+    },
+    {
+      "id": "TS1_Q27",
+      "number": 27,
+      "question": "Three balls — each of which is either red or yellow — lie in a straight line on a pool table. Aziz strikes the first ball, which is red. That ball hits the middle ball. The middle ball then hits the last ball, which is yellow.\nOn the basis of this information, which one of the following statements must be true?",
+      "options": [
+        "Only one of the balls was red.",
+        "A red ball hit a yellow ball.",
+        "A yellow ball hit a red ball.",
+        "Only one of the balls was yellow."
+      ],
+      "reasoning": "First ball = red, last ball = yellow, middle ball = unknown (red or yellow). Case 1: middle ball is red → red hits red, then red hits yellow. A red ball hit a yellow ball ✓. Case 2: middle ball is yellow → red hits yellow, then yellow hits yellow. A red ball hit a yellow ball ✓ (the first hit). In both cases, a red ball hit a yellow ball. Options A and D fail because the middle ball could be either colour. Option C fails because if the middle ball is red, no yellow ball hits a red ball.",
+      "correct_index": 1,
+      "correct_answer": "A red ball hit a yellow ball."
+    },
+    {
+      "id": "TS1_Q28",
+      "number": 28,
+      "question": "A view of a single level of a building is shown below:\n\n[IMAGE: 3D isometric view of a building level with internal walls creating rooms. Four 2D floor plan options A–D. See p1q21.txt for descriptions.]\n\nWhich one of the following drawings represents the floor plan for this level of the building?",
+      "options": ["Option A", "Option B", "Option C", "Option D"],
+      "reasoning": "This is a spatial visualisation question requiring translation from a 3D isometric view to a 2D floor plan. The approach is to identify the overall building outline, count the number of rooms, note the positions of internal walls, and match these features to one of the floor plan options. Key observations from the 3D view include the number and relative sizes of rooms, the placement of dividing walls, and the overall footprint shape.",
+      "correct_index": 3,
+      "correct_answer": "Option D"
+    },
+    {
+      "id": "TS1_Q29",
+      "number": 29,
+      "question": "A girl is locked in the dungeon of a castle. There are 5 chests in a row in the dungeon, one of which contains a key to escape, but the others contain poisonous snakes. The girl can only open one chest. She has 5 clues to help her make her choice:\nThe white chest is 2 places away from the chest with the key.\nThe black chest is at the far right and 2 places away from the white chest.\nThe red chest is not next to the chest with the key.\nThe yellow chest is to the left of the white one.\nThe purple chest is not next to the black or white chests.\nWhich chest should the girl open to find the key?",
+      "options": ["black", "red", "yellow", "purple"],
+      "reasoning": "From clue 2: black is at position 5 (far right) and 2 from white → white is at position 3. From clue 4: yellow is left of white (position 3) → yellow at position 1 or 2. From clue 5: purple is not next to black (pos 5) or white (pos 3) → not at positions 2 or 4 → purple at position 1. So yellow at position 2, red at position 4. From clue 1: white (pos 3) is 2 from key → key at position 1 or 5. From clue 3: red (pos 4) not next to key → key not at position 3 or 5. Combining: key at position 1. Position 1 = purple. The girl should open the purple chest.",
+      "correct_index": 3,
+      "correct_answer": "purple"
+    },
+    {
+      "id": "TS1_Q30",
+      "number": 30,
+      "question": "Zara's class wanted to decide what colour to paint their classroom. They decided to have a vote. Students could vote to change it to red, yellow or green. Everyone had to cast two votes, but they could not vote for the same colour twice. The colour would only be changed if everyone voted for the same colour; if this did not happen the room would be left unpainted. Every colour got at least one vote.\nKnowing one of the following would allow us to know the result of the vote. Which one is it?",
+      "options": [
+        "No student voted for both red and green.",
+        "Every student voted for either green or yellow, or both.",
+        "Red was the most popular vote.",
+        "Only two people voted for green."
+      ],
+      "reasoning": "Each student picks 2 of 3 colours. The possible vote pairs are: red+yellow, red+green, yellow+green. The room is painted only if all students voted for one common colour (unanimously). Option A: if no student voted for both red and green, every student chose either red+yellow or yellow+green. In both pairs, yellow is included. So EVERY student voted for yellow → yellow is unanimous and wins. Since at least one voted red+yellow (R gets a vote) and at least one voted yellow+green (G gets a vote), the constraint 'every colour got at least one vote' holds. We know the result: yellow. Options B–D don't uniquely determine the outcome.",
+      "correct_index": 0,
+      "correct_answer": "No student voted for both red and green."
+    }
+  ]
+}

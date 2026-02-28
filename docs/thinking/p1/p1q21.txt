@@ -1,0 +1,157 @@
+Thinking Skills — Practice Test 1 — Questions 21–30
+
+
+Q21
+Faisal: "To have any chance of passing your piano exam, you will need to practise for at least fifteen minutes, four times a week."
+Sajid: "I practise every day for twenty minutes or more, so I'm sure to pass the exam."
+Which one of these sentences shows the mistake Sajid has made?
+
+A Taking an exam can be a stressful experience.
+B Learning to play an instrument well requires many years of practice.
+C Practising alone is not as useful as having a lesson with your teacher.
+D Doing the minimum practice required does not guarantee success in the exam.
+
+
+Q22
+Dominoes are to be arranged in a square, on a table, face up, as shown below. New dominoes are placed so that neither of the numbers on them is placed next to the same number on another tile.
+
+[IMAGE: A 6×6 grid of domino halves forming a square frame with some internal tiles. Two positions are empty and must be filled. Below the grid are 5 available dominoes numbered 1–5.]
+
+The existing grid (reading left to right, top to bottom, where each cell shows a pip count and "__" marks an empty half that needs filling):
+
+Row 1:  4  1  4  3  4  1
+Row 2:  1  .  1  .  3  .  1  .  5  .  3
+Row 3:  4  5  3  4  5  .  __  .  6
+Row 4:  .  3  .  5  .  __  .  1  .  4  .  1
+Row 5:  .  1  .  __  .  6  .  5  .  1
+Row 6:  6  .  4  .  4  .  1
+         6  3  5  4  6  3
+
+Note: The grid is complex. The domino halves form a 6×6 arrangement with dominoes placed both horizontally and vertically. Two domino positions are empty.
+
+The five available dominoes (each shown as [left|right]):
+  Domino 1: [4|2]
+  Domino 2: [3|5]
+  Domino 3: [blank|1]
+  Domino 4: [5|4]
+  Domino 5: [5|6]
+
+The dominoes numbered 1–5 shown above may be used only once.
+Which of the two-domino combinations shown below will NOT complete the square?
+
+A 1 and 3
+B 2 and 5
+C 3 and 4
+D 4 and 5
+
+
+Q23
+There are six towns (A, B, C, D, E and F) in a region.
+Town B is north of Town C and northeast of Town A. Town C is north of Town D and west of Town E. Town F is east of Town E.
+Which town is northwest of Town D?
+
+A Town A
+B Town B
+C Town E
+D Town F
+
+
+Q24
+A politician said in a television interview: "The more trade that countries do with each other, the better it is for everyone."
+Which one of these statements, if true, best supports the politician's claim?
+
+A It is important for a country to have strong businesses.
+B Businesses do better when more people are buying their goods or services.
+C Countries that trade with each other are less likely to go to war against each other.
+D Different countries can sometimes make particular goods more cheaply than others.
+
+
+Q25
+Daniel wants to make as many cupcakes as possible from the ingredients he has at home.
+The recipe to make 8 cupcakes needs 100 g of flour, 100 g of sugar, 100 g of butter and 2 eggs.
+At home, he has 600 g of flour, 500 g of sugar, 300 g of butter and 5 eggs.
+What is the maximum number of cupcakes Daniel can make?
+
+A 12
+B 16
+C 20
+D 24
+
+
+Q26
+Whenever Mr Rudd's favourite team loses, it always puts him in a bad mood. And when Mr Rudd is in a bad mood, he always gives us extra homework.
+
+Wei: "We got extra homework last week — Mr Rudd's team must have lost!"
+Dylan: "If they lose this week, we're sure to get extra homework again!"
+If the information in the box is true, whose reasoning is correct?
+
+A Wei only
+B Dylan only
+C Both Wei and Dylan
+D Neither Wei and Dylan
+
+
+Q27
+Three balls — each of which is either red or yellow — lie in a straight line on a pool table. Aziz strikes the first ball, which is red. That ball hits the middle ball. The middle ball then hits the last ball, which is yellow.
+On the basis of this information, which one of the following statements must be true?
+
+A Only one of the balls was red.
+B A red ball hit a yellow ball.
+C A yellow ball hit a red ball.
+D Only one of the balls was yellow.
+
+
+Q28
+A view of a single level of a building is shown below:
+
+[IMAGE: A 3D isometric view of a building level seen from the front-left, looking down. The building has an irregular footprint with internal walls creating several rooms:]
+
+The building's floor plan, derived from the 3D view:
+- Overall shape: wider than deep, roughly cross-shaped or T-shaped
+- Upper-left area: one medium room (roughly rectangular)
+- Upper-right area: two smaller rooms side by side, separated by a wall
+- Lower area: one large room spanning most of the width
+- A narrow connecting section between upper and lower areas
+- Wall openings/doorways connect the rooms
+
+Which one of the following drawings represents the floor plan for this level of the building?
+
+[IMAGE: Four 2D floor plan options A–D, each showing a different arrangement of rooms within a similar overall outline. The plans differ in the placement and number of internal walls.]
+
+Option A: Cross-shaped outline. Upper section has two rooms (one small left, one medium right). Lower section has one large room. Rooms connected by narrow middle section.
+
+Option B: Cross-shaped outline. Upper section has one large room on left, one smaller room on right. Lower section has two rooms side by side.
+
+Option C: Cross-shaped outline. Upper section has one small room on left, one medium room on right. Lower section has one large room. Internal wall arrangement differs from A.
+
+Option D: Cross-shaped outline. Upper section has one large room spanning the width. Lower section has two rooms (one medium left, two smaller right). Internal wall arrangement differs from others.
+
+A Option A
+B Option B
+C Option C
+D Option D
+
+
+Q29
+A girl is locked in the dungeon of a castle. There are 5 chests in a row in the dungeon, one of which contains a key to escape, but the others contain poisonous snakes. The girl can only open one chest. She has 5 clues to help her make her choice:
+The white chest is 2 places away from the chest with the key.
+The black chest is at the far right and 2 places away from the white chest.
+The red chest is not next to the chest with the key.
+The yellow chest is to the left of the white one.
+The purple chest is not next to the black or white chests.
+Which chest should the girl open to find the key?
+
+A black
+B red
+C yellow
+D purple
+
+
+Q30
+Zara's class wanted to decide what colour to paint their classroom. They decided to have a vote. Students could vote to change it to red, yellow or green. Everyone had to cast two votes, but they could not vote for the same colour twice. The colour would only be changed if everyone voted for the same colour; if this did not happen the room would be left unpainted. Every colour got at least one vote.
+Knowing one of the following would allow us to know the result of the vote. Which one is it?
+
+A No student voted for both red and green.
+B Every student voted for either green or yellow, or both.
+C Red was the most popular vote.
+D Only two people voted for green.

@@ -1,0 +1,173 @@
+Thinking Skills — Practice Test 1 — Questions 11–20
+
+
+Q11
+When Kinta was learning to drive his instructor told him: "To have even a chance of passing your driving test you must have had at least 20 hours of driving practice."
+If Kinta's instructor is correct, which one of these statements will be true?
+
+A All the learner drivers who have had 20 hours or more of practice will pass their test.
+B None of the learner drivers who have had less than 20 hours of practice will pass their test.
+C Some of the learner drivers who have had less than 20 hours of practice will pass their test.
+D Only the learner drivers who have had less than 20 hours of practice will pass their test.
+
+
+Q12
+An emu's egg is dark green, speckled with white spots, and can measure up to 13 cm long. Only an ostrich's egg is larger.
+
+Charlotte: "This egg is dark green, and fairly large, so it must be an emu's."
+Oliver: "But it's only about 10 cm long, so it can't be!"
+If the information in the box is true, whose reasoning is correct?
+
+A Charlotte only
+B Oliver only
+C Both Charlotte and Oliver
+D Neither Charlotte nor Oliver
+
+
+Q13
+A piece of string is initially held end-to-end in a straight line. A mark is made in the middle of the string. The string is then folded in half and the new ends again pulled tight. A mark is made in the middle of the strands of folded string. This process is then repeated a third time.
+The string is then unfolded and its ends pulled so that it is once again in its initial straight line.
+The distance between marks on the string is found to be 4 cm.
+How long is the piece of string?
+
+A 16 cm
+B 24 cm
+C 28 cm
+D 32 cm
+
+
+Q14
+Mrs Hughes: "I know that ten of the children in my class are short-sighted, but I only saw seven wearing glasses this morning. So some of the class must have been wearing contact lenses."
+Which one of the following sentences shows the mistake Mrs Hughes has made?
+
+A She did not include the children in other classes.
+B She did not say which children must have been wearing contact lenses.
+C Some of the short-sighted children might not have been wearing either glasses or contact lenses.
+D Some of the children who have normal eyesight now might need glasses in the future.
+
+
+Q15
+Jess, Kamilla, Lucy, and Max are seated around a table on a train. Two of them are facing forwards (in the direction of travel) and two are facing backwards. Two have window seats and the other two have aisle seats.
+I know that:
+Jess is sitting diagonally opposite Lucy;
+Max is facing forwards;
+Kamilla is next to Jess.
+Which one of the following do I also know?
+
+A Lucy is travelling backwards.
+B Lucy has a window seat.
+C Kamilla has an aisle seat.
+D Jess is sitting opposite Max.
+
+
+Q16
+The diagram shows one of a number of ways that five different shapes can be arranged together to form a square.
+
+[IMAGE: A square divided into 5 irregular pieces. The square is on a 4×4 grid. The five pieces, labelled 1–5, are arranged as follows:]
+
+Original square (4×4 grid, each cell labelled by piece number):
+    1  1  2  2
+    1  3  3  2
+    4  3  5  5
+    4  4  4  5
+
+Piece 1: L-shape (3 cells — top-left corner + cell below)
+Piece 2: L-shape (3 cells — top-right column of 2 + cell left of bottom)
+Piece 3: T/S-shape (4 cells — center cross/zigzag)
+Piece 4: L-shape (4 cells — bottom-left area)
+Piece 5: L-shape (3 cells — bottom-right column of 2 + cell left of top)
+
+Note: Pieces 3 and 4 have 4 cells each; pieces 1, 2, and 5 have 3 cells each (not all are simple L shapes — some have step-like edges at half-grid offsets).
+
+Which one of the following squares consists of the same five shapes as the square above? (They may be turned over.)
+
+[IMAGE: Four squares A–D, each divided into 5 pieces with different arrangements. The pieces in each option have slightly different shapes from each other.]
+
+Option A (4×4 grid):
+    1  2  2  2
+    1  1  3  2
+    4  1  3  3
+    4  4  5  5
+
+Option B (4×4 grid):
+    1  1  2  2
+    3  1  2  4
+    3  3  4  4
+    5  5  5  4
+
+Option C (4×4 grid):
+    1  2  2  2
+    1  1  3  2
+    1  4  3  3
+    4  4  5  5
+
+Option D (4×4 grid):
+    1  1  2  2
+    3  1  1  2
+    3  3  4  4
+    5  5  4  4
+
+A Option A
+B Option B
+C Option C
+D Option D
+
+
+Q17
+An environmentalist says: "Plastic pollution in our oceans is not just a problem for the creatures that live there — it affects us too."
+Which one of these statements, if true, best supports the environmentalist's claim?
+
+A Only a small proportion of plastic is recycled.
+B Many things made of plastic could be made from environmentally friendly alternatives.
+C Plastics are durable and can last for over 500 years.
+D Plastics have been found in fish sold in supermarkets.
+
+
+Q18
+When the fire alarm goes off, it could either be a real fire, or it could be a fire drill. Fire drills can be scheduled for any day of the week, but they always happen at exactly 2 o'clock in the afternoon.
+
+Yuri: "If the fire alarm goes off during the morning, you know it must be a real fire!"
+Bindi: "Even if the fire alarm is not going off, it doesn't mean that there isn't a fire."
+If the information in the box is true, whose reasoning is correct?
+
+A Yuri only
+B Bindi only
+C Both Yuri and Bindi
+D Neither Yuri nor Bindi
+
+
+Q19
+At a school, exams are held at the end of each year. A prize is awarded in each subject to the student who has made the biggest improvement in his/her exam mark since the previous year. In Year 9, the marks achieved by the six students in the mathematics class were as follows:
+
+  Uma     84
+  Finn    82
+  Lily    75
+  Arlo    73
+  Leon    73
+  Sophie  69
+
+At the end of Year 10, their marks were as follows:
+
+  Finn    88
+  Lily    86
+  Uma     79
+  Arlo    78
+  Sophie  78
+  Leon    73
+
+Which student won the Year 10 prize for mathematics?
+
+A Finn
+B Lily
+C Uma
+D Sophie
+
+
+Q20
+Arthur, Bilal, Conor, and David play regularly in a sports team. The coach has just told them: "If Arthur does not play tomorrow, then Bilal will play. If Arthur does play, then Conor will play in place of David."
+So, if Bilal does not play tomorrow, which of the other three will be in the team?
+
+A Arthur only
+B David only
+C Arthur and Conor
+D Conor and David
