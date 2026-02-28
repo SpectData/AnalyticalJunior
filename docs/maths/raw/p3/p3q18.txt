@@ -1,0 +1,12 @@
+Q18
+
+[Diagram: Two thermometers side by side, scaled 0-30 degrees C. The outside thermometer shows approximately 4.5 degrees C. The inside thermometer shows approximately 21 degrees C.]
+
+These thermometers show the temperature outside and inside.
+What is the difference between the temperature outside and the temperature inside?
+
+A 15 degrees C
+B 16 degrees C
+C 16 1/2 degrees C
+D 17 degrees C
+E 17 1/2 degrees C

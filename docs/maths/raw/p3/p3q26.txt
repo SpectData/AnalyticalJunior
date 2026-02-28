@@ -1,0 +1,12 @@
+Q26
+
+20 boxes are going to be packed into bags.
+Each box has a mass of 400 grams.
+Each bag can hold a mass of up to 1.5 kilograms.
+What is the smallest number of bags needed to pack all the boxes?
+
+A 3
+B 5
+C 6
+D 7
+E 10

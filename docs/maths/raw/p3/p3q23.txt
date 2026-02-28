@@ -1,0 +1,12 @@
+Q23
+
+[Diagram: A vertical container with a scale from 0 (bottom) to 40 mL (top). The scale has evenly spaced tick marks. The water level (shown by shading) is at approximately 60 percent of the way from bottom to top. The container has straight sides.]
+
+Birrani is measuring water in a container. This container has an unusual scale.
+What is the volume of water Birrani has?
+
+A 24 mL
+B 25 mL
+C 26 mL
+D 28 mL
+E 32 mL

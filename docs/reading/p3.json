@@ -1,0 +1,319 @@
+{
+  "meta": {
+    "paper": "Practice Paper 3",
+    "section": "reading",
+    "question_type": "long",
+    "description": "NSW Opportunity Class Placement Test — Reading Comprehension",
+    "total_questions": 25
+  },
+  "passages": [
+    {
+      "id": "P3_PASSAGE_1",
+      "title": "The golden egg",
+      "type": "comprehension",
+      "source": "'The Phoenix and the Carpet' (1904) by Edith Nesbit",
+      "text": "When the baby had been put to bed the four children sat sadly round the fire in the nursery. 'I wish they taught magic at school,' Jane sighed. 'I believe if we could do a little magic it might make something happen.'\n'I wonder how you begin?' Robert looked round the room, but he got no ideas from the faded green curtains, or the drab Venetian blinds. Even the new carpet suggested nothing, though its pattern was a very wonderful one, and seemed as though it were just going to make you think of something.\n'Let's get the Ingoldsby Legends book. There's a thing about abracadabra there,' said Cyril, yawning. 'We may as well play magic.'\nSo they traced strange figures on the floor with chalk. And nothing happened. Then Anthea said, 'I'm sure a magic fire ought to be made of sweet smelling wood, and have magic essences in it.'\n'I don't know any sweet smelling wood except cedar,' said Robert, 'but I've got some ends of cedar-wood pencil.' So they burned those. And still nothing happened.\n'Let's burn some of the eucalyptus oil we have for colds,' said Anthea.\nAnd they did. It certainly smelled very strong. Then they got some clean tea-cloths from the kitchen and waved them over the magic chalk-tracings. Robert's tea-cloth caught the golden egg they had found that day and whisked it off the mantelpiece, and it fell into the fender and rolled under the grate and lay glowing in the nest of hot ashes.\n'It's not smashed, anyhow,' said Robert and he put his hand under the grating and picked up the egg. But the egg was much hotter than anyone would have believed it could possibly get in such a short time and he dropped it with a cry of 'Bother!' It fell on the top bar of the grate and bounced right into the glowing heart of the fire.\n'Look at it! Look!' cried Anthea. 'I do believe something is going to happen!'\nFor the egg was now red-hot, and inside it something was moving. Next moment there was a soft cracking sound; the egg burst in two, and out of it came a flame-coloured bird. It rested a moment among the flames and the four children could see it growing bigger and bigger under their eyes. It rose in its nest of fire, stretched its wings, and flew out into the room. It flew round and round, and where it passed the air was warm. Then it perched on the fender. The children looked at each other. Then Cyril put out a hand towards the bird. It put its head on one side, as you may have seen a parrot do when it is just going to speak, and said, 'Be careful. I am not nearly cool yet.'\nThey looked at the bird, and it was certainly worth looking at. Its feathers were like gold. 'I believe I know what it is,' said Robert. 'I've seen a picture in the encyclopaedia.'\nHe hurried away but when he came back holding out the book and crying, 'I say, look here!' the others all said 'Hush!' for the bird was speaking.\n'Which of you,' it was saying, 'put the egg into the fire?'\n'He did,' said three voices, and three fingers pointed at Robert. The bird bowed; at least it was more like that than anything else.\n'I am your grateful debtor,' it said with a high-bred air.\nThe children were all choking with wonder and curiosity — all except Robert. He said 'I know who you are.'\nAnd he showed them a picture of a bird sitting in a nest of flames.\n'You are the Phoenix,' said Robert; and the bird was quite pleased.\n'My fame has lived then for 2000 years. Allow me to look at my portrait,' it said. 'It's not a flattering likeness.'\n'I can read you something about yourself, if you like.'\nThe Phoenix nodded, and Robert read\n'Phoenix — in ornithology, fabulous bird of antiquity.'\n'Antiquity is quite correct,' said the Phoenix,\nRobert continued, 'The ancients speak of this bird as the only one of its kind. They describe it as about the size of an eagle.'\n'Eagles are of different sizes,' the Phoenix said. 'It's not at all a good description. Please go on reading.'\n'Its neck is covered with feathers of a gold colour,' Robert went on, 'and the rest of its body purple; only the tail white. They say that when advanced in age it builds itself a pile of sweet wood and aromatic gums, fires it with the wafting of its wings, and thus burns itself, and that from its ashes arises a worm, which in time grows up to be a Phoenix. Hence the Phoenicians gave —'\n'Never mind what they gave,' said the Phoenix, ruffling its golden feathers. 'That book ought to be destroyed. It's most inaccurate. The rest of my body was never purple, and as for my tail, well, I simply ask you, is it white?'\n'No, it's not,' said everybody.\n'No, and it never was,' said the Phoenix. 'And that about the worm is just a vulgar insult. The Phoenix has an egg, like all respectable birds. It makes a pile — that part's right — and it lays its egg, and it burns itself; and it wakes up in its egg, and goes on living again, and so on for ever and ever. I can't tell you how weary I got of it — such a restless existence; no repose.'\n'But how did your egg get here?' asked Anthea.\n'Ah, that's my life secret,' said the Phoenix.",
+      "questions": [
+        {
+          "id": "P3_Q1",
+          "number": 1,
+          "question": "How are the children feeling at the beginning of the extract?",
+          "options": [
+            "worried about the baby",
+            "depressed by the shabbiness of the room",
+            "frustrated by the rules they have to follow",
+            "unsure how to occupy themselves"
+          ],
+          "reasoning": "The children 'sat sadly round the fire' after the baby was put to bed. Jane wishes magic were taught at school so 'it might make something happen.' Robert looks around the room for ideas but gets none. Cyril yawns and says 'We may as well play magic.' They are bored and casting about for something to do. Option A is wrong — the baby is mentioned only as context for timing. Option B — while the room is described as faded/drab, they aren't depressed by it; Robert is just looking for inspiration. Option C has no support in the text.",
+          "correct_index": 3,
+          "correct_answer": "unsure how to occupy themselves"
+        },
+        {
+          "id": "P3_Q2",
+          "number": 2,
+          "question": "The children try to make magic by",
+          "options": [
+            "adapting old household traditions.",
+            "using everyday objects they have at home.",
+            "reciting a sequence of words from a book.",
+            "remembering instructions they were taught in the past."
+          ],
+          "reasoning": "The children use chalk (to trace figures), cedar-wood pencil ends (burned for smell), eucalyptus oil ('we have for colds'), and tea-cloths from the kitchen. All are ordinary household items repurposed for their magic attempt. Option A is wrong — they aren't adapting traditions. Option C — they reference the Ingoldsby Legends book for abracadabra but the text doesn't say they recite words from it; instead they draw chalk figures and burn things. Option D is unsupported — nobody taught them magic.",
+          "correct_index": 1,
+          "correct_answer": "using everyday objects they have at home."
+        },
+        {
+          "id": "P3_Q3",
+          "number": 3,
+          "question": "When Robert tries to move the egg from under the fireplace grate,",
+          "options": [
+            "he sees it has something inside it.",
+            "he accidentally cracks the shell.",
+            "he is unable to keep hold of it.",
+            "he burns his hand on the grate."
+          ],
+          "reasoning": "The text says: 'he put his hand under the grating and picked up the egg. But the egg was much hotter than anyone would have believed... and he dropped it.' He picked it up but couldn't keep hold of it because of the heat. Option A is wrong — he doesn't see anything inside at this point (that comes later after it falls into the fire). Option B is wrong — the egg doesn't crack until it's in the fire. Option D is wrong — he burns himself on the egg, not the grate.",
+          "correct_index": 2,
+          "correct_answer": "he is unable to keep hold of it."
+        },
+        {
+          "id": "P3_Q4",
+          "number": 4,
+          "question": "What detail particularly annoys the Phoenix about the encyclopaedia entry?",
+          "options": [
+            "the reference to a worm",
+            "the fact that its tail is ignored",
+            "the quotation from the Phoenicians",
+            "the mention of its great age"
+          ],
+          "reasoning": "The Phoenix calls the worm account 'just a vulgar insult' — the strongest language it uses about any part of the entry. It is annoyed by other inaccuracies (body colour, tail colour) but responds to those with mild corrections. The word 'vulgar insult' signals particular annoyance. Option B — the tail isn't ignored; it's described as white, which the Phoenix corrects but without the same intensity. Option C — it dismisses the Phoenicians ('Never mind what they gave') but isn't particularly annoyed. Option D — it agrees antiquity is correct.",
+          "correct_index": 0,
+          "correct_answer": "the reference to a worm"
+        },
+        {
+          "id": "P3_Q5",
+          "number": 5,
+          "question": "The language used by the Phoenix",
+          "options": [
+            "is repetitive and limited.",
+            "is copied from that of the children.",
+            "is a mixture of formal and less formal styles.",
+            "is difficult for the children to follow."
+          ],
+          "reasoning": "The Phoenix uses formal phrases like 'I am your grateful debtor', 'with a high-bred air', 'in ornithology, fabulous bird of antiquity' — but also informal expressions like 'well, I simply ask you, is it white?', 'just a vulgar insult', 'I can't tell you how weary I got of it.' This mix of elevated and conversational register is characteristic throughout. Option A is wrong — its language is varied. Option B is wrong — its style is distinctly different from the children's. Option D is unsupported — the children understand it fine.",
+          "correct_index": 2,
+          "correct_answer": "is a mixture of formal and less formal styles."
+        },
+        {
+          "id": "P3_Q6",
+          "number": 6,
+          "question": "What impression is given of the Phoenix throughout this extract?",
+          "options": [
+            "It has a high opinion of itself.",
+            "It could be dangerous if angered.",
+            "It has been mistreated in the past.",
+            "It is unsure of this new environment."
+          ],
+          "reasoning": "The Phoenix is 'quite pleased' that its fame has lasted 2000 years, dismisses the encyclopaedia portrait as 'not a flattering likeness', demands corrections to inaccurate descriptions of its appearance, calls the worm story a 'vulgar insult', and speaks with 'a high-bred air.' Throughout, it displays vanity and self-importance. Option B — there's no sense of danger. Option C — 'weary' of its existence but not mistreated. Option D — it seems perfectly comfortable and self-assured.",
+          "correct_index": 0,
+          "correct_answer": "It has a high opinion of itself."
+        }
+      ]
+    },
+    {
+      "id": "P3_PASSAGE_2",
+      "title": "Twilight",
+      "type": "comprehension",
+      "source": "'Twilight' by Henry Wadsworth Longfellow",
+      "text": "Twilight\n\n1 The twilight is sad and cloudy,\n     The wind blows wild and free,\n     And like the wings of sea-birds\n     Flash the white caps of the sea.\n\n2 But in the fisherman's cottage\n     There shines a ruddier light,\n     And a little face at the window\n     Peers out into the night.\n\n3 Close, close it is pressed to the window,\n     As if those childish eyes\n     Were looking into the darkness,\n     To see some form arise.\n\n4 And a woman's waving shadow\n     Is passing to and fro,\n     Now rising to the ceiling,\n     Now bowing and bending low.\n\n5 What tale do the roaring ocean,\n     And the night-wind, bleak and wild,\n     As they beat at the crazy casement,\n     Tell to that little child?\n\n6 And why do the roaring ocean,\n     And the night-wind, wild and bleak,\n     As they beat at the heart of the mother,\n     Drive the color from her cheek?",
+      "questions": [
+        {
+          "id": "P3_Q7",
+          "number": 7,
+          "question": "In verse 1, what is the ocean compared with?",
+          "options": [
+            "clouds",
+            "birds",
+            "caps",
+            "wind"
+          ],
+          "reasoning": "The simile is: 'And like the wings of sea-birds / Flash the white caps of the sea.' The white caps (foam crests) of the ocean are compared to the wings of sea-birds — both white, flashing. The ocean's whitecaps are likened to birds. Option A — clouds aren't part of the comparison. Option C — 'caps' are the ocean feature being described, not what it's compared to. Option D — wind is mentioned separately.",
+          "correct_index": 1,
+          "correct_answer": "birds"
+        },
+        {
+          "id": "P3_Q8",
+          "number": 8,
+          "question": "In verse 5, the writer",
+          "options": [
+            "wonders what the child is thinking about the storm.",
+            "questions whether the child is safe from the storm.",
+            "remembers his own experiences of storms as a child.",
+            "suggests that the child need not be afraid of the storm."
+          ],
+          "reasoning": "Verse 5 asks: 'What tale do the roaring ocean, / And the night-wind, bleak and wild, / As they beat at the crazy casement, / Tell to that little child?' The poet wonders what story/impression the storm communicates to the child — what the child thinks or imagines. Option B is wrong — safety isn't questioned. Option C is unsupported — no personal memory is invoked. Option D is wrong — the tone is questioning, not reassuring.",
+          "correct_index": 0,
+          "correct_answer": "wonders what the child is thinking about the storm."
+        },
+        {
+          "id": "P3_Q9",
+          "number": 9,
+          "question": "The poem suggests that the woman is",
+          "options": [
+            "exhausted by the child's behaviour.",
+            "irritated by the noise of the storm.",
+            "respectful of the storm's power.",
+            "fearful for the return of the fisherman."
+          ],
+          "reasoning": "The poem is set in a 'fisherman's cottage' during a violent storm. The woman (mother) paces 'to and fro' — a classic sign of anxiety. Verse 6 asks why the ocean and wind 'beat at the heart of the mother' and 'Drive the color from her cheek' — she is pale with fear. Her husband the fisherman is presumably out at sea in this storm. Option A is unsupported. Option B — she's not irritated, she's frightened. Option C — 'respectful' is too mild for someone going pale.",
+          "correct_index": 3,
+          "correct_answer": "fearful for the return of the fisherman."
+        },
+        {
+          "id": "P3_Q10",
+          "number": 10,
+          "question": "Which of the following does the writer describe as having a human emotion?",
+          "options": [
+            "the cottage (verse 2)",
+            "the shadow (verse 4)",
+            "the twilight (verse 1)",
+            "the ocean (verse 5)"
+          ],
+          "reasoning": "Verse 1 opens: 'The twilight is sad and cloudy.' Sadness is a human emotion attributed to the twilight — this is personification. Option A — the cottage 'shines' but isn't given emotion. Option B — the shadow 'passes to and fro' and 'bows' but these are physical movements, not emotions. Option D — the ocean 'roars' and 'beats' — actions, not emotions.",
+          "correct_index": 2,
+          "correct_answer": "the twilight (verse 1)"
+        },
+        {
+          "id": "P3_Q11",
+          "number": 11,
+          "question": "The scene in this poem is viewed from",
+          "options": [
+            "out at sea.",
+            "inside the cottage.",
+            "between the sea and the cottage.",
+            "above the sea, as a bird's-eye view."
+          ],
+          "reasoning": "The observer sees the outside (the sea, whitecaps, wind) and also sees 'a little face at the window' and 'a woman's waving shadow' — these are details visible from outside the cottage, looking in through the window. The viewpoint is somewhere between the sea and the cottage, seeing both. Option A is wrong — you couldn't see a face at the window from far out at sea. Option B is wrong — if inside, you wouldn't describe the face 'peering out into the night' or see a shadow on the window from inside. Option D is unsupported.",
+          "correct_index": 2,
+          "correct_answer": "between the sea and the cottage."
+        }
+      ]
+    },
+    {
+      "id": "P3_PASSAGE_3",
+      "title": "The History of Escalators",
+      "type": "sentence_insertion",
+      "text": "Today, escalators are a routine part of modern existence, moving people in large public buildings throughout the world. They're practical, user-friendly and relatively safe, but this present-day convenience has been a product of many false starts as well as some imaginative thinking.\n\nThe first person to design an escalator was the inventor Nathan Ames, in 1848. His patent for the 'Revolving Stairs' would allow people to 'ascend and descend from one level of a building to another, without exerting any muscular strength'. When Ames wrote this, he was thinking this apparatus would exist in private residences. 12 ............ As with the rest of his inventions, though, Ames never even tried to build this escalator; it did not progress beyond the point of the idea being registered.\n\n13 ............ Lee Gray, an architecture professor at the University of North Carolina-Charlotte, says that even if someone had constructed a model of Ames' Revolving Stairs, it is doubtful it would have succeeded — there was no provision for hooking it to a motor. The next attempt at moving stairs came in 1889, when an amateur Philadelphia engineer named Leamon Souder earned a patent for 'The Stairway', a moving staircase that was pulled by an 'endless chain' which would be moved hydraulically. Like Ames, Souder never actually built his model. 14 ............ Souder described his invention in a manner that made it plausible using the new technologies of the day.\n\nIn 1896, Jesse Reno took the next step, at Coney Island, a fairground in New York. 15 ............ Examples included the roller-coaster and large-scale electric lighting. So it was a great place for Reno to get publicity for his 'Inclined Elevator'. Essentially a slow-moving single platform conveyor belt, the invention carried people up a short rise to Coney Island's Iron Pier, with moving handrails to ensure people could steady themselves as they moved upwards. 16 ............ But although it was so popular, it was not especially effective as a way of transporting people. Its electric motor only allowed it to go at a speed of 90 feet per minute, about 30 percent of an adult human's walking pace.\n\nThe explorer George Wheeler registered a patent for a similar idea around the same time as Reno, and his design featured actual steps like the escalators of today. Before the production stage, the patent was bought from Wheeler and the invention was named the 'escalator', based on the Latin word for steps: scala. Elisha Otis and his famed elevator company produced a working model for the 1900 Paris Exposition. Looking more like a modern escalator than Reno's version, the escalator came complete with steps and a track system. Professor Gray says the demonstration was a hit at the event, serving dual purposes. 17 ............\n\nBy 1911, Reno's company had installed more than 20 escalators in North America and, by 1920, Otis had installed 350 escalators across the world, mostly in department stores and mass transit systems. Some of these are still carrying customers up and down today.",
+      "gaps": ["12", "13", "14", "15", "16", "17"],
+      "sentences": [
+        {
+          "label": "A",
+          "text": "The design might not have worked anyway."
+        },
+        {
+          "label": "B",
+          "text": "Many people's first exposure to modern inventions happened here."
+        },
+        {
+          "label": "C",
+          "text": "The machinery was designed to benefit those who could not climb stairs in their homes."
+        },
+        {
+          "label": "D",
+          "text": "In just over a week as a test project, the invention garnered more than 75,000 riders."
+        },
+        {
+          "label": "E",
+          "text": "As well as this, a special guard called a comb platform prevented clothes from getting caught."
+        },
+        {
+          "label": "F",
+          "text": "Yet this was an innovation that was more sophisticated in its engineering."
+        },
+        {
+          "label": "G",
+          "text": "Not only did it display the technology, it alleviated foot traffic."
+        }
+      ],
+      "gap_reasoning": {
+        "12": "Gap 12 follows 'he was thinking this apparatus would exist in private residences' and precedes 'As with the rest of his inventions, though, Ames never even tried to build this escalator.' Sentence C ('The machinery was designed to benefit those who could not climb stairs in their homes') elaborates on the private-residence purpose — helping people who struggle with stairs at home. It links the residential context to the next sentence about Ames never building it.",
+        "13": "Gap 13 starts a new paragraph and precedes the professor saying Ames' design probably wouldn't have worked because there was no motor. Sentence A ('The design might not have worked anyway') introduces this criticism, which the professor then explains in detail.",
+        "14": "Gap 14 follows 'Like Ames, Souder never actually built his model' and precedes 'Souder described his invention in a manner that made it plausible using the new technologies of the day.' Sentence F ('Yet this was an innovation that was more sophisticated in its engineering') provides a contrast — Souder didn't build it either, yet his design was more advanced, as the next sentence about 'new technologies of the day' confirms.",
+        "15": "Gap 15 follows the mention of Coney Island as a fairground and precedes 'Examples included the roller-coaster and large-scale electric lighting.' Sentence B ('Many people's first exposure to modern inventions happened here') introduces Coney Island as a showcase for new inventions, and the 'Examples included...' sentence then lists specific ones.",
+        "16": "Gap 16 follows the description of handrails and precedes 'But although it was so popular'. Sentence D ('In just over a week as a test project, the invention garnered more than 75,000 riders') explains why it was 'so popular' — the huge ridership proves popularity, and the 'But' then introduces its limitations.",
+        "17": "Gap 17 follows 'serving dual purposes' and ends the paragraph. Sentence G ('Not only did it display the technology, it alleviated foot traffic') spells out the two purposes — showcasing the technology and reducing pedestrian congestion at the exposition."
+      },
+      "extra_sentence_reasoning": "Sentence E ('As well as this, a special guard called a comb platform prevented clothes from getting caught') is the extra sentence. It describes a safety feature that doesn't fit naturally into any gap. It could theoretically follow the handrail mention, but gap 16 needs to establish popularity (for the 'But although it was so popular' transition), which Sentence D does better.",
+      "correct_mapping": {
+        "12": "C",
+        "13": "A",
+        "14": "F",
+        "15": "B",
+        "16": "D",
+        "17": "G"
+      },
+      "extra_sentence": "E"
+    },
+    {
+      "id": "P3_PASSAGE_4",
+      "title": "Colour",
+      "type": "extract_matching",
+      "extracts": [
+        {
+          "label": "A",
+          "text": "The discovery of a 100,000-year-old 'paint workshop' in the Blombos Cave, in South Africa — complete with various ochres, bones, charcoal, grinding-stones, abalone shell containers and mixing vessels, but without any contemporaneous cave painting — suggests that the pigments were being used at that time for body painting and face painting, rather than cave art. The same is true of sacred sites in Australia, such as the Arnhem Land rock shelters, where used lumps of red ochre pigment were discovered, but no sign of any Aboriginal rock art. It therefore appears that by the time humans started to create the first prehistoric art, they would already have had some experience in sourcing, extracting and blending pigments for personal decoration. But many of the colours and hues used to dye bodies, faces and hair were made from animal and vegetable sources, which were only effective in the short-term. So artists gradually switched to mineral-based pigments derived from iron oxide, manganese and kaolin, which didn't fade."
+        },
+        {
+          "label": "B",
+          "text": "I had never seen a painting made from the beginning. I thought that you painted what you saw, using the colours you saw.\n\nHe taught me.\n\nHe began the painting of the baker's daughter with a layer of pale grey on the white canvas. Then he made reddish-brown marks all over it to indicate where the girl and the table and pitcher and window would go. After that I thought he would begin to paint what he saw — a girl's face, a blue skirt, a yellow and black bodice, a silver pitcher and basin. Instead he painted patches of colour — black where her skirt would be, ochre for the bodice, red for the pitcher and the basin it sat in. He spent a long time on these false colours, as I called them.\n\nBut then he began to add new colours on top of these. He painted a light blue over the girl's skirt, and it became a blue through which bits of black could be seen, darker in the shadow of the table, lighter closer to the window. The pitcher and basin were the most complicated — they became yellow, and brown, and green, and blue. They reflected the pattern of the rug, the girl's bodice, the blue cloth draped over the chair — everything but their true silver colour. And yet they looked as they should, like a pitcher and a basin.\n\nAfter that I could not stop looking at things."
+        },
+        {
+          "label": "C",
+          "text": "The universe is pulsating with an energy that we call electromagnetic waves. The frequency range of electromagnetic waves is huge. But the average human eye can detect only a very small portion of this vast range — only, in fact, the portion with wavelengths between 0.00038 and 0.00075 millimetres. We know this section as visible light. When our eyes see the whole range of visible light together, they read it as 'white'. When some of the wavelengths are missing, they see it as 'coloured'.\n\nSo when we see 'red', what we are actually seeing is that portion of the electromagnetic spectrum with a wavelength of about 0.0007 millimetres, in a situation where the other wavelengths are absent. It is our brain (and our language) which informs us it is 'red', and at the same time may attach cultural labels that tell us it is powerful, or that it is the colour of love, or that it is a traffic sign which means we have to stop."
+        },
+        {
+          "label": "D",
+          "text": "Some Aboriginal artistic communities have chosen to stay with using traditional pigments from the earth — red ochre, yellow oxide, white pipeclay, and black charcoal. Other communities have moved on to a broader palette.\n\nColour choice is often arrived at through a group decision-making process in the community of Lajamanu. Lorna Fencer Napurrula was told by her peer group of artists that symbolic designs had to be painted in black and the dotting that went around the design had to be white. Lorna argued that she wasn't bound as an artist to continue to paint the symbols as they were used traditionally. A considerable argument went on between the Elders in the studio. This was eventually resolved and Lorna went on to use a broader colour palette in her paintings."
+        }
+      ],
+      "statements": [
+        {
+          "id": "P3_Q18",
+          "number": 18,
+          "text": "explains how people perceive different colours?",
+          "reasoning": "Extract C explains the science of colour perception: the human eye detects a small portion of the electromagnetic spectrum, and different wavelengths are perceived as different colours. 'When our eyes see the whole range of visible light together, they read it as white. When some of the wavelengths are missing, they see it as coloured.'",
+          "correct_extract": "C"
+        },
+        {
+          "id": "P3_Q19",
+          "number": 19,
+          "text": "describes someone becoming newly aware of colour?",
+          "reasoning": "Extract B's narrator begins: 'I had never seen a painting made from the beginning. I thought that you painted what you saw, using the colours you saw.' After watching the painter work with layered colours, the narrator says: 'After that I could not stop looking at things.' This describes a person becoming newly aware of how colour works in art and the world.",
+          "correct_extract": "B"
+        },
+        {
+          "id": "P3_Q20",
+          "number": 20,
+          "text": "refers to various meanings that one colour may convey?",
+          "reasoning": "Extract C discusses the colour red specifically: 'It is our brain (and our language) which informs us it is red, and at the same time may attach cultural labels that tell us it is powerful, or that it is the colour of love, or that it is a traffic sign which means we have to stop.' One colour (red) with multiple meanings — power, love, stop signal.",
+          "correct_extract": "C"
+        },
+        {
+          "id": "P3_Q21",
+          "number": 21,
+          "text": "explains why a change occurred in the composition of colouring materials?",
+          "reasoning": "Extract A explains: 'many of the colours and hues used to dye bodies, faces and hair were made from animal and vegetable sources, which were only effective in the short-term. So artists gradually switched to mineral-based pigments derived from iron oxide, manganese and kaolin, which didn't fade.' The reason for the change: animal/vegetable pigments faded; mineral-based ones didn't.",
+          "correct_extract": "A"
+        },
+        {
+          "id": "P3_Q22",
+          "number": 22,
+          "text": "mentions someone who was eager to use colour in an unconventional way?",
+          "reasoning": "Extract D describes Lorna Fencer Napurrula who 'argued that she wasn't bound as an artist to continue to paint the symbols as they were used traditionally' and went on to use 'a broader colour palette' — she was eager to break from convention and use colour in a non-traditional way.",
+          "correct_extract": "D"
+        },
+        {
+          "id": "P3_Q23",
+          "number": 23,
+          "text": "describes how our mental processes are involved in interpreting colour?",
+          "reasoning": "Extract C states: 'It is our brain (and our language) which informs us it is red, and at the same time may attach cultural labels.' The brain is a mental process — it interprets the wavelength as a colour and attaches cultural meaning. This is about the cognitive/mental side of colour interpretation, beyond just physical perception.",
+          "correct_extract": "C"
+        },
+        {
+          "id": "P3_Q24",
+          "number": 24,
+          "text": "says that the use of colour in one painting initially appeared to be wrong?",
+          "reasoning": "Extract B's narrator describes watching the painter use unexpected base colours: 'Instead he painted patches of colour — black where her skirt would be, ochre for the bodice, red for the pitcher and the basin it sat in. He spent a long time on these false colours, as I called them.' The narrator called them 'false colours' — they initially appeared wrong.",
+          "correct_extract": "B"
+        },
+        {
+          "id": "P3_Q25",
+          "number": 25,
+          "text": "gives evidence of the early use of coloured paints for a particular purpose?",
+          "reasoning": "Extract A describes '100,000-year-old paint workshop' discoveries with ochres and mixing vessels but no cave paintings, suggesting 'the pigments were being used at that time for body painting and face painting, rather than cave art.' This is evidence of early paint use for a particular purpose (body/face decoration).",
+          "correct_extract": "A"
+        }
+      ]
+    }
+  ]
+}

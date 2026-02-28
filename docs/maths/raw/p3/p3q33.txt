@@ -1,0 +1,15 @@
+Q33
+
+Cho saves money by putting it in a money box.
+At the start of Monday, the box is empty.
+At the end of Monday, the box contains $12.
+At the end of Wednesday, the box contains $30.
+At the end of Friday, the box contains $80.
+She puts in the same amount of money on each of Tuesday, Wednesday and Friday.
+How much money does she put in on Thursday?
+
+A $25
+B $29
+C $32
+D $39
+E $41

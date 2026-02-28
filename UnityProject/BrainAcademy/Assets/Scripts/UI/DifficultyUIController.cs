@@ -16,16 +16,8 @@ public class DifficultyUIController : MonoBehaviour
 
     void Start()
     {
-        // Set title based on current flow
         if (titleText != null)
-        {
-            if (GameManager.Instance.SelectedFlow == GameFlow.SnakeSpell)
-                titleText.text = "Snake Spellcaster \u2014 Select Difficulty";
-            else
-                titleText.text = GameManager.Instance.SelectedCategory == Category.Math
-                    ? "Math \u2014 Select Difficulty"
-                    : "Logic & Puzzles \u2014 Select Difficulty";
-        }
+            titleText.text = "Snake Spellcaster \u2014 Select Difficulty";
 
         backButton.onClick.AddListener(OnBackClicked);
         easyButton.onClick.AddListener(() => OnDifficultySelected(Difficulty.Easy));
@@ -37,11 +29,7 @@ public class DifficultyUIController : MonoBehaviour
     private void OnDifficultySelected(Difficulty difficulty)
     {
         GameManager.Instance.SelectedDifficulty = difficulty;
-
-        if (GameManager.Instance.SelectedFlow == GameFlow.SnakeSpell)
-            SceneTransitionManager.Instance.LoadSnakeSpell();
-        else
-            SceneTransitionManager.Instance.LoadQuizGame();
+        SceneTransitionManager.Instance.LoadSnakeSpell();
     }
 
     private void OnBackClicked()

@@ -11,8 +11,6 @@ public static class SceneBuilderMenu
     // Colors from AppColors
     private static readonly Color Purple60 = new Color(0.40f, 0.49f, 0.92f);     // #667EEA
     private static readonly Color Purple80 = new Color(0.46f, 0.29f, 0.64f);     // #764BA2
-    private static readonly Color MathBlue = new Color(0.29f, 0.56f, 0.85f);     // #4A90D9
-    private static readonly Color LogicOrange = new Color(0.90f, 0.49f, 0.13f);  // #E67E22
     private static readonly Color SnakeGreen = new Color(0.18f, 0.80f, 0.44f);   // #2ECC71
     private static readonly Color EasyGreen = new Color(0.15f, 0.68f, 0.38f);    // #27AE60
     private static readonly Color MediumYellow = new Color(0.95f, 0.61f, 0.07f); // #F39C12
@@ -66,20 +64,10 @@ public static class SceneBuilderMenu
         UIFactory.CreateTMP(statsCard.transform, "StreakLabel", "Best Streak",
             fontSize: 20, color: Color.gray);
 
-        // Category buttons
-        var mathBtn = UIFactory.CreateButton(canvas.transform, "MathButton",
-            "Mathematics", MathBlue, 32);
-        UIFactory.SetRect(mathBtn.gameObject, new Vector2(0.05f, 0.52f), new Vector2(0.95f, 0.68f),
-            new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
-
-        var logicBtn = UIFactory.CreateButton(canvas.transform, "LogicButton",
-            "Logic & Puzzles", LogicOrange, 32);
-        UIFactory.SetRect(logicBtn.gameObject, new Vector2(0.05f, 0.34f), new Vector2(0.95f, 0.50f),
-            new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
-
+        // Game button
         var snakeBtn = UIFactory.CreateButton(canvas.transform, "SnakeSpellButton",
             "Snake Spellcaster", SnakeGreen, 32);
-        UIFactory.SetRect(snakeBtn.gameObject, new Vector2(0.05f, 0.16f), new Vector2(0.95f, 0.32f),
+        UIFactory.SetRect(snakeBtn.gameObject, new Vector2(0.05f, 0.40f), new Vector2(0.95f, 0.56f),
             new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
 
         // Controller GO
@@ -89,8 +77,6 @@ public static class SceneBuilderMenu
         UIFactory.Wire(menuUI, "totalScoreText", totalScore);
         UIFactory.Wire(menuUI, "gamesPlayedText", gamesPlayed);
         UIFactory.Wire(menuUI, "bestStreakText", bestStreak);
-        UIFactory.Wire(menuUI, "mathButton", mathBtn);
-        UIFactory.Wire(menuUI, "logicButton", logicBtn);
         UIFactory.Wire(menuUI, "snakeSpellButton", snakeBtn);
 
         // Persistent managers (DontDestroyOnLoad singletons)

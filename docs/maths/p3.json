@@ -1,0 +1,392 @@
+{
+  "meta": {
+    "paper": "Practice Paper 3",
+    "section": "mathematical_reasoning",
+    "description": "NSW Opportunity Class Placement Test — Mathematical Reasoning",
+    "total_questions": 35
+  },
+  "questions": [
+    {
+      "id": "M3_Q1",
+      "number": 1,
+      "question": "An F-shape is made out of squares, as shown.\nHow will the F-shape look after it is turned a quarter of a turn anti-clockwise?",
+      "diagram": "An F-shape made of shaded squares on a grid. The F has a vertical bar of 5 squares on the left, a horizontal top bar of 3 squares extending right, and a horizontal middle bar of 2 squares extending right. Five answer options (A-E) each show a different rotation/reflection of the F-shape.",
+      "options": [
+        "F rotated 90 degrees clockwise",
+        "F rotated 180 degrees (upside-down)",
+        "F reflected vertically",
+        "F rotated with arms extending upward from the right",
+        "F rotated 90 degrees anti-clockwise — long horizontal bar at bottom, short arms going up on the left"
+      ],
+      "reasoning": "A quarter turn anti-clockwise (90 degrees CCW) transforms the vertical bar into a horizontal bar at the bottom, and the horizontal arms rotate to point upward on the left side. This matches option E.",
+      "correct_index": 4,
+      "correct_answer": "E"
+    },
+    {
+      "id": "M3_Q2",
+      "number": 2,
+      "question": "Amber wants to balance these scales.\nLeft pan: 12 kg and 14 kg. Right pan: 19 kg.\nWhich of the following methods would balance the scales?\n  1. Add 5 kg and 7 kg on the right.\n  2. Add 9 kg on the left and add 16 kg on the right.\n  3. Add 8 kg on the left and add 8 kg on the right.",
+      "diagram": "A balance scale. The left pan holds two weights: 12 kg and 14 kg (total 26 kg). The right pan holds one weight: 19 kg. The left side is tilted down (heavier).",
+      "options": [
+        "method 1 only",
+        "method 2 only",
+        "method 3 only",
+        "methods 1 and 2 only",
+        "methods 1 and 3 only"
+      ],
+      "reasoning": "Left = 26 kg, Right = 19 kg. Method 1: R = 19+5+7 = 31, L = 26. Not balanced. Method 2: L = 26+9 = 35, R = 19+16 = 35. Balanced! Method 3: L = 26+8 = 34, R = 19+8 = 27. Not balanced. Only method 2 works.",
+      "correct_index": 1,
+      "correct_answer": "method 2 only"
+    },
+    {
+      "id": "M3_Q3",
+      "number": 3,
+      "question": "The diagram is a map showing the positions of Nyla and Oscar's front doors.\nNyla's ruler measures distance in millimetres.\nThe scale is: 1 centimetre on the map represents 10 metres in real life.\nHow far apart are Nyla and Oscar's front doors in real life?",
+      "diagram": "A map showing two houses marked with X symbols. A ruler is placed diagonally between Nyla's house and Oscar's house. The ruler reads approximately 150 mm between the two house markers. Scale: 1 cm = 10 m.",
+      "options": ["110 m", "150 m", "190 m", "1100 m", "1500 m"],
+      "reasoning": "The ruler reads approximately 150 mm = 15 cm. Scale: 1 cm = 10 m. Distance = 15 x 10 = 150 m.",
+      "correct_index": 1,
+      "correct_answer": "150 m"
+    },
+    {
+      "id": "M3_Q4",
+      "number": 4,
+      "question": "When the puzzle below is completed, each row and each column will contain a correct number sentence.\nWhat number does the triangle represent?",
+      "diagram": "A cross-shaped number puzzle grid. Row 1: 14 + 13 = 27. Right column going down: 27 - 3 = 24. Row 2: 8 x 3 = 24. Left column going down: 8 x 6 = 48. Row 3: 48 - triangle = 10. The triangle symbol represents the unknown value.",
+      "options": ["26", "32", "38", "50", "58"],
+      "reasoning": "Row 1: 14 + 13 = 27. Right column: 27 - 3 = 24. Row 2: ? x 3 = 24, so ? = 8. Left column: 8 x 6 = 48. Row 3: 48 - triangle = 10, so triangle = 48 - 10 = 38.",
+      "correct_index": 2,
+      "correct_answer": "38"
+    },
+    {
+      "id": "M3_Q5",
+      "number": 5,
+      "question": "Which one of the following numbers is closest to 2?",
+      "options": ["1 3/4", "1 1/2", "2 2/3", "2 1/3", "2 1/2"],
+      "reasoning": "Distances from 2: 1 3/4 is 1/4 away. 1 1/2 is 1/2 away. 2 2/3 is 2/3 away. 2 1/3 is 1/3 away. 2 1/2 is 1/2 away. The smallest distance is 1/4, so 1 3/4 is closest to 2.",
+      "correct_index": 0,
+      "correct_answer": "1 3/4"
+    },
+    {
+      "id": "M3_Q6",
+      "number": 6,
+      "question": "What number do you get if you add 11 thousands, 11 hundreds, 11 tens and 11 ones?",
+      "options": ["11 111", "11 131", "11 231", "12 221", "11 111 111"],
+      "reasoning": "11 thousands = 11 000. 11 hundreds = 1 100. 11 tens = 110. 11 ones = 11. Sum = 11 000 + 1 100 + 110 + 11 = 12 221.",
+      "correct_index": 3,
+      "correct_answer": "12 221"
+    },
+    {
+      "id": "M3_Q7",
+      "number": 7,
+      "question": "Tristan has $20.\nHe wants to estimate the change he will receive when he buys three items at these prices: $6.45, $2.35, $8.85.\nTo estimate the total cost, he rounds each price to the nearest dollar and then adds the rounded values together.\nHow much change does he estimate he will get?",
+      "diagram": "Three price tags showing $6.45, $2.35, and $8.85.",
+      "options": ["$0", "$1", "$2", "$3", "$4"],
+      "reasoning": "$6.45 rounds to $6. $2.35 rounds to $2. $8.85 rounds to $9. Estimated total = $6 + $2 + $9 = $17. Estimated change = $20 - $17 = $3.",
+      "correct_index": 3,
+      "correct_answer": "$3"
+    },
+    {
+      "id": "M3_Q8",
+      "number": 8,
+      "question": "Andrea has these two objects, each made of identical cubes.\nIf she breaks them up into cubes, how many of the objects below can she make?",
+      "diagram": "Two identical flat rectangular LEGO-style objects, each made of unit cubes arranged in a 5x2 grid (10 cubes each, total 20 cubes). Below them is a smaller target object — a 2x1 domino shape made of 2 unit cubes.",
+      "options": ["6", "8", "10", "12", "14"],
+      "reasoning": "Each object has 5 x 2 = 10 cubes. Two objects = 20 cubes total. Each target shape uses 2 cubes. 20 / 2 = 10 target shapes can be made.",
+      "correct_index": 2,
+      "correct_answer": "10"
+    },
+    {
+      "id": "M3_Q9",
+      "number": 9,
+      "question": "Maisy is building a wall using bricks, one layer at a time.\nShe always completes one layer before she starts the next layer.\nEach layer is made from 6 bricks.\nMaisy has 26 bricks and she uses them all.\nWhich layer is she working on when she lays her last brick?",
+      "options": ["4th", "5th", "6th", "7th", "8th"],
+      "reasoning": "Each layer uses 6 bricks. 4 complete layers = 24 bricks. 26 - 24 = 2 bricks remaining, which go on the 5th layer. She is working on the 5th layer when she lays her last brick.",
+      "correct_index": 1,
+      "correct_answer": "5th"
+    },
+    {
+      "id": "M3_Q10",
+      "number": 10,
+      "question": "Oliver has a box of 16 coloured discs.\n- 5 discs are red.\n- 2 discs are green.\n- 8 discs are blue.\n- 1 disc is yellow.\nHe picks one disc at random from the box.\nWhich of these statements are correct?\n  1. It is certain that he picks a blue disc.\n  2. It is equally likely that he picks a blue disc or does not pick a blue disc.\n  3. It is possible for him to pick a yellow disc.",
+      "options": [
+        "none of them",
+        "statements 1 and 2 only",
+        "statements 1 and 3 only",
+        "statements 2 and 3 only",
+        "statements 1, 2 and 3"
+      ],
+      "reasoning": "Statement 1: 8/16 = 1/2 chance of blue, not certain. FALSE. Statement 2: P(blue) = 8/16 = 1/2, P(not blue) = 8/16 = 1/2. Equally likely. TRUE. Statement 3: 1/16 chance of yellow, which is possible. TRUE. Statements 2 and 3 are correct.",
+      "correct_index": 3,
+      "correct_answer": "statements 2 and 3 only"
+    },
+    {
+      "id": "M3_Q11",
+      "number": 11,
+      "question": "Omid has a 1 litre measuring jug. It contains 100 mL of water.\nHe has some identical blocks. He drops two blocks into the water and they sink. The water level rises to 150 mL.\nOmid drops five more blocks into the water.\nWhat is the new water level?",
+      "options": ["225 mL", "275 mL", "375 mL", "400 mL", "525 mL"],
+      "reasoning": "2 blocks raise water from 100 mL to 150 mL, so 2 blocks displace 50 mL. Each block displaces 25 mL. 5 more blocks displace 5 x 25 = 125 mL. New level = 150 + 125 = 275 mL.",
+      "correct_index": 1,
+      "correct_answer": "275 mL"
+    },
+    {
+      "id": "M3_Q12",
+      "number": 12,
+      "question": "A restaurant has a target to sell 150 drinks each day.\nThe graph shows how many drinks they have sold so far today.\nHow many more drinks do they need to sell to reach their target?",
+      "diagram": "A horizontal bar graph showing drinks sold today at a restaurant. The x-axis goes from 0 to 60. The bars show approximately: tea: 8, coffee: 20, juice: 35, water: 40. Target is 150 drinks per day.",
+      "options": ["44", "47", "50", "56", "100"],
+      "reasoning": "From the bar graph: tea = 8, coffee = 20, juice = 35, water = 40. Total sold = 8 + 20 + 35 + 40 = 103. More needed = 150 - 103 = 47.",
+      "correct_index": 1,
+      "correct_answer": "47"
+    },
+    {
+      "id": "M3_Q13",
+      "number": 13,
+      "question": "Shawn starts with the number 53 and follows this instruction five times:\n- If the number you have is odd, add 1, or if it is even, divide by 2.\nAfter following the instruction five times, what number does Shawn have?",
+      "options": ["4", "7", "10", "15", "20"],
+      "reasoning": "53 (odd) +1 = 54. 54 (even) /2 = 27. 27 (odd) +1 = 28. 28 (even) /2 = 14. 14 (even) /2 = 7. After 5 steps: 7.",
+      "correct_index": 1,
+      "correct_answer": "7"
+    },
+    {
+      "id": "M3_Q14",
+      "number": 14,
+      "question": "Shape P has an area of 2 cm squared.\nWhat is the area of Shape Q?",
+      "diagram": "Two shapes drawn on a dot grid (dots spaced 1 cm apart). Shape P is a small rectangle spanning 2 units wide x 1 unit tall (area = 2 cm squared). Shape Q is a large rectangular shape approximately 4 units wide x 5 units tall, with a 2x1 notch cut from the top-left corner, drawn on the same dot grid.",
+      "options": ["8 cm squared", "10 cm squared", "15 cm squared", "16 cm squared", "24 cm squared"],
+      "reasoning": null,
+      "correct_index": null,
+      "correct_answer": null
+    },
+    {
+      "id": "M3_Q15",
+      "number": 15,
+      "question": "Four bananas weigh the same as six apples.\nA shopkeeper puts fruit into bags.\n  Bag 1: 10 bananas and 9 apples\n  Bag 2: 6 bananas and 12 apples\n  Bag 3: 16 bananas and 3 apples\nWhich one of these statements is correct?",
+      "options": [
+        "All three bags weigh the same.",
+        "Bags 1 and 2 weigh the same, and bag 3 has a different weight.",
+        "Bags 1 and 3 weigh the same, and bag 2 has a different weight.",
+        "Bags 2 and 3 weigh the same, and bag 1 has a different weight.",
+        "All three bags have different weights."
+      ],
+      "reasoning": "4 bananas = 6 apples, so 1 banana = 1.5 apples. Convert all to apple-equivalents: Bag 1 = 10(1.5) + 9 = 15 + 9 = 24. Bag 2 = 6(1.5) + 12 = 9 + 12 = 21. Bag 3 = 16(1.5) + 3 = 24 + 3 = 27. All three are different.",
+      "correct_index": 4,
+      "correct_answer": "All three bags have different weights."
+    },
+    {
+      "id": "M3_Q16",
+      "number": 16,
+      "question": "Which of these statements is/are correct?\n  1. All rhombuses are parallelograms.\n  2. All rectangles are kites.\n  3. All quadrilaterals are squares.",
+      "options": [
+        "statement 1 only",
+        "statement 2 only",
+        "statement 3 only",
+        "statements 1 and 3 only",
+        "statements 2 and 3 only"
+      ],
+      "reasoning": "Statement 1: A rhombus has two pairs of parallel sides, so it is always a parallelogram. TRUE. Statement 2: A kite has two pairs of adjacent equal sides; a rectangle only has opposite sides equal (not necessarily adjacent), so not all rectangles are kites. FALSE. Statement 3: Not all quadrilaterals are squares — e.g. a rectangle that is not a square. FALSE. Only statement 1 is correct.",
+      "correct_index": 0,
+      "correct_answer": "statement 1 only"
+    },
+    {
+      "id": "M3_Q17",
+      "number": 17,
+      "question": "Selina makes fences around square pieces of land.\nEach fence has posts that are 2 metres apart. There is a post at each corner of the square.\nTo make a square with side length 4 m, she needs 8 posts as shown in the picture.\nHow many posts does she need to make a square with side length 10 m?",
+      "diagram": "A square fence with side length 4 m. Posts are placed 2 m apart along each side, with a post at each corner. The diagram shows 8 posts: 3 on each side, with corner posts shared between adjacent sides.",
+      "options": ["16", "20", "24", "25", "36"],
+      "reasoning": "Side length 10 m, posts 2 m apart. Each side has 10/2 = 5 gaps, so 6 posts per side (including both corners). But corner posts are shared between adjacent sides: 4 sides x 5 unique posts per side (excluding one shared corner) = 20. Alternatively: 4 x 6 - 4 (shared corners) = 24 - 4 = 20.",
+      "correct_index": 1,
+      "correct_answer": "20"
+    },
+    {
+      "id": "M3_Q18",
+      "number": 18,
+      "question": "These thermometers show the temperature outside and inside.\nWhat is the difference between the temperature outside and the temperature inside?",
+      "diagram": "Two thermometers side by side, scaled 0-30 degrees C. The outside thermometer shows approximately 4.5 degrees C. The inside thermometer shows approximately 21 degrees C.",
+      "options": [
+        "15 degrees C",
+        "16 degrees C",
+        "16 1/2 degrees C",
+        "17 degrees C",
+        "17 1/2 degrees C"
+      ],
+      "reasoning": "Inside temperature: approximately 21 degrees C. Outside temperature: approximately 4.5 degrees C. Difference = 21 - 4.5 = 16.5 = 16 1/2 degrees C.",
+      "correct_index": 2,
+      "correct_answer": "16 1/2 degrees C"
+    },
+    {
+      "id": "M3_Q19",
+      "number": 19,
+      "question": "Jake has three different building blocks.\nHe stacks all three on top of each other in different ways.\nWhat is the tallest stack he can make?",
+      "diagram": "Three rectangular building blocks shown in 3D with labelled dimensions: Block 1: 3 cm x 5 cm x 4 cm. Block 2: 4 cm x 4 cm x 5 cm. Block 3: 7 cm x 6 cm x 5 cm. Marked 'diagram not to scale'.",
+      "options": ["13 cm", "14 cm", "15 cm", "17 cm", "18 cm"],
+      "reasoning": "To maximise height, orient each block so its tallest dimension is vertical. Block 1: max dimension = 5 cm. Block 2: max dimension = 5 cm. Block 3: max dimension = 7 cm. Tallest stack = 5 + 5 + 7 = 17 cm.",
+      "correct_index": 3,
+      "correct_answer": "17 cm"
+    },
+    {
+      "id": "M3_Q20",
+      "number": 20,
+      "question": "Myo has two identical squares, X and Y.\nShe divides square X into 64 equal-sized small squares.\nShe divides square Y into 8 equal-sized triangles.\nShe shades some squares on X and some triangles on Y, as shown.\nHow many more small squares must Myo shade on X so that the same area is shaded on both diagrams?",
+      "diagram": "Two identical squares, X and Y. Square X is divided into an 8x8 grid (64 small squares) with approximately 8 squares shaded in a cluster near the upper-middle area. Square Y is divided into 8 equal triangles by its two diagonals and two medians, with three of the 8 triangles shaded.",
+      "options": ["5", "8", "16", "22", "24"],
+      "reasoning": null,
+      "correct_index": null,
+      "correct_answer": null
+    },
+    {
+      "id": "M3_Q21",
+      "number": 21,
+      "question": "Fran has one each of the shapes below, which she can move and rotate.\nShe has an empty 6 by 6 grid.\nFran realises she can cover the grid exactly using four of these shapes, with no shapes overlapping.\nWhich shape is not used?",
+      "diagram": "Five polyomino shapes labelled A-E on grid paper: Shape A: a 6x3 rectangle (18 squares). Shape B: a 5x2 rectangle (10 squares). Shape C: an L-shaped piece (approximately 6 squares). Shape D: an L-shaped piece (approximately 7 squares). Shape E: a 2x1 rectangle (2 squares). Below them is an empty 6x6 grid (36 squares total).",
+      "options": ["shape A", "shape B", "shape C", "shape D", "shape E"],
+      "reasoning": null,
+      "correct_index": null,
+      "correct_answer": null
+    },
+    {
+      "id": "M3_Q22",
+      "number": 22,
+      "question": "The sum of the six number cards below is 25.\nThe diamond and hexagon represent two whole numbers that are greater than zero.\nThe cards are: 8, diamond, 4, 5, hexagon, 2.\nWhat is the largest possible difference between the diamond and the hexagon?",
+      "diagram": "Six number cards in a row: 8, diamond, 4, 5, hexagon, 2. The diamond and hexagon represent two unknown whole numbers greater than zero.",
+      "options": ["0", "2", "3", "4", "6"],
+      "reasoning": "Known cards sum: 8 + 4 + 5 + 2 = 19. Diamond + hexagon = 25 - 19 = 6. Both must be whole numbers > 0. Possible pairs: (1,5), (2,4), (3,3), (4,2), (5,1). Largest difference = |5 - 1| = 4.",
+      "correct_index": 3,
+      "correct_answer": "4"
+    },
+    {
+      "id": "M3_Q23",
+      "number": 23,
+      "question": "Birrani is measuring water in a container. This container has an unusual scale.\nWhat is the volume of water Birrani has?",
+      "diagram": "A vertical container with a scale from 0 (bottom) to 40 mL (top). The scale has evenly spaced tick marks. The water level (shown by shading) is at approximately 60 percent of the way from bottom to top. The container has straight sides.",
+      "options": ["24 mL", "25 mL", "26 mL", "28 mL", "32 mL"],
+      "reasoning": null,
+      "correct_index": null,
+      "correct_answer": null
+    },
+    {
+      "id": "M3_Q24",
+      "number": 24,
+      "question": "Hayden follows these instructions:\n- Choose a starting number.\n- Add 4 to your number.\n- Multiply by 2.\nHe gets the answer 40.\nWhat do you get if you add together the digits in his starting number?",
+      "options": ["6", "7", "9", "12", "15"],
+      "reasoning": "Working backwards: result = 40. Before multiplying by 2: 40 / 2 = 20. Before adding 4: 20 - 4 = 16. Starting number = 16. Sum of digits: 1 + 6 = 7.",
+      "correct_index": 1,
+      "correct_answer": "7"
+    },
+    {
+      "id": "M3_Q25",
+      "number": 25,
+      "question": "The children in a class are making up a new type of money. They decide that:\n- 9 squigs are worth 2 zots\n- 3 zots are worth 5 grozzles\nHow many squigs are 20 grozzles worth?",
+      "options": ["24 squigs", "36 squigs", "54 squigs", "108 squigs", "150 squigs"],
+      "reasoning": "3 zots = 5 grozzles, so 1 grozzle = 3/5 zot. 20 grozzles = 20 x 3/5 = 12 zots. 9 squigs = 2 zots, so 1 zot = 9/2 squigs. 12 zots = 12 x 9/2 = 54 squigs.",
+      "correct_index": 2,
+      "correct_answer": "54 squigs"
+    },
+    {
+      "id": "M3_Q26",
+      "number": 26,
+      "question": "20 boxes are going to be packed into bags.\nEach box has a mass of 400 grams.\nEach bag can hold a mass of up to 1.5 kilograms.\nWhat is the smallest number of bags needed to pack all the boxes?",
+      "options": ["3", "5", "6", "7", "10"],
+      "reasoning": "Each bag holds up to 1.5 kg = 1500 g. Each box is 400 g. Max boxes per bag: floor(1500/400) = 3 (since 3 x 400 = 1200 <= 1500, but 4 x 400 = 1600 > 1500). 20 boxes / 3 per bag = 6 bags with 2 remaining, so need 7 bags.",
+      "correct_index": 3,
+      "correct_answer": "7"
+    },
+    {
+      "id": "M3_Q27",
+      "number": 27,
+      "question": "The column graph shows the number of car tyres replaced by two mechanics, Phil and Suzie, in one day. The scale is missing from the graph.\nThe picture graph shows the number of tyres replaced by Phil. The pictures for Suzie are missing.\nWhat should the picture graph show for Suzie?",
+      "diagram": "A column graph (without scale markings on the y-axis) showing two bars for Phil and Suzie. Suzie's bar is taller than Phil's. A picture graph shows Phil's row with: two full tyre symbols (4 tyres each) and one 3/4 tyre symbol (3 tyres) = 11 tyres total. Suzie's row is empty. Key: full tyre = 4, 3/4 tyre = 3, half tyre = 2, quarter tyre = 1.",
+      "options": [
+        "two full + 3/4 tyre = 11 tyres",
+        "three full tyres = 12 tyres",
+        "three full + 1/4 tyre = 13 tyres",
+        "three full + 3/4 tyre = 15 tyres",
+        "four full + 3/4 tyre = 19 tyres"
+      ],
+      "reasoning": null,
+      "correct_index": null,
+      "correct_answer": null
+    },
+    {
+      "id": "M3_Q28",
+      "number": 28,
+      "question": "Six children are going to play in a tennis tournament.\nEach child will play every other child once.\nHow many matches will there be in total?",
+      "options": ["15", "18", "21", "30", "36"],
+      "reasoning": "Each pair of children plays one match. Number of pairs = C(6,2) = 6! / (2! x 4!) = (6 x 5) / 2 = 15.",
+      "correct_index": 0,
+      "correct_answer": "15"
+    },
+    {
+      "id": "M3_Q29",
+      "number": 29,
+      "question": "Here is part of a number line.\nThe arrow represents one jump.\nStarting from 9, what value will be reached on the number line after 11 of these jumps?",
+      "diagram": "A number line showing whole numbers 7, 8, and 9 with minor tick marks dividing each unit into 4 equal parts (quarters). An arc/arrow shows one jump going backwards (left) from 9 by 1/4 of a unit.",
+      "options": ["6 1/4", "6 1/2", "6 3/4", "7 1/4", "7 3/4"],
+      "reasoning": "Each jump goes backwards 1/4. After 11 jumps: 9 - 11 x (1/4) = 9 - 11/4 = 9 - 2 3/4 = 6 1/4.",
+      "correct_index": 0,
+      "correct_answer": "6 1/4"
+    },
+    {
+      "id": "M3_Q30",
+      "number": 30,
+      "question": "Sarah and her friends live in Forster and take the 8:50 am bus to Coffs Harbour.\nThey stay in Coffs Harbour until they get a bus home, arriving in Forster at 9:19 pm that evening.\nHow long do they spend at Coffs Harbour?\n\nForster to Coffs Harbour timetable:\nBus 1: Forster 7:00 am, Wauchope 8:48 am, Kempsey 9:58 am, Coffs Harbour 11:49 am\nBus 2: Forster 8:50 am, Wauchope 10:38 am, Kempsey 11:48 am, Coffs Harbour 1:39 pm\n\nCoffs Harbour to Forster timetable:\nBus 3: Coffs Harbour 2:39 pm, Kempsey 4:40 pm, Wauchope 5:53 pm, Forster 7:33 pm\nBus 4: Coffs Harbour 4:25 pm, Kempsey 6:26 pm, Wauchope 7:39 pm, Forster 9:19 pm",
+      "options": [
+        "2 hours 46 minutes",
+        "3 hours 14 minutes",
+        "3 hours 26 minutes",
+        "4 hours 36 minutes",
+        "7 hours 40 minutes"
+      ],
+      "reasoning": "They take Bus 2, arriving Coffs Harbour at 1:39 pm. They arrive home at 9:19 pm on Bus 4, which leaves Coffs Harbour at 4:25 pm. Time at Coffs Harbour = 1:39 pm to 4:25 pm. From 1:39 to 4:39 = 3 hours, minus 14 minutes = 2 hours 46 minutes.",
+      "correct_index": 0,
+      "correct_answer": "2 hours 46 minutes"
+    },
+    {
+      "id": "M3_Q31",
+      "number": 31,
+      "question": "Brian and Yarram are collecting cards.\nAltogether they have 250 cards, but Yarram has 18 more than Brian.\nHow many cards does Yarram have?",
+      "options": ["107", "116", "134", "143", "152"],
+      "reasoning": "Let Brian = B. Yarram = B + 18. B + (B + 18) = 250. 2B = 232. B = 116. Yarram = 116 + 18 = 134.",
+      "correct_index": 2,
+      "correct_answer": "134"
+    },
+    {
+      "id": "M3_Q32",
+      "number": 32,
+      "question": "In a restaurant, the same amount of vegetables need to be chopped every day.\nRomesh chops the vegetables on a Thursday. If he starts at 8:45 am and works as quickly as he can, he finishes at 9:25 am.\nLucinda chops the vegetables on a Friday. If she starts at 8:25 am and works as quickly as she can, she finishes at 9:05 am.\nThey both chop the vegetables on a Saturday. If they start at 8:35 am and work as quickly as they can, what time will they finish?",
+      "options": ["8:55 am", "9:05 am", "9:15 am", "9:25 am", "9:55 am"],
+      "reasoning": "Romesh takes 40 minutes alone. Lucinda takes 40 minutes alone. Romesh's rate = 1/40 per minute. Lucinda's rate = 1/40 per minute. Combined rate = 2/40 = 1/20 per minute. Together they take 20 minutes. Starting at 8:35 am + 20 minutes = 8:55 am.",
+      "correct_index": 0,
+      "correct_answer": "8:55 am"
+    },
+    {
+      "id": "M3_Q33",
+      "number": 33,
+      "question": "Cho saves money by putting it in a money box.\nAt the start of Monday, the box is empty.\nAt the end of Monday, the box contains $12.\nAt the end of Wednesday, the box contains $30.\nAt the end of Friday, the box contains $80.\nShe puts in the same amount of money on each of Tuesday, Wednesday and Friday.\nHow much money does she put in on Thursday?",
+      "options": ["$25", "$29", "$32", "$39", "$41"],
+      "reasoning": "Monday: puts in $12 (box = $12). Let x = amount on each of Tue, Wed, Fri. End of Wednesday: 12 + x (Tue) + x (Wed) = 30. So 2x = 18, x = 9. End of Friday: 30 + Thursday + x (Fri) = 80. So 30 + Thursday + 9 = 80. Thursday = 80 - 39 = 41.",
+      "correct_index": 4,
+      "correct_answer": "$41"
+    },
+    {
+      "id": "M3_Q34",
+      "number": 34,
+      "question": "The diagram shows a 7-sided shape.\nIt is cut along the three dashed lines shown. This makes four pieces: three triangles and one other shape.\nHow many sides do the four pieces have in total?",
+      "diagram": "A 7-sided polygon (heptagon) with three dashed lines cutting through it. One dashed line cuts vertically near the left side, one cuts diagonally from lower-left to lower-right, and one cuts diagonally from upper area to the right. The cuts create four pieces: three triangles and one quadrilateral.",
+      "options": ["11", "13", "14", "16", "17"],
+      "reasoning": null,
+      "correct_index": null,
+      "correct_answer": null
+    },
+    {
+      "id": "M3_Q35",
+      "number": 35,
+      "question": "The map shows some of the Aboriginal regions of eastern Australia.\nShuyi plans a route from Tamworth to Brisbane. On her route she only travels north or east. She can make as many turns as she wants, but always travels north or east.\nWhat is the greatest number of different regions she could pass through? (Do not include Kamilaroi or Yuggera.)",
+      "diagram": "A map of Aboriginal regions in eastern Australia. Tamworth is in the KAMILAROI region (lower-centre). Brisbane is in the YUGGERA region (upper-right). Regions from south to north include: WONNARUA, GEAWEGAL (bottom); KAMILAROI, BIRIPI, DHANGATTI (lower-middle); NGANYAY-WANA, NGARABAL, GUMBAYNGGIRR (middle); BIGAMBUL, BUNDJALUNG (upper-middle); MANDANDANJI, BARUNGGAM, WAKA WAKA, GUBBI, YUGGERA (top).",
+      "options": ["3", "5", "6", "7", "8"],
+      "reasoning": null,
+      "correct_index": null,
+      "correct_answer": null
+    }
+  ]
+}

@@ -20,21 +20,6 @@ public class Question
     }
 }
 
-[System.Serializable]
-public class MemoryQuestion
-{
-    public int gridSize;
-    public List<int> highlighted;
-    public float showTimeSeconds;
-
-    public MemoryQuestion(int gridSize, List<int> highlighted, float showTimeSeconds)
-    {
-        this.gridSize = gridSize;
-        this.highlighted = highlighted;
-        this.showTimeSeconds = showTimeSeconds;
-    }
-}
-
 public abstract class GameQuestion
 {
     public class Standard : GameQuestion
@@ -43,10 +28,21 @@ public abstract class GameQuestion
         public Standard(Question question) { this.question = question; }
     }
 
-    public class Memory : GameQuestion
+    public class ReadingComprehension : GameQuestion
     {
-        public MemoryQuestion memoryQuestion;
-        public Memory(MemoryQuestion memoryQuestion) { this.memoryQuestion = memoryQuestion; }
+        public string passageTitle;
+        public string passageText;
+        public string passageType;
+        public Question question;
+
+        public ReadingComprehension(string passageTitle, string passageText,
+            string passageType, Question question)
+        {
+            this.passageTitle = passageTitle;
+            this.passageText = passageText;
+            this.passageType = passageType;
+            this.question = question;
+        }
     }
 }
 

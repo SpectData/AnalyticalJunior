@@ -1,0 +1,335 @@
+{
+  "meta": {
+    "paper": "Practice Paper 2",
+    "section": "thinking_skills",
+    "description": "NSW Opportunity Class Placement Test — Thinking Skills",
+    "total_questions": 30
+  },
+  "questions": [
+    {
+      "id": "TS2_Q1",
+      "number": 1,
+      "question": "A community club offers the following sports:\nnetball: Monday, Thursday\nboxing: Monday, Friday\nfootball: Tuesday, Wednesday\nswimming: Wednesday, Thursday\ntennis: Tuesday, Friday\nI want to do a sport on a Monday, Wednesday and Friday. One of my sports must be football.\nWhich sport will I not be able to do?",
+      "options": ["netball", "boxing", "swimming", "tennis"],
+      "reasoning": "Football is available Tuesday and Wednesday. Since my plan includes Wednesday, football must go on Wednesday. Monday: netball (Mon/Thu) or boxing (Mon/Fri). Friday: boxing (Mon/Fri) or tennis (Tue/Fri). Swimming is available Wednesday and Thursday, but Wednesday is taken by football and Thursday is not in my plan. Swimming cannot be scheduled.",
+      "correct_index": 2,
+      "correct_answer": "swimming"
+    },
+    {
+      "id": "TS2_Q2",
+      "number": 2,
+      "question": "Four friends want to go to the movies. There are four kinds of movies showing: cartoon, comedy, drama and action. Andrew likes all movies except dramas and action. Rishi and Audrey only like comedies and dramas. Yifan would like to watch any movie so long as it is not a cartoon or an action movie.\nWhich kind of movie would all four friends like to see?",
+      "options": ["comedy", "action", "cartoon", "drama"],
+      "reasoning": "Andrew likes: cartoon, comedy. Rishi likes: comedy, drama. Audrey likes: comedy, drama. Yifan likes: comedy, drama. The only genre ALL four like is comedy. Drama is excluded by Andrew. Cartoon is excluded by Rishi, Audrey, and Yifan. Action is excluded by everyone except possibly Yifan (who also excludes it).",
+      "correct_index": 0,
+      "correct_answer": "comedy"
+    },
+    {
+      "id": "TS2_Q3",
+      "number": 3,
+      "question": "The school chess coach has told the team that if they want to do well in chess competitions, they should go running or play tennis every day.\nWhich one of these statements, if true, best supports the coach's claim?",
+      "options": [
+        "Chess is not a physical sport.",
+        "Regular exercise improves concentration.",
+        "Chess players are often good tennis players.",
+        "Running builds physical strength and stamina."
+      ],
+      "reasoning": "The coach claims running/tennis helps chess performance. Option B provides a direct causal link: exercise improves concentration, which is essential for chess. Option A says chess isn't physical, which doesn't explain why exercise helps. Option C is a correlation, not a reason. Option D explains running's benefit in general but not why it helps chess specifically.",
+      "correct_index": 1,
+      "correct_answer": "Regular exercise improves concentration."
+    },
+    {
+      "id": "TS2_Q4",
+      "number": 4,
+      "question": "A piece of a construction kit is shown below.\n\n[IMAGE: 3D isometric view of stacked cubes forming a staircase shape. Base is 3×2×1. Heights from back-left to back-right: 3, 2, 1. See p2q1.txt for full description.]\n\nWhich one of the following shows a side view of the construction kit piece?",
+      "options": ["Option A", "Option B", "Option C", "Option D"],
+      "reasoning": "The 3D piece has a base 3 cubes wide × 2 deep, with heights stepping down from 3 (back-left) to 2 (back-centre) to 1 (back-right and front). Viewed from the back, the profile is a staircase: 3 tall on left, 2 in middle, 1 on right, all on a 3-wide base. The exact side view depends on the viewing angle and which option correctly represents the staircase profile.",
+      "correct_index": null,
+      "correct_answer": null
+    },
+    {
+      "id": "TS2_Q5",
+      "number": 5,
+      "question": "There are five school teams: Red, Yellow, Green, Orange and Blue. A member of each team competes in the 100 m race.\nYellow finished third.\nGreen finished after Red but before Yellow.\nBlue beat Orange but finished after Yellow.\nWho won the race?",
+      "options": ["Red", "Green", "Orange", "Blue"],
+      "reasoning": "From the clues: Red before Green before Yellow (3rd). So Red is 1st and Green is 2nd. Yellow is 3rd. Blue after Yellow but beat Orange, so Blue is 4th and Orange is 5th. Order: Red, Green, Yellow, Blue, Orange. The winner is Red.",
+      "correct_index": 0,
+      "correct_answer": "Red"
+    },
+    {
+      "id": "TS2_Q6",
+      "number": 6,
+      "question": "The arrow snake got its name because of its long and thin body and quick-as-lightning movements. It is a popular belief that an arrow snake can leap great distances, and even that its head can pierce the body of its prey.\n\nGabriel: \"That can't be true. I've seen arrow snakes plenty of times, and I've never seen one jump — let alone pierce its prey!\"\nWhich one of the following sentences shows the mistake Gabriel has made?",
+      "options": [
+        "He has ignored the reason the arrow snake got its name.",
+        "He has denied the well-known fact that some snakes can jump.",
+        "He has denied something just because he has not witnessed it himself.",
+        "He has assumed that no popular belief can be true."
+      ],
+      "reasoning": "Gabriel uses his personal experience ('I've never seen it') to conclude the belief is false. Just because he hasn't observed it doesn't mean it can't happen. This is the argument from personal incredulity. Option A is wrong — the name isn't the issue. Option B assumes a fact not established. Option D is too broad.",
+      "correct_index": 2,
+      "correct_answer": "He has denied something just because he has not witnessed it himself."
+    },
+    {
+      "id": "TS2_Q7",
+      "number": 7,
+      "question": "Rainfall in 3 cities during the driest months of the year is shown below in the bar chart.\n\n[IMAGE: Bar chart showing monthly rainfall May–Oct for Chitaquin, Fentan, Shishain. See p2q1.txt for approximate values.]\n\nWhat is the total rainfall in the city with the highest total rainfall during the months of May to October?",
+      "options": ["35", "55", "82", "91"],
+      "reasoning": "Reading the bar chart, Chitaquin (dark bars) has the highest individual and cumulative values. Approximate totals: Chitaquin: 17+12+10+8+30+5 = 82. Fentan: 15+12+6+7+10+8 = 58. Shishain: 5+0+5+5+5+3 = 23. Chitaquin has the highest total at 82.",
+      "correct_index": 2,
+      "correct_answer": "82"
+    },
+    {
+      "id": "TS2_Q8",
+      "number": 8,
+      "question": "You cannot write good poetry without having interesting life experiences.\n\nRose: \"My brother has been on some adventures and met some interesting people, so his poetry is certain to be good.\"\nElsie: \"Well, my great aunt won prizes for her beautiful poetry, so she must have had an interesting life.\"\nIf the information in the box is true, whose reasoning is correct?",
+      "options": ["Rose only", "Elsie only", "Both Rose and Elsie", "Neither Rose nor Elsie"],
+      "reasoning": "The rule: good poetry → interesting experiences (necessary condition). Rose reasons: has experiences → good poetry. This reverses the conditional — experiences are necessary but not sufficient. Rose is wrong. Elsie reasons: good poetry → must have had interesting experiences. This correctly applies the original conditional. Elsie is right.",
+      "correct_index": 1,
+      "correct_answer": "Elsie only"
+    },
+    {
+      "id": "TS2_Q9",
+      "number": 9,
+      "question": "Izzy is taller than Caitlin; Caitlin is shorter than Melissa. But when they stand on a short flight of three stairs, one on each step, their heads are all level.\nWhich one of these sentences cannot be true?",
+      "options": [
+        "Izzy is on the bottom step.",
+        "Melissa is on the middle step.",
+        "Caitlin is on the middle step.",
+        "Melissa is the tallest of the three girls."
+      ],
+      "reasoning": "Izzy > Caitlin and Melissa > Caitlin, so Caitlin is the shortest. For heads to be level on stairs, the shortest person must be on the highest step. Caitlin must be on the top step. She cannot be on the middle step, because no one shorter exists to go above her. Options A, B, and D are all possible depending on whether Izzy or Melissa is taller.",
+      "correct_index": 2,
+      "correct_answer": "Caitlin is on the middle step."
+    },
+    {
+      "id": "TS2_Q10",
+      "number": 10,
+      "question": "In a game, players take it in turns to draw shapes in a line.\nThe following rules apply (going from left to right):\n  The shape immediately after a square must be a circle.\n  The second shape after a triangle must be a square.\nWhich one of the following sequences is not allowed?\n\n[IMAGE: Four sequences of shapes (squares ■, circles ●, triangles ▲). See p2q1.txt for full descriptions.]",
+      "options": ["Row A", "Row B", "Row C", "Row D"],
+      "reasoning": "Check each row against both rules. Row D has a triangle at position 3. Rule 2 requires position 5 (second after triangle) to be a square. But position 4 is a square (rule 1 requires position 5 to be a circle). Position 5 cannot be both a square and a circle — the rules conflict. Row D is not allowed. Rows A, B, and C all satisfy both rules.",
+      "correct_index": 3,
+      "correct_answer": "Row D"
+    },
+    {
+      "id": "TS2_Q11",
+      "number": 11,
+      "question": "Michael says: \"I don't like this book I've been told to read. I think students should be free to choose what books they study at school.\"\nWhich one of these statements, if true, best supports Michael's claim?",
+      "options": [
+        "Students are allowed to choose what they study in some other subjects.",
+        "Students often want to read books that have been made into films.",
+        "Other students in the class also disliked the book they were told to read.",
+        "Students learn more when they enjoy what they read."
+      ],
+      "reasoning": "Michael's claim is that students should choose their books. The best support gives a reason WHY choice is beneficial. Option D provides a direct educational benefit: enjoyment leads to better learning. Option A is a precedent but not a reason. Option B is about preferences, not outcomes. Option C shows agreement but doesn't explain why choice matters.",
+      "correct_index": 3,
+      "correct_answer": "Students learn more when they enjoy what they read."
+    },
+    {
+      "id": "TS2_Q12",
+      "number": 12,
+      "question": "Four boys are riding their bicycles and have a race to see who can go fastest. Marcel's bicycle is blue and Ralph's is purple. The boy on the red bicycle, Barry, finishes the race ahead of Ralph, but behind Will on his green bicycle. Marcel is level with the boy on the purple bicycle.\nWhich colour bicycle is the winner?",
+      "options": ["green", "blue", "purple", "red"],
+      "reasoning": "Will (green) finished ahead of Barry (red), who finished ahead of Ralph (purple). Marcel (blue) is level with the boy on the purple bicycle, which is Ralph. So the order is: 1st Will (green), 2nd Barry (red), 3rd Marcel (blue) = Ralph (purple). The winner rides the green bicycle.",
+      "correct_index": 0,
+      "correct_answer": "green"
+    },
+    {
+      "id": "TS2_Q13",
+      "number": 13,
+      "question": "The lights in four rooms of my house automatically switch on and off during day and night, when I am away from home, so that it always looks like there is someone at home.\nThe diagram below shows when lights are on or off for each room.\n\n[IMAGE: Light schedule timeline. See p2q11.txt for descriptions.]\n\nWhat is the longest continuous period of time that more than 1 light is on in my home?",
+      "options": ["3 hours", "4 hours", "5 hours", "6 hours"],
+      "reasoning": "From the diagram, at least two rooms have overlapping ON periods during the night (bedroom and hall both appear to be on through the midnight hours). The exact duration of overlap depends on the precise start/end times shown in the diagram, which require careful visual reading of the grid cells.",
+      "correct_index": null,
+      "correct_answer": null
+    },
+    {
+      "id": "TS2_Q14",
+      "number": 14,
+      "question": "Ms Chen does a survey and notices that most girls want Harry Potter and most boys want Star Wars.\n\nMs Chen: \"There are the same number of boys and girls in the class. So I should put the girls in one classroom and show them Harry Potter, and put the boys in the other classroom to watch Star Wars.\"\nWhich one of the following sentences shows the mistake Ms Chen has made?",
+      "options": [
+        "Harry Potter and Star Wars may be different lengths.",
+        "There may be some boys who would prefer Harry Potter, and some girls who would prefer Star Wars.",
+        "Some of the boys might only have chosen Star Wars because their friends did.",
+        "Different numbers of boys and girls might miss the last day of term."
+      ],
+      "reasoning": "Ms Chen says 'most' of each gender prefers a certain movie, but then splits the class entirely by gender. 'Most' does not mean 'all' — some boys may prefer Harry Potter and some girls may prefer Star Wars. By separating by gender rather than preference, she forces some students to watch a movie they don't want.",
+      "correct_index": 1,
+      "correct_answer": "There may be some boys who would prefer Harry Potter, and some girls who would prefer Star Wars."
+    },
+    {
+      "id": "TS2_Q15",
+      "number": 15,
+      "question": "A secret agent uses a code to send messages. It involves shifting each letter of the alphabet forwards or backwards two letters. There are no spaces between words.\nYou receive: YFCPBKFVFGWCTPKXG?\nWhich of the following could be the intended message?",
+      "options": [
+        "WHERE ARE YOU HIDING?",
+        "WHO READ THE MESSAGE?",
+        "WHEN DID THEY ARRIVE?",
+        "WHAT DID HE DISCOVER?"
+      ],
+      "reasoning": "Decode by checking each option letter-by-letter (each code letter = original ± 2). Option C: WHENDIDTHEYARRIVE → W(Y-2)✓ H(F+2)✓ E(C+2)✓ N(P-2)✓ D(B+2)✓ I(K-2)✓ D(F-2)✓ T(V-2)✓ H(F+2)✓ E(G-2)✓ Y(W+2)✓ A(C-2)✓ R(T-2)✓ R(P+2)✓ I(K-2)✓ V(X-2)✓ E(G-2)✓. All 17 letters match. Options A, B, D fail at various positions.",
+      "correct_index": 2,
+      "correct_answer": "WHEN DID THEY ARRIVE?"
+    },
+    {
+      "id": "TS2_Q16",
+      "number": 16,
+      "question": "I have recently tiled the wall of my bathroom using a set of identical tiles. I have laid the tiles so that the black sections on one tile do not join along the edge of the black sections on another tile.\n\n[IMAGE: Wall grid with one tile missing. Four orientation options A–D. See p2q11.txt for description.]\n\nI have one tile left to put in place. Which way up will the last tile be placed?",
+      "options": ["Option A", "Option B", "Option C", "Option D"],
+      "reasoning": "This is a visual constraint-satisfaction problem. The wall shows identical tiles placed in alternating orientations so black sections never share edges between adjacent tiles. The missing tile's orientation must ensure its black edges do not touch the black edges of its left and top neighbours. Determining the correct orientation requires precise reading of the neighbouring tiles' edge colours.",
+      "correct_index": null,
+      "correct_answer": null
+    },
+    {
+      "id": "TS2_Q17",
+      "number": 17,
+      "question": "Patricia's friend Aditya recently won a gold medal for the 200 metre freestyle. He trains for six hours per day, six days a week.\n\nPatricia: \"I'm going to start a new programme, swimming for six hours a day, six days a week. Then I'll get a gold medal too!\"\nWhich one of the following sentences shows the mistake Patricia has made?",
+      "options": [
+        "Some gold medallists may train far less than Aditya.",
+        "Patricia's training programme alone may not guarantee her a gold medal.",
+        "The training programme may prevent Patricia from doing other things she likes.",
+        "Patricia may not be able to afford the cost of the training programme."
+      ],
+      "reasoning": "Patricia assumes that copying Aditya's training schedule guarantees a gold medal. But training is a necessary factor, not a sufficient one — talent, coaching, competition, and many other factors also matter. Option B correctly identifies this: the programme alone may not guarantee success. Options A, C, D raise valid points but don't address Patricia's core logical error.",
+      "correct_index": 1,
+      "correct_answer": "Patricia's training programme alone may not guarantee her a gold medal."
+    },
+    {
+      "id": "TS2_Q18",
+      "number": 18,
+      "question": "An actor came to visit a local school. She gave the principal this advice: \"It is important for children to be given the chance to perform in a school play or concert.\"\nWhich one of these statements, if true, best supports the actor's claim?",
+      "options": [
+        "The actor has given similar advice at many other schools.",
+        "Children spend a lot of time playing sports and other games.",
+        "Many people enjoy watching plays or listening to concerts.",
+        "Performing in front of other people helps to build confidence."
+      ],
+      "reasoning": "The claim is that children should have the chance to perform. The best support gives a reason WHY performing is important/beneficial. Option D provides a concrete benefit: building confidence. Option A is about the actor's track record, not the value of performing. Option B is irrelevant. Option C is about audiences, not performers.",
+      "correct_index": 3,
+      "correct_answer": "Performing in front of other people helps to build confidence."
+    },
+    {
+      "id": "TS2_Q19",
+      "number": 19,
+      "question": "A dentists' surgery opens at 8:00 am and closes at 5:00 pm each day. Each appointment is 20 minutes and every dentist has a 60-minute lunch break but no other breaks.\nThree dentists work in the surgery.\nWhat is the maximum number of appointments that can be made in the surgery in a day?",
+      "options": ["63", "72", "81", "90"],
+      "reasoning": "Open 8 am to 5 pm = 9 hours = 540 minutes. Each dentist takes a 60-minute lunch break, leaving 480 minutes of working time. 480 ÷ 20 = 24 appointments per dentist. Three dentists: 3 × 24 = 72 appointments total.",
+      "correct_index": 1,
+      "correct_answer": "72"
+    },
+    {
+      "id": "TS2_Q20",
+      "number": 20,
+      "question": "There are six lunch boxes lined up on a shelf and each is a different colour: blue, green, orange, purple, red and yellow. There is one box between the green box and the orange box. The purple box's only neighbour is blue, and there are three boxes between the red box and the blue box.\nWhat colour lunch boxes are at each end of the line?",
+      "options": ["orange and blue", "red and purple", "green and yellow", "purple and orange"],
+      "reasoning": "Purple's only neighbour is blue → purple is at one end (position 1 or 6) with blue next to it. Three boxes between red and blue: if purple=1, blue=2 then red=6 (positions 3,4,5 between). If purple=6, blue=5 then red=1. In both cases the ends are purple and red. One box between green and orange → they're at positions 2 apart. Remaining positions filled by green, orange, yellow. In all valid arrangements, the ends are red and purple.",
+      "correct_index": 1,
+      "correct_answer": "red and purple"
+    },
+    {
+      "id": "TS2_Q21",
+      "number": 21,
+      "question": "Ms Flint notices Class 1 had 47 detentions and Class 2 had 18.\n\nMs Flint: \"That clearly shows students in Class 2 are much better behaved than students in Class 1.\"\nWhich one of the following sentences shows the mistake Ms Flint has made?",
+      "options": [
+        "Good behaviour may not be the most important thing for students in Class 1 to focus on.",
+        "There may be good reasons why students in Class 1 have problems with behaviour.",
+        "Students in Class 1 might do just as well as students in Class 2 in their examinations.",
+        "Students in Class 1 may be more likely to be given detention when they are badly behaved than students in Class 2."
+      ],
+      "reasoning": "Ms Flint assumes that more detentions = worse behaviour. But different teachers may have different thresholds for giving detentions. Mr Avery (Class 1) might give detentions more readily than Mr Bailey (Class 2) for the same level of misbehaviour. Option D identifies this confounding variable: the rate of giving detentions differs between teachers, not necessarily the behaviour itself.",
+      "correct_index": 3,
+      "correct_answer": "Students in Class 1 may be more likely to be given detention when they are badly behaved than students in Class 2."
+    },
+    {
+      "id": "TS2_Q22",
+      "number": 22,
+      "question": "The side view of an airport terminal building is shown below.\n\n[IMAGE: Stepped pyramid building with 5 centred tiers. See p2q21.txt for description.]\n\nWhich one of the following is the only possible view of the terminal building from above?",
+      "options": ["Option A", "Option B", "Option C", "Option D"],
+      "reasoning": "The side view shows a symmetric stepped building with each tier centred on the one below. From above, this should appear as concentric nested rectangles. The side view tells us the tiers are centred left-to-right. The correct top-down view must show rectangles centred in at least one axis with proportions matching the tier widths visible in the side view. Distinguishing between the options requires precise visual comparison.",
+      "correct_index": null,
+      "correct_answer": null
+    },
+    {
+      "id": "TS2_Q23",
+      "number": 23,
+      "question": "The Kingdom of Chromatica has five festivals. Colours: Independence Day = Red, King's Birthday = Yellow, Women's Day = Blue, Ice Carnival = Blue, New Year = Red.\nShiro sees everyone wearing the same colour but can't determine which festival it is.\nWhat can we say about the colour Shiro saw?",
+      "options": [
+        "It was either red or yellow.",
+        "It was either yellow or blue.",
+        "It was either blue or red.",
+        "It could have been red, yellow or blue."
+      ],
+      "reasoning": "Shiro can't determine the festival even after checking the table. If the colour were yellow, there's only one yellow festival (King's Birthday) — he would know immediately. For the colour to be ambiguous, multiple festivals must share it. Red has 2 festivals (Independence Day, New Year) and blue has 2 festivals (Women's Day, Ice Carnival). So the colour was either blue or red.",
+      "correct_index": 2,
+      "correct_answer": "It was either blue or red."
+    },
+    {
+      "id": "TS2_Q24",
+      "number": 24,
+      "question": "Darren has 15 cards: 5 red (1–5), 5 blue (1–5), 5 yellow (1–5).\n\nLily: \"To be certain of having all three colours, he has to draw eleven cards.\"\nTom: \"To be certain of having three different numbers, he needs to draw seven cards.\"\nWhose reasoning is correct?",
+      "options": ["Lily only", "Tom only", "Both Lily and Tom", "Neither Lily nor Tom"],
+      "reasoning": "Lily: Worst case for all 3 colours — draw all 5 of one colour and all 5 of another = 10 cards, only 2 colours. The 11th card must be the 3rd colour. Lily is correct. Tom: Worst case for 3 different numbers — draw all 3 cards of one number and all 3 of another = 6 cards, only 2 distinct numbers. The 7th card must introduce a 3rd number. Tom is correct. Both apply the pigeonhole principle correctly.",
+      "correct_index": 2,
+      "correct_answer": "Both Lily and Tom"
+    },
+    {
+      "id": "TS2_Q25",
+      "number": 25,
+      "question": "10 students ran 200m twice. Fastest time = result.\n\nStudent 1: 25.6/24.1, Student 2: 25.0/26.4, Student 3: 27.4/25.8, Student 4: 25.3/24.9, Student 5: 24.8/26.3, Student 6: 26.1/27.2, Student 7: 26.4/28.1, Student 8: 27.7/26.9, Student 9: 25.8/24.5, Student 10: 25.2/25.6\n\nWhich student came 3rd in the competition?",
+      "options": ["student 4", "student 5", "student 9", "student 10"],
+      "reasoning": "Results (fastest of two attempts): S1=24.1, S2=25.0, S3=25.8, S4=24.9, S5=24.8, S6=26.1, S7=26.4, S8=26.9, S9=24.5, S10=25.2. Ranked fastest to slowest: 1st S1(24.1), 2nd S9(24.5), 3rd S5(24.8), 4th S4(24.9), 5th S2(25.0). Student 5 came 3rd.",
+      "correct_index": 1,
+      "correct_answer": "student 5"
+    },
+    {
+      "id": "TS2_Q26",
+      "number": 26,
+      "question": "Angela said: \"If you want to strengthen your whole body, you should take up swimming as well as running.\"\nWhich one of these statements, if true, best supports Angela's claim?",
+      "options": [
+        "Swimming uses more of the body's muscles than running.",
+        "Swimming can be quite relaxing and help reduce stress.",
+        "Being able to swim well is good for your own personal safety.",
+        "People who run too much can sometimes damage their knees or ankles."
+      ],
+      "reasoning": "Angela's claim is that swimming helps 'strengthen your whole body' in addition to running. The best support explains WHY swimming adds whole-body benefit. Option A directly supports this: swimming uses more muscles than running, so adding it helps strengthen the whole body. Options B, C, D are benefits of swimming but don't connect to whole-body strengthening.",
+      "correct_index": 0,
+      "correct_answer": "Swimming uses more of the body's muscles than running."
+    },
+    {
+      "id": "TS2_Q27",
+      "number": 27,
+      "question": "The majority of the Bulbo trees in the world are in the Manu Forest in Peru.\n\nRavi: \"If you randomly choose a Bulbo tree from the world, it would probably be in Peru.\"\nLuca: \"If you randomly choose a tree in the Manu Forest, it would probably be a Bulbo tree.\"\nWhose reasoning is correct?",
+      "options": ["Ravi only", "Luca only", "Both Ravi and Luca", "Neither Ravi nor Luca"],
+      "reasoning": "Ravi: Most Bulbo trees are in Peru → a random Bulbo tree is probably from Peru. This correctly applies the given information. Ravi is right. Luca: Most Bulbo trees are in the Manu Forest, but the forest could contain millions of other tree species. The majority of Bulbo trees being there does NOT mean the majority of trees there are Bulbo. Luca confuses 'most Bulbo trees are here' with 'most trees here are Bulbo.' Luca is wrong.",
+      "correct_index": 0,
+      "correct_answer": "Ravi only"
+    },
+    {
+      "id": "TS2_Q28",
+      "number": 28,
+      "question": "A pyramid of 9 layers is shown below.\n\n[IMAGE: Symmetric pyramid with layers of widths 1, 3, 5, 7, 9, 11, 13, 15, 17 blocks. Four options A–D show the layers separated and rearranged. See p2q21.txt for descriptions.]\n\nWhich one of the following arrangements shows all 9 layers of the pyramid?",
+      "options": ["Option A", "Option B", "Option C", "Option D"],
+      "reasoning": "The pyramid has 9 layers with widths 1, 3, 5, 7, 9, 11, 13, 15, 17 (consecutive odd numbers). When disassembled and rearranged flat, all 9 rows must be present with exactly these widths. The correct option is the one where every row width matches one of the original pyramid layers. This requires careful counting of blocks in each row of each option.",
+      "correct_index": null,
+      "correct_answer": null
+    },
+    {
+      "id": "TS2_Q29",
+      "number": 29,
+      "question": "The Crown Jewels of the Kingdom of Animalia have been stolen!\nThe horse says that the rabbit stole the jewels. The rabbit says that the tiger did it. The owl claims to be innocent. The tiger says that the rabbit is lying.\nIf only one of them is telling the truth, who stole the Crown Jewels?",
+      "options": ["the horse", "the rabbit", "the owl", "the tiger"],
+      "reasoning": "Test each animal as the sole truth-teller. If tiger tells truth: rabbit IS lying (tiger didn't do it). Then horse is lying (rabbit didn't steal), and owl is lying (owl IS guilty). Check: rabbit lying ✓ (tiger didn't do it — owl did). Horse lying ✓ (rabbit didn't steal — owl did). Owl lying ✓ (owl is NOT innocent). Only tiger tells truth; owl stole the jewels. Other cases lead to contradictions (multiple truth-tellers).",
+      "correct_index": 2,
+      "correct_answer": "the owl"
+    },
+    {
+      "id": "TS2_Q30",
+      "number": 30,
+      "question": "Archer Bridge: Mon/Wed/Fri. Djorlom Bridge: Tue/Thu/Sat. Korra Ferry: Sundays always, and other days only if the normally-open bridge is damaged.\n\nRobbie: \"If the ferry operates for two days in a row, it must mean that both the bridges are damaged.\"\nDeclan: \"If you don't use the Archer Bridge, you'll never be able to cross the river on Friday.\"\nWhose reasoning is correct?",
+      "options": ["Robbie only", "Declan only", "Both Robbie and Declan", "Neither Robbie nor Declan"],
+      "reasoning": "Robbie: Counter-example — Saturday + Sunday. If Djorlom is damaged on Saturday, the ferry runs Saturday. Sunday the ferry always runs. Two consecutive ferry days, but only Djorlom is damaged, not both. Robbie is wrong. Declan: On Friday, if Archer Bridge is damaged, the ferry operates instead. You can cross without using Archer Bridge. Declan says you'll 'never' be able to cross — but you can via the ferry. Declan is wrong. Neither is correct.",
+      "correct_index": 3,
+      "correct_answer": "Neither Robbie nor Declan"
+    }
+  ]
+}

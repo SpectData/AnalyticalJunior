@@ -1,0 +1,318 @@
+{
+  "meta": {
+    "paper": "Practice Paper 2",
+    "section": "reading",
+    "question_type": "long",
+    "description": "NSW Opportunity Class Placement Test — Reading Comprehension",
+    "total_questions": 25
+  },
+  "passages": [
+    {
+      "id": "P2_PASSAGE_1",
+      "title": "Crossing the Stride",
+      "type": "comprehension",
+      "text": "Twelve-year-old Mikey spends one summer living beside the river Stride in rural northern England.\n\nA clump of rotted tree root whizzed just past Mikey's head. Out of nowhere it came, as he was sitting on the riverbank, dangling his feet over the edge, throwing stones into the black swirling waters below. Half curious, half panicked, he stayed where he was and waited to see if it would happen again. Away to his left on the other side of the water was a gate which looked like it led down from a path. Mikey kept his gaze fixed on that. This time a clump of mud followed. This one missed him by a long stretch but it confirmed that he was under some sort of attack. It seemed to be coming from behind a large mound of mud and rocks with grass sprouting on top. At least it was just soft stuff coming his way. He knew nobody in this territory some half a mile from home, so he got up, heart pounding in his ears, and started to move away, on the path towards the farmhouse.\n\n'He's running...here, don't you run, stones-boy... we want a word with you!' cried a voice, as two figures emerged, obviously local boys on their summer break from school. They were on the other side of the river, so Mikey was perfectly safe...until he remembered the bridge. 'We'll catch him at the bridge further downstream,' shouted the short, black-haired thrower to the other. Mikey decided running was futile and too stressful, so he stopped in his tracks and turned to face them.\n\n'Sorry, I thought you were The Strider! I'm Mikey,' he blurted out, trying not to sound too nervous. 'I'll wait for you at the bridge.'\n\nThe survival strategy, well-honed from school, seemed to be working \u2013 certainly it put Mikey's pursuers off their guard. When they met at the bridge, it was the other one, tall, lanky and very upright - just like a stick of celery - who said: 'Ere, I've seed you before, ha'nt I? You're the one what saved that sparrowhawk from the Strider the other evening!'\n\nIt was true, Mikey had noticed a sparrowhawk lying flapping near the Stride; he'd picked it up in his leather gloves and taken it back to the farmhouse for Auntie May to tend to. 'Leave him Zak, he's all right...he's an absolute legend!' Celery said to The Mud Thrower.\n\n'You're all right, you are,' said Zak, panting as they stood on Mikey's side of the bridge. 'You just stand and don't run. I'm Zak, and this is Tremble. What are you doing on our patch and how do you know about The Strider?'\n\nMikey explained that he was here for the summer, as his Mum in London was ill, and he was living with his aunt and uncle in the big farmhouse. And The Strider? Well, everyone hereabouts knew about the Strider story. Some said he was a malevolent water spirit, some that he was the ghost of a walker who'd tried and failed to jump over the river, but all agreed that he lived in the murky, fast-flowing, waters of the Stride and liked nothing better than luring people to their watery doom. Uncle Bob had told Mikey all about him. Mikey learnt that Tremble was so-called because the mere mention of the Strider could evidently make him shake and that Zak was something of a leader figure, not to be trifled with.\n\nMikey's new friends, as he thought he could probably trust them enough to call them, made him promise to meet them the following afternoon at a point on the Stride footpath known as The Crossing, a place which seemed to be solemnly important to them. When he got there, Mikey soon saw why: the Stride was quite narrow at this point, and attached to an overhanging branch belonging to a large oak tree was a rope with a makeshift wooden seat.\n\nBut this time there were two other kids with them. Mikey was introduced to a boy, Rango, whose appearance was dominated by an enormous cowboy hat, and a sparkling-eyed girl called Emily, who looked like she loved nothing more than baiting water spirits. Together they were, he learned, The Striders, and they spent their summer building dens and climbing trees in the wooded lands around the river.\n\nZak said: 'Because you rescued a hawk from the Strider, we want to make you an honorary member of our club \u2013 that's if you want to, of course. If you agree, from now on when you're with us, you're not Mikey anymore.\n\n'Aren't I?' said Mikey.\n\n'No,' said Zak firmly. You're Sparrow. But you have to do one thing first, to earn the name.'\n\nMikey shrugged his shoulders, as if to say 'why not?'\n\n'You have to swing across the river, touch down with one foot and then swing back and get off...all in one movement. And without falling off or falling over.'\n\n'Or falling in the water?'\n\n'That's the catch,' said Zak. 'They say it's so deep at The Crossing that nobody has ever survived falling in. And I mean ever.'\n\nTremble grinned a toothy grin and did his best not to shake, Rango mumbled something cowboy-ish from somewhere beneath his hat, and Emily, who Mikey thought could sense his discomfort, said: 'Don't listen to Zak \u2013 he's talking mumbo jumbo. It's perfectly easy, Mikey. I'll show you what to do first. I've done it thousands of times. There's a knack to it...when you're sitting on the bit of wood.'\n\nMikey looked again at The Crossing. At this point, where so many people had \u2013 apparently \u2013 tried and failed to cross the river by hook or by crook, it was, he estimated, about eight feet across from bank to bank. He fancied that you could get quite a good run-up to the nearside bank, and on either side the bank looked sturdy and not likely to give way under your weight. If he was right...well, eight feet wasn't that far: he'd jumped much further in long jump practice for school sports day.\n\n'Ok, I'll do it!'\n\nTremble patted him on the back and Emily smiled. 'He's gonna fly like a Sparrow!' said Tremble, and everyone laughed.\n\n'But not the swing,' Mikey said. 'I'll jump the Stride.'",
+      "questions": [
+        {
+          "id": "P2_Q1",
+          "number": 1,
+          "question": "Mikey is aware that the things thrown at him",
+          "options": [
+            "are landing near him by mistake.",
+            "are meant to make him retaliate.",
+            "are coming from two different places.",
+            "are not intended to hurt him."
+          ],
+          "reasoning": "The text says 'At least it was just soft stuff coming his way' \u2014 a tree root and a clump of mud. The phrase 'at least it was just soft stuff' shows Mikey recognises the projectiles are not meant to cause real harm. Option A is wrong \u2014 he knows it's deliberate ('it confirmed that he was under some sort of attack'). Option B has no support. Option C is wrong \u2014 both came from the same spot ('behind a large mound').",
+          "correct_index": 3,
+          "correct_answer": "are not intended to hurt him."
+        },
+        {
+          "id": "P2_Q2",
+          "number": 2,
+          "question": "After the meeting at the bridge, Zak and Tremble are thinking that Mikey",
+          "options": [
+            "is hiding the fact that he belongs to another group.",
+            "has witnessed an incident where a bird got injured.",
+            "deserves their respect for showing courage.",
+            "may be a legendary figure sent to fight The Strider."
+          ],
+          "reasoning": "Celery (Tremble) says 'he's an absolute legend!' after recognising Mikey as the one who rescued the sparrowhawk from near the Strider. Zak adds 'You're all right, you are \u2014 You just stand and don't run.' They admire his bravery in rescuing the bird and in standing his ground rather than fleeing. Option B is inaccurate \u2014 Mikey didn't merely witness an injury, he actively rescued the bird. Option D takes 'legend' too literally. Option A is unsupported.",
+          "correct_index": 2,
+          "correct_answer": "deserves their respect for showing courage."
+        },
+        {
+          "id": "P2_Q3",
+          "number": 3,
+          "question": "In the paragraph about The Strider, we are told that there is some disagreement over",
+          "options": [
+            "what his exact form is.",
+            "where exactly he lives.",
+            "what his intentions are.",
+            "how best to fight against him."
+          ],
+          "reasoning": "The text says: 'Some said he was a malevolent water spirit, some that he was the ghost of a walker who'd tried and failed to jump over the river.' This is a disagreement about what form The Strider takes \u2014 spirit vs ghost. By contrast, 'all agreed that he lived in the murky, fast-flowing, waters' (no disagreement on location) and 'all agreed... he liked nothing better than luring people to their watery doom' (no disagreement on intentions). Option D is never mentioned.",
+          "correct_index": 0,
+          "correct_answer": "what his exact form is."
+        },
+        {
+          "id": "P2_Q4",
+          "number": 4,
+          "question": "What does Emily do at The Crossing?",
+          "options": [
+            "She tells off Zak.",
+            "She tries to reassure Mikey.",
+            "She boasts about surviving the fall.",
+            "She tries to provoke The Strider into appearing."
+          ],
+          "reasoning": "Emily says: 'Don't listen to Zak \u2013 he's talking mumbo jumbo. It's perfectly easy, Mikey. I'll show you what to do first. I've done it thousands of times. There's a knack to it.' She is directly reassuring Mikey that the task is safe and manageable. Option A is too strong \u2014 she dismisses Zak's exaggeration but doesn't tell him off. Option C is wrong \u2014 she hasn't fallen. Option D is unsupported.",
+          "correct_index": 1,
+          "correct_answer": "She tries to reassure Mikey."
+        },
+        {
+          "id": "P2_Q5",
+          "number": 5,
+          "question": "How does Mikey feel about crossing the Stride river?",
+          "options": [
+            "concerned about the condition of the rope",
+            "annoyed that this is the only way of joining the club",
+            "confident that he can do it the hard way",
+            "frustrated that the required method is too complicated"
+          ],
+          "reasoning": "Mikey estimates the river at 'about eight feet across', notes 'the bank looked sturdy', and thinks 'eight feet wasn't that far: he'd jumped much further in long jump practice.' He says 'Ok, I'll do it!' but then adds 'But not the swing \u2014 I'll jump the Stride.' He rejects the easy method (the swing) and confidently chooses to jump \u2014 the harder way. Options A, B, and D describe negative emotions that aren't reflected in the text.",
+          "correct_index": 2,
+          "correct_answer": "confident that he can do it the hard way"
+        },
+        {
+          "id": "P2_Q6",
+          "number": 6,
+          "question": "In this text, the writer uses",
+          "options": [
+            "humour to make the story seem less menacing.",
+            "poetic language to make the place seem attractive.",
+            "repetition of particular words to make the river seem mysterious.",
+            "changes in perspective so that we see the story through different people's eyes."
+          ],
+          "reasoning": "The story involves potentially threatening situations (being pelted, The Strider legend, a dangerous river crossing), but the writer lightens the tone with humour throughout: Tremble's name (he shakes at the mention of The Strider), describing someone as 'just like a stick of celery', Rango's enormous cowboy hat, 'mumbo jumbo', 'something cowboy-ish from somewhere beneath his hat', 'He's gonna fly like a Sparrow!' These comic touches make the menacing elements feel less threatening. Option B is wrong \u2014 the language isn't notably poetic. Option C \u2014 while 'Strider/Stride' recur, the main technique is humour. Option D is wrong \u2014 the story stays in Mikey's perspective throughout.",
+          "correct_index": 0,
+          "correct_answer": "humour to make the story seem less menacing."
+        }
+      ]
+    },
+    {
+      "id": "P2_PASSAGE_2",
+      "title": "Observation",
+      "type": "poem",
+      "author": "William Hart-Smith",
+      "text": "Now and then concentrating\non the very small,\n\nfocusing my attention\non a very small area\n\nlike this crack in sandstone\n\nperpetually wet with seepage,\n\ngetting so close\nto moss, liverworts, and fern\n\n      it becomes a forest\nwith wild beasts in it,\n\nbirds in the branches\nand crickets piping,\n\ncicadas shrilling.\nSomeone seeing me\n\nstaring so fixedly\n      at nothing\n\nmight be excused\nfor thinking me vague, abstracted,\n\n      lost in introspection.\nNo! I am awake, absorbed,\n\njust looking in a different direction.",
+      "questions": [
+        {
+          "id": "P2_Q7",
+          "number": 7,
+          "question": "In the first four lines, the poet repeats words and ideas to suggest",
+          "options": [
+            "how important his observations are.",
+            "how careful he is in his observations.",
+            "how quickly he carries out his observations.",
+            "how difficult it is to choose a place for his observations."
+          ],
+          "reasoning": "The first four lines repeat 'very small' twice and pair 'concentrating' with 'focusing my attention' \u2014 two words for the same careful, deliberate act. The repetition emphasises precision and care, not speed or difficulty. Option A is about significance, which isn't the focus of these lines. Option C is contradicted by the slow, deliberate tone. Option D is unsupported \u2014 the poet has already chosen his spot.",
+          "correct_index": 1,
+          "correct_answer": "how careful he is in his observations."
+        },
+        {
+          "id": "P2_Q8",
+          "number": 8,
+          "question": "In line 9, what becomes a forest?",
+          "options": [
+            "a crack",
+            "sandstone",
+            "seepage",
+            "fern"
+          ],
+          "reasoning": "The sentence structure is: 'focusing my attention on a very small area / like this crack in sandstone / perpetually wet with seepage, / getting so close / to moss, liverworts, and fern / it becomes a forest'. The 'it' refers back to the subject being observed \u2014 'this crack in sandstone'. The crack, with its tiny mosses and ferns, is what transforms into a forest when viewed closely enough. The sandstone is just the material the crack is in; seepage is moisture; fern is part of what grows there.",
+          "correct_index": 0,
+          "correct_answer": "a crack"
+        },
+        {
+          "id": "P2_Q9",
+          "number": 9,
+          "question": "The poet uses rhyming words",
+          "options": [
+            "to provide a climax to the poem.",
+            "to link two similar feelings.",
+            "to suggest things are happening now.",
+            "to connect the beginning and end of the poem."
+          ],
+          "reasoning": "The main rhyming pair is 'introspection' (line 19) and 'direction' (line 21), which occur at the poem's climax. The poem builds gradually through description, and these rhyming words deliver the turning point: others might think he's 'lost in introspection', but 'No! I am awake, absorbed, just looking in a different direction.' The rhyme underscores this emphatic conclusion. Additionally, 'concentrating' and 'attention' at the start echo the -tion sound, linking the beginning to the end. Option D captures this structural connection across the poem.",
+          "correct_index": 3,
+          "correct_answer": "to connect the beginning and end of the poem."
+        },
+        {
+          "id": "P2_Q10",
+          "number": 10,
+          "question": "In lines 14 to 19, the poet is",
+          "options": [
+            "complaining about the way people criticise him.",
+            "explaining how to understand the complexity of nature.",
+            "giving an account of how he feels when observing things.",
+            "describing the impression another person may have of him."
+          ],
+          "reasoning": "Lines 14-19: 'Someone seeing me / staring so fixedly / at nothing / might be excused / for thinking me vague, abstracted, / lost in introspection.' The poet imagines how an outside observer would perceive him \u2014 staring at nothing, appearing vague and lost in thought. He's describing the impression he'd give. Option A is wrong \u2014 'might be excused' shows understanding, not complaint. Option B is not what these lines address. Option C is wrong \u2014 he's describing how others see him, not how he himself feels.",
+          "correct_index": 3,
+          "correct_answer": "describing the impression another person may have of him."
+        },
+        {
+          "id": "P2_Q11",
+          "number": 11,
+          "question": "In what 'different direction' (line 21) is the poet looking?",
+          "options": [
+            "towards a real landscape",
+            "into his imagination",
+            "into his past life",
+            "towards the positives in life"
+          ],
+          "reasoning": "The poem describes looking at a tiny crack in sandstone so closely that it 'becomes a forest with wild beasts in it, birds in the branches and crickets piping'. The real crack is transformed through the poet's imagination into a forest landscape. The 'different direction' is inward \u2014 into his imagination, where the miniature world becomes something vast and alive. Option A is partially true (he looks at a real crack), but the 'different direction' is the imaginative transformation, not the physical scene. Options C and D are unsupported.",
+          "correct_index": 1,
+          "correct_answer": "into his imagination"
+        }
+      ]
+    },
+    {
+      "id": "P2_PASSAGE_3",
+      "title": "The tawny frogmouth: the owl that isn't",
+      "type": "sentence_insertion",
+      "text": "Australia is a land of iconic birds. Kookaburra, emu, budgie, sulphur-crested cockatoo, wedge-tailed eagle, galah \u2013 you'd never mistake one of those species for any of the others. One of our birds, though, is often confused with another type. The tawny frogmouth, haunter of midnight letterboxes, maker of weird noises in the dark, possessor of a penetrating yellow-eyed stare, is not an owl.\n\n12 ............ . Fluffy feathers? Check. Front-facing giant eyes? Check. Hooked, raptor-like beak mostly hidden by tufts and whiskery bits? Check. Nocturnal, spooky, silent-flying and maker of hooty-type noises? All check.\n\nIn fact, the frogmouth is a type of nightjar. 13 ............ . However, it's not that straightforward. Confusingly, \"strigoides\", the scientific name for the species, means \"owl-form\" and they will eat baby mice if offered them by wildlife carers. But even so, a frogmouth is not an owl.\n\nDuring the day, frogmouths adopt a distinctively stretched and thin posture. With eyes closed or opened to the merest slit, they are impressively well-camouflaged against almost any tree. 14 ............ . You just never see them. You'll probably hear them, though, making a deep \"oom-oom-oom\" in the late evening. Manage to get a torch on one, and the bird will just stare back at you, not moving, daring you to make the first move.\n\nSince frogmouths live in a wide range of Australian habitats, as a species they need to be able to handle temperatures from as low as eight degrees all the way up to 40+. 15 ............ . When it comes to extreme cold, frogmouths can enter a state known as \"torpor\". It's not quite hibernation \u2013 it only lasts for a few hours at a time rather than weeks \u2013 but it has the same drop in metabolic function, slowed heart rate, and conservation of energy. During torpor, a frogmouth's body temperature can drop by up to 10 degrees. 16 ............ .\n\nMeanwhile, the tawny frogmouth's close South American relative, the potoo, has become a sort of running joke on the internet. 17 ............ . Not only do these exaggerated features allow them to spot and scoop up their insect prey in the dark, they have also enabled the potoo to become the star of thousands of memes.",
+      "gaps": ["12", "13", "14", "15", "16", "17"],
+      "sentences": [
+        {
+          "label": "A",
+          "text": "The key difference between these birds and true owls is that frogmouths feed on insects."
+        },
+        {
+          "label": "B",
+          "text": "In doing so, frogmouths play an important role in their native habitat, particularly in agricultural areas."
+        },
+        {
+          "label": "C",
+          "text": "That's unusually extensive for a single bird species, so they have special adaptations for fast panting, and use their wide mouths as radiators."
+        },
+        {
+          "label": "D",
+          "text": "Looking more like a cartoon character than a real animal, it has yellow eyes like ping pong balls and a ridiculously oversized mouth."
+        },
+        {
+          "label": "E",
+          "text": "For comparison, if this ever happened to you, you would enter severe hypothermia, lose consciousness, and unless rescued by other humans, you would probably be in serious trouble."
+        },
+        {
+          "label": "F",
+          "text": "Not that we blame anyone for making that mistake."
+        },
+        {
+          "label": "G",
+          "text": "In any sizeable garden, there are almost certainly frogmouths around."
+        }
+      ],
+      "gap_reasoning": {
+        "12": "Gap 12 follows 'is not an owl' and precedes a checklist of owl-like features ('Fluffy feathers? Check...'). Sentence F ('Not that we blame anyone for making that mistake') is the natural bridge \u2014 it acknowledges the confusion before listing the reasons why someone would mistake a frogmouth for an owl.",
+        "13": "Gap 13 follows 'the frogmouth is a type of nightjar' and precedes 'However, it's not that straightforward. Confusingly... they will eat baby mice.' Sentence A ('The key difference between these birds and true owls is that frogmouths feed on insects') explains the nightjar distinction (insect diet vs owl's rodent diet), and the 'However' then complicates this by noting they do eat mice.",
+        "14": "Gap 14 follows the description of excellent camouflage and precedes 'You just never see them.' Sentence G ('In any sizeable garden, there are almost certainly frogmouths around') explains why you never see them \u2014 they're common and nearby, but their camouflage makes them invisible.",
+        "15": "Gap 15 follows the temperature range (8\u00b0 to 40+) and precedes the discussion of extreme cold and torpor. Sentence C ('That's unusually extensive for a single bird species, so they have special adaptations for fast panting, and use their wide mouths as radiators') addresses the heat end of the range before the text moves to cold adaptations.",
+        "16": "Gap 16 follows 'body temperature can drop by up to 10 degrees' and ends the torpor paragraph. Sentence E ('For comparison, if this ever happened to you, you would enter severe hypothermia...') puts the 10-degree drop into human perspective, emphasising how remarkable the adaptation is.",
+        "17": "Gap 17 follows 'a sort of running joke on the internet' and precedes 'Not only do these exaggerated features...' Sentence D ('Looking more like a cartoon character than a real animal, it has yellow eyes like ping pong balls and a ridiculously oversized mouth') describes the exaggerated features that the next sentence refers to."
+      },
+      "extra_sentence_reasoning": "Sentence B ('In doing so, frogmouths play an important role in their native habitat, particularly in agricultural areas') is the extra sentence. It would logically follow a mention of frogmouths eating insects, but no gap provides that context without disrupting the flow. The passage never discusses their ecological role in agriculture.",
+      "correct_mapping": {
+        "12": "F",
+        "13": "A",
+        "14": "G",
+        "15": "C",
+        "16": "E",
+        "17": "D"
+      },
+      "extra_sentence": "B"
+    },
+    {
+      "id": "P2_PASSAGE_4",
+      "title": "Water",
+      "type": "extract_matching",
+      "extracts": [
+        {
+          "label": "A",
+          "text": "Whenever I start a presentation about water management, I ask the audience if they know what the price of a litre of tap water is. Usually the room goes quiet, shoulders shrug and only a few make a guess, usually an overestimation. My next question is about the price of a litre of petrol. Within a split second, I get the right answer from the audience.\n\nWater is indispensable, not only for humans, but for all living things. Yet our relationship with water is out of touch. In developed countries, drinking water is readily available everywhere: from the tap, the supermarket, and the corner shop. Many of us do not realise just how important water really is and what we use it for. Besides drinking water, water is used in production processes. We trade water in reality and virtually, we regulate water, we divert water, we pollute water, we fight over water, we rely on water to cool thermal power plants, and most importantly, water will be the medium through which environmental impacts are felt and experienced."
+        },
+        {
+          "label": "B",
+          "text": "Emma sat on the edge of her father's yacht, her back to the hot noon sunrays and her feet dangling into the warmed summer waters. She kicked lazily at the swelling waves until they fell below her toes again, while toying with the idea of swimming. It would be something to do, a break from the sweltering heat. Her head felt hot, the heat sinking into her black hair as efficiently as tarmac. She slid to her side and dangled her arm down to catch the briny water with her fingertips. This far out the waves had no white crest, no foam spray, instead they rolled in lazy arcs like the back of a giant cobra. She got abruptly to her feet and, without calling out a warning to her dad, she dived right in. The sultry air was immediately replaced with the cool water of the ocean."
+        },
+        {
+          "label": "C",
+          "text": "Aboriginal peoples have long recognised that, in some areas, many species of bird, animal and plant life cannot exist without a constant water source; similarly, they know that following certain species during seasonal movements of animals can lead directly to water. Key features of traditional knowledge about locating and using water include oral instruction, mapping of water sources and setting up markers and identifiers such as scar trees and artwork in the environment. These markers also served as signposts by which Aboriginal peoples understood and recognised the custodianship of the water source and the rights and responsibilities of visitors to these sites. In some areas, artwork and carvings on trees that were thousands of years old pointed the way to water sources that were difficult to find. Over the past two hundred years, however, many of these trees and artworks have been removed as a result of land clearing and farming."
+        },
+        {
+          "label": "D",
+          "text": "Swimming is generally considered to be a healthy leisure activity for both the young and old. It is even often advised as the most appropriate sport for asthmatic children, mainly on the grounds that inhaling moist air is less conducive to triggering exercise-induced asthma. However, for obvious reasons of microbiological safety, the water of public and private swimming pools must be disinfected. The most common procedure for water disinfection consists of chlorination. As with all human and technological intervention, the use of chlorine-based products to disinfect swimming water may lead to a number of unwanted effects, in particular the presence of chlorine-containing compounds in the air. Consequently, chlorination may affect the respiratory health of either those who work as swimming attendants or instructors, or those who use the pools as customers."
+        }
+      ],
+      "statements": [
+        {
+          "id": "P2_Q18",
+          "number": 18,
+          "text": "talk extensively about a substance that is added to water?",
+          "reasoning": "Extract D discusses chlorination at length \u2014 'chlorine-based products to disinfect swimming water', 'chlorine-containing compounds in the air', 'chlorination may affect the respiratory health'. Chlorine is a substance added to pool water, and the extract talks about it extensively.",
+          "correct_extract": "D"
+        },
+        {
+          "id": "P2_Q19",
+          "number": 19,
+          "text": "mention the cost of water being less than some people realise?",
+          "reasoning": "Extract A describes asking audiences the price of tap water: 'only a few make a guess, usually an overestimation.' People guess higher than the real price \u2014 meaning the actual cost is less than they realise.",
+          "correct_extract": "A"
+        },
+        {
+          "id": "P2_Q20",
+          "number": 20,
+          "text": "describe water in figurative language?",
+          "reasoning": "Extract B uses a simile: 'they rolled in lazy arcs like the back of a giant cobra.' This is figurative language \u2014 comparing waves to a cobra. It also uses 'the heat sinking into her black hair as efficiently as tarmac' (another simile). No other extract uses figurative language to describe water itself.",
+          "correct_extract": "B"
+        },
+        {
+          "id": "P2_Q21",
+          "number": 21,
+          "text": "talk about people taking water for granted?",
+          "reasoning": "Extract A states: 'our relationship with water is out of touch' and 'Many of us do not realise just how important water really is and what we use it for.' In developed countries, water is 'readily available everywhere' \u2014 people take it for granted.",
+          "correct_extract": "A"
+        },
+        {
+          "id": "P2_Q22",
+          "number": 22,
+          "text": "explain a regulation concerning water?",
+          "reasoning": "Extract D states: 'for obvious reasons of microbiological safety, the water of public and private swimming pools must be disinfected.' The word 'must' indicates a requirement/regulation. The extract then explains the disinfection procedure (chlorination) as the regulated practice.",
+          "correct_extract": "D"
+        },
+        {
+          "id": "P2_Q23",
+          "number": 23,
+          "text": "refer to people keeping a record of where water is?",
+          "reasoning": "Extract C describes Aboriginal peoples' 'mapping of water sources and setting up markers and identifiers such as scar trees and artwork'. Mapping and marking are forms of record-keeping about water locations. 'Artwork and carvings on trees that were thousands of years old pointed the way to water sources.'",
+          "correct_extract": "C"
+        },
+        {
+          "id": "P2_Q24",
+          "number": 24,
+          "text": "refer to water as providing relief for someone?",
+          "reasoning": "Extract B describes Emma suffering from heat ('sweltering heat', 'Her head felt hot') and then diving in: 'The sultry air was immediately replaced with the cool water of the ocean.' The cool water provides direct physical relief from the heat.",
+          "correct_extract": "B"
+        },
+        {
+          "id": "P2_Q25",
+          "number": 25,
+          "text": "mention how a particular group of people can benefit from being in water?",
+          "reasoning": "Extract D states swimming is 'often advised as the most appropriate sport for asthmatic children, mainly on the grounds that inhaling moist air is less conducive to triggering exercise-induced asthma.' Asthmatic children are the specific group who benefit from being in (pool) water.",
+          "correct_extract": "D"
+        }
+      ]
+    }
+  ]
+}

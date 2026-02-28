@@ -1,0 +1,170 @@
+Thinking Skills — Practice Test 2 — Questions 21–30
+
+
+Q21
+The school principal, Ms Flint, is looking at the school records for last term to see which class has the best-behaved students.
+She notices that students in Class 1, who are taught by Mr Avery, were given 47 lunchtime detentions in total last term. Students in Class 2, who are taught by Mr Bailey, were only given 18.
+
+Ms Flint: "That's interesting — it clearly shows that students in Class 2 are much better behaved than students in Class 1."
+Which one of the following sentences shows the mistake Ms Flint has made?
+
+A Good behaviour may not be the most important thing for students in Class 1 to focus on.
+B There may be good reasons why students in Class 1 have problems with behaviour.
+C Students in Class 1 might do just as well as students in Class 2 in their examinations.
+D Students in Class 1 may be more likely to be given detention when they are badly behaved than students in Class 2.
+
+
+Q22
+The side view of an airport terminal building is shown below.
+
+[IMAGE: A side-view silhouette of a stepped/pyramid-shaped building with 5 tiers. Each tier is narrower than the one below, and all tiers are centred horizontally. Each tier has a row of rectangular windows:
+- Tier 1 (ground, widest): ~10 windows
+- Tier 2: ~7 windows
+- Tier 3: ~4 windows
+- Tier 4: ~4 windows
+- Tier 5 (top, smallest — control tower): ~1 window
+The building sits on a flat ground line.]
+
+Which one of the following is the only possible view of the terminal building from above?
+
+[IMAGE: Four top-down view options A–D. Each shows nested rectangles representing the outlines of each tier seen from above:
+Option A: Concentric rectangles, all perfectly centred within each other, with equal spacing all around.
+Option B: Nested rectangles offset toward the upper-right corner — each inner rectangle is shifted up and right relative to the outer.
+Option C: Concentric rectangles, all centred, similar to A but with slightly different proportions — the inner rectangles are more vertically elongated.
+Option D: Nested rectangles offset toward the lower-right corner — each inner rectangle is shifted down and right.]
+
+A Option A
+B Option B
+C Option C
+D Option D
+
+
+Q23
+The Kingdom of Chromatica has five traditional festivals which are held every year. During these festivals, all the citizens of Chromatica wear the same colour. The colours are shown in this table:
+
+Festival                        Colour
+Chromatican Independence Day    Red
+The King's Official Birthday    Yellow
+Women's Day                     Blue
+The Ice Carnival                Blue
+Chromatican New Year            Red
+
+Shiro is visiting Chromatica and sees that everyone is wearing the same colour, so he knows they are celebrating a festival, but he doesn't know which one. Even after checking the table above, he's still not sure.
+
+What can we say about the colour that Shiro saw everyone wearing?
+
+A It was either red or yellow.
+B It was either yellow or blue.
+C It was either blue or red.
+D It could have been red, yellow or blue.
+
+
+Q24
+Darren has a deck of fifteen special playing cards:
+Five red cards, numbered 1–5
+Five blue cards, numbered 1–5
+Five yellow cards, numbered 1–5
+He shuffles the deck randomly, and then draws a number of cards from the top.
+
+Lily: "To be certain of having all three colours, he has to draw eleven cards."
+Tom: "To be certain of having three different numbers, he needs to draw seven cards."
+If the information in the box is true, whose reasoning is correct?
+
+A Lily only
+B Tom only
+C Both Lily and Tom
+D Neither Lily nor Tom
+
+
+Q25
+In a competition, 10 students were allowed two attempts at running 200 metres as fast as possible. The fastest time in the two attempts was counted as their 'result'. The attempts for the 10 students are shown in the table.
+
+student    attempt 1       attempt 2
+number    (in seconds)    (in seconds)
+1            25.6            24.1
+2            25.0            26.4
+3            27.4            25.8
+4            25.3            24.9
+5            24.8            26.3
+6            26.1            27.2
+7            26.4            28.1
+8            27.7            26.9
+9            25.8            24.5
+10           25.2            25.6
+
+Which student came 3rd in the competition?
+
+A student 4
+B student 5
+C student 9
+D student 10
+
+
+Q26
+Dylan was keen to get fitter and stronger so he took up running. His friend Angela said to him: "If you want to strengthen your whole body, you should take up swimming as well as running."
+
+Which one of these statements, if true, best supports Angela's claim?
+
+A Swimming uses more of the body's muscles than running.
+B Swimming can be quite relaxing and help reduce stress.
+C Being able to swim well is good for your own personal safety.
+D People who run too much can sometimes damage their knees or ankles.
+
+
+Q27
+The majority of the Bulbo trees in the world are in the Manu Forest in Peru.
+
+Ravi: "So if you were to randomly choose a tree from all the Bulbo trees in the world, it would probably be in Peru."
+Luca: "And if you were to randomly choose a tree in the Manu Forest, it would probably be a Bulbo tree."
+If the information in the box is true, whose reasoning is correct?
+
+A Ravi only
+B Luca only
+C Both Ravi and Luca
+D Neither Ravi nor Luca
+
+
+Q28
+A pyramid of 9 layers is shown below.
+
+[IMAGE: A symmetric pyramid made of rectangular blocks stacked in 9 layers. Each layer is wider than the one above, centred. The layer widths from top to bottom are approximately: 1, 3, 5, 7, 9, 11, 13, 15, 17 blocks.
+
+Below are four options A–D, each showing the 9 layers separated and rearranged into a flat 2D pattern:
+Option A: Layers arranged in an irregular zigzag — alternating between wide rows on the left and narrow rows on the right, creating a jagged left edge.
+Option B: Layers arranged as a neat right-aligned staircase — widest rows at the bottom, progressively narrower rows stepping up and to the right. All rows are right-aligned. The pattern forms a smooth triangular shape on the right side.
+Option C: Layers arranged as a left-aligned staircase going from wide at top to narrow in middle then wide again at bottom, creating an hourglass-like arrangement.
+Option D: Layers arranged similarly to B but left-aligned — widest at bottom, narrower rows stepping up to the left.]
+
+Which one of the following arrangements shows all 9 layers of the pyramid?
+
+A Option A
+B Option B
+C Option C
+D Option D
+
+
+Q29
+The Crown Jewels of the Kingdom of Animalia have been stolen!
+The horse says that the rabbit stole the jewels. The rabbit says that the tiger did it. The owl claims to be innocent. The tiger says that the rabbit is lying.
+If only one of them is telling the truth, who stole the Crown Jewels?
+
+A the horse
+B the rabbit
+C the owl
+D the tiger
+
+
+Q30
+There are three ways to cross the Korra River:
+Archer Bridge is only open on Mondays, Wednesdays and Fridays.
+Djorlom Bridge is only open on Tuesdays, Thursdays and Saturdays.
+The Korra Ferry is used on Sundays. It is also sometimes used on other days, but only if the bridge that would normally be open is damaged.
+
+Robbie: "If the ferry operates for two days in a row, it must mean that both the bridges are damaged."
+Declan: "If you don't use the Archer Bridge, you'll never be able to cross the river on Friday."
+If the information in the box is true, whose reasoning is correct?
+
+A Robbie only
+B Declan only
+C Both Robbie and Declan
+D Neither Robbie nor Declan

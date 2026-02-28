@@ -1,0 +1,12 @@
+Q8
+
+[Diagram: Two identical flat rectangular LEGO-style objects, each made of unit cubes arranged in a 5x2 grid (10 cubes each, total 20 cubes). Below them is a smaller target object — a 2x1 domino shape made of 2 unit cubes.]
+
+Andrea has these two objects, each made of identical cubes.
+If she breaks them up into cubes, how many of the objects below can she make?
+
+A 6
+B 8
+C 10
+D 12
+E 14

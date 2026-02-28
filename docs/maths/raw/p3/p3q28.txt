@@ -1,0 +1,11 @@
+Q28
+
+Six children are going to play in a tennis tournament.
+Each child will play every other child once.
+How many matches will there be in total?
+
+A 15
+B 18
+C 21
+D 30
+E 36

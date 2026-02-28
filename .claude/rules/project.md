@@ -3,7 +3,7 @@
 ## Overview
 
 Unity app for NSW Opportunity Class test preparation, targeting Android.
-Game modes: Quiz (Math/Logic) and Snake Spellcaster (tower defense with OC questions).
+Game mode: Snake Spellcaster (tower defense with OC questions).
 
 ## Tech Stack
 
@@ -23,7 +23,6 @@ UnityProject/BrainAcademy/Assets/
 │   ├── Core/              # AppColors, SnakeSpellConstants, GameManager, AudioManager
 │   ├── Models/            # Enums, SnakeSpellModels, GameModels, SnakeSpellConstants
 │   ├── Questions/         # QuestionBankLoader, MathQuestionGenerator, LogicQuestionGenerator
-│   ├── Quiz/              # QuizController, QuizUIController
 │   ├── SnakeSpell/        # SnakeSpellController, BattlefieldRenderer, WaveGenerator
 │   ├── UI/                # AnswerButtonUI, FeedbackOverlay, MenuUIController, etc.
 │   └── BrainAcademy.asmdef
@@ -33,9 +32,9 @@ UnityProject/BrainAcademy/Assets/
 │   └── BrainAcademy.Editor.asmdef
 ├── Tests/
 │   └── EditMode/          # NUnit tests for pure logic classes
-├── Scenes/                # MenuScene, QuizGameScene, SnakeSpellScene, etc.
+├── Scenes/                # MenuScene, DifficultySelectScene, SnakeSpellScene, SnakeSpellResultsScene
 ├── Sprites/               # DALL-E generated PvZ-style sprites (8 PNGs)
-├── Prefabs/               # AnswerButton, SnakePrefab, SpellPrefab, MemoryCell
+├── Prefabs/               # AnswerButton, SnakePrefab, SpellPrefab
 └── TextMesh Pro/          # TMP essential resources
 ```
 

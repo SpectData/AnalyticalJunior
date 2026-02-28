@@ -1,0 +1,11 @@
+Q31
+
+Brian and Yarram are collecting cards.
+Altogether they have 250 cards, but Yarram has 18 more than Brian.
+How many cards does Yarram have?
+
+A 107
+B 116
+C 134
+D 143
+E 152

@@ -1,0 +1,13 @@
+Q34
+
+[Diagram: A 7-sided polygon (heptagon) with three dashed lines cutting through it. One dashed line cuts vertically near the left side, one cuts diagonally from lower-left to lower-right, and one cuts diagonally from upper area to the right. The cuts create four pieces: three triangles and one quadrilateral.]
+
+The diagram shows a 7-sided shape.
+It is cut along the three dashed lines shown. This makes four pieces: three triangles and one other shape.
+How many sides do the four pieces have in total?
+
+A 11
+B 13
+C 14
+D 16
+E 17

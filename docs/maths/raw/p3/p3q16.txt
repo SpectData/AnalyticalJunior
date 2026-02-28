@@ -1,0 +1,12 @@
+Q16
+
+Which of these statements is/are correct?
+  1. All rhombuses are parallelograms.
+  2. All rectangles are kites.
+  3. All quadrilaterals are squares.
+
+A statement 1 only
+B statement 2 only
+C statement 3 only
+D statements 1 and 3 only
+E statements 2 and 3 only

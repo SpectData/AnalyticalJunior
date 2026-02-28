@@ -1,0 +1,13 @@
+Q9
+
+Maisy is building a wall using bricks, one layer at a time.
+She always completes one layer before she starts the next layer.
+Each layer is made from 6 bricks.
+Maisy has 26 bricks and she uses them all.
+Which layer is she working on when she lays her last brick?
+
+A 4th
+B 5th
+C 6th
+D 7th
+E 8th

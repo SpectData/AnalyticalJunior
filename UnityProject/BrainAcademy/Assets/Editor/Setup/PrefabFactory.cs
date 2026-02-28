@@ -12,7 +12,6 @@ public static class PrefabFactory
     private const string SpriteDir = "Assets/Sprites";
 
     public static GameObject AnswerButtonPrefab { get; private set; }
-    public static GameObject MemoryCellPrefab { get; private set; }
     public static GameObject SnakePrefab { get; private set; }
     public static GameObject SpellPrefab { get; private set; }
 
@@ -34,7 +33,6 @@ public static class PrefabFactory
         LoadSprites();
 
         AnswerButtonPrefab = CreateAnswerButton();
-        MemoryCellPrefab = CreateMemoryCell();
         SnakePrefab = CreateSnake();
         SpellPrefab = CreateSpell();
 
@@ -118,31 +116,6 @@ public static class PrefabFactory
         UIFactory.Wire(comp, "answerText", tmp);
 
         return SavePrefab(root, "AnswerButton");
-    }
-
-    // ── MemoryCell ──────────────────────────────────────────────────────
-
-    private static GameObject CreateMemoryCell()
-    {
-        var root = new GameObject("MemoryCell", typeof(Image), typeof(Button));
-        var rt = root.GetComponent<RectTransform>();
-        rt.sizeDelta = new Vector2(80, 80);
-
-        root.GetComponent<Image>().color = new Color(0.95f, 0.95f, 0.95f);
-
-        // Border
-        var border = new GameObject("Border", typeof(Image));
-        border.transform.SetParent(root.transform, false);
-        border.GetComponent<Image>().color = new Color(0.85f, 0.85f, 0.85f);
-        UIFactory.Stretch(border);
-
-        // Attach script and wire
-        var comp = root.AddComponent<MemoryCellUI>();
-        UIFactory.Wire(comp, "backgroundImage", root.GetComponent<Image>());
-        UIFactory.Wire(comp, "borderImage", border.GetComponent<Image>());
-        UIFactory.Wire(comp, "button", root.GetComponent<Button>());
-
-        return SavePrefab(root, "MemoryCell");
     }
 
     // ── Snake ───────────────────────────────────────────────────────────

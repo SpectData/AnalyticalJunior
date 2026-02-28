@@ -85,39 +85,6 @@ public static class LogicQuestionGenerator
         );
     }
 
-    public static GameQuestion.Memory GenerateMemoryGrid(Difficulty difficulty)
-    {
-        int gridSize, cellCount;
-        float showTimeSeconds;
-
-        switch (difficulty)
-        {
-            case Difficulty.Easy:
-                gridSize = 3; cellCount = 3; showTimeSeconds = 3.0f;
-                break;
-            case Difficulty.Medium:
-                gridSize = 4; cellCount = 4; showTimeSeconds = 2.5f;
-                break;
-            case Difficulty.Hard:
-                gridSize = 4; cellCount = 5; showTimeSeconds = 2.0f;
-                break;
-            default: // SuperHard
-                gridSize = 5; cellCount = 7; showTimeSeconds = 1.5f;
-                break;
-        }
-
-        int totalCells = gridSize * gridSize;
-        HashSet<int> highlightedSet = new HashSet<int>();
-        while (highlightedSet.Count < cellCount)
-        {
-            highlightedSet.Add(Random.Range(0, totalCells));
-        }
-
-        return new GameQuestion.Memory(
-            new MemoryQuestion(gridSize, highlightedSet.ToList(), showTimeSeconds)
-        );
-    }
-
     private struct OddOneOutConfig
     {
         public List<int> group;

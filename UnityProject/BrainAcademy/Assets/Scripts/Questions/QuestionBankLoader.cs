@@ -9,14 +9,25 @@ public class QuestionBankLoader
     private class BankQuestion
     {
         public string id;
+        public string questionType; // "short" or "long"
         public string topic;
         public string difficulty;
         public string question;
         public List<string> options;
         public string correctAnswer;
+        public string passageId; // null for short questions
+    }
+
+    private class PassageData
+    {
+        public string id;
+        public string title;
+        public string type;
+        public string text;
     }
 
     private readonly List<BankQuestion> allQuestions = new List<BankQuestion>();
+    private readonly Dictionary<string, PassageData> passages = new Dictionary<string, PassageData>();
     private readonly HashSet<string> usedIds = new HashSet<string>();
 
     public void Load()
@@ -29,22 +40,75 @@ public class QuestionBankLoader
         }
 
         JObject root = JObject.Parse(json.text);
+        string version = root["meta"]?["version"]?.ToString() ?? "1.0";
 
-        JArray math = (JArray)root["mathematical_reasoning"];
-        if (math != null)
+        if (version.StartsWith("2"))
+            LoadV2(root);
+        else
+            LoadV1(root);
+
+        Debug.Log($"QuestionBankLoader: Loaded {allQuestions.Count} questions, {passages.Count} passages");
+    }
+
+    private void LoadV1(JObject root)
+    {
+        LoadSection(root, "mathematical_reasoning", "short");
+        LoadSection(root, "thinking_skills", "short");
+    }
+
+    private void LoadV2(JObject root)
+    {
+        LoadSection(root, "mathematical_reasoning", "short");
+        LoadSection(root, "thinking_skills", "short");
+        LoadReadingSection(root);
+    }
+
+    private void LoadSection(JObject root, string section, string questionType)
+    {
+        JArray arr = (JArray)root[section];
+        if (arr == null) return;
+
+        foreach (JToken item in arr)
         {
-            foreach (JToken item in math)
-                allQuestions.Add(ParseBankQuestion(item));
+            BankQuestion bq = ParseBankQuestion(item);
+            bq.questionType = questionType;
+            allQuestions.Add(bq);
+        }
+    }
+
+    private void LoadReadingSection(JObject root)
+    {
+        JObject reading = (JObject)root["reading"];
+        if (reading == null) return;
+
+        JArray passageArr = (JArray)reading["passages"];
+        if (passageArr != null)
+        {
+            foreach (JToken p in passageArr)
+            {
+                var pd = new PassageData
+                {
+                    id = p["id"]?.ToString(),
+                    title = p["title"]?.ToString(),
+                    type = p["type"]?.ToString(),
+                    text = p["text"]?.ToString()
+                };
+                if (pd.id != null)
+                    passages[pd.id] = pd;
+            }
         }
 
-        JArray thinking = (JArray)root["thinking_skills"];
-        if (thinking != null)
+        JArray questionArr = (JArray)reading["questions"];
+        if (questionArr != null)
         {
-            foreach (JToken item in thinking)
-                allQuestions.Add(ParseBankQuestion(item));
+            foreach (JToken item in questionArr)
+            {
+                BankQuestion bq = ParseBankQuestion(item);
+                bq.questionType = "long";
+                bq.passageId = item["passage_id"]?.ToString();
+                allQuestions.Add(bq);
+            }
         }
-
-        Debug.Log($"QuestionBankLoader: Loaded {allQuestions.Count} questions");
     }
 
     private BankQuestion ParseBankQuestion(JToken obj)
@@ -73,29 +137,97 @@ public class QuestionBankLoader
         string diffStr = difficulty.ToBankKey();
 
         var available = allQuestions
-            .Where(q => q.difficulty == diffStr && !usedIds.Contains(q.id))
+            .Where(q => q.questionType == "short"
+                     && q.difficulty == diffStr
+                     && !usedIds.Contains(q.id))
             .ToList();
 
         if (available.Count == 0)
         {
             // All questions for this difficulty used - recycle
             usedIds.RemoveWhere(id =>
-                allQuestions.Any(q => q.id == id && q.difficulty == diffStr));
-            available = allQuestions.Where(q => q.difficulty == diffStr).ToList();
+                allQuestions.Any(q => q.id == id
+                                  && q.questionType == "short"
+                                  && q.difficulty == diffStr));
+            available = allQuestions
+                .Where(q => q.questionType == "short" && q.difficulty == diffStr)
+                .ToList();
         }
 
         if (available.Count == 0) return null;
 
         BankQuestion bq = available[Random.Range(0, available.Count)];
-        return ConvertToGameQuestion(bq);
+        return ConvertToStandardQuestion(bq);
     }
 
-    private GameQuestion.Standard ConvertToGameQuestion(BankQuestion bq)
+    public GameQuestion.Standard GetShortQuestion()
+    {
+        var available = allQuestions
+            .Where(q => q.questionType == "short" && !usedIds.Contains(q.id))
+            .ToList();
+
+        if (available.Count == 0)
+        {
+            usedIds.RemoveWhere(id =>
+                allQuestions.Any(q => q.id == id && q.questionType == "short"));
+            available = allQuestions
+                .Where(q => q.questionType == "short")
+                .ToList();
+        }
+
+        if (available.Count == 0) return null;
+
+        BankQuestion bq = available[Random.Range(0, available.Count)];
+        return ConvertToStandardQuestion(bq);
+    }
+
+    public GameQuestion.ReadingComprehension GetReadingQuestion()
+    {
+        var available = allQuestions
+            .Where(q => q.questionType == "long" && !usedIds.Contains(q.id))
+            .ToList();
+
+        if (available.Count == 0)
+        {
+            usedIds.RemoveWhere(id =>
+                allQuestions.Any(q => q.id == id && q.questionType == "long"));
+            available = allQuestions
+                .Where(q => q.questionType == "long")
+                .ToList();
+        }
+
+        if (available.Count == 0) return null;
+
+        BankQuestion bq = available[Random.Range(0, available.Count)];
+        usedIds.Add(bq.id);
+
+        PassageData passage = null;
+        if (bq.passageId != null)
+            passages.TryGetValue(bq.passageId, out passage);
+
+        string label = passage?.title ?? "Reading";
+
+        return new GameQuestion.ReadingComprehension(
+            passageTitle: passage?.title ?? "",
+            passageText: passage?.text ?? "",
+            passageType: passage?.type ?? "comprehension",
+            question: new Question(
+                label: label,
+                questionText: bq.question,
+                answers: bq.options,
+                correctAnswer: bq.correctAnswer
+            )
+        );
+    }
+
+    private GameQuestion.Standard ConvertToStandardQuestion(BankQuestion bq)
     {
         usedIds.Add(bq.id);
 
         TextInfo textInfo = CultureInfo.InvariantCulture.TextInfo;
-        string label = textInfo.ToTitleCase(bq.topic.Replace("_", " "));
+        string label = string.IsNullOrEmpty(bq.topic)
+            ? "General"
+            : textInfo.ToTitleCase(bq.topic.Replace("_", " "));
 
         return new GameQuestion.Standard(
             new Question(

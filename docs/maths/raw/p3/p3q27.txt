@@ -1,0 +1,15 @@
+Q27
+
+[Diagram: A column graph (without scale markings on the y-axis) showing two bars for Phil and Suzie. Suzie's bar is taller than Phil's, approximately in a 5:4 ratio.
+A picture graph shows Phil's row with: two full tyre symbols (4 tyres each) and one 3/4 tyre symbol (3 tyres) = 11 tyres total. Suzie's row is empty.
+Key: full tyre = 4, 3/4 tyre = 3, half tyre = 2, quarter tyre = 1.]
+
+The column graph shows the number of car tyres replaced by two mechanics, Phil and Suzie, in one day. The scale is missing from the graph.
+The picture graph shows the number of tyres replaced by Phil. The pictures for Suzie are missing.
+What should the picture graph show for Suzie?
+
+A [two full + 3/4 tyre = 11 tyres]
+B [three full tyres = 12 tyres]
+C [three full + 1/4 tyre = 13 tyres]
+D [three full + 3/4 tyre = 15 tyres]
+E [four full + 3/4 tyre = 19 tyres]

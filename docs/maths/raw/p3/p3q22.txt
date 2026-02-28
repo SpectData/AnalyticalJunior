@@ -1,0 +1,14 @@
+Q22
+
+[Diagram: Six number cards in a row: 8, diamond, 4, 5, hexagon, 2. The diamond (light shape) and hexagon (dark shape) represent two unknown whole numbers greater than zero.]
+
+The sum of the six number cards below is 25.
+The diamond and hexagon represent two whole numbers that are greater than zero.
+The cards are: 8, diamond, 4, 5, hexagon, 2.
+What is the largest possible difference between the diamond and the hexagon?
+
+A 0
+B 2
+C 3
+D 4
+E 6

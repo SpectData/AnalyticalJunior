@@ -1,0 +1,14 @@
+Q7
+
+[Diagram: Three price tags showing $6.45, $2.35, and $8.85.]
+
+Tristan has $20.
+He wants to estimate the change he will receive when he buys three items at these prices: $6.45, $2.35, $8.85.
+To estimate the total cost, he rounds each price to the nearest dollar and then adds the rounded values together.
+How much change does he estimate he will get?
+
+A $0
+B $1
+C $2
+D $3
+E $4

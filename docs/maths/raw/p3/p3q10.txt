@@ -1,0 +1,18 @@
+Q10
+
+Oliver has a box of 16 coloured discs.
+- 5 discs are red.
+- 2 discs are green.
+- 8 discs are blue.
+- 1 disc is yellow.
+He picks one disc at random from the box.
+Which of these statements are correct?
+  1. It is certain that he picks a blue disc.
+  2. It is equally likely that he picks a blue disc or does not pick a blue disc.
+  3. It is possible for him to pick a yellow disc.
+
+A none of them
+B statements 1 and 2 only
+C statements 1 and 3 only
+D statements 2 and 3 only
+E statements 1, 2 and 3

@@ -1,0 +1,12 @@
+Q1
+
+[Diagram: An F-shape made of shaded squares on a 6x5 grid. The F has a vertical bar of 5 squares on the left, a horizontal top bar of 3 squares extending right, and a horizontal middle bar of 2 squares extending right. Five answer options (A-E) each show a different rotation of the F-shape on similar grids.]
+
+An F-shape is made out of squares, as shown.
+How will the F-shape look after it is turned a quarter of a turn anti-clockwise?
+
+A [Diagram: F rotated 90 degrees clockwise — horizontal bar at top-right, arms going down]
+B [Diagram: F rotated 180 degrees — upside-down F]
+C [Diagram: F reflected vertically]
+D [Diagram: F rotated with arms extending upward from the right]
+E [Diagram: F rotated 90 degrees anti-clockwise — long horizontal bar at bottom, short arms going up on the left]

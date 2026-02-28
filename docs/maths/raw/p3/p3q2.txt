@@ -1,0 +1,16 @@
+Q2
+
+[Diagram: A balance scale. The left pan holds two weights: 12 kg and 14 kg (total 26 kg). The right pan holds one weight: 19 kg. The left side is tilted down (heavier).]
+
+Amber wants to balance these scales.
+Left pan: 12 kg and 14 kg. Right pan: 19 kg.
+Which of the following methods would balance the scales?
+  1. Add 5 kg and 7 kg on the right.
+  2. Add 9 kg on the left and add 16 kg on the right.
+  3. Add 8 kg on the left and add 8 kg on the right.
+
+A method 1 only
+B method 2 only
+C method 3 only
+D methods 1 and 2 only
+E methods 1 and 3 only

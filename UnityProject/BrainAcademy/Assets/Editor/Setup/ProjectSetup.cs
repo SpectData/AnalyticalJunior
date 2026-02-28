@@ -30,12 +30,10 @@ public static class ProjectSetup
         // Prefabs must be created before scenes (scenes instantiate prefabs)
         PrefabFactory.CreateAll();
 
-        // Build all 6 scenes
+        // Build all scenes
         SceneBuilderMenu.BuildMenuScene();
         SceneBuilderMenu.BuildDifficultyScene();
-        SceneBuilderQuiz.Build();
         SceneBuilderSnake.Build();
-        SceneBuilderResults.BuildResultsScene();
         SceneBuilderResults.BuildSnakeResultsScene();
 
         ConfigureBuildSettings();
@@ -167,13 +165,11 @@ public static class ProjectSetup
         {
             new EditorBuildSettingsScene("Assets/Scenes/MenuScene.unity", true),
             new EditorBuildSettingsScene("Assets/Scenes/DifficultySelectScene.unity", true),
-            new EditorBuildSettingsScene("Assets/Scenes/QuizGameScene.unity", true),
             new EditorBuildSettingsScene("Assets/Scenes/SnakeSpellScene.unity", true),
-            new EditorBuildSettingsScene("Assets/Scenes/ResultsScene.unity", true),
             new EditorBuildSettingsScene("Assets/Scenes/SnakeSpellResultsScene.unity", true),
         };
 
         EditorBuildSettings.scenes = scenes;
-        Debug.Log("[Setup] Build settings configured (6 scenes)");
+        Debug.Log("[Setup] Build settings configured (4 scenes)");
     }
 }

@@ -1,0 +1,12 @@
+Q25
+
+The children in a class are making up a new type of money. They decide that:
+- 9 squigs are worth 2 zots
+- 3 zots are worth 5 grozzles
+How many squigs are 20 grozzles worth?
+
+A 24 squigs
+B 36 squigs
+C 54 squigs
+D 108 squigs
+E 150 squigs

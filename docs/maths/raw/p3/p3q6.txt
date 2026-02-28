@@ -1,0 +1,9 @@
+Q6
+
+What number do you get if you add 11 thousands, 11 hundreds, 11 tens and 11 ones?
+
+A 11 111
+B 11 131
+C 11 231
+D 12 221
+E 11 111 111
