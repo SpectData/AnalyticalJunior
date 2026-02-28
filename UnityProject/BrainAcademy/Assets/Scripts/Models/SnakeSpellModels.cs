@@ -204,39 +204,39 @@ public static class DifficultyExtensions
             case Difficulty.Easy:
                 return new DifficultyConfig(
                     baseSnakeSpeed: 30f,
-                    baseSpawnInterval: 4.0f,
+                    baseSpawnInterval: 60.0f,
                     startingLives: 5,
                     availableSnakeTypes: new List<SnakeType> { SnakeType.Green },
-                    questionTimerSeconds: 20,
+                    questionTimerSeconds: 60,
                     pointsPerKill: 10
                 );
             case Difficulty.Medium:
                 return new DifficultyConfig(
                     baseSnakeSpeed: 45f,
-                    baseSpawnInterval: 3.0f,
+                    baseSpawnInterval: 60.0f,
                     startingLives: 4,
                     availableSnakeTypes: new List<SnakeType> { SnakeType.Green, SnakeType.Yellow },
-                    questionTimerSeconds: 15,
+                    questionTimerSeconds: 60,
                     pointsPerKill: 25
                 );
             case Difficulty.Hard:
                 return new DifficultyConfig(
                     baseSnakeSpeed: 60f,
-                    baseSpawnInterval: 2.5f,
+                    baseSpawnInterval: 60.0f,
                     startingLives: 3,
                     availableSnakeTypes: new List<SnakeType>
                         { SnakeType.Green, SnakeType.Yellow, SnakeType.Red },
-                    questionTimerSeconds: 10,
+                    questionTimerSeconds: 60,
                     pointsPerKill: 50
                 );
             case Difficulty.SuperHard:
                 return new DifficultyConfig(
                     baseSnakeSpeed: 80f,
-                    baseSpawnInterval: 2.0f,
+                    baseSpawnInterval: 60.0f,
                     startingLives: 3,
                     availableSnakeTypes: new List<SnakeType>
                         { SnakeType.Green, SnakeType.Yellow, SnakeType.Red, SnakeType.Purple },
-                    questionTimerSeconds: 7,
+                    questionTimerSeconds: 60,
                     pointsPerKill: 100
                 );
             default:

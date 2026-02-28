@@ -100,7 +100,7 @@ public static class SceneBuilderSnake
             wizard.transform.localScale = new Vector3(-1, 1, 1);
             var wrt = UIFactory.SetRect(wizard,
                 new Vector2(0, yMin), new Vector2(0, yMax),
-                new Vector2(0, 0.5f), new Vector2(50, 0), new Vector2(80, 0));
+                new Vector2(0, 0.5f), new Vector2(50, 0), new Vector2(90, 0));
             wizardRTs[i] = wrt;
         }
 
@@ -160,7 +160,7 @@ public static class SceneBuilderSnake
             new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
 
         var questionText = UIFactory.CreateTMP(qtContainer.transform, "QuestionText",
-            "Question...", fontSize: 26, color: Color.black);
+            "Question...", fontSize: 36, color: Color.black);
         UIFactory.Stretch(questionText.gameObject);
 
         // Sequence container

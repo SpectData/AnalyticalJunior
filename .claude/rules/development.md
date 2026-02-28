@@ -2,29 +2,46 @@
 
 ## Environment
 
-- **Java:** Use Android Studio's bundled JDK (configured in `gradle.properties` via `org.gradle.java.home`).
-- **Build:** Use `./gradlew` for all build tasks. Never use `gradle` directly.
-- **No pip:** This repo has a Python `pyproject.toml` for PDF extraction tooling only. Use `uv` commands if Python is needed.
+- **Unity:** Unity 6000.3.10f1 (Unity 6). Open the project via Unity Hub pointing at `UnityProject/BrainAcademy/`.
+- **Build:** Use Unity batch mode or the Unity Editor for builds. CLI: `Unity.exe -batchmode -quit -projectPath ... -executeMethod BuildAndroid.Build`
+- **Android deploy:** `adb install -r Builds/BrainAcademy.apk` (adb is at `%LOCALAPPDATA%/Android/Sdk/platform-tools/adb.exe`)
+- **No dotnet CLI:** This is a Unity-only project. Do not run `dotnet` commands.
+- **No pip:** This repo has a Python `pyproject.toml` for sprite tooling only. Use `uv` commands if Python is needed.
 
 ## Code Style
 
 - Follow existing patterns in the codebase.
 - Do not refactor unrelated code.
-- Composable functions use **PascalCase** (Compose industry standard).
-- Non-composable functions use **camelCase**.
+- Use **PascalCase** for public methods, classes, and properties (C# convention).
+- Use **camelCase** for private fields and local variables.
+- Use **4-space indentation** (configured in `.editorconfig`).
 
 ## Pre-commit Checks
 
-Before committing, always run:
+The pre-commit hook (`scripts/pre-commit`) runs automatically and checks:
+1. No secret/credential files staged
+2. No trailing whitespace in C# files
+3. No accidentally large files staged
+4. Unity compilation (optional, set `UNITY_EXE` env var to enable)
 
+Install the hook if not already present:
 ```bash
-./gradlew ktlintCheck detekt
+cp scripts/pre-commit .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
 ```
 
-- **ktlint** — Code formatting (auto-fix with `./gradlew ktlintFormat`).
-- **detekt** — Static analysis.
-- Both are enforced by the git pre-commit hook (auto-installed on Gradle sync).
-- Fix all issues before committing. Do not skip or suppress warnings without justification.
+## Testing
+
+Run EditMode tests via Unity batch mode:
+```bash
+Unity.exe -projectPath UnityProject/BrainAcademy -batchmode -runTests -testPlatform EditMode -testResults Logs/test-results.xml
+```
+
+Or in Unity Editor: **Window > General > Test Runner > EditMode > Run All**.
+
+- Tests live in `Assets/Tests/EditMode/` with the `EditModeTests.asmdef` assembly.
+- Test pure logic classes (models, wave generator, difficulty config) in EditMode tests.
+- Do not test MonoBehaviour rendering/UI in EditMode; those belong in PlayMode tests (future).
 
 ## Git Practices
 
@@ -45,7 +62,7 @@ Before committing, always run:
 ## Question Bank
 
 - Questions are aligned to the **NSW Opportunity Class Placement Test** curriculum (Year 4, Stage 2).
-- The source of truth is `docs/question_bank.json`. After editing, copy to `app/src/main/assets/question_bank.json`.
+- The source of truth is `docs/question_bank.json`. After editing, copy to `UnityProject/BrainAcademy/Assets/Resources/question_bank.json`.
 - Each question has: id, topic, subtopic, difficulty, question text, options, correct_index, correct_answer, explanation.
 - Difficulty levels: `easy`, `medium`, `hard`, `super_hard`.
 - When adding questions, follow the existing JSON structure and assign appropriate difficulty and topic tags.
