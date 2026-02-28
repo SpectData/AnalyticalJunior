@@ -1,0 +1,17 @@
+Q20
+
+[Diagram: Two identical squares, X and Y.
+Square X is divided into an 8x8 grid (64 small squares). A small number of squares (approximately 8) are shaded in a cluster near the upper-middle area.
+Square Y is divided into 8 equal triangles by its two diagonals and two medians. Three of the 8 triangles are shaded (forming a wedge on one side).]
+
+Myo has two identical squares, X and Y.
+She divides square X into 64 equal-sized small squares.
+She divides square Y into 8 equal-sized triangles.
+She shades some squares on X and some triangles on Y, as shown.
+How many more small squares must Myo shade on X so that the same area is shaded on both diagrams?
+
+A 5
+B 8
+C 16
+D 22
+E 24

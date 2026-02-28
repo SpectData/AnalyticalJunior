@@ -1,0 +1,11 @@
+Q13
+
+Shawn starts with the number 53 and follows this instruction five times:
+- If the number you have is odd, add 1, or if it is even, divide by 2.
+After following the instruction five times, what number does Shawn have?
+
+A 4
+B 7
+C 10
+D 15
+E 20

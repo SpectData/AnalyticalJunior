@@ -1,0 +1,20 @@
+Q21
+
+[Diagram: Five polyomino shapes labelled A-E on grid paper:
+Shape A: A 6-wide x 3-tall rectangle (18 squares)
+Shape B: A 5-wide x 2-tall rectangle (10 squares)
+Shape C: An L-shaped piece roughly 4x2 with a notch (approximately 6 squares)
+Shape D: An L-shaped piece roughly 3x3 with a corner removed (approximately 7 squares)
+Shape E: A tiny 2x1 rectangle (2 squares)
+Below them is an empty 6x6 grid (36 squares total).]
+
+Fran has one each of the shapes below, which she can move and rotate.
+She has an empty 6 by 6 grid.
+Fran realises she can cover the grid exactly using four of these shapes, with no shapes overlapping.
+Which shape is not used?
+
+A shape A
+B shape B
+C shape C
+D shape D
+E shape E

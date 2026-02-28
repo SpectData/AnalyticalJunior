@@ -1,0 +1,12 @@
+Q32
+
+In a restaurant, the same amount of vegetables need to be chopped every day.
+Romesh chops the vegetables on a Thursday. If he starts at 8:45 am and works as quickly as he can, he finishes at 9:25 am.
+Lucinda chops the vegetables on a Friday. If she starts at 8:25 am and works as quickly as she can, she finishes at 9:05 am.
+They both chop the vegetables on a Saturday. If they start at 8:35 am and work as quickly as they can, what time will they finish?
+
+A 8:55 am
+B 9:05 am
+C 9:15 am
+D 9:25 am
+E 9:55 am

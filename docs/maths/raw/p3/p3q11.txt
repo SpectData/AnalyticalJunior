@@ -1,0 +1,12 @@
+Q11
+
+Omid has a 1 litre measuring jug. It contains 100 mL of water.
+He has some identical blocks. He drops two blocks into the water and they sink. The water level rises to 150 mL.
+Omid drops five more blocks into the water.
+What is the new water level?
+
+A 225 mL
+B 275 mL
+C 375 mL
+D 400 mL
+E 525 mL

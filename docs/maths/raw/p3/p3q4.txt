@@ -1,0 +1,18 @@
+Q4
+
+[Diagram: A cross-shaped number puzzle grid. The grid contains:
+Row 1 (horizontal): 14 + 13 = 27
+Column (right side, vertical): 27 - 3 = (result feeds into Row 2)
+Row 2 (horizontal): [?] x 3 = [?]
+Column (left side, vertical): [?] x 6 = [?] (connecting Row 2 to Row 3)
+Row 3 (horizontal): [?] - triangle = 10
+The triangle symbol represents the unknown value.]
+
+When the puzzle below is completed, each row and each column will contain a correct number sentence.
+What number does the triangle represent?
+
+A 26
+B 32
+C 38
+D 50
+E 58

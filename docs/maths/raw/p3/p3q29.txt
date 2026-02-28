@@ -1,0 +1,13 @@
+Q29
+
+[Diagram: A number line showing whole numbers 7, 8, and 9 with minor tick marks dividing each unit into 4 equal parts (quarters). An arc/arrow shows one jump going backwards (left) from 9 by 1/4 of a unit.]
+
+Here is part of a number line.
+The arrow represents one jump.
+Starting from 9, what value will be reached on the number line after 11 of these jumps?
+
+A 6 1/4
+B 6 1/2
+C 6 3/4
+D 7 1/4
+E 7 3/4

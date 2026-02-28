@@ -1,0 +1,17 @@
+Q19
+
+[Diagram: Three rectangular building blocks shown in 3D with labelled dimensions:
+Block 1: 3 cm x 5 cm x 4 cm
+Block 2: 4 cm x 4 cm x 5 cm
+Block 3: 7 cm x 6 cm x 5 cm
+Marked 'diagram not to scale'.]
+
+Jake has three different building blocks.
+He stacks all three on top of each other in different ways.
+What is the tallest stack he can make?
+
+A 13 cm
+B 14 cm
+C 15 cm
+D 17 cm
+E 18 cm

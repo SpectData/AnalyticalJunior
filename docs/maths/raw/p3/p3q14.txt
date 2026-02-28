@@ -1,0 +1,12 @@
+Q14
+
+[Diagram: Two shapes drawn on a dot grid (dots spaced 1 cm apart). Shape P is a small rectangle spanning 2 units wide x 1 unit tall (area = 2 cm squared). Shape Q is a large rectangular shape approximately 4 units wide x 5 units tall, with a 2x1 notch cut from the top-left corner, drawn on the same dot grid.]
+
+Shape P has an area of 2 cm squared.
+What is the area of Shape Q?
+
+A 8 cm squared
+B 10 cm squared
+C 15 cm squared
+D 16 cm squared
+E 24 cm squared

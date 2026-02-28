@@ -1,0 +1,18 @@
+Q35
+
+[Diagram: A map of Aboriginal regions in eastern Australia. North is up. Tamworth is marked in the KAMILAROI region (lower-centre). Brisbane is marked in the YUGGERA region (upper-right). The regions from south to north include:
+Bottom row: WONNARUA, GEAWEGAL
+Lower-middle: KAMILAROI (contains Tamworth), BIRIPI, DHANGATTI
+Middle: NGANYAY-WANA, NGARABAL, GUMBAYNGGIRR
+Upper-middle: BIGAMBUL, BUNDJALUNG
+Top row: MANDANDANJI, BARUNGGAM, WAKA WAKA, GUBBI, YUGGERA (contains Brisbane)]
+
+The map shows some of the Aboriginal regions of eastern Australia.
+Shuyi plans a route from Tamworth to Brisbane. On her route she only travels north or east. She can make as many turns as she wants, but always travels north or east.
+What is the greatest number of different regions she could pass through? (Do not include Kamilaroi or Yuggera.)
+
+A 3
+B 5
+C 6
+D 7
+E 8

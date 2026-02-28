@@ -1,0 +1,27 @@
+Q30
+
+Here is a bus timetable:
+
+Forster to Coffs Harbour:
+              Bus 1      Bus 2
+Forster       7:00 am    8:50 am
+Wauchope      8:48 am    10:38 am
+Kempsey       9:58 am    11:48 am
+Coffs Harbour 11:49 am   1:39 pm
+
+Coffs Harbour to Forster:
+              Bus 3      Bus 4
+Coffs Harbour 2:39 pm    4:25 pm
+Kempsey       4:40 pm    6:26 pm
+Wauchope      5:53 pm    7:39 pm
+Forster       7:33 pm    9:19 pm
+
+Sarah and her friends live in Forster and take the 8:50 am bus to Coffs Harbour.
+They stay in Coffs Harbour until they get a bus home, arriving in Forster at 9:19 pm that evening.
+How long do they spend at Coffs Harbour?
+
+A 2 hours 46 minutes
+B 3 hours 14 minutes
+C 3 hours 26 minutes
+D 4 hours 36 minutes
+E 7 hours 40 minutes

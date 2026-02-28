@@ -1,0 +1,14 @@
+Q15
+
+Four bananas weigh the same as six apples.
+A shopkeeper puts fruit into bags.
+  Bag 1: 10 bananas and 9 apples
+  Bag 2: 6 bananas and 12 apples
+  Bag 3: 16 bananas and 3 apples
+Which one of these statements is correct?
+
+A All three bags weigh the same.
+B Bags 1 and 2 weigh the same, and bag 3 has a different weight.
+C Bags 1 and 3 weigh the same, and bag 2 has a different weight.
+D Bags 2 and 3 weigh the same, and bag 1 has a different weight.
+E All three bags have different weights.

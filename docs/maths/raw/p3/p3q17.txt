@@ -1,0 +1,14 @@
+Q17
+
+[Diagram: A square fence with side length 4 m. Posts are placed 2 m apart along each side, with a post at each corner. The diagram shows 8 posts: 3 on each side, with corner posts shared between adjacent sides.]
+
+Selina makes fences around square pieces of land.
+Each fence has posts that are 2 metres apart. There is a post at each corner of the square.
+To make a square with side length 4 m, she needs 8 posts as shown in the picture.
+How many posts does she need to make a square with side length 10 m?
+
+A 16
+B 20
+C 24
+D 25
+E 36

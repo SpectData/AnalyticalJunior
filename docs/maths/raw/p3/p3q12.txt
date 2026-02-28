@@ -1,0 +1,18 @@
+Q12
+
+[Diagram: A horizontal bar graph showing drinks sold today at a restaurant. The x-axis goes from 0 to 60. The bars show approximately:
+- tea: ~8
+- coffee: ~20
+- juice: ~35
+- water: ~40
+Target is 150 drinks per day.]
+
+A restaurant has a target to sell 150 drinks each day.
+The graph shows how many drinks they have sold so far today.
+How many more drinks do they need to sell to reach their target?
+
+A 44
+B 47
+C 50
+D 56
+E 100
