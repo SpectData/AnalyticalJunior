@@ -62,7 +62,11 @@ Or in Unity Editor: **Window > General > Test Runner > EditMode > Run All**.
 ## Question Bank
 
 - Questions are aligned to the **NSW Opportunity Class Placement Test** curriculum (Year 4, Stage 2).
-- The source of truth is `docs/question_bank.json`. After editing, copy to `UnityProject/BrainAcademy/Assets/Resources/question_bank.json`.
-- Each question has: id, topic, subtopic, difficulty, question text, options, correct_index, correct_answer, explanation.
-- Difficulty levels: `easy`, `medium`, `hard`, `super_hard`.
-- When adding questions, follow the existing JSON structure and assign appropriate difficulty and topic tags.
+- Two question types: **short** (<1 min: maths, thinking) and **long** (>1 min: reading comprehension).
+- **Manifest:** `docs/question_bank.json` is the index/manifest listing all paper files.
+- **Paper files:** Individual papers live under `docs/maths/`, `docs/reading/`, `docs/thinking/`, `docs/curated/`.
+- **Build:** Run `uv run scripts/build_question_bank.py` to consolidate papers into `UnityProject/BrainAcademy/Assets/Resources/question_bank.json`.
+- Each paper JSON has a `meta.question_type` field (`"short"` or `"long"`).
+- When adding new papers, add an entry to the manifest's `papers` array and run the build script.
+- Difficulty levels for curated questions: `easy`, `medium`, `hard`, `super_hard`.
+- Reading papers use passage-based structure. Only `comprehension` and `poem` passage types produce standard MCQ questions in the runtime build.

@@ -1,0 +1,340 @@
+{
+  "meta": {
+    "paper": "Practice Paper 2",
+    "section": "mathematical_reasoning",
+    "question_type": "short",
+    "description": "NSW Opportunity Class Placement Test — Mathematical Reasoning",
+    "total_questions": 35
+  },
+  "questions": [
+    {
+      "id": "M2_Q1",
+      "number": 1,
+      "question": "There were 72 people on a bus.\nAt a bus stop, some people got off and 15 people got on.\nThen there were 68 people on the bus.\nHow many people got off at the bus stop?",
+      "options": ["1", "4", "11", "19", "29"],
+      "reasoning": "Let x = people who got off. 72 - x + 15 = 68. 87 - x = 68. x = 87 - 68 = 19.",
+      "correct_index": 3,
+      "correct_answer": "19"
+    },
+    {
+      "id": "M2_Q2",
+      "number": 2,
+      "question": "Here is part of Year 4's timetable for Friday:\nHow many minutes are spent altogether on break and lunch?",
+      "diagram": "A horizontal timetable strip showing: music (8:30 am), geography (9:20 am), break (10:10 am), maths (10:30 am), lunch (11:40 am), end (12:35 pm).",
+      "options": ["55 minutes", "75 minutes", "85 minutes", "95 minutes", "115 minutes"],
+      "reasoning": "Break: 10:10 am to 10:30 am = 20 minutes. Lunch: 11:40 am to 12:35 pm = 55 minutes. Total = 20 + 55 = 75 minutes.",
+      "correct_index": 1,
+      "correct_answer": "75 minutes"
+    },
+    {
+      "id": "M2_Q3",
+      "number": 3,
+      "question": "Antony walks around the rectangle in the direction shown, starting at X.\nHe walks around the rectangle 4 times completely, then walks along 3 more sides,\nalways travelling in the same direction around the rectangle. He finishes at Y.\nHow far does Antony walk in total?",
+      "diagram": "A rectangle 3 m wide and 2 m tall. X is at the bottom-left corner, Y is at the bottom-right corner. An arrow at X points upward, showing counterclockwise direction.",
+      "options": ["24 m", "31 m", "36 m", "40 m", "47 m"],
+      "reasoning": "Perimeter = 2(3+2) = 10 m. Four complete laps = 4 x 10 = 40 m. From X going counterclockwise (up), 3 more sides: left side (2 m) + top (3 m) + right side (2 m) = 7 m, arriving at Y. Total = 40 + 7 = 47 m.",
+      "correct_index": 4,
+      "correct_answer": "47 m"
+    },
+    {
+      "id": "M2_Q4",
+      "number": 4,
+      "question": "There is a repeating pattern shown in the grid below. Part of the pattern is hidden by some spilled paint.\nWhich image is in position D2?",
+      "diagram": "A 6x6 grid (columns A-F, rows 1-6) with a repeating diagonal pattern of five symbols: sun, music note, triangle, square, triple-bar. Each row shifts one position left. Blue paint covers rows 1-3 in columns C-F. Visible: Row 6 = sun, note, triangle, square, triple-bar, sun. Row 5 = note, triangle, square, triple-bar, sun, note. Row 4 = triangle, square, triple-bar, sun, note, triangle.",
+      "options": ["sun", "music note", "triangle", "square", "triple-bar"],
+      "reasoning": "The pattern shifts left by one each row down. Continuing from row 4: Row 3: square, triple-bar, sun, note, triangle, square. Row 2: triple-bar, sun, note, triangle, square, triple-bar. Position D2 = triangle.",
+      "correct_index": 2,
+      "correct_answer": "triangle"
+    },
+    {
+      "id": "M2_Q5",
+      "number": 5,
+      "question": "Here are the first five numbers in a sequence:\n5, 11, 17, 23, 29\nWhat is the 10th number of the sequence?",
+      "options": ["35", "59", "60", "61", "89"],
+      "reasoning": "Common difference = 6. nth term = 5 + (n-1) x 6 = 6n - 1. 10th term = 6(10) - 1 = 59.",
+      "correct_index": 1,
+      "correct_answer": "59"
+    },
+    {
+      "id": "M2_Q6",
+      "number": 6,
+      "question": "Melissa cuts her birthday cake into 10 equal pieces.\nShe gives 2 pieces to John, then gives Sue half of what is left.\nMelissa then eats one piece.\nWhat fraction of the cake does Melissa have left?",
+      "options": ["2/10", "1/4", "3/10", "2/3", "3/4"],
+      "reasoning": "Start: 10 pieces. Give John 2: 8 left. Give Sue half of 8 = 4 pieces: 4 left. Melissa eats 1: 3 left. Fraction = 3/10.",
+      "correct_index": 2,
+      "correct_answer": "3/10"
+    },
+    {
+      "id": "M2_Q7",
+      "number": 7,
+      "question": "Raj bought 8 soft drinks, each at the same price.\nHe paid using a $20 note.\nHe received $8 change.\nHow much did each soft drink cost?",
+      "options": ["$0.75", "$0.96", "$1.00", "$1.20", "$1.50"],
+      "reasoning": "Total spent = $20 - $8 = $12. Each drink = $12 / 8 = $1.50.",
+      "correct_index": 4,
+      "correct_answer": "$1.50"
+    },
+    {
+      "id": "M2_Q8",
+      "number": 8,
+      "question": "The diagram shows the number of lengths of a swimming pool swum by 31 people.\nKalou counts the number of people who swam three or more lengths.\nJade counts the number of people who swam fewer than three lengths.\nWhat is the difference between the numbers Kalou and Jade calculate?",
+      "diagram": "A dot plot with x-axis 'number of lengths' (0-8). Dots stacked vertically form a staircase pattern, taller on the left. Approximate counts: 0 lengths=0, 1=0, 2=7, 3=6, 4=5, 5=5, 6=4, 7=3, 8=1. Total = 31.",
+      "options": ["2", "5", "7", "9", "12"],
+      "reasoning": "From the dot plot: fewer than 3 lengths (0+1+2) = 0+0+7 = 7 people. Three or more (3+4+5+6+7+8) = 6+5+5+4+3+1 = 24 people. Difference = 24 - 7 = 17. However, based on the answer options, the exact dot counts may differ slightly. With fewer than 3 = 12 and three or more = 19, difference = 7.",
+      "correct_index": null,
+      "correct_answer": null
+    },
+    {
+      "id": "M2_Q9",
+      "number": 9,
+      "question": "When the digit 8 is replaced by the digit 9 in each of the numbers below, which number increases the most?",
+      "options": ["24 680", "48 001", "63 918", "81 234", "99 899"],
+      "reasoning": "Replace 8 with 9 and find the increase:\n24 680 → 24 690: increase = 10\n48 001 → 49 001: increase = 1000\n63 918 → 63 919: increase = 1\n81 234 → 91 234: increase = 10 000\n99 899 → 99 999: the 8 is in hundreds place, increase = 100.\n81 234 increases the most (by 10 000).",
+      "correct_index": 3,
+      "correct_answer": "81 234"
+    },
+    {
+      "id": "M2_Q10",
+      "number": 10,
+      "question": "Cooper wants to buy a new surfboard.\nHe must choose both the shape and the colour. There are three shapes to choose from: fish, gun, longboard.\nEach shape is available in any one of these four colours: red, blue, yellow, purple.\nHow many different types of surfboard can Cooper choose from?",
+      "options": ["6", "7", "8", "12", "16"],
+      "reasoning": "Number of combinations = shapes x colours = 3 x 4 = 12.",
+      "correct_index": 3,
+      "correct_answer": "12"
+    },
+    {
+      "id": "M2_Q11",
+      "number": 11,
+      "question": "Amina and Morten both weigh the same pen.\nWhen Amina places the pen on her scales, the arrow correctly shows its mass in grams.\nWhen Morten places the pen on his different scales, the arrow correctly shows the pen's mass in grams, but the arrow is in a different position.\nWhat does Y represent on Morten's scales?",
+      "diagram": "Amina's scales: 0g to 40g, divided into 5 equal segments. Arrow at 3rd mark = 24g. Morten's scales: 0g to Y, divided into 4 equal segments. Arrow at 2nd mark (midpoint).",
+      "options": ["15 g", "24 g", "48 g", "60 g", "96 g"],
+      "reasoning": "Amina's scale: 0g to 40g in 5 equal parts (each 8g). Arrow at 3rd mark = 24g. The pen weighs 24g. Morten's scale: 0g to Y in 4 equal parts. Arrow at 2nd mark = Y/2. Since Y/2 = 24, Y = 48g.",
+      "correct_index": 2,
+      "correct_answer": "48 g"
+    },
+    {
+      "id": "M2_Q12",
+      "number": 12,
+      "question": "Here are three shapes: X, Y and Z.\nWhat is the order of the shapes, from smallest area to largest area?",
+      "diagram": "Three shapes on centimetre grid paper. Shape X: an L-shaped figure, approximately 12 square units. Shape Y: a large arrow/chevron shape, approximately 10-11 square units (some diagonal edges). Shape Z: a right-triangle-like shape, approximately 7-8 square units.",
+      "options": ["X, Y, Z", "X, Z, Y", "Y, X, Z", "Y, Z, X", "Z, Y, X"],
+      "reasoning": "This question requires counting grid squares for each shape from the diagram. The exact areas depend on the grid positions. The shapes need to be ordered from smallest to largest area based on careful counting of full and half squares.",
+      "correct_index": null,
+      "correct_answer": null
+    },
+    {
+      "id": "M2_Q13",
+      "number": 13,
+      "question": "A packet of nuts weighs 25 grams.\nHow many packets of nuts weigh half a kilogram?",
+      "options": ["2", "10", "20", "40", "200"],
+      "reasoning": "Half a kilogram = 500 grams. Number of packets = 500 / 25 = 20.",
+      "correct_index": 2,
+      "correct_answer": "20"
+    },
+    {
+      "id": "M2_Q14",
+      "number": 14,
+      "question": "Shamira has these notes in her purse:\n- four $5 notes\n- two $10 notes\n- two $20 notes\nShe takes a note from her purse without looking.\nWhich of these statements is/are correct?\n  1. She is more likely to take a $5 note than a $20 note.\n  2. She is equally likely to take a $5 note or not to take a $5 note.\n  3. It is certain that she takes a note worth more than $5.",
+      "options": ["statement 1 only", "statement 2 only", "statements 1 and 2 only", "statements 2 and 3 only", "statements 1, 2 and 3"],
+      "reasoning": "Total notes = 4 + 2 + 2 = 8.\nStatement 1: P($5) = 4/8 = 1/2. P($20) = 2/8 = 1/4. 1/2 > 1/4. True.\nStatement 2: P($5) = 4/8 = 1/2. P(not $5) = 4/8 = 1/2. Equal. True.\nStatement 3: $5 notes exist, so it's NOT certain she takes a note worth more than $5. False.\nStatements 1 and 2 are correct.",
+      "correct_index": 2,
+      "correct_answer": "statements 1 and 2 only"
+    },
+    {
+      "id": "M2_Q15",
+      "number": 15,
+      "question": "Maxine turns a dial on a machine.\nShe follows this instruction repeatedly:\n- Turn the dial clockwise through an acute angle.\nAfter a while, she has turned the dial by at least one complete revolution.\nWhat is the smallest number of times she could have followed the instruction?",
+      "options": ["2", "3", "4", "5", "6"],
+      "reasoning": "An acute angle is less than 90 degrees. One complete revolution = 360 degrees. To minimise turns, maximise each turn. Max acute angle approaches 90 degrees (but must be less). With 4 turns of just under 90 degrees = just under 360 degrees (not enough). With 5 turns of just under 90 degrees = just under 450 degrees > 360. The smallest number is 5.",
+      "correct_index": 3,
+      "correct_answer": "5"
+    },
+    {
+      "id": "M2_Q16",
+      "number": 16,
+      "question": "Grey rhombuses are placed inside a regular hexagon, touching the corners.\nBlack equilateral triangles are placed between the rhombuses.\nHere is the original hexagon:\nHow many black triangles would be needed to completely fill the original hexagon?",
+      "diagram": "First image: A regular hexagon filled with 3 grey rhombuses (each made of 2 equilateral triangles) radiating from the centre to alternating vertices, with 6 black equilateral triangles between them forming a Star of David pattern. A smaller white hexagonal region at the centre. Second image: The same hexagon, empty.",
+      "options": ["18", "21", "24", "30", "36"],
+      "reasoning": "A regular hexagon can be divided into 6 equilateral triangles from centre to vertices. Each of these can be divided into 4 smaller equilateral triangles (by connecting midpoints), giving 24 small triangles total. The black triangles in the pattern are this same small size. To fill the entire hexagon with these small equilateral triangles requires 24.",
+      "correct_index": 2,
+      "correct_answer": "24"
+    },
+    {
+      "id": "M2_Q17",
+      "number": 17,
+      "question": "A rectangle and a rhombus have the same perimeter.\nJoel measures one edge of the rhombus and finds that it is 9 centimetres long.\nJenna measures the length of the rectangle and finds that it is 14 centimetres long.\nWhat is the width of the rectangle?",
+      "options": ["4 cm", "5 cm", "8 cm", "22 cm", "36 cm"],
+      "reasoning": "Rhombus perimeter = 4 x 9 = 36 cm. Rectangle perimeter = 36 cm. 2(14 + w) = 36. 14 + w = 18. w = 4 cm.",
+      "correct_index": 0,
+      "correct_answer": "4 cm"
+    },
+    {
+      "id": "M2_Q18",
+      "number": 18,
+      "question": "12 x 35 = 4 x Triangle x 7\nWhat is the missing number Triangle?",
+      "options": ["3", "4", "5", "8", "15"],
+      "reasoning": "12 x 35 = 420. 4 x Triangle x 7 = 28 x Triangle. 28 x Triangle = 420. Triangle = 420 / 28 = 15.",
+      "correct_index": 4,
+      "correct_answer": "15"
+    },
+    {
+      "id": "M2_Q19",
+      "number": 19,
+      "question": "Erin is looking at the following block of cubes.\nFrom her point of view, she sees the shape shown.\nWhich arrow shows the way Erin must be looking?",
+      "diagram": "A 3D step-shaped block: bottom layer has 3 cubes in a row (left to right), top layer has 2 cubes on the left side. Five arrows: A from left, B from upper-left diagonal, C from right, D from below diagonal, E from directly above. Erin's 2D view shows 1 square on upper-right and 2 squares on the bottom row (a step pattern).",
+      "options": ["A", "B", "C", "D", "E"],
+      "reasoning": "The block has 2 cubes tall on the left and 1 cube tall on the right. Erin sees a step with 1 square on upper-right and 2 on the bottom. This is the view from the right side (arrow C), where the near side (right) is 1 cube tall and the far side (left) is 2 cubes tall, creating a step going up to the left.",
+      "correct_index": 2,
+      "correct_answer": "C"
+    },
+    {
+      "id": "M2_Q20",
+      "number": 20,
+      "question": "A clock shows 5:55 am.\nWhat time will it show 555 minutes later?",
+      "options": ["11:10 am", "11:50 am", "12:05 pm", "3:10 pm", "3:50 pm"],
+      "reasoning": "555 minutes = 9 hours 15 minutes (555 / 60 = 9 remainder 15). 5:55 am + 9 hours 15 minutes = 3:10 pm.",
+      "correct_index": 3,
+      "correct_answer": "3:10 pm"
+    },
+    {
+      "id": "M2_Q21",
+      "number": 21,
+      "question": "Panu, Quinn and Rita each think of a number.\nPanu is thinking of the number of halves needed to make 2 1/2.\nQuinn is thinking of the number of thirds needed to make 2 1/3.\nRita is thinking of the number of quarters needed to make 1 1/2.\nWhat is the order of their numbers from smallest to largest?",
+      "options": ["Panu's, Rita's, Quinn's", "Quinn's, Panu's, Rita's", "Quinn's, Rita's, Panu's", "Rita's, Panu's, Quinn's", "Rita's, Quinn's, Panu's"],
+      "reasoning": "Panu: 2 1/2 = 5/2, so 5 halves. Panu's number = 5.\nQuinn: 2 1/3 = 7/3, so 7 thirds. Quinn's number = 7.\nRita: 1 1/2 = 3/2 = 6/4, so 6 quarters. Rita's number = 6.\nSmallest to largest: 5, 6, 7 = Panu's, Rita's, Quinn's.",
+      "correct_index": 0,
+      "correct_answer": "Panu's, Rita's, Quinn's"
+    },
+    {
+      "id": "M2_Q22",
+      "number": 22,
+      "question": "Which of these are possible ways to make 100 by adding three whole numbers?\n  1. Add three even numbers.\n  2. Add two even numbers and one odd number.\n  3. Add two odd numbers and one even number.\n  4. Add three odd numbers.",
+      "options": ["1 only", "1 and 2 only", "1 and 3 only", "1, 2 and 3 only", "2, 3 and 4 only"],
+      "reasoning": "100 is even.\n1. even + even + even = even. Possible (e.g., 30+30+40). Yes.\n2. even + even + odd = even + odd = odd. Cannot make 100 (even). No.\n3. odd + odd + even = even + even = even. Possible (e.g., 1+1+98). Yes.\n4. odd + odd + odd = even + odd = odd. Cannot make 100 (even). No.\nOnly 1 and 3 are possible.",
+      "correct_index": 2,
+      "correct_answer": "1 and 3 only"
+    },
+    {
+      "id": "M2_Q23",
+      "number": 23,
+      "question": "A box contains 25 marbles:\n3 blue, 4 red, 8 yellow and 10 green.\nLemar takes one marble out of the box without looking.\nWhich of these events is the least likely?",
+      "options": ["The marble is either blue or red.", "The marble is yellow.", "The marble is not green.", "The marble is not blue.", "The marble is neither red nor green."],
+      "reasoning": "A: blue or red = 3+4 = 7/25\nB: yellow = 8/25\nC: not green = 25-10 = 15/25\nD: not blue = 25-3 = 22/25\nE: neither red nor green = 25-4-10 = 11/25\nSmallest probability is A (7/25). A is the least likely.",
+      "correct_index": 0,
+      "correct_answer": "The marble is either blue or red."
+    },
+    {
+      "id": "M2_Q24",
+      "number": 24,
+      "question": "Alesha is doing this puzzle:\nWrite the same whole number into each box to make the sentences true.\n  Box + 4 is bigger than 8.\n  Box + Box is less than 14.\nAlesha realises that there is more than one correct answer to the puzzle.\nHow many different correct answers are there?",
+      "options": ["2", "3", "4", "5", "6"],
+      "reasoning": "Condition 1: n + 4 > 8, so n > 4, meaning n >= 5.\nCondition 2: n + n < 14, so 2n < 14, meaning n < 7, so n <= 6.\nValid whole numbers: n = 5, 6. That's 2 answers.",
+      "correct_index": 0,
+      "correct_answer": "2"
+    },
+    {
+      "id": "M2_Q25",
+      "number": 25,
+      "question": "Ophelia has 12 lumps of clay with the following masses:\n100 g, 100 g, 50 g, 5 g, 5 g, 5 g, 2 g, 2 g, 2 g, 1 g, 1 g, 1 g\nShe joins them all to make one big lump.\nShe splits the big lump into two equal pieces.\nWhat is the mass of each piece?",
+      "options": ["87 g", "137 g", "174 g", "237 g", "274 g"],
+      "reasoning": "Total = 2(100) + 50 + 3(5) + 3(2) + 3(1) = 200 + 50 + 15 + 6 + 3 = 274 g. Each piece = 274 / 2 = 137 g.",
+      "correct_index": 1,
+      "correct_answer": "137 g"
+    },
+    {
+      "id": "M2_Q26",
+      "number": 26,
+      "question": "Charles counts from 4 to 7 in jumps of 1/3.\nJulie counts from 6 to 8 in jumps of 1/4.\nWhich statement is correct?",
+      "options": ["Julie makes 2 more jumps than Charles.", "Julie makes 1 more jump than Charles.", "They make the same number of jumps.", "Charles makes 1 more jump than Julie.", "Charles makes 2 more jumps than Julie."],
+      "reasoning": "Charles: distance = 7 - 4 = 3. Jumps of 1/3: 3 / (1/3) = 9 jumps.\nJulie: distance = 8 - 6 = 2. Jumps of 1/4: 2 / (1/4) = 8 jumps.\nCharles makes 9, Julie makes 8. Charles makes 1 more jump than Julie.",
+      "correct_index": 3,
+      "correct_answer": "Charles makes 1 more jump than Julie."
+    },
+    {
+      "id": "M2_Q27",
+      "number": 27,
+      "question": "Isabella recorded the number of letters in each word of a sentence.\nThe column graph shows her results.\nWhat was the total number of letters in the sentence?",
+      "diagram": "A column graph. Y-axis: 'number of words' (scale 0-7). X-axis: 'length of word'. Bar heights: 2 letters = 3 words (blue), 3 letters = 6 words (orange), 4 letters = 2 words (purple).",
+      "options": ["9", "11", "20", "28", "32"],
+      "reasoning": "Total letters = (3 words x 2 letters) + (6 words x 3 letters) + (2 words x 4 letters) = 6 + 18 + 8 = 32.",
+      "correct_index": 4,
+      "correct_answer": "32"
+    },
+    {
+      "id": "M2_Q28",
+      "number": 28,
+      "question": "This square is drawn on a playground. It has a circle at each corner.\nThe arrow shows the direction of north.\nAlan, Bea, Carla and Denzil are each standing in different circles.\nAlan is facing south-east and is looking at Carla.\nCarla is facing west and is looking at Denzil.\nDenzil is looking at Bea.\nWhich direction is Denzil facing?",
+      "diagram": "A square with dashed circles at each corner. North arrow points straight up. Corners: top-left (NW), top-right (NE), bottom-left (SW), bottom-right (SE).",
+      "options": ["north-east", "north", "north-west", "west", "south-west"],
+      "reasoning": "Alan faces SE and looks at Carla. Alan must be at NW corner, Carla at SE corner.\nCarla faces west and looks at Denzil. From SE facing west = looking toward SW. Denzil is at SW corner.\nThat leaves Bea at NE corner.\nDenzil (SW) looks at Bea (NE). Direction from SW to NE = north-east.",
+      "correct_index": 0,
+      "correct_answer": "north-east"
+    },
+    {
+      "id": "M2_Q29",
+      "number": 29,
+      "question": "Sajid's birthday is on Tuesday 7th January.\nRuby's birthday is 20 days before Sajid's birthday.\nOn what day and date is Ruby's birthday?",
+      "diagram": "A January calendar. Columns: Mo, Tu, We, Th, Fr, Sa, Su. Tuesday 7th January is circled. The calendar also shows the end of December (30th Mon, 31st Tue).",
+      "options": ["Tuesday 17th December", "Wednesday 17th December", "Tuesday 18th December", "Wednesday 18th December", "Tuesday 19th December"],
+      "reasoning": "Count back 20 days from 7 January. Jan 7 to Jan 1 = 6 days. Remaining = 20 - 6 = 14 days. 14 days back from 1 Jan = 18 December. Day of week: Jan 7 is Tuesday. 20 days = 2 weeks + 6 days. Tuesday - 6 days = Wednesday. Ruby's birthday is Wednesday 18th December.",
+      "correct_index": 3,
+      "correct_answer": "Wednesday 18th December"
+    },
+    {
+      "id": "M2_Q30",
+      "number": 30,
+      "question": "Lachlan cuts a strip of paper 2 cm wide into five shorter rectangular strips that are still 2 cm wide.\nHe uses all of the five shorter strips to make two letters, L and U, without overlapping or folding any of these strips.\nWhat was the length of the strip of paper Lachlan started with?",
+      "diagram": "A long 2 cm wide paper strip cut into 5 pieces. Letter L: 10 cm tall, 8 cm wide base, made from 2 strips (vertical 10 cm, horizontal base). Letter U: 12 cm tall, 6 cm wide, base portion 2 cm tall, made from 3 strips (two vertical sides, one horizontal bottom). Diagrams not to scale.",
+      "options": ["40 cm", "42 cm", "44 cm", "46 cm", "48 cm"],
+      "reasoning": "The L uses 2 strips. Vertical strip = 10 cm. Horizontal strip: base is 8 cm wide, minus the 2 cm width of the vertical strip = 6 cm. L strips: 10 + 6 = 16 cm.\nThe U uses 3 strips. Left vertical = 12 cm. Right vertical = 12 cm. Bottom horizontal: width is 6 cm minus two strip widths (2+2) = 2 cm. U strips: 12 + 12 + 2 = 26 cm.\nTotal = 16 + 26 = 42 cm.",
+      "correct_index": 1,
+      "correct_answer": "42 cm"
+    },
+    {
+      "id": "M2_Q31",
+      "number": 31,
+      "question": "Sean writes down the smallest 3-digit number that has three different digits.\nTammy writes down the largest 3-digit number that has three different digits.\nWhat is the sum of their two numbers?",
+      "options": ["1089", "1098", "1099", "1107", "1110"],
+      "reasoning": "Smallest 3-digit number with three different digits: 102 (1 in hundreds, 0 in tens, 2 in ones).\nLargest 3-digit number with three different digits: 987.\nSum = 102 + 987 = 1089.",
+      "correct_index": 0,
+      "correct_answer": "1089"
+    },
+    {
+      "id": "M2_Q32",
+      "number": 32,
+      "question": "Here is a picture graph showing the numbers of butterflies counted in a garden on three different days. The key is missing.\nA small butterfly represents half as many as a large butterfly.\nWhich of these sets of numbers could this graph represent?",
+      "diagram": "A picture graph with butterfly symbols. Monday: 2 large + 1 small butterfly. Tuesday: 3 large + 1 small butterfly. Wednesday: 2 large + 1 small butterfly. Key: small butterfly = half as many as large butterfly. Three possible number sets: X (12, 20, 16), Y (20, 28, 24), Z (30, 50, 20).",
+      "options": ["X only", "Z only", "X and Y only", "Y and Z only", "X, Y and Z"],
+      "reasoning": "If Mon=2.5 units, Tue=3.5 units, Wed=2.5 units (where large=1, small=0.5), then the ratio is 5:7:5. Check each set:\nX: 12:20:16 = 3:5:4 - doesn't match 5:7:5.\nY: 20:28:24 = 5:7:6 - doesn't match 5:7:5.\nZ: 30:50:20 = 3:5:2 - doesn't match 5:7:5.\nThe exact butterfly symbol counts in the graph determine which sets work. This requires precise visual reading of the picture graph.",
+      "correct_index": null,
+      "correct_answer": null
+    },
+    {
+      "id": "M2_Q33",
+      "number": 33,
+      "question": "Dave is 7 years younger than Sam.\nSam is 5 years older than Lisa.\nFred is 13 years older than Dave.\nFred is older than Lisa.\nHow many years older is Fred than Lisa?",
+      "options": ["6", "8", "10", "11", "15"],
+      "reasoning": "Let Dave = D. Sam = D + 7. Lisa = Sam - 5 = D + 7 - 5 = D + 2. Fred = D + 13.\nFred - Lisa = (D + 13) - (D + 2) = 11.",
+      "correct_index": 3,
+      "correct_answer": "11"
+    },
+    {
+      "id": "M2_Q34",
+      "number": 34,
+      "question": "Mei has a piece of card that measures 12 cm by 8 cm. She cuts a 3 cm by 3 cm square from each corner.\nShe then folds up the edges to make an open box.\nMei puts centimetre cubes into the box.\nHow many cubes does she need to completely fill the box?",
+      "diagram": "A 12 cm x 8 cm card with 3 cm x 3 cm squares cut from each corner, then folded up into an open box. A 1 cm x 1 cm x 1 cm reference cube is shown.",
+      "options": ["36", "60", "72", "135", "288"],
+      "reasoning": "After cutting 3 cm squares from each corner and folding up:\nLength = 12 - 2(3) = 6 cm.\nWidth = 8 - 2(3) = 2 cm.\nHeight = 3 cm.\nVolume = 6 x 2 x 3 = 36 cm³. So 36 cubes.",
+      "correct_index": 0,
+      "correct_answer": "36"
+    },
+    {
+      "id": "M2_Q35",
+      "number": 35,
+      "question": "In a code, each letter is represented by a different whole number greater than 1.\nWords are replaced by the product of their letters.\nFor example: If M = 5 and E = 10 then ME = 5 x 10 = 50.\nIf NAN = 36 and NUN = 18, what is the value of UNA?",
+      "options": ["12", "24", "30", "36", "72"],
+      "reasoning": "NAN = N x A x N = N² x A = 36.\nNUN = N x U x N = N² x U = 18.\nDivide: NAN / NUN = A / U = 36 / 18 = 2. So A = 2U.\nN² x U = 18. Try N=3: 9U = 18, U = 2. Then A = 4. Check: N²A = 9 x 4 = 36. Correct.\nAll different and > 1: N=3, U=2, A=4. All valid.\nUNA = U x N x A = 2 x 3 x 4 = 24.",
+      "correct_index": 1,
+      "correct_answer": "24"
+    }
+  ]
+}

@@ -48,6 +48,23 @@ public abstract class GameQuestion
         public MemoryQuestion memoryQuestion;
         public Memory(MemoryQuestion memoryQuestion) { this.memoryQuestion = memoryQuestion; }
     }
+
+    public class ReadingComprehension : GameQuestion
+    {
+        public string passageTitle;
+        public string passageText;
+        public string passageType;
+        public Question question;
+
+        public ReadingComprehension(string passageTitle, string passageText,
+            string passageType, Question question)
+        {
+            this.passageTitle = passageTitle;
+            this.passageText = passageText;
+            this.passageType = passageType;
+            this.question = question;
+        }
+    }
 }
 
 [System.Serializable]
