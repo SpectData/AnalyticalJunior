@@ -1,0 +1,25 @@
+#!/bin/bash
+echo "Running pre-commit checks..."
+
+echo "=== ktlint ==="
+./gradlew ktlintCheck --daemon 2>&1
+KTLINT_STATUS=$?
+
+echo "=== detekt ==="
+./gradlew detekt --daemon 2>&1
+DETEKT_STATUS=$?
+
+if [ $KTLINT_STATUS -ne 0 ] || [ $DETEKT_STATUS -ne 0 ]; then
+    echo ""
+    echo "Pre-commit checks FAILED."
+    if [ $KTLINT_STATUS -ne 0 ]; then
+        echo "  ktlint: FAILED (run './gradlew ktlintFormat' to auto-fix)"
+    fi
+    if [ $DETEKT_STATUS -ne 0 ]; then
+        echo "  detekt: FAILED (review issues above)"
+    fi
+    exit 1
+fi
+
+echo "Pre-commit checks PASSED."
+exit 0

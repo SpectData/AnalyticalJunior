@@ -1,0 +1,39 @@
+build:
+  maxIssues: 0
+
+complexity:
+  LongMethod:
+    threshold: 150
+    ignoreAnnotated:
+      - Composable
+  LongParameterList:
+    functionThreshold: 10
+    constructorThreshold: 10
+    ignoreAnnotated:
+      - Composable
+  CyclomaticComplexMethod:
+    threshold: 20
+    ignoreAnnotated:
+      - Composable
+  TooManyFunctions:
+    active: false
+
+style:
+  MagicNumber:
+    active: false
+  WildcardImport:
+    active: false
+  MaxLineLength:
+    maxLineLength: 120
+  ReturnCount:
+    max: 5
+  UnusedPrivateMember:
+    active: true
+
+naming:
+  FunctionNaming:
+    functionPattern: "[a-zA-Z][a-zA-Z0-9]*"
+  TopLevelPropertyNaming:
+    constantPattern: "[A-Z][A-Za-z0-9]*"
+  MatchingDeclarationName:
+    active: false

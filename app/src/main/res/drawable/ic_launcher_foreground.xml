@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Brain icon - simplified -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,30 C42,30 33,39 33,50 C33,55 35,59 38,62 L38,72 C38,74 40,76 42,76 L66,76 C68,76 70,74 70,72 L70,62 C73,59 75,55 75,50 C75,39 66,30 54,30z"
+        android:strokeWidth="0" />
+    <path
+        android:fillColor="#667EEA"
+        android:pathData="M54,36 L54,70"
+        android:strokeColor="#667EEA"
+        android:strokeWidth="2" />
+    <path
+        android:fillColor="#667EEA"
+        android:pathData="M44,45 Q54,40 54,50"
+        android:strokeColor="#667EEA"
+        android:strokeWidth="2" />
+    <path
+        android:fillColor="#667EEA"
+        android:pathData="M64,45 Q54,40 54,50"
+        android:strokeColor="#667EEA"
+        android:strokeWidth="2" />
+    <path
+        android:fillColor="#667EEA"
+        android:pathData="M44,55 Q54,60 54,50"
+        android:strokeColor="#667EEA"
+        android:strokeWidth="2" />
+    <path
+        android:fillColor="#667EEA"
+        android:pathData="M64,55 Q54,60 54,50"
+        android:strokeColor="#667EEA"
+        android:strokeWidth="2" />
+</vector>

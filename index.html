@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Academy Junior</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --math-color: #4A90D9;
+            --math-light: #E8F2FF;
+            --logic-color: #E67E22;
+            --logic-light: #FFF3E8;
+            --easy-color: #27AE60;
+            --medium-color: #F39C12;
+            --hard-color: #E74C3C;
+            --bg: #F0F4F8;
+            --card-bg: #FFFFFF;
+            --text: #2C3E50;
+            --text-light: #7F8C8D;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        .header h1 { font-size: 2rem; letter-spacing: 2px; }
+        .header p { font-size: 0.9rem; opacity: 0.85; margin-top: 4px; }
+
+        /* ── Score Bar ── */
+        .score-bar {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 12px 20px;
+            background: white;
+            width: 100%;
+            max-width: 700px;
+            margin-top: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .score-item { text-align: center; }
+        .score-item .label { font-size: 0.75rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; }
+        .score-item .value { font-size: 1.4rem; font-weight: 700; }
+
+        /* ── Screens ── */
+        .screen { display: none; width: 100%; max-width: 700px; padding: 20px; }
+        .screen.active { display: block; }
+
+        /* ── Menu ── */
+        .category-cards { display: flex; gap: 16px; margin-top: 20px; flex-wrap: wrap; justify-content: center; }
+        .category-card {
+            flex: 1; min-width: 280px; max-width: 340px;
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 24px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            border-top: 5px solid;
+        }
+        .category-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
+        .category-card.math { border-top-color: var(--math-color); }
+        .category-card.logic { border-top-color: var(--logic-color); }
+        .category-card .icon { font-size: 2.5rem; margin-bottom: 10px; }
+        .category-card h3 { font-size: 1.2rem; margin-bottom: 6px; }
+        .category-card p { font-size: 0.85rem; color: var(--text-light); }
+
+        /* ── Difficulty Select ── */
+        .difficulty-buttons { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; justify-content: center; }
+        .diff-btn {
+            padding: 16px 32px;
+            border: none; border-radius: 12px;
+            font-size: 1.1rem; font-weight: 600;
+            cursor: pointer; color: white;
+            transition: transform 0.2s, box-shadow 0.2s;
+            min-width: 140px;
+        }
+        .diff-btn:hover { transform: scale(1.05); }
+        .diff-btn.easy { background: var(--easy-color); }
+        .diff-btn.medium { background: var(--medium-color); }
+        .diff-btn.hard { background: var(--hard-color); }
+        .diff-info {
+            margin-top: 12px; font-size: 0.85rem; color: var(--text-light); text-align: center;
+        }
+
+        /* ── Game Screen ── */
+        .game-hud {
+            display: flex; justify-content: space-between; align-items: center;
+            background: white; padding: 12px 20px; border-radius: 12px;
+            margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .game-hud .timer { font-size: 1.5rem; font-weight: 700; }
+        .game-hud .timer.warning { color: var(--hard-color); }
+        .game-hud .question-count { font-size: 0.9rem; color: var(--text-light); }
+        .game-hud .game-score { font-size: 1.1rem; font-weight: 600; }
+
+        .progress-bar-container {
+            width: 100%; height: 6px; background: #E0E0E0; border-radius: 3px;
+            margin-bottom: 20px; overflow: hidden;
+        }
+        .progress-bar {
+            height: 100%; background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 3px; transition: width 0.3s;
+        }
+
+        .question-card {
+            background: white; border-radius: 16px; padding: 32px;
+            text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            min-height: 300px; display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+        }
+        .question-card .minigame-label {
+            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;
+            color: var(--text-light); margin-bottom: 12px;
+        }
+        .question-card .question-text {
+            font-size: 1.6rem; font-weight: 600; margin-bottom: 28px; line-height: 1.4;
+        }
+
+        .answers { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%; max-width: 500px; }
+        .answer-btn {
+            padding: 16px; border: 2px solid #E0E0E0; border-radius: 12px;
+            background: white; font-size: 1.1rem; font-weight: 500;
+            cursor: pointer; transition: all 0.2s;
+        }
+        .answer-btn:hover { border-color: #667eea; background: #F8F9FF; }
+        .answer-btn.correct { border-color: var(--easy-color); background: #E8F8F0; color: var(--easy-color); }
+        .answer-btn.wrong { border-color: var(--hard-color); background: #FDE8E8; color: var(--hard-color); }
+
+        /* ── Sequence / Pattern display ── */
+        .sequence-display {
+            display: flex; gap: 12px; justify-content: center; align-items: center;
+            flex-wrap: wrap; margin-bottom: 24px;
+        }
+        .seq-item {
+            width: 55px; height: 55px; display: flex; align-items: center; justify-content: center;
+            border-radius: 10px; font-size: 1.3rem; font-weight: 700;
+            background: #F0F4F8; border: 2px solid #D0D8E0;
+        }
+        .seq-item.blank {
+            background: linear-gradient(135deg, #667eea22, #764ba222);
+            border: 2px dashed #667eea; color: #667eea; font-size: 1.5rem;
+        }
+        .seq-arrow { font-size: 1.2rem; color: var(--text-light); }
+
+        /* ── Memory Grid ── */
+        .memory-grid {
+            display: grid; gap: 8px; justify-content: center; margin-bottom: 24px;
+        }
+        .memory-cell {
+            width: 60px; height: 60px; border-radius: 10px;
+            border: 2px solid #D0D8E0; background: #F0F4F8;
+            cursor: pointer; transition: all 0.2s;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem;
+        }
+        .memory-cell.highlighted { background: #667eea; border-color: #5568d4; }
+        .memory-cell.selected { background: #764ba2; border-color: #6a4292; color: white; }
+        .memory-cell.correct-cell { background: var(--easy-color); border-color: #1E8449; }
+        .memory-cell.wrong-cell { background: var(--hard-color); border-color: #C0392B; }
+
+        /* ── Results ── */
+        .results-card {
+            background: white; border-radius: 16px; padding: 40px;
+            text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        .results-card .grade { font-size: 4rem; margin: 16px 0; }
+        .results-card .final-score { font-size: 2rem; font-weight: 700; color: #667eea; }
+        .results-card .detail { font-size: 0.95rem; color: var(--text-light); margin: 6px 0; }
+        .results-card .stars { font-size: 2.5rem; margin: 16px 0; }
+
+        .btn {
+            padding: 14px 32px; border: none; border-radius: 12px;
+            font-size: 1rem; font-weight: 600; cursor: pointer;
+            color: white; background: linear-gradient(135deg, #667eea, #764ba2);
+            transition: transform 0.2s; margin: 6px;
+        }
+        .btn:hover { transform: scale(1.05); }
+        .btn.secondary { background: #BDC3C7; }
+
+        .back-btn {
+            display: inline-block; margin-bottom: 16px; padding: 8px 16px;
+            background: none; border: 1px solid #D0D8E0; border-radius: 8px;
+            cursor: pointer; font-size: 0.9rem; color: var(--text-light);
+            transition: all 0.2s;
+        }
+        .back-btn:hover { background: #F0F4F8; }
+
+        /* ── Feedback flash ── */
+        .feedback {
+            position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            font-size: 3rem; font-weight: 700; pointer-events: none;
+            opacity: 0; transition: opacity 0.3s;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .feedback.show { opacity: 1; }
+        .feedback.correct-fb { color: var(--easy-color); }
+        .feedback.wrong-fb { color: var(--hard-color); }
+
+        /* ── Responsive ── */
+        @media (max-width: 500px) {
+            .header h1 { font-size: 1.4rem; }
+            .question-card .question-text { font-size: 1.2rem; }
+            .answers { grid-template-columns: 1fr; }
+            .seq-item { width: 45px; height: 45px; font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>BRAIN ACADEMY JUNIOR</h1>
+    <p>Train your brain, level up your mind!</p>
+</div>
+
+<div class="score-bar">
+    <div class="score-item">
+        <div class="label">Total Score</div>
+        <div class="value" id="totalScore">0</div>
+    </div>
+    <div class="score-item">
+        <div class="label">Games Played</div>
+        <div class="value" id="gamesPlayed">0</div>
+    </div>
+    <div class="score-item">
+        <div class="label">Best Streak</div>
+        <div class="value" id="bestStreak">0</div>
+    </div>
+</div>
+
+<!-- ════ MENU SCREEN ════ -->
+<div class="screen active" id="menuScreen">
+    <h2 style="text-align:center; margin-top:24px;">Choose a Category</h2>
+    <div class="category-cards">
+        <div class="category-card math" onclick="selectCategory('math')">
+            <div class="icon">&#x1F522;</div>
+            <h3>Math</h3>
+            <p>Quick calculations, number sequences, and comparisons</p>
+        </div>
+        <div class="category-card logic" onclick="selectCategory('logic')">
+            <div class="icon">&#x1F9E9;</div>
+            <h3>Logic & Puzzles</h3>
+            <p>Pattern recognition, memory, and odd-one-out challenges</p>
+        </div>
+    </div>
+</div>
+
+<!-- ════ DIFFICULTY SCREEN ════ -->
+<div class="screen" id="diffScreen">
+    <button class="back-btn" onclick="showScreen('menuScreen')">&larr; Back</button>
+    <h2 style="text-align:center;" id="diffTitle">Select Difficulty</h2>
+    <div class="difficulty-buttons">
+        <button class="diff-btn easy" onclick="startGame('easy')">Easy<br><span style="font-size:0.75rem;font-weight:400;">+10 pts</span></button>
+        <button class="diff-btn medium" onclick="startGame('medium')">Medium<br><span style="font-size:0.75rem;font-weight:400;">+25 pts</span></button>
+        <button class="diff-btn hard" onclick="startGame('hard')">Hard<br><span style="font-size:0.75rem;font-weight:400;">+50 pts</span></button>
+    </div>
+    <p class="diff-info">Higher difficulty = more points but harder questions and less time!</p>
+</div>
+
+<!-- ════ GAME SCREEN ════ -->
+<div class="screen" id="gameScreen">
+    <div class="game-hud">
+        <div>
+            <div class="timer" id="timer">30</div>
+            <div style="font-size:0.7rem;color:var(--text-light);">seconds</div>
+        </div>
+        <div class="question-count" id="questionCount">1 / 5</div>
+        <div class="game-score">Score: <span id="gameScore">0</span></div>
+    </div>
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progressBar" style="width:0%"></div>
+    </div>
+    <div class="question-card" id="questionCard">
+        <!-- Dynamic content -->
+    </div>
+</div>
+
+<!-- ════ RESULTS SCREEN ════ -->
+<div class="screen" id="resultsScreen">
+    <div class="results-card">
+        <h2>Round Complete!</h2>
+        <div class="stars" id="stars"></div>
+        <div class="final-score" id="finalScore">0</div>
+        <div class="detail" id="resultDetail"></div>
+        <div class="detail" id="resultAccuracy"></div>
+        <div style="margin-top:24px;">
+            <button class="btn" onclick="startGame(currentDifficulty)">Play Again</button>
+            <button class="btn secondary" onclick="showScreen('menuScreen')">Menu</button>
+        </div>
+    </div>
+</div>
+
+<!-- Feedback overlay -->
+<div class="feedback" id="feedback"></div>
+
+<script>
+// ══════════════════════════════════════════
+// GAME STATE
+// ══════════════════════════════════════════
+let currentCategory = '';
+let currentDifficulty = '';
+let currentQuestion = 0;
+let totalQuestions = 5;
+let gameScoreVal = 0;
+let streak = 0;
+let correctCount = 0;
+let timerInterval = null;
+let timeLeft = 0;
+let answered = false;
+
+// Persistent stats
+let totalScoreVal = 0;
+let gamesPlayedVal = 0;
+let bestStreakVal = 0;
+
+// ── Point values per difficulty ──
+const pointMap = { easy: 10, medium: 25, hard: 50 };
+const timeMap  = { easy: 20, medium: 15, hard: 10 };
+
+// ══════════════════════════════════════════
+// NAVIGATION
+// ══════════════════════════════════════════
+function showScreen(id) {
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+
+function selectCategory(cat) {
+    currentCategory = cat;
+    const title = cat === 'math' ? 'Math' : 'Logic & Puzzles';
+    document.getElementById('diffTitle').textContent = title + ' \u2014 Select Difficulty';
+    showScreen('diffScreen');
+}
+
+// ══════════════════════════════════════════
+// GAME LOOP
+// ══════════════════════════════════════════
+function startGame(diff) {
+    currentDifficulty = diff;
+    currentQuestion = 0;
+    gameScoreVal = 0;
+    streak = 0;
+    correctCount = 0;
+    document.getElementById('gameScore').textContent = '0';
+    showScreen('gameScreen');
+    nextQuestion();
+}
+
+function nextQuestion() {
+    if (currentQuestion >= totalQuestions) {
+        endGame();
+        return;
+    }
+    answered = false;
+    currentQuestion++;
+    document.getElementById('questionCount').textContent = currentQuestion + ' / ' + totalQuestions;
+    document.getElementById('progressBar').style.width = ((currentQuestion - 1) / totalQuestions * 100) + '%';
+
+    let q;
+    if (currentCategory === 'math') {
+        const generators = [generateQuickCalc, generateSequence, generateCompare];
+        q = generators[Math.floor(Math.random() * generators.length)](currentDifficulty);
+    } else {
+        const generators = [generatePatternMatch, generateOddOneOut, generateMemoryGrid];
+        q = generators[Math.floor(Math.random() * generators.length)](currentDifficulty);
+    }
+
+    renderQuestion(q);
+    startTimer();
+}
+
+// ── Timer ──
+function startTimer() {
+    timeLeft = timeMap[currentDifficulty];
+    const timerEl = document.getElementById('timer');
+    timerEl.textContent = timeLeft;
+    timerEl.classList.remove('warning');
+
+    clearInterval(timerInterval);
+    timerInterval = setInterval(() => {
+        timeLeft--;
+        timerEl.textContent = timeLeft;
+        if (timeLeft <= 5) timerEl.classList.add('warning');
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            handleTimeout();
+        }
+    }, 1000);
+}
+
+function handleTimeout() {
+    if (answered) return;
+    answered = true;
+    streak = 0;
+    showFeedback('Time\'s up!', false);
+    // Highlight correct answer
+    document.querySelectorAll('.answer-btn').forEach(btn => {
+        if (btn.dataset.correct === 'true') btn.classList.add('correct');
+    });
+    setTimeout(nextQuestion, 1200);
+}
+
+// ══════════════════════════════════════════
+// RENDER QUESTION
+// ══════════════════════════════════════════
+function renderQuestion(q) {
+    const card = document.getElementById('questionCard');
+
+    if (q.type === 'memory') {
+        renderMemory(q);
+        return;
+    }
+
+    let html = `<div class="minigame-label">${q.label}</div>`;
+
+    if (q.sequence) {
+        html += `<div class="sequence-display">`;
+        q.sequence.forEach((item, i) => {
+            if (i > 0) html += `<span class="seq-arrow">\u2192</span>`;
+            if (item === '?') {
+                html += `<div class="seq-item blank">?</div>`;
+            } else {
+                html += `<div class="seq-item">${item}</div>`;
+            }
+        });
+        html += `</div>`;
+    } else {
+        html += `<div class="question-text">${q.question}</div>`;
+    }
+
+    html += `<div class="answers">`;
+    q.answers.forEach((a, i) => {
+        html += `<button class="answer-btn" data-correct="${a === q.correct}" onclick="selectAnswer(this, ${a === q.correct})">${a}</button>`;
+    });
+    html += `</div>`;
+
+    card.innerHTML = html;
+}
+
+function selectAnswer(btn, isCorrect) {
+    if (answered) return;
+    answered = true;
+    clearInterval(timerInterval);
+
+    document.querySelectorAll('.answer-btn').forEach(b => {
+        if (b.dataset.correct === 'true') b.classList.add('correct');
+    });
+
+    if (isCorrect) {
+        btn.classList.add('correct');
+        streak++;
+        correctCount++;
+        const bonus = streak > 1 ? Math.floor(pointMap[currentDifficulty] * 0.5) : 0;
+        const pts = pointMap[currentDifficulty] + bonus;
+        gameScoreVal += pts;
+        document.getElementById('gameScore').textContent = gameScoreVal;
+        showFeedback(bonus > 0 ? `+${pts} Streak!` : `+${pts}`, true);
+    } else {
+        btn.classList.add('wrong');
+        streak = 0;
+        showFeedback('Wrong!', false);
+    }
+
+    if (streak > bestStreakVal) {
+        bestStreakVal = streak;
+        document.getElementById('bestStreak').textContent = bestStreakVal;
+    }
+
+    setTimeout(nextQuestion, 1000);
+}
+
+// ── Feedback flash ──
+function showFeedback(text, correct) {
+    const fb = document.getElementById('feedback');
+    fb.textContent = text;
+    fb.className = 'feedback show ' + (correct ? 'correct-fb' : 'wrong-fb');
+    setTimeout(() => fb.classList.remove('show'), 800);
+}
+
+// ══════════════════════════════════════════
+// END GAME
+// ══════════════════════════════════════════
+function endGame() {
+    clearInterval(timerInterval);
+    gamesPlayedVal++;
+    totalScoreVal += gameScoreVal;
+    document.getElementById('totalScore').textContent = totalScoreVal;
+    document.getElementById('gamesPlayed').textContent = gamesPlayedVal;
+
+    const pct = Math.round((correctCount / totalQuestions) * 100);
+    const starCount = pct >= 100 ? 3 : pct >= 60 ? 2 : pct >= 20 ? 1 : 0;
+
+    document.getElementById('finalScore').textContent = gameScoreVal + ' points';
+    document.getElementById('resultDetail').textContent = correctCount + ' / ' + totalQuestions + ' correct';
+    document.getElementById('resultAccuracy').textContent = pct + '% accuracy';
+    document.getElementById('stars').textContent = '\u2B50'.repeat(starCount) + '\u2606'.repeat(3 - starCount);
+
+    document.getElementById('progressBar').style.width = '100%';
+    showScreen('resultsScreen');
+}
+
+// ══════════════════════════════════════════
+// MATH MINIGAMES
+// ══════════════════════════════════════════
+
+// 1) Quick Calc
+function generateQuickCalc(diff) {
+    let a, b, op, answer;
+    if (diff === 'easy') {
+        a = rand(1, 10); b = rand(1, 10);
+        op = ['+', '-'][rand(0, 1)];
+    } else if (diff === 'medium') {
+        a = rand(5, 30); b = rand(5, 30);
+        op = ['+', '-', '\u00D7'][rand(0, 2)];
+        if (op === '\u00D7') { a = rand(2, 12); b = rand(2, 12); }
+    } else {
+        op = ['+', '-', '\u00D7'][rand(0, 2)];
+        if (op === '\u00D7') { a = rand(5, 15); b = rand(5, 15); }
+        else { a = rand(20, 100); b = rand(20, 100); }
+    }
+    if (op === '+') answer = a + b;
+    else if (op === '-') { if (b > a) [a, b] = [b, a]; answer = a - b; }
+    else answer = a * b;
+
+    const distractors = generateDistractors(answer, 3);
+    const answers = shuffle([answer, ...distractors]);
+    return { type: 'standard', label: 'Quick Calc', question: `${a} ${op} ${b} = ?`, answers, correct: answer };
+}
+
+// 2) Number Sequence
+function generateSequence(diff) {
+    let seq, answer;
+    if (diff === 'easy') {
+        const start = rand(1, 10);
+        const step = rand(1, 5);
+        seq = Array.from({length: 5}, (_, i) => start + step * i);
+    } else if (diff === 'medium') {
+        const start = rand(1, 5);
+        const mult = rand(2, 3);
+        seq = Array.from({length: 5}, (_, i) => start * Math.pow(mult, i));
+    } else {
+        const a = rand(1, 3);
+        const b = rand(1, 4);
+        const c = rand(1, 3);
+        seq = Array.from({length: 5}, (_, i) => a * i * i + b * i + c);
+    }
+    answer = seq[4];
+    const display = [...seq.slice(0, 4), '?'];
+    const distractors = generateDistractors(answer, 3);
+    return { type: 'standard', label: 'Number Sequence', sequence: display, answers: shuffle([answer, ...distractors]), correct: answer };
+}
+
+// 3) Compare
+function generateCompare(diff) {
+    let exprA, exprB, valA, valB;
+    if (diff === 'easy') {
+        const a1 = rand(1, 10), a2 = rand(1, 10);
+        const b1 = rand(1, 10), b2 = rand(1, 10);
+        valA = a1 + a2; valB = b1 + b2;
+        exprA = `${a1} + ${a2}`; exprB = `${b1} + ${b2}`;
+    } else if (diff === 'medium') {
+        const a1 = rand(2, 8), a2 = rand(2, 8);
+        const b1 = rand(2, 8), b2 = rand(2, 8);
+        valA = a1 * a2; valB = b1 * b2;
+        exprA = `${a1} \u00D7 ${a2}`; exprB = `${b1} \u00D7 ${b2}`;
+    } else {
+        const a1 = rand(5, 15), a2 = rand(2, 8), a3 = rand(1, 10);
+        const b1 = rand(5, 15), b2 = rand(2, 8), b3 = rand(1, 10);
+        valA = a1 * a2 + a3; valB = b1 * b2 + b3;
+        exprA = `${a1} \u00D7 ${a2} + ${a3}`; exprB = `${b1} \u00D7 ${b2} + ${b3}`;
+    }
+    // Make sure they're not equal
+    if (valA === valB) valB += 1;
+
+    const correct = valA > valB ? exprA : exprB;
+    const question = 'Which is larger?';
+    return { type: 'standard', label: 'Compare', question, answers: shuffle([exprA, exprB]), correct };
+}
+
+// ══════════════════════════════════════════
+// LOGIC MINIGAMES
+// ══════════════════════════════════════════
+
+// 1) Pattern Match (shape patterns)
+function generatePatternMatch(diff) {
+    const shapes = ['\u25CF', '\u25A0', '\u25B2', '\u2666', '\u2605'];
+    let pattern, answer;
+
+    if (diff === 'easy') {
+        // ABAB pattern
+        const a = shapes[rand(0, 4)];
+        let b; do { b = shapes[rand(0, 4)]; } while (b === a);
+        pattern = [a, b, a, b, '?'];
+        answer = a;
+    } else if (diff === 'medium') {
+        // ABCABC pattern
+        const picks = shuffleCopy(shapes).slice(0, 3);
+        pattern = [picks[0], picks[1], picks[2], picks[0], picks[1], '?'];
+        answer = picks[2];
+    } else {
+        // AABBAABB pattern
+        const a = shapes[rand(0, 4)];
+        let b; do { b = shapes[rand(0, 4)]; } while (b === a);
+        pattern = [a, a, b, b, a, a, b, '?'];
+        answer = b;
+    }
+
+    const wrongShapes = shapes.filter(s => s !== answer);
+    const distractors = shuffleCopy(wrongShapes).slice(0, 3);
+    return { type: 'standard', label: 'Pattern Match', sequence: pattern, answers: shuffle([answer, ...distractors]), correct: answer };
+}
+
+// 2) Odd One Out
+function generateOddOneOut(diff) {
+    let items, odd, question;
+
+    if (diff === 'easy') {
+        const evens = [2, 4, 6, 8, 10, 12, 14];
+        const odds  = [1, 3, 5, 7, 9, 11, 13];
+        if (Math.random() > 0.5) {
+            const picks = shuffleCopy(evens).slice(0, 3);
+            odd = odds[rand(0, odds.length - 1)];
+            items = shuffle([...picks, odd]);
+            question = 'Which number does NOT belong?';
+        } else {
+            const picks = shuffleCopy(odds).slice(0, 3);
+            odd = evens[rand(0, evens.length - 1)];
+            items = shuffle([...picks, odd]);
+            question = 'Which number does NOT belong?';
+        }
+    } else if (diff === 'medium') {
+        const primes = [2, 3, 5, 7, 11, 13, 17, 19, 23];
+        const nonPrimes = [4, 6, 8, 9, 10, 12, 14, 15];
+        if (Math.random() > 0.5) {
+            const picks = shuffleCopy(primes).slice(0, 3);
+            odd = nonPrimes[rand(0, nonPrimes.length - 1)];
+            items = shuffle([...picks, odd]);
+            question = 'Which is NOT a prime number?';
+        } else {
+            const multiples3 = [3, 6, 9, 12, 15, 18, 21];
+            const non3 = [4, 5, 7, 8, 10, 11, 13];
+            const picks = shuffleCopy(multiples3).slice(0, 3);
+            odd = non3[rand(0, non3.length - 1)];
+            items = shuffle([...picks, odd]);
+            question = 'Which is NOT a multiple of 3?';
+        }
+    } else {
+        const squares = [1, 4, 9, 16, 25, 36, 49, 64];
+        const nonSquares = [2, 3, 5, 6, 7, 8, 10, 11, 12, 13, 15];
+        if (Math.random() > 0.5) {
+            const picks = shuffleCopy(squares).slice(0, 3);
+            odd = nonSquares[rand(0, nonSquares.length - 1)];
+            items = shuffle([...picks, odd]);
+            question = 'Which is NOT a perfect square?';
+        } else {
+            const fib = [1, 2, 3, 5, 8, 13, 21, 34];
+            const nonFib = [4, 6, 7, 9, 10, 11, 12, 14];
+            const picks = shuffleCopy(fib).slice(0, 3);
+            odd = nonFib[rand(0, nonFib.length - 1)];
+            items = shuffle([...picks, odd]);
+            question = 'Which is NOT a Fibonacci number?';
+        }
+    }
+
+    return { type: 'standard', label: 'Odd One Out', question, answers: items, correct: odd };
+}
+
+// 3) Memory Grid
+function generateMemoryGrid(diff) {
+    let gridSize, cellCount;
+    if (diff === 'easy')   { gridSize = 3; cellCount = 3; }
+    else if (diff === 'medium') { gridSize = 4; cellCount = 4; }
+    else { gridSize = 4; cellCount = 5; }
+
+    const totalCells = gridSize * gridSize;
+    const highlighted = [];
+    while (highlighted.length < cellCount) {
+        const idx = rand(0, totalCells - 1);
+        if (!highlighted.includes(idx)) highlighted.push(idx);
+    }
+
+    return { type: 'memory', label: 'Memory Grid', gridSize, highlighted, diff };
+}
+
+function renderMemory(q) {
+    const card = document.getElementById('questionCard');
+    const { gridSize, highlighted } = q;
+    const total = gridSize * gridSize;
+
+    // Show phase
+    let html = `<div class="minigame-label">Memory Grid</div>`;
+    html += `<div class="question-text">Remember the highlighted cells!</div>`;
+    html += `<div class="memory-grid" style="grid-template-columns: repeat(${gridSize}, 60px);">`;
+    for (let i = 0; i < total; i++) {
+        const hl = highlighted.includes(i) ? ' highlighted' : '';
+        html += `<div class="memory-cell${hl}" data-idx="${i}"></div>`;
+    }
+    html += `</div>`;
+    card.innerHTML = html;
+
+    // After delay, hide and let user pick
+    const showTime = q.diff === 'easy' ? 3000 : q.diff === 'medium' ? 2500 : 2000;
+    setTimeout(() => {
+        const cells = card.querySelectorAll('.memory-cell');
+        cells.forEach(c => c.classList.remove('highlighted'));
+
+        let selectedCount = 0;
+        let correctPicks = 0;
+
+        card.querySelector('.question-text').textContent = `Tap the ${highlighted.length} cells that were highlighted!`;
+
+        cells.forEach(cell => {
+            cell.addEventListener('click', function handler() {
+                if (answered || selectedCount >= highlighted.length) return;
+                cell.removeEventListener('click', handler);
+                selectedCount++;
+                const idx = parseInt(cell.dataset.idx);
+
+                if (highlighted.includes(idx)) {
+                    cell.classList.add('correct-cell');
+                    correctPicks++;
+                } else {
+                    cell.classList.add('wrong-cell');
+                }
+
+                if (selectedCount >= highlighted.length) {
+                    answered = true;
+                    clearInterval(timerInterval);
+                    // Reveal all correct
+                    cells.forEach(c => {
+                        if (highlighted.includes(parseInt(c.dataset.idx)) && !c.classList.contains('correct-cell')) {
+                            c.classList.add('highlighted');
+                        }
+                    });
+
+                    if (correctPicks === highlighted.length) {
+                        streak++;
+                        correctCount++;
+                        const bonus = streak > 1 ? Math.floor(pointMap[currentDifficulty] * 0.5) : 0;
+                        const pts = pointMap[currentDifficulty] + bonus;
+                        gameScoreVal += pts;
+                        document.getElementById('gameScore').textContent = gameScoreVal;
+                        showFeedback(bonus > 0 ? `+${pts} Streak!` : `+${pts}`, true);
+                    } else {
+                        streak = 0;
+                        showFeedback(`${correctPicks}/${highlighted.length}`, false);
+                    }
+
+                    if (streak > bestStreakVal) {
+                        bestStreakVal = streak;
+                        document.getElementById('bestStreak').textContent = bestStreakVal;
+                    }
+
+                    setTimeout(nextQuestion, 1200);
+                }
+            });
+        });
+    }, showTime);
+}
+
+// ══════════════════════════════════════════
+// UTILITIES
+// ══════════════════════════════════════════
+function rand(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
+function shuffleCopy(arr) { return shuffle([...arr]); }
+
+function generateDistractors(correct, count) {
+    const set = new Set();
+    while (set.size < count) {
+        let d;
+        const r = Math.random();
+        if (r < 0.3) d = correct + rand(1, 5);
+        else if (r < 0.6) d = correct - rand(1, 5);
+        else if (r < 0.8) d = correct + rand(5, 15);
+        else d = correct - rand(5, 15);
+        if (d !== correct && d >= 0) set.add(d);
+    }
+    return [...set];
+}
+</script>
+
+</body>
+</html>
