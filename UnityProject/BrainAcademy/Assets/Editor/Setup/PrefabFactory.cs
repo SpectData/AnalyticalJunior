@@ -44,6 +44,9 @@ public static class PrefabFactory
 
     private static void LoadSprites()
     {
+        // Force Unity to detect any new files added outside the editor
+        AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
+
         WizardSprite = LoadSprite("wizard");
         SnakeGreenSprite = LoadSprite("snake_green");
         SnakeYellowSprite = LoadSprite("snake_yellow");
@@ -68,6 +71,16 @@ public static class PrefabFactory
     private static Sprite LoadSprite(string name)
     {
         string path = $"{SpriteDir}/{name}.png";
+
+        // Ensure the texture is imported as Sprite type (Unity defaults to Texture2D)
+        var importer = AssetImporter.GetAtPath(path) as TextureImporter;
+        if (importer != null && importer.textureType != TextureImporterType.Sprite)
+        {
+            importer.textureType = TextureImporterType.Sprite;
+            importer.spriteImportMode = SpriteImportMode.Single;
+            importer.SaveAndReimport();
+        }
+
         return AssetDatabase.LoadAssetAtPath<Sprite>(path);
     }
 

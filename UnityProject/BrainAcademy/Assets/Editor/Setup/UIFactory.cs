@@ -12,6 +12,19 @@ public static class UIFactory
 
     public static GameObject CreateCanvas(string name)
     {
+        // Camera — required for Game view to render anything
+        var camGo = new GameObject("Main Camera", typeof(Camera), typeof(AudioListener));
+        var cam = camGo.GetComponent<Camera>();
+        cam.clearFlags = CameraClearFlags.SolidColor;
+        cam.backgroundColor = new Color(0.94f, 0.96f, 0.97f); // #F0F4F8
+        cam.orthographic = true;
+        camGo.tag = "MainCamera";
+
+        // EventSystem — required for button/touch input
+        var es = new GameObject("EventSystem",
+            typeof(UnityEngine.EventSystems.EventSystem),
+            typeof(UnityEngine.EventSystems.StandaloneInputModule));
+
         var go = new GameObject(name, typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
 
         var canvas = go.GetComponent<Canvas>();
@@ -101,6 +114,30 @@ public static class UIFactory
 
     // ── TextMeshPro ─────────────────────────────────────────────────────
 
+    private static TMP_FontAsset _cachedFont;
+
+    private static TMP_FontAsset FindDefaultFont()
+    {
+        if (_cachedFont != null) return _cachedFont;
+
+        // Try TMP_Settings first (works in Editor GUI, throws in batch mode)
+        try { _cachedFont = TMP_Settings.defaultFontAsset; }
+        catch { /* TMP_Settings not initialized in batch mode */ }
+        if (_cachedFont != null) return _cachedFont;
+
+        // Fallback: search AssetDatabase for any TMP font
+        var guids = AssetDatabase.FindAssets("t:TMP_FontAsset");
+        foreach (var guid in guids)
+        {
+            var path = AssetDatabase.GUIDToAssetPath(guid);
+            _cachedFont = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(path);
+            if (_cachedFont != null) return _cachedFont;
+        }
+
+        Debug.LogWarning("[Setup] No TMP font found — text will be invisible until TMP Essential Resources are imported");
+        return null;
+    }
+
     public static TextMeshProUGUI CreateTMP(Transform parent, string name,
         string text, int fontSize = 32,
         TextAlignmentOptions align = TextAlignmentOptions.Center,
@@ -109,6 +146,8 @@ public static class UIFactory
         var go = new GameObject(name, typeof(TextMeshProUGUI));
         go.transform.SetParent(parent, false);
         var tmp = go.GetComponent<TextMeshProUGUI>();
+        var font = FindDefaultFont();
+        if (font != null) tmp.font = font;
         tmp.text = text;
         tmp.fontSize = fontSize;
         tmp.alignment = align;
