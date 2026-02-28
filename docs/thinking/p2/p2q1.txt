@@ -1,0 +1,161 @@
+Thinking Skills — Practice Test 2 — Questions 1–10
+
+
+Q1
+A community club offers the following sports:
+
+sport       days available
+netball     Monday, Thursday
+boxing      Monday, Friday
+football    Tuesday, Wednesday
+swimming    Wednesday, Thursday
+tennis      Tuesday, Friday
+
+I want to do a sport on a Monday, Wednesday and Friday.
+One of my sports must be football.
+Which sport will I not be able to do?
+
+A netball
+B boxing
+C swimming
+D tennis
+
+
+Q2
+Four friends want to go to the movies. There are four kinds of movies showing: cartoon, comedy, drama and action. Andrew likes all movies except dramas and action. Rishi and Audrey only like comedies and dramas. Yifan would like to watch any movie so long as it is not a cartoon or an action movie.
+
+Which kind of movie would all four friends like to see?
+
+A comedy
+B action
+C cartoon
+D drama
+
+
+Q3
+The school chess coach has told the team that if they want to do well in chess competitions, they should go running or play tennis every day.
+Which one of these statements, if true, best supports the coach's claim?
+
+A Chess is not a physical sport.
+B Regular exercise improves concentration.
+C Chess players are often good tennis players.
+D Running builds physical strength and stamina.
+
+
+Q4
+A piece of a construction kit is shown below.
+
+[IMAGE: A 3D isometric view of a piece made from unit cubes. The piece has:
+- Base: a flat rectangular slab, 3 cubes wide × 2 cubes deep × 1 cube tall
+- Back-left corner: 2 additional cubes stacked on top of the base (total height 3)
+- Back-centre: 1 additional cube on top of the base (total height 2)
+- Remaining positions (front row and back-right): base only (height 1)
+The piece forms a staircase profile when viewed from the back: 3-2-1 stepping down left to right.]
+
+Which one of the following shows a side view of the construction kit piece?
+
+[IMAGE: Four 2D profile options A–D:
+Option A: Wide base (3 units). Tall column (1 wide, 3 tall) on the left, short column (1 wide, 2 tall) on the right, with a GAP between them above the base.
+Option B: Wide base (3 units). Tall column (1 wide, 3 tall) on the left, medium column (1 wide, 2 tall) immediately adjacent to the right. No gap — they form a staircase stepping down from left to right.
+Option C: Wide base (3 units). Tall column (1 wide, 3 tall) on the RIGHT, medium column (1 wide, 2 tall) to the left of it. Staircase stepping down from right to left.
+Option D: Wide base (3 units). Tall column (1 wide, 3 tall) on the RIGHT, short column (1 wide, 2 tall) immediately to its left. Similar to C but the short column is smaller.]
+
+A Option A
+B Option B
+C Option C
+D Option D
+
+
+Q5
+There are five school teams: Red, Yellow, Green, Orange and Blue. A member of each team competes in the 100 m race. You don't see the race but a friend tells you the following facts:
+Yellow finished third.
+Green finished after Red but before Yellow.
+Blue beat Orange but finished after Yellow.
+Who won the race?
+
+A Red
+B Green
+C Orange
+D Blue
+
+
+Q6
+The arrow snake got its name because of its long and thin body and quick-as-lightning movements. It is a popular belief that an arrow snake can leap great distances, and even that its head can pierce the body of its prey.
+
+Gabriel: "That can't be true. I've seen arrow snakes plenty of times, and I've never seen one jump — let alone pierce its prey!"
+Which one of the following sentences shows the mistake Gabriel has made?
+
+A He has ignored the reason the arrow snake got its name.
+B He has denied the well-known fact that some snakes can jump.
+C He has denied something just because he has not witnessed it himself.
+D He has assumed that no popular belief can be true.
+
+
+Q7
+Rainfall in 3 cities during the driest months of the year is shown below in the bar chart.
+
+[IMAGE: A grouped bar chart with the y-axis labelled "rainfall" from 0 to 40, and x-axis showing months May through October. Three bars per month represent three cities:
+- Chitaquin (dark/black bars)
+- Fentan (grey bars)
+- Shishain (white/light bars)
+
+Approximate readings:
+       Chitaquin  Fentan  Shishain
+May        17       15       5
+June       12       12       0
+July       10        6       5
+Aug         8        7       5
+Sept       30       10       5
+Oct         5        8       3
+]
+
+What is the total rainfall in the city with the highest total rainfall during the months of May to October?
+
+A 35
+B 55
+C 82
+D 91
+
+
+Q8
+You cannot write good poetry without having interesting life experiences.
+
+Rose: "My brother has been on some adventures and met some interesting people, so his poetry is certain to be good."
+Elsie: "Well, my great aunt won prizes for her beautiful poetry, so she must have had an interesting life."
+If the information in the box is true, whose reasoning is correct?
+
+A Rose only
+B Elsie only
+C Both Rose and Elsie
+D Neither Rose nor Elsie
+
+
+Q9
+Izzy is taller than Caitlin; Caitlin is shorter than Melissa. But when they stand on a short flight of three stairs, one on each step, their heads are all level.
+Which one of these sentences cannot be true?
+
+A Izzy is on the bottom step.
+B Melissa is on the middle step.
+C Caitlin is on the middle step.
+D Melissa is the tallest of the three girls.
+
+
+Q10
+In a game, players take it in turns to draw shapes in a line.
+The following rules apply (going from left to right):
+  The shape immediately after a square must be a circle.
+  The second shape after a triangle must be a square.
+Which one of the following sequences is not allowed?
+
+[IMAGE: Four rows of 8 solid black shapes each. The shapes used are squares (■), circles (●), and triangles (▲).
+
+Row A: ■ ● ▲ ● ■ ● ■ ●
+Row B: ■ ● ■ ● ■ ● ■ ●
+Row C: ■ ● ■ ● ▲ ● ■ ●
+Row D: ■ ● ▲ ■ ● ■ ● ■
+]
+
+A Row A
+B Row B
+C Row C
+D Row D
