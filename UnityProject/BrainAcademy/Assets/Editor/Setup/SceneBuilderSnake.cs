@@ -86,6 +86,7 @@ public static class SceneBuilderSnake
             var wizard = new GameObject($"Wizard{i}", typeof(Image));
             wizard.transform.SetParent(battlefield.transform, false);
             var wizImg = wizard.GetComponent<Image>();
+            wizImg.preserveAspect = true;
             if (PrefabFactory.WizardSprite != null)
             {
                 wizImg.sprite = PrefabFactory.WizardSprite;
@@ -95,9 +96,11 @@ public static class SceneBuilderSnake
             {
                 wizImg.color = Purple60;
             }
+            // Flip horizontally so wizard faces right (toward snakes)
+            wizard.transform.localScale = new Vector3(-1, 1, 1);
             var wrt = UIFactory.SetRect(wizard,
                 new Vector2(0, yMin), new Vector2(0, yMax),
-                new Vector2(0, 0.5f), new Vector2(30, 0), new Vector2(60, 0));
+                new Vector2(0, 0.5f), new Vector2(50, 0), new Vector2(80, 0));
             wizardRTs[i] = wrt;
         }
 

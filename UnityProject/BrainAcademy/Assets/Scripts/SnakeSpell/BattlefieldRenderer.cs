@@ -113,7 +113,7 @@ public class BattlefieldRenderer : MonoBehaviour
             Vector2 pos = GameToScreenPosition(snake.xPosition, snake.lane);
             snakeRT.anchoredPosition = pos;
 
-            // Set sprite/color based on snake type
+            // Set sprite/color and size based on snake type
             Image snakeImage = snakeRT.GetComponent<Image>();
             if (snakeImage != null)
             {
@@ -128,6 +128,10 @@ public class BattlefieldRenderer : MonoBehaviour
                     snakeImage.color = SnakeTypeData.GetBodyColor(snake.type);
                 }
             }
+
+            // Scale by snake type
+            float size = GetSnakeSize(snake.type);
+            snakeRT.sizeDelta = new Vector2(size, size);
 
             // Update HP bar if present
             Image hpBar = snakeRT.Find("HPBar")?.GetComponent<Image>();
@@ -246,6 +250,18 @@ public class BattlefieldRenderer : MonoBehaviour
             case SnakeType.Red: return snakeRedSprite;
             case SnakeType.Purple: return snakePurpleSprite;
             default: return null;
+        }
+    }
+
+    private float GetSnakeSize(SnakeType type)
+    {
+        switch (type)
+        {
+            case SnakeType.Green: return 80f;
+            case SnakeType.Yellow: return 80f;
+            case SnakeType.Red: return 90f;
+            case SnakeType.Purple: return 100f;
+            default: return 80f;
         }
     }
 

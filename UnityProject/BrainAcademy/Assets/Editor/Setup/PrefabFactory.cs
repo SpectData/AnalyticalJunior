@@ -151,7 +151,7 @@ public static class PrefabFactory
     {
         var root = new GameObject("SnakePrefab", typeof(Image));
         var rt = root.GetComponent<RectTransform>();
-        rt.sizeDelta = new Vector2(40, 40);
+        rt.sizeDelta = new Vector2(80, 80);
 
         var img = root.GetComponent<Image>();
         if (SnakeGreenSprite != null)
@@ -192,7 +192,7 @@ public static class PrefabFactory
 
         var root = new GameObject("SpellPrefab", typeof(Image));
         var rt = root.GetComponent<RectTransform>();
-        rt.sizeDelta = new Vector2(20, 20);
+        rt.sizeDelta = new Vector2(30, 30);
 
         var img = root.GetComponent<Image>();
         if (SpellSprite != null)
