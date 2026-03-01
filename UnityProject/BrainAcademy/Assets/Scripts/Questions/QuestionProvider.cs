@@ -18,6 +18,14 @@ public class QuestionProvider
         return GenerateProceduralQuestion(difficulty);
     }
 
+    public GameQuestion.Standard GetSnakeSpellQuestion()
+    {
+        // Adaptive mode: serve any short question regardless of difficulty.
+        GameQuestion.Standard bankQuestion = bankLoader?.GetShortQuestion();
+        if (bankQuestion != null) return bankQuestion;
+        return GenerateProceduralQuestion(Difficulty.Medium);
+    }
+
     private GameQuestion.Standard GenerateProceduralQuestion(Difficulty difficulty)
     {
         int choice = Random.Range(0, 5);

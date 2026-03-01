@@ -35,6 +35,6 @@ public class MenuUIController : MonoBehaviour
 
     private void OnSnakeSpellClicked()
     {
-        SceneTransitionManager.Instance.LoadDifficultySelect();
+        SceneTransitionManager.Instance.LoadSnakeSpell();
     }
 }

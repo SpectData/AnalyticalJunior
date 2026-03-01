@@ -4,18 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// Builds MenuScene and DifficultySelectScene.
+/// Builds MenuScene.
 /// </summary>
 public static class SceneBuilderMenu
 {
     // Colors from AppColors
     private static readonly Color Purple60 = new Color(0.40f, 0.49f, 0.92f);     // #667EEA
-    private static readonly Color Purple80 = new Color(0.46f, 0.29f, 0.64f);     // #764BA2
     private static readonly Color SnakeGreen = new Color(0.18f, 0.80f, 0.44f);   // #2ECC71
-    private static readonly Color EasyGreen = new Color(0.15f, 0.68f, 0.38f);    // #27AE60
-    private static readonly Color MediumYellow = new Color(0.95f, 0.61f, 0.07f); // #F39C12
-    private static readonly Color HardRed = new Color(0.91f, 0.30f, 0.24f);      // #E74C3C
-    private static readonly Color SuperHardPurple = new Color(0.56f, 0.27f, 0.68f); // #8E44AD
     private static readonly Color Background = new Color(0.94f, 0.96f, 0.97f);   // #F0F4F8
 
     // ── MenuScene ───────────────────────────────────────────────────────
@@ -92,62 +87,5 @@ public static class SceneBuilderMenu
         // Save
         EditorSceneManager.SaveScene(scene, "Assets/Scenes/MenuScene.unity");
         Debug.Log("[Setup] MenuScene built");
-    }
-
-    // ── DifficultySelectScene ───────────────────────────────────────────
-
-    public static void BuildDifficultyScene()
-    {
-        var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
-
-        var canvas = UIFactory.CreateCanvas("Canvas");
-        UIFactory.CreateBackground(canvas.transform, Background);
-
-        // Back button
-        var backBtn = UIFactory.CreateButton(canvas.transform, "BackButton",
-            "< Back", new Color(0.5f, 0.5f, 0.5f), 24);
-        UIFactory.SetRect(backBtn.gameObject, new Vector2(0.02f, 0.92f), new Vector2(0.25f, 0.97f),
-            new Vector2(0, 1), Vector2.zero, Vector2.zero);
-
-        // Title
-        var title = UIFactory.CreateTMP(canvas.transform, "TitleText",
-            "Select Difficulty", fontSize: 40);
-        UIFactory.SetRect(title.gameObject, new Vector2(0, 0.82f), new Vector2(1, 0.90f),
-            new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
-
-        // 2x2 grid of difficulty buttons
-        var easyBtn = UIFactory.CreateButton(canvas.transform, "EasyButton",
-            "Easy", EasyGreen, 32);
-        UIFactory.SetRect(easyBtn.gameObject, new Vector2(0.05f, 0.62f), new Vector2(0.48f, 0.78f),
-            new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
-
-        var mediumBtn = UIFactory.CreateButton(canvas.transform, "MediumButton",
-            "Medium", MediumYellow, 32);
-        UIFactory.SetRect(mediumBtn.gameObject, new Vector2(0.52f, 0.62f), new Vector2(0.95f, 0.78f),
-            new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
-
-        var hardBtn = UIFactory.CreateButton(canvas.transform, "HardButton",
-            "Hard", HardRed, 32);
-        UIFactory.SetRect(hardBtn.gameObject, new Vector2(0.05f, 0.44f), new Vector2(0.48f, 0.60f),
-            new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
-
-        var superHardBtn = UIFactory.CreateButton(canvas.transform, "SuperHardButton",
-            "Super Hard", SuperHardPurple, 32);
-        UIFactory.SetRect(superHardBtn.gameObject, new Vector2(0.52f, 0.44f), new Vector2(0.95f, 0.60f),
-            new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
-
-        // Controller
-        var ctrlGo = new GameObject("DifficultyController");
-        var diffUI = ctrlGo.AddComponent<DifficultyUIController>();
-
-        UIFactory.Wire(diffUI, "backButton", backBtn);
-        UIFactory.Wire(diffUI, "titleText", title);
-        UIFactory.Wire(diffUI, "easyButton", easyBtn);
-        UIFactory.Wire(diffUI, "mediumButton", mediumBtn);
-        UIFactory.Wire(diffUI, "hardButton", hardBtn);
-        UIFactory.Wire(diffUI, "superHardButton", superHardBtn);
-
-        EditorSceneManager.SaveScene(scene, "Assets/Scenes/DifficultySelectScene.unity");
-        Debug.Log("[Setup] DifficultySelectScene built");
     }
 }
