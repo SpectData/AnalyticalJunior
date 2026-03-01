@@ -154,7 +154,7 @@ public class SnakeDataTests
     }
 }
 
-public class SnakeSpellConstantsTests
+public class SnakeSpellConstantsMessageTests
 {
     [Test]
     public void GetLifeLossMessage_SingleLife_ReturnsSingular()
