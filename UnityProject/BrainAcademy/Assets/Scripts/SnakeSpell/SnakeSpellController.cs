@@ -45,6 +45,10 @@ public class SnakeSpellController : MonoBehaviour
     public string CalloutText { get; private set; }
     public bool ShowCallout { get; private set; }
 
+    // Life-loss flash
+    public bool ShowLifeLossFlash { get; private set; }
+    private int previousLives;
+
     // UI controller references
     private ReadingPhaseUIController readingPhaseUI;
     private ReviewUIController reviewUI;
@@ -88,6 +92,7 @@ public class SnakeSpellController : MonoBehaviour
         seenSnakeTypes = new HashSet<SnakeType>();
         CalloutText = null;
         ShowCallout = false;
+        ShowLifeLossFlash = false;
 
         Battlefield = new BattlefieldState
         {
@@ -96,8 +101,11 @@ public class SnakeSpellController : MonoBehaviour
             lives = Config.startingLives,
         };
 
+        previousLives = Config.startingLives;
+
         StartWave(1);
         GenerateNextQuestion();
+        DisplayCallout(SnakeSpellConstants.GetGameStartHint(Config.startingLives));
     }
 
     void Update()
@@ -137,6 +145,18 @@ public class SnakeSpellController : MonoBehaviour
         foreach (var snake in reached)
             Battlefield.snakes.Remove(snake);
         Battlefield.lives -= reached.Count;
+
+        // Detect life loss and trigger visual feedback
+        int livesLost = previousLives - Battlefield.lives;
+        if (livesLost > 0 && Battlefield.lives > 0)
+        {
+            ShowLifeLossFlash = true;
+            CalloutText = SnakeSpellConstants.GetLifeLossMessage(livesLost);
+            ShowCallout = true;
+            if (calloutCoroutine != null) StopCoroutine(calloutCoroutine);
+            calloutCoroutine = StartCoroutine(HideLifeLossEffects());
+        }
+        previousLives = Battlefield.lives;
 
         // Check spell-snake collisions
         var spellsToRemove = new HashSet<int>();
@@ -193,6 +213,7 @@ public class SnakeSpellController : MonoBehaviour
         if (Battlefield.lives <= 0)
         {
             Battlefield.lives = 0;
+            previousLives = 0;
             Battlefield.status = GameStatus.GameOver;
         }
         else if (waveComplete)
@@ -450,6 +471,14 @@ public class SnakeSpellController : MonoBehaviour
     private IEnumerator HideCallout()
     {
         yield return new WaitForSeconds(3.0f);
+        ShowCallout = false;
+    }
+
+    private IEnumerator HideLifeLossEffects()
+    {
+        yield return new WaitForSeconds(0.3f);
+        ShowLifeLossFlash = false;
+        yield return new WaitForSeconds(2.7f);
         ShowCallout = false;
     }
 
