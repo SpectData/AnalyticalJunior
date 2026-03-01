@@ -24,6 +24,8 @@ public static class PrefabFactory
     public static Sprite SpellSprite { get; private set; }
     public static Sprite GrassLightSprite { get; private set; }
     public static Sprite GrassDarkSprite { get; private set; }
+    public static Sprite HeartFilledSprite { get; private set; }
+    public static Sprite HeartEmptySprite { get; private set; }
 
     public static void CreateAll()
     {
@@ -53,6 +55,8 @@ public static class PrefabFactory
         SpellSprite = LoadSprite("spell");
         GrassLightSprite = LoadSprite("grass_light");
         GrassDarkSprite = LoadSprite("grass_dark");
+        HeartFilledSprite = LoadSprite("heart_filled");
+        HeartEmptySprite = LoadSprite("heart_empty");
 
         int loaded = 0;
         if (WizardSprite != null) loaded++;
@@ -63,7 +67,9 @@ public static class PrefabFactory
         if (SpellSprite != null) loaded++;
         if (GrassLightSprite != null) loaded++;
         if (GrassDarkSprite != null) loaded++;
-        Debug.Log($"[Setup] Loaded {loaded}/8 sprites from {SpriteDir}/");
+        if (HeartFilledSprite != null) loaded++;
+        if (HeartEmptySprite != null) loaded++;
+        Debug.Log($"[Setup] Loaded {loaded}/10 sprites from {SpriteDir}/");
     }
 
     private static Sprite LoadSprite(string name)

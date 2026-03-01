@@ -43,11 +43,22 @@ public static class SceneBuilderSnake
         hlg.childAlignment = UnityEngine.TextAnchor.MiddleCenter;
         hlg.padding = new RectOffset(10, 0, 0, 0);
 
-        var heartTexts = new TMPro.TextMeshProUGUI[maxLives];
+        var heartImages = new Image[maxLives];
         for (int i = 0; i < maxLives; i++)
         {
-            heartTexts[i] = UIFactory.CreateTMP(heartsContainer.transform, $"Heart{i}",
-                "\u2764", fontSize: 36, color: new Color(0.91f, 0.30f, 0.24f));
+            var heartGo = new GameObject($"Heart{i}", typeof(Image));
+            heartGo.transform.SetParent(heartsContainer.transform, false);
+            heartImages[i] = heartGo.GetComponent<Image>();
+            heartImages[i].preserveAspect = true;
+            if (PrefabFactory.HeartFilledSprite != null)
+            {
+                heartImages[i].sprite = PrefabFactory.HeartFilledSprite;
+                heartImages[i].color = Color.white;
+            }
+            else
+            {
+                heartImages[i].color = new Color(0.91f, 0.30f, 0.24f);
+            }
         }
 
         var waveText = UIFactory.CreateTMP(hud.transform, "WaveText",
@@ -195,7 +206,7 @@ public static class SceneBuilderSnake
 
         // Lightning bolt button (between battlefield and question panel)
         var lightningBtn = UIFactory.CreateButton(canvas.transform, "LightningBoltButton",
-            "\u26A1 Lightning!", AppColors.SpellGold, 24);
+            "Lightning!", AppColors.SpellGold, 24);
         UIFactory.SetRect(lightningBtn.gameObject,
             new Vector2(0.25f, 0.44f), new Vector2(0.75f, 0.50f),
             new Vector2(0.5f, 0), Vector2.zero, Vector2.zero);
@@ -217,8 +228,12 @@ public static class SceneBuilderSnake
         var uiCtrlGo = new GameObject("SnakeSpellUIController");
         var ssUI = uiCtrlGo.AddComponent<SnakeSpellUIController>();
 
-        UIFactory.WireList(ssUI, "heartIcons",
-            new Object[] { heartTexts[0], heartTexts[1], heartTexts[2], heartTexts[3] });
+        UIFactory.WireList(ssUI, "heartImages",
+            new Object[] { heartImages[0], heartImages[1], heartImages[2], heartImages[3] });
+        if (PrefabFactory.HeartFilledSprite != null)
+            UIFactory.Wire(ssUI, "heartFilledSprite", PrefabFactory.HeartFilledSprite);
+        if (PrefabFactory.HeartEmptySprite != null)
+            UIFactory.Wire(ssUI, "heartEmptySprite", PrefabFactory.HeartEmptySprite);
         UIFactory.Wire(ssUI, "waveText", waveText);
         UIFactory.Wire(ssUI, "scoreText", scoreText);
         UIFactory.Wire(ssUI, "questionPanel", qPanel);

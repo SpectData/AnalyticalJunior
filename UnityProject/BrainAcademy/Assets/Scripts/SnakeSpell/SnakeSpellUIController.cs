@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class SnakeSpellUIController : MonoBehaviour
 {
     [Header("HUD")]
-    [SerializeField] private List<TextMeshProUGUI> heartIcons;
+    [SerializeField] private List<Image> heartImages;
+    [SerializeField] private Sprite heartFilledSprite;
+    [SerializeField] private Sprite heartEmptySprite;
     [SerializeField] private TextMeshProUGUI waveText;
     [SerializeField] private TextMeshProUGUI scoreText;
 
@@ -58,23 +60,25 @@ public class SnakeSpellUIController : MonoBehaviour
     {
         BattlefieldState bf = controller.Battlefield;
 
-        if (heartIcons != null)
+        if (heartImages != null)
         {
-            for (int i = 0; i < heartIcons.Count; i++)
+            for (int i = 0; i < heartImages.Count; i++)
             {
-                if (heartIcons[i] == null) continue;
+                if (heartImages[i] == null) continue;
 
                 if (i < bf.lives)
                 {
-                    heartIcons[i].text = "\u2764";
-                    heartIcons[i].color = bf.lives <= 2
-                        ? GetPulsingColor(AppColors.HardRed)
-                        : AppColors.HardRed;
+                    if (heartFilledSprite != null)
+                        heartImages[i].sprite = heartFilledSprite;
+                    heartImages[i].color = bf.lives <= 2
+                        ? GetPulsingColor(Color.white)
+                        : Color.white;
                 }
                 else
                 {
-                    heartIcons[i].text = "\u2661";
-                    heartIcons[i].color = new Color(1f, 1f, 1f, 0.3f);
+                    if (heartEmptySprite != null)
+                        heartImages[i].sprite = heartEmptySprite;
+                    heartImages[i].color = new Color(1f, 1f, 1f, 0.3f);
                 }
             }
         }
@@ -108,8 +112,38 @@ public class SnakeSpellUIController : MonoBehaviour
         if (sequenceContainer != null) sequenceContainer.SetActive(hasSequence);
         if (questionTextContainer != null) questionTextContainer.SetActive(!hasSequence);
 
-        if (!hasSequence && questionText != null)
+        if (hasSequence && sequenceContainer != null)
+        {
+            // Populate sequence items (only rebuild if count changed)
+            int existing = sequenceContainer.transform.childCount;
+            if (existing != question.sequence.Count)
+            {
+                foreach (Transform child in sequenceContainer.transform)
+                    Destroy(child.gameObject);
+
+                for (int s = 0; s < question.sequence.Count; s++)
+                {
+                    var item = new GameObject($"SeqItem{s}", typeof(TextMeshProUGUI));
+                    item.transform.SetParent(sequenceContainer.transform, false);
+                    var tmp = item.GetComponent<TextMeshProUGUI>();
+                    tmp.fontSize = 32;
+                    tmp.alignment = TextAlignmentOptions.Center;
+                    tmp.color = Color.black;
+                }
+            }
+
+            for (int s = 0; s < question.sequence.Count; s++)
+            {
+                var tmp = sequenceContainer.transform.GetChild(s)
+                    .GetComponent<TextMeshProUGUI>();
+                if (tmp != null)
+                    tmp.text = question.sequence[s];
+            }
+        }
+        else if (questionText != null)
+        {
             questionText.text = question.questionText ?? "";
+        }
 
         // Answer buttons
         for (int i = 0; i < answerButtons.Count; i++)
