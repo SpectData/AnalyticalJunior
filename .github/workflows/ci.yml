@@ -86,9 +86,14 @@ jobs:
 
       - name: Check question bank is up to date
         run: |
-          git diff --exit-code UnityProject/BrainAcademy/Assets/Resources/question_bank.json \
-            && echo "Question bank is up to date." \
-            || { echo "::error::Question bank is out of date. Run 'uv run scripts/build_question_bank.py' and commit the result."; exit 1; }
+          OUTPUT="UnityProject/BrainAcademy/Assets/Resources/question_bank.json"
+          DIFF=$(git diff -- "$OUTPUT" | grep '^[+-]' | grep -v '^[+-][+-][+-]' | grep -v '"generated"' || true)
+          if [ -n "$DIFF" ]; then
+            echo "::error::Question bank is out of date. Run 'uv run scripts/build_question_bank.py' and commit the result."
+            git diff -- "$OUTPUT" | head -40
+            exit 1
+          fi
+          echo "Question bank is up to date (ignoring timestamp)."
 
   unity-tests:
     name: Unity Tests
@@ -124,7 +129,7 @@ jobs:
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
-        if: always()
+        if: always() && steps.tests.outputs.artifactsPath != ''
         with:
           name: EditMode-test-results
           path: ${{ steps.tests.outputs.artifactsPath }}
