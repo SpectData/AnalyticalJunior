@@ -25,8 +25,8 @@ public static class WaveGenerator
         return (config.baseSnakeSpeed + waveBonus) * SnakeTypeData.GetSpeedMultiplier(snakeType);
     }
 
-    public static int PickLane()
+    public static float PickAngle()
     {
-        return Random.Range(0, SnakeSpellConstants.NumLanes);
+        return Random.Range(0f, 360f);
     }
 }

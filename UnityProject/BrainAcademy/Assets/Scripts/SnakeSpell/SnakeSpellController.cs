@@ -85,16 +85,16 @@ public class SnakeSpellController : MonoBehaviour
 
     private void UpdatePlaying(float dt)
     {
-        // Move snakes left
+        // Move snakes inward (decreasing distance)
         foreach (var snake in Battlefield.snakes)
-            snake.xPosition -= snake.speed * dt;
+            snake.distance -= snake.speed * dt;
 
-        // Move spells right
+        // Move spells outward (increasing distance)
         foreach (var spell in Battlefield.spells)
-            spell.xPosition += spell.speed * dt;
+            spell.distance += spell.speed * dt;
 
         // Check snakes reaching wizard
-        var reached = Battlefield.snakes.Where(s => s.xPosition <= SnakeSpellConstants.WizardX).ToList();
+        var reached = Battlefield.snakes.Where(s => s.distance <= SnakeSpellConstants.WizardHitRadius).ToList();
         foreach (var snake in reached)
             Battlefield.snakes.Remove(snake);
         Battlefield.lives -= reached.Count;
@@ -103,8 +103,8 @@ public class SnakeSpellController : MonoBehaviour
         var spellsToRemove = new HashSet<int>();
         foreach (var spell in Battlefield.spells)
         {
-            var target = Battlefield.snakes.Find(s => s.id == spell.targetSnakeId && s.lane == spell.lane);
-            if (target != null && spell.xPosition >= target.xPosition)
+            var target = Battlefield.snakes.Find(s => s.id == spell.targetSnakeId);
+            if (target != null && spell.distance >= target.distance)
             {
                 spellsToRemove.Add(spell.id);
                 target.hp -= 1;
@@ -116,7 +116,7 @@ public class SnakeSpellController : MonoBehaviour
                 }
             }
 
-            if (spell.xPosition > SnakeSpellConstants.FieldWidth)
+            if (spell.distance > SnakeSpellConstants.SpellDespawnRadius)
                 spellsToRemove.Add(spell.id);
         }
         Battlefield.spells.RemoveAll(s => spellsToRemove.Contains(s.id));
@@ -125,15 +125,15 @@ public class SnakeSpellController : MonoBehaviour
         spawnTimer -= dt;
         if (spawnTimer <= 0f && snakesSpawnedThisWave < totalSnakesThisWave)
         {
-            int lane = WaveGenerator.PickLane();
+            float angleDeg = WaveGenerator.PickAngle();
             SnakeType type = WaveGenerator.PickSnakeType(Battlefield.currentWave, Config);
             float speed = WaveGenerator.GetSnakeSpeed(type, Battlefield.currentWave, Config);
 
             Battlefield.snakes.Add(new SnakeData(
                 id: nextSnakeId++,
-                lane: lane,
+                angleDeg: angleDeg,
                 type: type,
-                xPosition: SnakeSpellConstants.FieldWidth,
+                distance: SnakeSpellConstants.FieldRadius,
                 hp: SnakeTypeData.GetBaseHp(type),
                 speed: speed
             ));
@@ -249,15 +249,15 @@ public class SnakeSpellController : MonoBehaviour
     {
         var nearestSnake = Battlefield.snakes
             .Where(s => s.hp > 0)
-            .OrderBy(s => s.xPosition)
+            .OrderBy(s => s.distance)
             .FirstOrDefault();
 
         if (nearestSnake == null) return;
 
         Battlefield.spells.Add(new SpellData(
             id: nextSpellId++,
-            lane: nearestSnake.lane,
-            xPosition: SnakeSpellConstants.WizardX,
+            angleDeg: nearestSnake.angleDeg,
+            distance: 0f,
             targetSnakeId: nearestSnake.id
         ));
     }

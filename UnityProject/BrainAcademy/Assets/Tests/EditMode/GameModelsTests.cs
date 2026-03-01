@@ -77,20 +77,20 @@ public class GameQuestionTests
 public class SnakeSpellConstantsTests
 {
     [Test]
-    public void FieldWidth_Is1000()
+    public void FieldRadius_Is500()
     {
-        Assert.AreEqual(1000f, SnakeSpellConstants.FieldWidth);
+        Assert.AreEqual(500f, SnakeSpellConstants.FieldRadius);
     }
 
     [Test]
-    public void NumLanes_Is3()
+    public void WizardHitRadius_IsPositive()
     {
-        Assert.AreEqual(3, SnakeSpellConstants.NumLanes);
+        Assert.Greater(SnakeSpellConstants.WizardHitRadius, 0f);
     }
 
     [Test]
-    public void WizardX_IsPositive()
+    public void SpellDespawnRadius_IsGreaterThanFieldRadius()
     {
-        Assert.Greater(SnakeSpellConstants.WizardX, 0f);
+        Assert.Greater(SnakeSpellConstants.SpellDespawnRadius, SnakeSpellConstants.FieldRadius);
     }
 }

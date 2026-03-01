@@ -65,18 +65,18 @@ public static class SnakeTypeData
 public class SnakeData
 {
     public int id;
-    public int lane;
+    public float angleDeg;
     public SnakeType type;
-    public float xPosition;
+    public float distance;
     public int hp;
     public float speed;
 
-    public SnakeData(int id, int lane, SnakeType type, float xPosition, int hp, float speed)
+    public SnakeData(int id, float angleDeg, SnakeType type, float distance, int hp, float speed)
     {
         this.id = id;
-        this.lane = lane;
+        this.angleDeg = angleDeg;
         this.type = type;
-        this.xPosition = xPosition;
+        this.distance = distance;
         this.hp = hp;
         this.speed = speed;
     }
@@ -85,16 +85,16 @@ public class SnakeData
 public class SpellData
 {
     public int id;
-    public int lane;
-    public float xPosition;
+    public float angleDeg;
+    public float distance;
     public int targetSnakeId;
     public float speed;
 
-    public SpellData(int id, int lane, float xPosition, int targetSnakeId, float speed = 400f)
+    public SpellData(int id, float angleDeg, float distance, int targetSnakeId, float speed = 400f)
     {
         this.id = id;
-        this.lane = lane;
-        this.xPosition = xPosition;
+        this.angleDeg = angleDeg;
+        this.distance = distance;
         this.targetSnakeId = targetSnakeId;
         this.speed = speed;
     }

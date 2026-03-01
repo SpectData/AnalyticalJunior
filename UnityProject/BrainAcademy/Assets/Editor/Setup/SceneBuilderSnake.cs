@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// Builds SnakeSpellScene with HUD, battlefield panel (3 lanes),
+/// Builds SnakeSpellScene with HUD, radial battlefield panel,
 /// question panel, answer buttons, overlays, and feedback.
 /// </summary>
 public static class SceneBuilderSnake
@@ -12,8 +12,6 @@ public static class SceneBuilderSnake
     private static readonly Color Background = new Color(0.94f, 0.96f, 0.97f);
     private static readonly Color Purple60 = new Color(0.40f, 0.49f, 0.92f);
     private static readonly Color GrassLight = new Color(0.49f, 0.78f, 0.31f);  // #7EC850
-    private static readonly Color GrassDark = new Color(0.36f, 0.68f, 0.23f);   // #5DAE3B
-    private static readonly Color DirtRoad = AppColors.DirtRoad;
 
     public static void Build()
     {
@@ -49,60 +47,34 @@ public static class SceneBuilderSnake
             new Vector2(0, 0.48f), new Vector2(1, 0.93f),
             new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
 
-        // 3 lane backgrounds
-        var laneImages = new Image[3];
-        var dirtImages = new Image[3];
-        var wizardRTs = new RectTransform[3];
-
-        for (int i = 0; i < 3; i++)
+        // Single battlefield background
+        var bgObj = UIFactory.CreateImage(battlefield.transform,
+            "BattlefieldBackground", GrassLight, Vector2.zero);
+        UIFactory.Stretch(bgObj);
+        var bgImage = bgObj.GetComponent<Image>();
+        if (PrefabFactory.GrassLightSprite != null)
         {
-            float yMin = 1f - (i + 1) / 3f;
-            float yMax = 1f - i / 3f;
-
-            // Lane background
-            bool evenLane = i % 2 == 0;
-            var lane = UIFactory.CreateImage(battlefield.transform,
-                $"Lane{i}", evenLane ? GrassLight : GrassDark,
-                Vector2.zero);
-            UIFactory.SetRect(lane, new Vector2(0, yMin), new Vector2(1, yMax),
-                new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
-            var laneImg = lane.GetComponent<Image>();
-            Sprite grassSprite = evenLane ? PrefabFactory.GrassLightSprite : PrefabFactory.GrassDarkSprite;
-            if (grassSprite != null)
-            {
-                laneImg.sprite = grassSprite;
-                laneImg.color = Color.white;
-            }
-            laneImages[i] = laneImg;
-
-            // Dirt road (lane divider strip at bottom of lane)
-            var dirt = UIFactory.CreateImage(battlefield.transform,
-                $"DirtRoad{i}", DirtRoad, Vector2.zero);
-            UIFactory.SetRect(dirt, new Vector2(0, yMin), new Vector2(1, yMin + 0.04f),
-                new Vector2(0.5f, 0), Vector2.zero, Vector2.zero);
-            dirtImages[i] = dirt.GetComponent<Image>();
-
-            // Wizard (left side of each lane)
-            var wizard = new GameObject($"Wizard{i}", typeof(Image));
-            wizard.transform.SetParent(battlefield.transform, false);
-            var wizImg = wizard.GetComponent<Image>();
-            wizImg.preserveAspect = true;
-            if (PrefabFactory.WizardSprite != null)
-            {
-                wizImg.sprite = PrefabFactory.WizardSprite;
-                wizImg.color = Color.white;
-            }
-            else
-            {
-                wizImg.color = Purple60;
-            }
-            // Flip horizontally so wizard faces right (toward snakes)
-            wizard.transform.localScale = new Vector3(-1, 1, 1);
-            var wrt = UIFactory.SetRect(wizard,
-                new Vector2(0, yMin), new Vector2(0, yMax),
-                new Vector2(0, 0.5f), new Vector2(50, 0), new Vector2(90, 0));
-            wizardRTs[i] = wrt;
+            bgImage.sprite = PrefabFactory.GrassLightSprite;
+            bgImage.color = Color.white;
         }
+
+        // Single wizard centered
+        var wizard = new GameObject("Wizard", typeof(Image));
+        wizard.transform.SetParent(battlefield.transform, false);
+        var wizImg = wizard.GetComponent<Image>();
+        wizImg.preserveAspect = true;
+        if (PrefabFactory.WizardSprite != null)
+        {
+            wizImg.sprite = PrefabFactory.WizardSprite;
+            wizImg.color = Color.white;
+        }
+        else
+        {
+            wizImg.color = Purple60;
+        }
+        var wizRT = UIFactory.SetRect(wizard,
+            new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f),
+            new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(90, 90));
 
         // Wave transition overlay
         var waveOverlay = new GameObject("WaveTransitionOverlay", typeof(RectTransform));
@@ -216,12 +188,8 @@ public static class SceneBuilderSnake
         var bfRend = bfRendGo.AddComponent<BattlefieldRenderer>();
 
         UIFactory.Wire(bfRend, "battlefieldPanel", bfRT);
-        UIFactory.WireList(bfRend, "laneBackgrounds",
-            new Object[] { laneImages[0], laneImages[1], laneImages[2] });
-        UIFactory.WireList(bfRend, "dirtRoads",
-            new Object[] { dirtImages[0], dirtImages[1], dirtImages[2] });
-        UIFactory.WireList(bfRend, "wizardObjects",
-            new Object[] { wizardRTs[0], wizardRTs[1], wizardRTs[2] });
+        UIFactory.Wire(bfRend, "battlefieldBackground", bgImage);
+        UIFactory.Wire(bfRend, "wizardObject", wizRT);
         UIFactory.Wire(bfRend, "snakePrefab", PrefabFactory.SnakePrefab);
         UIFactory.Wire(bfRend, "spellPrefab", PrefabFactory.SpellPrefab);
         UIFactory.Wire(bfRend, "waveTransitionOverlay", waveOverlay);
@@ -241,10 +209,6 @@ public static class SceneBuilderSnake
             UIFactory.Wire(bfRend, "snakePurpleSprite", PrefabFactory.SnakePurpleSprite);
         if (PrefabFactory.SpellSprite != null)
             UIFactory.Wire(bfRend, "spellSprite", PrefabFactory.SpellSprite);
-        if (PrefabFactory.GrassLightSprite != null)
-            UIFactory.Wire(bfRend, "grassLightSprite", PrefabFactory.GrassLightSprite);
-        if (PrefabFactory.GrassDarkSprite != null)
-            UIFactory.Wire(bfRend, "grassDarkSprite", PrefabFactory.GrassDarkSprite);
 
         EditorSceneManager.SaveScene(scene, "Assets/Scenes/SnakeSpellScene.unity");
         Debug.Log("[Setup] SnakeSpellScene built");
