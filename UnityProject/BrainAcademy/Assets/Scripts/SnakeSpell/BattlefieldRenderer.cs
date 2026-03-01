@@ -7,12 +7,11 @@ public class BattlefieldRenderer : MonoBehaviour
     [Header("Battlefield Panel")]
     [SerializeField] private RectTransform battlefieldPanel;
 
-    [Header("Lane Backgrounds")]
-    [SerializeField] private List<Image> laneBackgrounds;
-    [SerializeField] private List<Image> dirtRoads;
+    [Header("Background")]
+    [SerializeField] private Image battlefieldBackground;
 
-    [Header("Wizards")]
-    [SerializeField] private List<RectTransform> wizardObjects;
+    [Header("Wizard")]
+    [SerializeField] private RectTransform wizardObject;
 
     [Header("Prefabs")]
     [SerializeField] private GameObject snakePrefab;
@@ -25,8 +24,6 @@ public class BattlefieldRenderer : MonoBehaviour
     [SerializeField] private Sprite snakeRedSprite;
     [SerializeField] private Sprite snakePurpleSprite;
     [SerializeField] private Sprite spellSprite;
-    [SerializeField] private Sprite grassLightSprite;
-    [SerializeField] private Sprite grassDarkSprite;
 
     [Header("Overlays")]
     [SerializeField] private GameObject waveTransitionOverlay;
@@ -47,38 +44,14 @@ public class BattlefieldRenderer : MonoBehaviour
         controller = FindObjectOfType<SnakeSpellController>();
         GenerateCircleSprite();
 
-        // Set lane backgrounds (use sprites if available, otherwise colors)
-        for (int i = 0; i < laneBackgrounds.Count && i < SnakeSpellConstants.NumLanes; i++)
+        // Set wizard sprite if available
+        if (wizardObject != null && wizardSprite != null)
         {
-            bool even = i % 2 == 0;
-            var laneImg = laneBackgrounds[i];
-            Sprite grassSprite = even ? grassLightSprite : grassDarkSprite;
-            if (grassSprite != null)
+            var wImg = wizardObject.GetComponent<Image>();
+            if (wImg != null)
             {
-                laneImg.sprite = grassSprite;
-                laneImg.color = Color.white;
-            }
-            else
-            {
-                laneImg.color = even ? AppColors.GrassLight : AppColors.GrassDark;
-            }
-        }
-
-        // Set dirt road colors
-        foreach (var road in dirtRoads)
-            road.color = AppColors.DirtRoad;
-
-        // Set wizard sprites if available
-        for (int i = 0; i < wizardObjects.Count; i++)
-        {
-            if (wizardSprite != null)
-            {
-                var wImg = wizardObjects[i].GetComponent<Image>();
-                if (wImg != null)
-                {
-                    wImg.sprite = wizardSprite;
-                    wImg.color = Color.white;
-                }
+                wImg.sprite = wizardSprite;
+                wImg.color = Color.white;
             }
         }
     }
@@ -109,9 +82,12 @@ public class BattlefieldRenderer : MonoBehaviour
                 activeSnakeObjects[snake.id] = snakeRT;
             }
 
-            // Position snake
-            Vector2 pos = GameToScreenPosition(snake.xPosition, snake.lane);
+            // Position snake using polar coordinates
+            Vector2 pos = PolarToScreenPosition(snake.angleDeg, snake.distance);
             snakeRT.anchoredPosition = pos;
+
+            // Rotate snake to face wizard (inward)
+            snakeRT.localRotation = Quaternion.Euler(0, 0, snake.angleDeg + 180f);
 
             // Set sprite/color and size based on snake type
             Image snakeImage = snakeRT.GetComponent<Image>();
@@ -176,7 +152,7 @@ public class BattlefieldRenderer : MonoBehaviour
                 activeSpellObjects[spell.id] = spellRT;
             }
 
-            Vector2 pos = GameToScreenPosition(spell.xPosition, spell.lane);
+            Vector2 pos = PolarToScreenPosition(spell.angleDeg, spell.distance);
             spellRT.anchoredPosition = pos;
 
             Image spellImage = spellRT.GetComponent<Image>();
@@ -223,20 +199,21 @@ public class BattlefieldRenderer : MonoBehaviour
             gameOverOverlay.SetActive(bf.status == GameStatus.GameOver);
     }
 
-    private Vector2 GameToScreenPosition(float gameX, int lane)
+    private Vector2 PolarToScreenPosition(float angleDeg, float distance)
     {
         if (battlefieldPanel == null) return Vector2.zero;
 
         float panelWidth = battlefieldPanel.rect.width;
         float panelHeight = battlefieldPanel.rect.height;
 
-        float scaleX = panelWidth / SnakeSpellConstants.FieldWidth;
-        float laneHeight = panelHeight / SnakeSpellConstants.NumLanes;
+        float maxScreenRadius = Mathf.Min(panelWidth, panelHeight) / 2f * 0.9f;
+        float screenRadius = (distance / SnakeSpellConstants.FieldRadius) * maxScreenRadius;
 
-        float screenX = gameX * scaleX - panelWidth / 2f;
-        float screenY = panelHeight / 2f - (lane + 0.5f) * laneHeight;
+        float angleRad = angleDeg * Mathf.Deg2Rad;
+        float x = Mathf.Cos(angleRad) * screenRadius;
+        float y = Mathf.Sin(angleRad) * screenRadius;
 
-        return new Vector2(screenX, screenY);
+        return new Vector2(x, y);
     }
 
     // ── Sprite Lookup ──

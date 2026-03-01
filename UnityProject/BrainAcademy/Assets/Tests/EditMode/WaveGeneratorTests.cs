@@ -87,4 +87,15 @@ public class WaveGeneratorTests
         var config = Difficulty.SuperHard.ToSnakeSpellConfig();
         Assert.AreEqual(SnakeType.Green, WaveGenerator.PickSnakeType(1, config));
     }
+
+    [Test]
+    public void PickAngle_ReturnsValueInRange()
+    {
+        for (int i = 0; i < 100; i++)
+        {
+            float angle = WaveGenerator.PickAngle();
+            Assert.GreaterOrEqual(angle, 0f);
+            Assert.Less(angle, 360f);
+        }
+    }
 }

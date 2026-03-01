@@ -106,13 +106,13 @@ public class SnakeDataTests
     [Test]
     public void Constructor_SetsAllFields()
     {
-        var snake = new SnakeData(id: 5, lane: 2, type: SnakeType.Red,
-            xPosition: 500f, hp: 3, speed: 60f);
+        var snake = new SnakeData(id: 5, angleDeg: 135f, type: SnakeType.Red,
+            distance: 500f, hp: 3, speed: 60f);
 
         Assert.AreEqual(5, snake.id);
-        Assert.AreEqual(2, snake.lane);
+        Assert.AreEqual(135f, snake.angleDeg);
         Assert.AreEqual(SnakeType.Red, snake.type);
-        Assert.AreEqual(500f, snake.xPosition);
+        Assert.AreEqual(500f, snake.distance);
         Assert.AreEqual(3, snake.hp);
         Assert.AreEqual(60f, snake.speed);
     }

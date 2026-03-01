@@ -1,6 +1,6 @@
 public static class SnakeSpellConstants
 {
-    public const float FieldWidth = 1000f;
-    public const float WizardX = 40f;
-    public const int NumLanes = 3;
+    public const float FieldRadius = 500f;
+    public const float WizardHitRadius = 30f;
+    public const float SpellDespawnRadius = 520f;
 }
