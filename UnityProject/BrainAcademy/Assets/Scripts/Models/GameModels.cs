@@ -8,15 +8,18 @@ public class Question
     public List<string> sequence;
     public List<string> answers;
     public string correctAnswer;
+    public string explanation;
 
     public Question(string label, List<string> answers, string correctAnswer,
-        string questionText = null, List<string> sequence = null)
+        string questionText = null, List<string> sequence = null,
+        string explanation = null)
     {
         this.label = label;
         this.questionText = questionText;
         this.sequence = sequence;
         this.answers = answers;
         this.correctAnswer = correctAnswer;
+        this.explanation = explanation;
     }
 }
 

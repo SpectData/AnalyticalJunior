@@ -15,6 +15,7 @@ public class QuestionBankLoader
         public string question;
         public List<string> options;
         public string correctAnswer;
+        public string explanation;
         public string passageId; // null for short questions
     }
 
@@ -129,6 +130,7 @@ public class QuestionBankLoader
             question = obj["question"]?.ToString() ?? "",
             options = options,
             correctAnswer = obj["correct_answer"]?.ToString() ?? "",
+            explanation = obj["explanation"]?.ToString() ?? "",
         };
     }
 
@@ -216,7 +218,8 @@ public class QuestionBankLoader
                 label: label,
                 questionText: bq.question,
                 answers: bq.options,
-                correctAnswer: bq.correctAnswer
+                correctAnswer: bq.correctAnswer,
+                explanation: bq.explanation
             )
         );
     }
@@ -253,7 +256,8 @@ public class QuestionBankLoader
                 label: label,
                 questionText: bq.question,
                 answers: bq.options,
-                correctAnswer: bq.correctAnswer
+                correctAnswer: bq.correctAnswer,
+                explanation: bq.explanation
             )
         );
     }
@@ -272,7 +276,8 @@ public class QuestionBankLoader
                 label: label,
                 questionText: bq.question,
                 answers: bq.options,
-                correctAnswer: bq.correctAnswer
+                correctAnswer: bq.correctAnswer,
+                explanation: bq.explanation
             )
         );
     }

@@ -9,12 +9,15 @@ public class SnakeSpellController : MonoBehaviour
     public DifficultyConfig Config { get; private set; }
     public BattlefieldState Battlefield { get; private set; }
 
-    // Question state
+    // Question state (wave phase)
     public GameQuestion.Standard CurrentQuestion { get; private set; }
-    public int QuestionTimeLeft { get; private set; }
     public bool Answered { get; private set; }
     public int SelectedAnswerIndex { get; private set; }
     public bool ShowCorrect { get; private set; }
+
+    // Lightning bolt
+    public bool HasLightningBolt => hasLightningBolt && Battlefield != null
+        && Battlefield.phase == GamePhase.WavePhase;
 
     // Feedback
     public string FeedbackText { get; private set; }
@@ -28,9 +31,17 @@ public class SnakeSpellController : MonoBehaviour
     private float spawnTimer;
     private int snakesSpawnedThisWave;
     private int totalSnakesThisWave;
-    private float waveTransitionCountdown;
-    private Coroutine questionTimerCoroutine;
     private bool navigatedToResults;
+
+    // Phase state
+    private List<ReviewItem> currentPhaseReviewItems = new List<ReviewItem>();
+    private bool hasLightningBolt;
+    private string currentPassageId;
+    private GameQuestion.ReadingComprehension currentReadingQuestion;
+
+    // UI controller references
+    private ReadingPhaseUIController readingPhaseUI;
+    private ReviewUIController reviewUI;
 
     void Start()
     {
@@ -39,6 +50,13 @@ public class SnakeSpellController : MonoBehaviour
 
         difficulty = GameManager.Instance.SelectedDifficulty;
         Config = difficulty.ToSnakeSpellConfig();
+
+        readingPhaseUI = FindObjectOfType<ReadingPhaseUIController>();
+        reviewUI = FindObjectOfType<ReviewUIController>();
+
+        if (readingPhaseUI != null)
+            readingPhaseUI.OnAnswerSubmitted += OnReadingAnswerSubmitted;
+
         StartGame();
     }
 
@@ -48,13 +66,17 @@ public class SnakeSpellController : MonoBehaviour
         nextSpellId = 0;
         spawnTimer = 0f;
         snakesSpawnedThisWave = 0;
-        waveTransitionCountdown = 0f;
         navigatedToResults = false;
         questionProvider.ResetBank();
+        currentPhaseReviewItems = new List<ReviewItem>();
+        hasLightningBolt = false;
+        currentPassageId = null;
+        currentReadingQuestion = null;
 
         Battlefield = new BattlefieldState
         {
             status = GameStatus.Playing,
+            phase = GamePhase.WavePhase,
             lives = Config.startingLives,
         };
 
@@ -75,15 +97,16 @@ public class SnakeSpellController : MonoBehaviour
             return;
         }
 
+        if (Battlefield.status != GameStatus.Playing) return;
+
         float dt = Time.deltaTime;
 
-        if (Battlefield.status == GameStatus.Playing)
-            UpdatePlaying(dt);
-        else if (Battlefield.status == GameStatus.WaveTransition)
-            UpdateWaveTransition(dt);
+        // Only WavePhase has per-frame updates; other phases are callback-driven
+        if (Battlefield.phase == GamePhase.WavePhase)
+            UpdateWavePhase(dt);
     }
 
-    private void UpdatePlaying(float dt)
+    private void UpdateWavePhase(float dt)
     {
         // Move snakes inward (decreasing distance)
         foreach (var snake in Battlefield.snakes)
@@ -152,21 +175,7 @@ public class SnakeSpellController : MonoBehaviour
         }
         else if (waveComplete)
         {
-            waveTransitionCountdown = 3f;
-            Battlefield.status = GameStatus.WaveTransition;
-        }
-    }
-
-    private void UpdateWaveTransition(float dt)
-    {
-        waveTransitionCountdown -= dt;
-        Battlefield.waveTransitionTimer = waveTransitionCountdown;
-
-        if (waveTransitionCountdown <= 0f)
-        {
-            int nextWave = Battlefield.currentWave + 1;
-            Battlefield.status = GameStatus.Playing;
-            StartWave(nextWave);
+            EnterWaveReview();
         }
     }
 
@@ -178,7 +187,119 @@ public class SnakeSpellController : MonoBehaviour
         Battlefield.currentWave = waveNumber;
     }
 
-    // ── Question Handling ──
+    // ── Phase Transitions ──
+
+    private void EnterWaveReview()
+    {
+        // Lightning bolt expires at end of wave (use-it-or-lose-it)
+        hasLightningBolt = false;
+        Battlefield.hasLightningBolt = false;
+
+        Battlefield.phase = GamePhase.WaveReview;
+
+        if (reviewUI != null)
+        {
+            reviewUI.Show(currentPhaseReviewItems, () =>
+            {
+                currentPhaseReviewItems = new List<ReviewItem>();
+                EnterInterWavePhase();
+            });
+        }
+        else
+        {
+            currentPhaseReviewItems = new List<ReviewItem>();
+            EnterInterWavePhase();
+        }
+    }
+
+    private void EnterInterWavePhase()
+    {
+        Battlefield.phase = GamePhase.InterWavePhase;
+
+        // Try to get a reading question for the current passage
+        GameQuestion.ReadingComprehension readingQ = null;
+        if (!string.IsNullOrEmpty(currentPassageId))
+            readingQ = questionProvider.GetReadingQuestionForPassage(currentPassageId);
+
+        // If passage exhausted or no current passage, get a new one
+        if (readingQ == null)
+            readingQ = questionProvider.GetReadingQuestion();
+
+        if (readingQ != null && readingPhaseUI != null)
+        {
+            currentPassageId = readingQ.passageId;
+            currentReadingQuestion = readingQ;
+            readingPhaseUI.ShowPanel(readingQ);
+        }
+        else
+        {
+            // No reading questions available — skip to next wave
+            currentPhaseReviewItems = new List<ReviewItem>();
+            StartNextWave();
+        }
+    }
+
+    private void OnReadingAnswerSubmitted(bool isCorrect, int selectedIndex)
+    {
+        hasLightningBolt = isCorrect;
+        Battlefield.hasLightningBolt = isCorrect;
+
+        // Collect review item for wrong answers
+        if (!isCorrect && currentReadingQuestion != null)
+        {
+            Question q = currentReadingQuestion.question;
+            string studentAnswer = (selectedIndex >= 0 && selectedIndex < q.answers.Count)
+                ? q.answers[selectedIndex]
+                : "(unknown)";
+
+            currentPhaseReviewItems.Add(new ReviewItem(
+                questionText: q.questionText,
+                studentAnswer: studentAnswer,
+                correctAnswer: q.correctAnswer,
+                explanation: q.explanation ?? ""
+            ));
+        }
+
+        StartCoroutine(DelayedEnterInterWaveReview());
+    }
+
+    private IEnumerator DelayedEnterInterWaveReview()
+    {
+        yield return new WaitForSeconds(1.5f);
+        if (readingPhaseUI != null)
+            readingPhaseUI.HidePanel();
+        EnterInterWaveReview();
+    }
+
+    private void EnterInterWaveReview()
+    {
+        Battlefield.phase = GamePhase.InterWaveReview;
+
+        if (reviewUI != null)
+        {
+            reviewUI.Show(currentPhaseReviewItems, () =>
+            {
+                currentPhaseReviewItems = new List<ReviewItem>();
+                StartNextWave();
+            });
+        }
+        else
+        {
+            currentPhaseReviewItems = new List<ReviewItem>();
+            StartNextWave();
+        }
+    }
+
+    private void StartNextWave()
+    {
+        int nextWave = Battlefield.currentWave + 1;
+        Battlefield.phase = GamePhase.WavePhase;
+        Battlefield.hasLightningBolt = hasLightningBolt;
+        StartWave(nextWave);
+        GenerateNextQuestion();
+    }
+
+    // ── Question Handling (Wave Phase) ──
 
     private void GenerateNextQuestion()
     {
@@ -186,35 +307,6 @@ public class SnakeSpellController : MonoBehaviour
         Answered = false;
         SelectedAnswerIndex = -1;
         ShowCorrect = false;
-        StartQuestionTimer();
-    }
-
-    private void StartQuestionTimer()
-    {
-        if (questionTimerCoroutine != null) StopCoroutine(questionTimerCoroutine);
-        QuestionTimeLeft = Config.questionTimerSeconds;
-        questionTimerCoroutine = StartCoroutine(QuestionTimerCoroutine());
-    }
-
-    private IEnumerator QuestionTimerCoroutine()
-    {
-        while (QuestionTimeLeft > 0)
-        {
-            yield return new WaitForSeconds(1f);
-            QuestionTimeLeft--;
-        }
-
-        if (!Answered)
-            HandleQuestionTimeout();
-    }
-
-    private void HandleQuestionTimeout()
-    {
-        Answered = true;
-        ShowCorrect = true;
-        Battlefield.questionsAnswered++;
-        DisplayFeedback("Time's up!", false);
-        StartCoroutine(ScheduleNextQuestion(0.8f));
     }
 
     public void SubmitAnswer(int index)
@@ -224,13 +316,23 @@ public class SnakeSpellController : MonoBehaviour
         Question q = CurrentQuestion.question;
 
         Answered = true;
-        if (questionTimerCoroutine != null) StopCoroutine(questionTimerCoroutine);
         SelectedAnswerIndex = index;
         ShowCorrect = true;
 
         bool isCorrect = q.answers[index] == q.correctAnswer;
         Battlefield.questionsAnswered++;
         if (isCorrect) Battlefield.questionsCorrect++;
+
+        // Collect review item for wrong answers
+        if (!isCorrect)
+        {
+            currentPhaseReviewItems.Add(new ReviewItem(
+                questionText: q.questionText,
+                studentAnswer: q.answers[index],
+                correctAnswer: q.correctAnswer,
+                explanation: q.explanation ?? ""
+            ));
+        }
 
         if (isCorrect)
         {
@@ -265,9 +367,37 @@ public class SnakeSpellController : MonoBehaviour
     private IEnumerator ScheduleNextQuestion(float delay)
     {
         yield return new WaitForSeconds(delay);
-        if (Battlefield.status == GameStatus.Playing || Battlefield.status == GameStatus.WaveTransition)
+        if (Battlefield.status == GameStatus.Playing && Battlefield.phase == GamePhase.WavePhase)
             GenerateNextQuestion();
     }
+
+    // ── Lightning Bolt ──
+
+    public void UseLightningBolt()
+    {
+        if (!hasLightningBolt) return;
+        if (Battlefield.phase != GamePhase.WavePhase) return;
+
+        hasLightningBolt = false;
+        Battlefield.hasLightningBolt = false;
+
+        var nearest = Battlefield.snakes
+            .Where(s => s.hp > 0)
+            .OrderBy(s => s.distance)
+            .Take(SnakeSpellConstants.LightningBoltZapCount)
+            .ToList();
+
+        foreach (var snake in nearest)
+        {
+            Battlefield.snakes.Remove(snake);
+            Battlefield.score += Config.pointsPerKill;
+            Battlefield.snakesKilled++;
+        }
+
+        DisplayFeedback($"Lightning! {nearest.Count} zapped!", true);
+    }
+
+    // ── Feedback ──
 
     private void DisplayFeedback(string text, bool correct)
     {
@@ -283,6 +413,8 @@ public class SnakeSpellController : MonoBehaviour
         ShowFeedback = false;
     }
 
+    // ── Results ──
+
     private void SaveResultsAndNavigate()
     {
         GameManager gm = GameManager.Instance;
@@ -297,13 +429,14 @@ public class SnakeSpellController : MonoBehaviour
 
     private IEnumerator DelayedNavigateToResults()
     {
-        // Brief pause on game over screen
         yield return new WaitForSeconds(1.5f);
         SceneTransitionManager.Instance.LoadSnakeResults();
     }
 
     void OnDestroy()
     {
+        if (readingPhaseUI != null)
+            readingPhaseUI.OnAnswerSubmitted -= OnReadingAnswerSubmitted;
         StopAllCoroutines();
     }
 }

@@ -11,8 +11,7 @@ public class SnakeSpellUIController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
 
     [Header("Question Panel")]
-    [SerializeField] private Image timerBar;
-    [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private GameObject questionPanel;
     [SerializeField] private TextMeshProUGUI labelText;
     [SerializeField] private TextMeshProUGUI questionText;
     [SerializeField] private GameObject sequenceContainer;
@@ -20,6 +19,9 @@ public class SnakeSpellUIController : MonoBehaviour
 
     [Header("Answer Buttons")]
     [SerializeField] private List<AnswerButtonUI> answerButtons;
+
+    [Header("Lightning Bolt")]
+    [SerializeField] private Button lightningBoltButton;
 
     [Header("Feedback")]
     [SerializeField] private FeedbackOverlay feedbackOverlay;
@@ -36,7 +38,18 @@ public class SnakeSpellUIController : MonoBehaviour
         if (controller == null || controller.Battlefield == null) return;
 
         UpdateHUD();
-        UpdateQuestionPanel();
+
+        bool inWavePhase = controller.Battlefield.status == GameStatus.Playing
+                        && controller.Battlefield.phase == GamePhase.WavePhase;
+
+        // Show question panel only during wave phase
+        if (questionPanel != null)
+            questionPanel.SetActive(inWavePhase);
+
+        if (inWavePhase)
+            UpdateQuestionPanel();
+
+        UpdateLightningBoltButton();
         UpdateFeedback();
     }
 
@@ -62,17 +75,6 @@ public class SnakeSpellUIController : MonoBehaviour
         GameQuestion.Standard q = controller.CurrentQuestion;
         if (q == null) return;
         Question question = q.question;
-
-        // Timer
-        if (timerBar != null)
-        {
-            float maxTime = controller.Config.questionTimerSeconds;
-            timerBar.fillAmount = controller.QuestionTimeLeft / maxTime;
-            timerBar.color = controller.QuestionTimeLeft > 3 ? AppColors.Purple60 : AppColors.HardRed;
-        }
-
-        if (timerText != null)
-            timerText.text = $"{controller.QuestionTimeLeft}s";
 
         // Label
         if (labelText != null)
@@ -112,6 +114,14 @@ public class SnakeSpellUIController : MonoBehaviour
                 answerButtons[i].gameObject.SetActive(false);
             }
         }
+    }
+
+    private void UpdateLightningBoltButton()
+    {
+        if (lightningBoltButton == null) return;
+
+        bool show = controller.HasLightningBolt;
+        lightningBoltButton.gameObject.SetActive(show);
     }
 
     private void UpdateFeedback()

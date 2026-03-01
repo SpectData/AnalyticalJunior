@@ -32,6 +32,29 @@ public class QuestionTests
         Assert.AreEqual("What comes next?", q.questionText);
         Assert.AreEqual(5, q.sequence.Count);
     }
+
+    [Test]
+    public void Constructor_SetsExplanation()
+    {
+        var answers = new List<string> { "A", "B" };
+        var q = new Question(
+            label: "Test",
+            answers: answers,
+            correctAnswer: "A",
+            explanation: "Because A is correct"
+        );
+
+        Assert.AreEqual("Because A is correct", q.explanation);
+    }
+
+    [Test]
+    public void Constructor_ExplanationDefaultsToNull()
+    {
+        var answers = new List<string> { "A", "B" };
+        var q = new Question(label: "Test", answers: answers, correctAnswer: "A");
+
+        Assert.IsNull(q.explanation);
+    }
 }
 
 public class GameQuestionTests
@@ -74,6 +97,44 @@ public class GameQuestionTests
     }
 }
 
+public class ReviewItemTests
+{
+    [Test]
+    public void Constructor_SetsAllFields()
+    {
+        var item = new ReviewItem(
+            questionText: "What is 2+2?",
+            studentAnswer: "5",
+            correctAnswer: "4",
+            explanation: "2+2 equals 4"
+        );
+
+        Assert.AreEqual("What is 2+2?", item.questionText);
+        Assert.AreEqual("5", item.studentAnswer);
+        Assert.AreEqual("4", item.correctAnswer);
+        Assert.AreEqual("2+2 equals 4", item.explanation);
+    }
+}
+
+public class GamePhaseTests
+{
+    [Test]
+    public void GamePhase_HasFourValues()
+    {
+        var values = System.Enum.GetValues(typeof(GamePhase));
+        Assert.AreEqual(4, values.Length);
+    }
+
+    [Test]
+    public void GamePhase_ContainsExpectedValues()
+    {
+        Assert.IsTrue(System.Enum.IsDefined(typeof(GamePhase), GamePhase.WavePhase));
+        Assert.IsTrue(System.Enum.IsDefined(typeof(GamePhase), GamePhase.WaveReview));
+        Assert.IsTrue(System.Enum.IsDefined(typeof(GamePhase), GamePhase.InterWavePhase));
+        Assert.IsTrue(System.Enum.IsDefined(typeof(GamePhase), GamePhase.InterWaveReview));
+    }
+}
+
 public class SnakeSpellConstantsTests
 {
     [Test]
@@ -92,5 +153,11 @@ public class SnakeSpellConstantsTests
     public void SpellDespawnRadius_IsGreaterThanFieldRadius()
     {
         Assert.Greater(SnakeSpellConstants.SpellDespawnRadius, SnakeSpellConstants.FieldRadius);
+    }
+
+    [Test]
+    public void LightningBoltZapCount_Is3()
+    {
+        Assert.AreEqual(3, SnakeSpellConstants.LightningBoltZapCount);
     }
 }
