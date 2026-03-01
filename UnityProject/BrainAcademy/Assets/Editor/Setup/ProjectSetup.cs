@@ -32,7 +32,6 @@ public static class ProjectSetup
 
         // Build all scenes
         SceneBuilderMenu.BuildMenuScene();
-        SceneBuilderMenu.BuildDifficultyScene();
         SceneBuilderSnake.Build();
         SceneBuilderReading.Build();
         SceneBuilderReview.Build();
@@ -166,12 +165,11 @@ public static class ProjectSetup
         var scenes = new[]
         {
             new EditorBuildSettingsScene("Assets/Scenes/MenuScene.unity", true),
-            new EditorBuildSettingsScene("Assets/Scenes/DifficultySelectScene.unity", true),
             new EditorBuildSettingsScene("Assets/Scenes/SnakeSpellScene.unity", true),
             new EditorBuildSettingsScene("Assets/Scenes/SnakeSpellResultsScene.unity", true),
         };
 
         EditorBuildSettings.scenes = scenes;
-        Debug.Log("[Setup] Build settings configured (4 scenes)");
+        Debug.Log("[Setup] Build settings configured (3 scenes)");
     }
 }

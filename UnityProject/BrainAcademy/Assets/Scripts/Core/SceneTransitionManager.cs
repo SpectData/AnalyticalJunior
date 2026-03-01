@@ -22,11 +22,6 @@ public class SceneTransitionManager : MonoBehaviour
         SceneManager.LoadScene("MenuScene");
     }
 
-    public void LoadDifficultySelect()
-    {
-        SceneManager.LoadScene("DifficultySelectScene");
-    }
-
     public void LoadSnakeSpell()
     {
         SceneManager.LoadScene("SnakeSpellScene");

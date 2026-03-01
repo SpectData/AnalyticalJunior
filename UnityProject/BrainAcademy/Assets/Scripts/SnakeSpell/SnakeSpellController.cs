@@ -25,7 +25,7 @@ public class SnakeSpellController : MonoBehaviour
     public bool ShowFeedback { get; private set; }
 
     private QuestionProvider questionProvider;
-    private Difficulty difficulty;
+    private AdaptiveDifficultyController adaptiveController;
     private int nextSnakeId;
     private int nextSpellId;
     private float spawnTimer;
@@ -48,8 +48,15 @@ public class SnakeSpellController : MonoBehaviour
         questionProvider = new QuestionProvider();
         questionProvider.Initialize();
 
-        difficulty = GameManager.Instance.SelectedDifficulty;
-        Config = difficulty.ToSnakeSpellConfig();
+        adaptiveController = new AdaptiveDifficultyController();
+        Config = new DifficultyConfig(
+            baseSnakeSpeed: 45f,
+            baseSpawnInterval: 3.0f,
+            startingLives: 4,
+            availableSnakeTypes: new List<SnakeType>
+                { SnakeType.Green, SnakeType.Yellow, SnakeType.Red, SnakeType.Purple },
+            pointsPerKill: 25
+        );
 
         readingPhaseUI = FindObjectOfType<ReadingPhaseUIController>();
         reviewUI = FindObjectOfType<ReviewUIController>();
@@ -162,7 +169,7 @@ public class SnakeSpellController : MonoBehaviour
             ));
 
             snakesSpawnedThisWave++;
-            spawnTimer = WaveGenerator.GetSpawnInterval(Battlefield.currentWave, Config);
+            spawnTimer = 1f / adaptiveController.GetSpawnRate();
         }
 
         // Check wave complete
@@ -243,6 +250,7 @@ public class SnakeSpellController : MonoBehaviour
     {
         hasLightningBolt = isCorrect;
         Battlefield.hasLightningBolt = isCorrect;
+        adaptiveController.RecordAnswer(isCorrect);
 
         // Collect review item for wrong answers
         if (!isCorrect && currentReadingQuestion != null)
@@ -303,7 +311,7 @@ public class SnakeSpellController : MonoBehaviour
 
     private void GenerateNextQuestion()
     {
-        CurrentQuestion = questionProvider.GetSnakeSpellQuestion(difficulty);
+        CurrentQuestion = questionProvider.GetSnakeSpellQuestion();
         Answered = false;
         SelectedAnswerIndex = -1;
         ShowCorrect = false;
@@ -322,6 +330,7 @@ public class SnakeSpellController : MonoBehaviour
         bool isCorrect = q.answers[index] == q.correctAnswer;
         Battlefield.questionsAnswered++;
         if (isCorrect) Battlefield.questionsCorrect++;
+        adaptiveController.RecordAnswer(isCorrect);
 
         // Collect review item for wrong answers
         if (!isCorrect)

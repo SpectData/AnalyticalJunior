@@ -20,7 +20,6 @@ public static class BuildAndroid
         var scenes = new[]
         {
             "Assets/Scenes/MenuScene.unity",
-            "Assets/Scenes/DifficultySelectScene.unity",
             "Assets/Scenes/QuizGameScene.unity",
             "Assets/Scenes/ResultsScene.unity",
             "Assets/Scenes/SnakeSpellScene.unity",

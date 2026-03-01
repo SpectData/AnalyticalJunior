@@ -7,9 +7,6 @@ public class GameManager : MonoBehaviour
     // Persistent stats
     public GameStats Stats { get; private set; }
 
-    // Navigation state (set before scene transitions)
-    public Difficulty SelectedDifficulty { get; set; }
-
     // Snake results (set by SnakeSpellController before transitioning)
     public int LastSnakeScore { get; set; }
     public int LastSnakeWave { get; set; }
