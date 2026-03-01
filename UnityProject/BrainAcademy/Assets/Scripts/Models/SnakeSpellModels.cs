@@ -60,6 +60,30 @@ public static class SnakeTypeData
             default: return "Snake";
         }
     }
+
+    public static string GetCalloutText(SnakeType type)
+    {
+        switch (type)
+        {
+            case SnakeType.Green: return "Green Snake \u2014 1 HP";
+            case SnakeType.Yellow: return "Yellow Snake \u2014 2 HP";
+            case SnakeType.Red: return "Red Snake \u2014 3 HP, Slow but tough!";
+            case SnakeType.Purple: return "Purple Snake \u2014 4 HP, Fast and strong!";
+            default: return "";
+        }
+    }
+
+    public static float GetSize(SnakeType type)
+    {
+        switch (type)
+        {
+            case SnakeType.Green: return 80f;
+            case SnakeType.Yellow: return 80f;
+            case SnakeType.Red: return 90f;
+            case SnakeType.Purple: return 100f;
+            default: return 80f;
+        }
+    }
 }
 
 public class SnakeData

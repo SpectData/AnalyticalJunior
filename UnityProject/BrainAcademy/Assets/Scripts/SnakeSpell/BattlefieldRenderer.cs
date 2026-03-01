@@ -30,6 +30,10 @@ public class BattlefieldRenderer : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI waveTransitionText;
     [SerializeField] private GameObject gameOverOverlay;
 
+    [Header("Callout")]
+    [SerializeField] private GameObject snakeCalloutBanner;
+    [SerializeField] private TMPro.TextMeshProUGUI snakeCalloutText;
+
     // Object pools
     private Dictionary<int, RectTransform> activeSnakeObjects = new Dictionary<int, RectTransform>();
     private Dictionary<int, RectTransform> activeSpellObjects = new Dictionary<int, RectTransform>();
@@ -198,6 +202,14 @@ public class BattlefieldRenderer : MonoBehaviour
 
         if (gameOverOverlay != null)
             gameOverOverlay.SetActive(bf.status == GameStatus.GameOver);
+
+        // Snake type callout
+        if (snakeCalloutBanner != null)
+        {
+            snakeCalloutBanner.SetActive(controller.ShowCallout);
+            if (controller.ShowCallout && snakeCalloutText != null)
+                snakeCalloutText.text = controller.CalloutText;
+        }
     }
 
     private Vector2 PolarToScreenPosition(float angleDeg, float distance)
@@ -233,14 +245,7 @@ public class BattlefieldRenderer : MonoBehaviour
 
     private float GetSnakeSize(SnakeType type)
     {
-        switch (type)
-        {
-            case SnakeType.Green: return 80f;
-            case SnakeType.Yellow: return 80f;
-            case SnakeType.Red: return 90f;
-            case SnakeType.Purple: return 100f;
-            default: return 80f;
-        }
+        return SnakeTypeData.GetSize(type);
     }
 
     // ── Object Pooling ──

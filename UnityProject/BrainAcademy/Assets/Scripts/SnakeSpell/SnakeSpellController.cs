@@ -39,6 +39,12 @@ public class SnakeSpellController : MonoBehaviour
     private string currentPassageId;
     private GameQuestion.ReadingComprehension currentReadingQuestion;
 
+    // Snake type introduction callout
+    private HashSet<SnakeType> seenSnakeTypes = new HashSet<SnakeType>();
+    private Coroutine calloutCoroutine;
+    public string CalloutText { get; private set; }
+    public bool ShowCallout { get; private set; }
+
     // UI controller references
     private ReadingPhaseUIController readingPhaseUI;
     private ReviewUIController reviewUI;
@@ -79,6 +85,9 @@ public class SnakeSpellController : MonoBehaviour
         hasLightningBolt = false;
         currentPassageId = null;
         currentReadingQuestion = null;
+        seenSnakeTypes = new HashSet<SnakeType>();
+        CalloutText = null;
+        ShowCallout = false;
 
         Battlefield = new BattlefieldState
         {
@@ -170,6 +179,12 @@ public class SnakeSpellController : MonoBehaviour
 
             snakesSpawnedThisWave++;
             spawnTimer = 1f / adaptiveController.GetSpawnRate();
+
+            // Show callout on first appearance of this snake type
+            if (seenSnakeTypes.Add(type))
+            {
+                DisplayCallout(SnakeTypeData.GetCalloutText(type));
+            }
         }
 
         // Check wave complete
@@ -420,6 +435,22 @@ public class SnakeSpellController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.8f);
         ShowFeedback = false;
+    }
+
+    // ── Snake Type Callout ──
+
+    private void DisplayCallout(string text)
+    {
+        CalloutText = text;
+        ShowCallout = true;
+        if (calloutCoroutine != null) StopCoroutine(calloutCoroutine);
+        calloutCoroutine = StartCoroutine(HideCallout());
+    }
+
+    private IEnumerator HideCallout()
+    {
+        yield return new WaitForSeconds(3.0f);
+        ShowCallout = false;
     }
 
     // ── Results ──
