@@ -1,0 +1,165 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Secret file check
+        run: |
+          FORBIDDEN=$(git diff --name-only origin/main...HEAD -- 2>/dev/null \
+            | grep -iE '\.(env|pem|key)$|secrets/|credentials' || true)
+          if [ -n "$FORBIDDEN" ]; then
+            echo "::error::Potentially sensitive files detected:"
+            echo "$FORBIDDEN"
+            exit 1
+          fi
+          echo "No secret files found."
+
+      - name: Trailing whitespace check (C# files)
+        run: |
+          CS_FILES=$(find UnityProject/BrainAcademy/Assets -name '*.cs' -type f 2>/dev/null || true)
+          if [ -n "$CS_FILES" ]; then
+            TRAILING=$(echo "$CS_FILES" | xargs grep -rnP '\s+$' 2>/dev/null || true)
+            if [ -n "$TRAILING" ]; then
+              echo "::error::Trailing whitespace found in C# files:"
+              echo "$TRAILING" | head -20
+              exit 1
+            fi
+          fi
+          echo "No trailing whitespace found."
+
+      - name: Large file check (>2MB, excluding assets)
+        run: |
+          LARGE=$(find . -type f -size +2M \
+            ! -name '*.png' ! -name '*.jpg' ! -name '*.wav' \
+            ! -name '*.mp3' ! -name '*.ogg' ! -name '*.asset' \
+            ! -name '*.unity' ! -name '*.prefab' ! -name '*.pdf' \
+            ! -path './.git/*' ! -path '*/Library/*' \
+            2>/dev/null || true)
+          if [ -n "$LARGE" ]; then
+            echo "::warning::Large files detected (>2MB):"
+            echo "$LARGE"
+          fi
+          echo "Large file check complete."
+
+  question-bank:
+    name: Question Bank
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+
+      - name: Set up Python
+        run: uv python install 3.11
+
+      - name: Build question bank
+        run: uv run scripts/build_question_bank.py
+
+      - name: Verify output exists and is valid JSON
+        run: |
+          OUTPUT="UnityProject/BrainAcademy/Assets/Resources/question_bank.json"
+          if [ ! -f "$OUTPUT" ]; then
+            echo "::error::Question bank output not found at $OUTPUT"
+            exit 1
+          fi
+          python3 -c "import json; json.load(open('$OUTPUT'))"
+          echo "Question bank built and validated successfully."
+
+      - name: Check question bank is up to date
+        run: |
+          OUTPUT="UnityProject/BrainAcademy/Assets/Resources/question_bank.json"
+          DIFF=$(git diff -- "$OUTPUT" | grep '^[+-]' | grep -v '^[+-][+-][+-]' | grep -v '"generated"' || true)
+          if [ -n "$DIFF" ]; then
+            echo "::error::Question bank is out of date. Run 'uv run scripts/build_question_bank.py' and commit the result."
+            git diff -- "$OUTPUT" | head -40
+            exit 1
+          fi
+          echo "Question bank is up to date (ignoring timestamp)."
+
+  unity-tests:
+    name: Unity Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Cache Unity Library
+        uses: actions/cache@v4
+        with:
+          path: UnityProject/BrainAcademy/Library
+          key: Library-EditMode-${{ hashFiles('UnityProject/BrainAcademy/Assets/**', 'UnityProject/BrainAcademy/Packages/**', 'UnityProject/BrainAcademy/ProjectSettings/**') }}
+          restore-keys: |
+            Library-EditMode-
+            Library-
+
+      - name: Run EditMode tests
+        uses: game-ci/unity-test-runner@v4
+        id: tests
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: UnityProject/BrainAcademy
+          testMode: EditMode
+          unityVersion: auto
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          checkName: Unity EditMode Test Results
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always() && steps.tests.outputs.artifactsPath != ''
+        with:
+          name: EditMode-test-results
+          path: ${{ steps.tests.outputs.artifactsPath }}
+
+  unity-compile:
+    name: Unity Compile
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Cache Unity Library
+        uses: actions/cache@v4
+        with:
+          path: UnityProject/BrainAcademy/Library
+          key: Library-Compile-${{ hashFiles('UnityProject/BrainAcademy/Assets/**', 'UnityProject/BrainAcademy/Packages/**', 'UnityProject/BrainAcademy/ProjectSettings/**') }}
+          restore-keys: |
+            Library-Compile-
+            Library-
+
+      - name: Compile Unity project
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: UnityProject/BrainAcademy
+          unityVersion: auto
+          targetPlatform: StandaloneLinux64
+          allowDirtyBuild: true
