@@ -5,14 +5,14 @@ public class AdaptiveDifficultyControllerTests
     [Test]
     public void GetSpawnRate_Initial_ReturnsMinRate()
     {
-        var controller = new AdaptiveDifficultyController(minSpawnRate: 0.3f);
-        Assert.AreEqual(0.3f, controller.GetSpawnRate());
+        var controller = new AdaptiveDifficultyController();
+        Assert.AreEqual(0.022f, controller.GetSpawnRate());
     }
 
     [Test]
     public void RecordAnswer_AllCorrect_IncreasesSpawnRate()
     {
-        var controller = new AdaptiveDifficultyController(minSpawnRate: 0.3f);
+        var controller = new AdaptiveDifficultyController();
         float initial = controller.GetSpawnRate();
 
         for (int i = 0; i < 20; i++)
@@ -24,12 +24,12 @@ public class AdaptiveDifficultyControllerTests
     [Test]
     public void RecordAnswer_AllWrong_StaysAtMinRate()
     {
-        var controller = new AdaptiveDifficultyController(minSpawnRate: 0.3f);
+        var controller = new AdaptiveDifficultyController();
 
         for (int i = 0; i < 20; i++)
             controller.RecordAnswer(false);
 
-        Assert.AreEqual(0.3f, controller.GetSpawnRate());
+        Assert.AreEqual(0.022f, controller.GetSpawnRate());
     }
 
     [Test]
@@ -37,7 +37,6 @@ public class AdaptiveDifficultyControllerTests
     {
         var controller = new AdaptiveDifficultyController(
             targetSuccessRate: 0.8f,
-            minSpawnRate: 0.3f,
             maxSpawnRate: 2.0f,
             adjustmentSpeed: 0.1f);
 

@@ -14,7 +14,7 @@ public class AdaptiveDifficultyController
 
     public AdaptiveDifficultyController(
         float targetSuccessRate = 0.8f,
-        float minSpawnRate = 0.3f,
+        float minSpawnRate = 0.022f,
         float maxSpawnRate = 2.0f,
         int windowSize = 20,
         float adjustmentSpeed = 0.1f)
