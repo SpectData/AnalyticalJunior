@@ -109,20 +109,10 @@ public static class SceneBuilderSnake
         UIFactory.SetRect(qPanel, new Vector2(0, 0), new Vector2(1, 0.48f),
             new Vector2(0.5f, 0), Vector2.zero, Vector2.zero);
 
-        // Timer bar
-        var timerBar = UIFactory.CreateFilledImage(qPanel.transform, "TimerBar", Purple60);
-        UIFactory.SetRect(timerBar, new Vector2(0.03f, 0.90f), new Vector2(0.85f, 0.96f),
-            new Vector2(0, 1), Vector2.zero, Vector2.zero);
-
-        var timerText = UIFactory.CreateTMP(qPanel.transform, "TimerText",
-            "30s", fontSize: 22, color: Color.gray);
-        UIFactory.SetRect(timerText.gameObject, new Vector2(0.87f, 0.90f), new Vector2(0.97f, 0.96f),
-            new Vector2(1, 1), Vector2.zero, Vector2.zero);
-
         // Label
         var labelText = UIFactory.CreateTMP(qPanel.transform, "LabelText",
             "MATH", fontSize: 20, color: Purple60);
-        UIFactory.SetRect(labelText.gameObject, new Vector2(0.03f, 0.80f), new Vector2(0.97f, 0.89f),
+        UIFactory.SetRect(labelText.gameObject, new Vector2(0.03f, 0.88f), new Vector2(0.97f, 0.96f),
             new Vector2(0, 1), Vector2.zero, Vector2.zero);
 
         // Question text container
@@ -159,6 +149,14 @@ public static class SceneBuilderSnake
         var answerButtons = UIFactory.CreateAnswerButtons(
             ansContainer.transform, PrefabFactory.AnswerButtonPrefab, 4);
 
+        // Lightning bolt button (between battlefield and question panel)
+        var lightningBtn = UIFactory.CreateButton(canvas.transform, "LightningBoltButton",
+            "\u26A1 Lightning!", AppColors.SpellGold, 24);
+        UIFactory.SetRect(lightningBtn.gameObject,
+            new Vector2(0.25f, 0.44f), new Vector2(0.75f, 0.50f),
+            new Vector2(0.5f, 0), Vector2.zero, Vector2.zero);
+        lightningBtn.gameObject.SetActive(false);
+
         // Feedback overlay
         var (fbGo, fbComp, _) = UIFactory.CreateFeedbackOverlay(canvas.transform);
 
@@ -172,8 +170,7 @@ public static class SceneBuilderSnake
         UIFactory.Wire(ssUI, "livesText", livesText);
         UIFactory.Wire(ssUI, "waveText", waveText);
         UIFactory.Wire(ssUI, "scoreText", scoreText);
-        UIFactory.Wire(ssUI, "timerBar", timerBar.GetComponent<Image>());
-        UIFactory.Wire(ssUI, "timerText", timerText);
+        UIFactory.Wire(ssUI, "questionPanel", qPanel);
         UIFactory.Wire(ssUI, "labelText", labelText);
         UIFactory.Wire(ssUI, "questionText", questionText);
         UIFactory.Wire(ssUI, "sequenceContainer", seqContainer);
@@ -181,6 +178,7 @@ public static class SceneBuilderSnake
         UIFactory.WireList(ssUI, "answerButtons",
             new Object[] { answerButtons[0], answerButtons[1],
                            answerButtons[2], answerButtons[3] });
+        UIFactory.Wire(ssUI, "lightningBoltButton", lightningBtn);
         UIFactory.Wire(ssUI, "feedbackOverlay", fbComp);
 
         // Battlefield renderer

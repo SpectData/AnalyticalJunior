@@ -133,4 +133,18 @@ public class BattlefieldStateTests
         Assert.AreEqual(0, state.snakes.Count);
         Assert.AreEqual(0, state.spells.Count);
     }
+
+    [Test]
+    public void DefaultState_PhaseIsWavePhase()
+    {
+        var state = new BattlefieldState();
+        Assert.AreEqual(GamePhase.WavePhase, state.phase);
+    }
+
+    [Test]
+    public void DefaultState_HasNoLightningBolt()
+    {
+        var state = new BattlefieldState();
+        Assert.IsFalse(state.hasLightningBolt);
+    }
 }

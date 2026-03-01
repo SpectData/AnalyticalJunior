@@ -189,7 +189,8 @@ public class BattlefieldRenderer : MonoBehaviour
     {
         if (waveTransitionOverlay != null)
         {
-            bool showTransition = bf.status == GameStatus.WaveTransition;
+            bool showTransition = bf.status == GameStatus.Playing
+                               && bf.phase == GamePhase.WaveReview;
             waveTransitionOverlay.SetActive(showTransition);
             if (showTransition && waveTransitionText != null)
                 waveTransitionText.text = $"Wave {bf.currentWave} Complete!";

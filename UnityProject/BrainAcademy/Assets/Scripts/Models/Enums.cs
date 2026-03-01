@@ -18,6 +18,13 @@ public enum GameStatus
 {
     NotStarted,
     Playing,
-    WaveTransition,
     GameOver
+}
+
+public enum GamePhase
+{
+    WavePhase,
+    WaveReview,
+    InterWavePhase,
+    InterWaveReview
 }

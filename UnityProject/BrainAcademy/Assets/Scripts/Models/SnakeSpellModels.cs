@@ -103,6 +103,7 @@ public class SpellData
 public class BattlefieldState
 {
     public GameStatus status = GameStatus.NotStarted;
+    public GamePhase phase = GamePhase.WavePhase;
     public List<SnakeData> snakes = new List<SnakeData>();
     public List<SpellData> spells = new List<SpellData>();
     public int currentWave;
@@ -111,7 +112,7 @@ public class BattlefieldState
     public int snakesKilled;
     public int questionsAnswered;
     public int questionsCorrect;
-    public float waveTransitionTimer;
+    public bool hasLightningBolt;
 }
 
 public class DifficultyConfig
@@ -120,17 +121,15 @@ public class DifficultyConfig
     public float baseSpawnInterval;
     public int startingLives;
     public List<SnakeType> availableSnakeTypes;
-    public int questionTimerSeconds;
     public int pointsPerKill;
 
     public DifficultyConfig(float baseSnakeSpeed, float baseSpawnInterval, int startingLives,
-        List<SnakeType> availableSnakeTypes, int questionTimerSeconds, int pointsPerKill)
+        List<SnakeType> availableSnakeTypes, int pointsPerKill)
     {
         this.baseSnakeSpeed = baseSnakeSpeed;
         this.baseSpawnInterval = baseSpawnInterval;
         this.startingLives = startingLives;
         this.availableSnakeTypes = availableSnakeTypes;
-        this.questionTimerSeconds = questionTimerSeconds;
         this.pointsPerKill = pointsPerKill;
     }
 }
@@ -158,18 +157,6 @@ public static class DifficultyExtensions
             case Difficulty.Hard: return 25;
             case Difficulty.SuperHard: return 50;
             default: return 5;
-        }
-    }
-
-    public static int GetTimerSeconds(this Difficulty d)
-    {
-        switch (d)
-        {
-            case Difficulty.Easy: return 20;
-            case Difficulty.Medium: return 15;
-            case Difficulty.Hard: return 10;
-            case Difficulty.SuperHard: return 7;
-            default: return 20;
         }
     }
 
@@ -207,7 +194,6 @@ public static class DifficultyExtensions
                     baseSpawnInterval: 60.0f,
                     startingLives: 5,
                     availableSnakeTypes: new List<SnakeType> { SnakeType.Green },
-                    questionTimerSeconds: 60,
                     pointsPerKill: 10
                 );
             case Difficulty.Medium:
@@ -216,7 +202,6 @@ public static class DifficultyExtensions
                     baseSpawnInterval: 60.0f,
                     startingLives: 4,
                     availableSnakeTypes: new List<SnakeType> { SnakeType.Green, SnakeType.Yellow },
-                    questionTimerSeconds: 60,
                     pointsPerKill: 25
                 );
             case Difficulty.Hard:
@@ -226,7 +211,6 @@ public static class DifficultyExtensions
                     startingLives: 3,
                     availableSnakeTypes: new List<SnakeType>
                         { SnakeType.Green, SnakeType.Yellow, SnakeType.Red },
-                    questionTimerSeconds: 60,
                     pointsPerKill: 50
                 );
             case Difficulty.SuperHard:
@@ -236,7 +220,6 @@ public static class DifficultyExtensions
                     startingLives: 3,
                     availableSnakeTypes: new List<SnakeType>
                         { SnakeType.Green, SnakeType.Yellow, SnakeType.Red, SnakeType.Purple },
-                    questionTimerSeconds: 60,
                     pointsPerKill: 100
                 );
             default:

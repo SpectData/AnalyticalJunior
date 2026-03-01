@@ -31,7 +31,7 @@ public class ReadingPhaseUIController : MonoBehaviour
     /// <summary>
     /// Fired when the player submits an answer. Bool = true if correct.
     /// </summary>
-    public event Action<bool> OnAnswerSubmitted;
+    public event Action<bool, int> OnAnswerSubmitted;
 
     private string currentPassageId;
     private GameQuestion.ReadingComprehension currentQuestion;
@@ -142,6 +142,6 @@ public class ReadingPhaseUIController : MonoBehaviour
             feedbackOverlay.Show(feedbackMsg, isCorrect);
         }
 
-        OnAnswerSubmitted?.Invoke(isCorrect);
+        OnAnswerSubmitted?.Invoke(isCorrect, index);
     }
 }
