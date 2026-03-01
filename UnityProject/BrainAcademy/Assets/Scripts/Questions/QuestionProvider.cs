@@ -31,6 +31,16 @@ public class QuestionProvider
         }
     }
 
+    public GameQuestion.ReadingComprehension GetReadingQuestion()
+    {
+        return bankLoader?.GetReadingQuestion();
+    }
+
+    public GameQuestion.ReadingComprehension GetReadingQuestionForPassage(string passageId)
+    {
+        return bankLoader?.GetReadingQuestionForPassage(passageId);
+    }
+
     public void ResetBank()
     {
         bankLoader?.Reset();

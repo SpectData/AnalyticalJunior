@@ -45,12 +45,32 @@ public class GameQuestionTests
     }
 
     [Test]
-    public void Memory_WrapsMemoryQuestion()
+    public void ReadingComprehension_SetsAllFields()
     {
-        var mq = new MemoryQuestion(3, new List<int> { 0, 1, 2 }, 2.0f);
-        var gq = new GameQuestion.Memory(mq);
-        Assert.AreEqual(mq, gq.memoryQuestion);
-        Assert.AreEqual(3, gq.memoryQuestion.gridSize);
+        var q = new Question("Reading", new List<string> { "A", "B", "C", "D" }, "B",
+            questionText: "What is the main idea?");
+        var rc = new GameQuestion.ReadingComprehension(
+            passageId: "passage_01",
+            passageTitle: "The Story of Frogs",
+            passageText: "Frogs are amphibians...",
+            passageType: "comprehension",
+            question: q
+        );
+
+        Assert.AreEqual("passage_01", rc.passageId);
+        Assert.AreEqual("The Story of Frogs", rc.passageTitle);
+        Assert.AreEqual("Frogs are amphibians...", rc.passageText);
+        Assert.AreEqual("comprehension", rc.passageType);
+        Assert.AreEqual(q, rc.question);
+    }
+
+    [Test]
+    public void ReadingComprehension_PassageIdCanBeEmpty()
+    {
+        var q = new Question("Reading", new List<string> { "A" }, "A");
+        var rc = new GameQuestion.ReadingComprehension("", "Title", "Text", "poem", q);
+
+        Assert.AreEqual("", rc.passageId);
     }
 }
 
