@@ -150,8 +150,8 @@ public static class PrefabFactory
         hpRt.anchorMin = new Vector2(0, 0);
         hpRt.anchorMax = new Vector2(1, 0);
         hpRt.pivot = new Vector2(0.5f, 0);
-        hpRt.anchoredPosition = new Vector2(0, -5);
-        hpRt.sizeDelta = new Vector2(0, 6);
+        hpRt.anchoredPosition = new Vector2(0, -8);
+        hpRt.sizeDelta = new Vector2(0, 12);
 
         return SavePrefab(root, "SnakePrefab");
     }

@@ -38,6 +38,42 @@ public class SnakeTypeDataTests
         Assert.AreEqual("Red Snake", SnakeTypeData.GetDisplayName(SnakeType.Red));
         Assert.AreEqual("Purple Snake", SnakeTypeData.GetDisplayName(SnakeType.Purple));
     }
+
+    [Test]
+    public void GetCalloutText_AllTypes_ReturnsNonEmptyString()
+    {
+        Assert.IsNotEmpty(SnakeTypeData.GetCalloutText(SnakeType.Green));
+        Assert.IsNotEmpty(SnakeTypeData.GetCalloutText(SnakeType.Yellow));
+        Assert.IsNotEmpty(SnakeTypeData.GetCalloutText(SnakeType.Red));
+        Assert.IsNotEmpty(SnakeTypeData.GetCalloutText(SnakeType.Purple));
+    }
+
+    [Test]
+    public void GetCalloutText_ContainsSnakeName()
+    {
+        Assert.That(SnakeTypeData.GetCalloutText(SnakeType.Green), Does.Contain("Green"));
+        Assert.That(SnakeTypeData.GetCalloutText(SnakeType.Yellow), Does.Contain("Yellow"));
+        Assert.That(SnakeTypeData.GetCalloutText(SnakeType.Red), Does.Contain("Red"));
+        Assert.That(SnakeTypeData.GetCalloutText(SnakeType.Purple), Does.Contain("Purple"));
+    }
+
+    [Test]
+    public void GetCalloutText_ContainsHpInfo()
+    {
+        Assert.That(SnakeTypeData.GetCalloutText(SnakeType.Green), Does.Contain("1 HP"));
+        Assert.That(SnakeTypeData.GetCalloutText(SnakeType.Yellow), Does.Contain("2 HP"));
+        Assert.That(SnakeTypeData.GetCalloutText(SnakeType.Red), Does.Contain("3 HP"));
+        Assert.That(SnakeTypeData.GetCalloutText(SnakeType.Purple), Does.Contain("4 HP"));
+    }
+
+    [Test]
+    public void GetSize_ReturnsExpectedValues()
+    {
+        Assert.AreEqual(80f, SnakeTypeData.GetSize(SnakeType.Green));
+        Assert.AreEqual(80f, SnakeTypeData.GetSize(SnakeType.Yellow));
+        Assert.AreEqual(90f, SnakeTypeData.GetSize(SnakeType.Red));
+        Assert.AreEqual(100f, SnakeTypeData.GetSize(SnakeType.Purple));
+    }
 }
 
 public class DifficultyExtensionsTests

@@ -104,6 +104,21 @@ public static class SceneBuilderSnake
         UIFactory.CreateTMP(gameOverOverlay.transform, "GameOverText",
             "Game Over!", fontSize: 48, color: Color.white);
 
+        // Snake type callout banner (top of battlefield)
+        var calloutBanner = new GameObject("SnakeCalloutBanner",
+            typeof(RectTransform), typeof(Image));
+        calloutBanner.transform.SetParent(battlefield.transform, false);
+        calloutBanner.GetComponent<Image>().color = new Color(0, 0, 0, 0.7f);
+        UIFactory.SetRect(calloutBanner,
+            new Vector2(0.1f, 0.85f), new Vector2(0.9f, 0.97f),
+            new Vector2(0.5f, 1), Vector2.zero, Vector2.zero);
+        calloutBanner.SetActive(false);
+
+        var calloutText = UIFactory.CreateTMP(calloutBanner.transform,
+            "SnakeCalloutText", "",
+            fontSize: 26, color: Color.white);
+        UIFactory.Stretch(calloutText.gameObject);
+
         // ── Question panel (bottom) ─────────────────────────────────────
         var qPanel = UIFactory.CreatePanel(canvas.transform, "QuestionPanel", Color.white);
         UIFactory.SetRect(qPanel, new Vector2(0, 0), new Vector2(1, 0.48f),
@@ -193,6 +208,8 @@ public static class SceneBuilderSnake
         UIFactory.Wire(bfRend, "waveTransitionOverlay", waveOverlay);
         UIFactory.Wire(bfRend, "waveTransitionText", waveTransText);
         UIFactory.Wire(bfRend, "gameOverOverlay", gameOverOverlay);
+        UIFactory.Wire(bfRend, "snakeCalloutBanner", calloutBanner);
+        UIFactory.Wire(bfRend, "snakeCalloutText", calloutText);
 
         // Wire sprites (null-safe — fields stay null if sprites not yet generated)
         if (PrefabFactory.WizardSprite != null)
