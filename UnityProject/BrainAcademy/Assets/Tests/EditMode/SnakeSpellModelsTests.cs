@@ -154,6 +154,38 @@ public class SnakeDataTests
     }
 }
 
+public class SnakeSpellConstantsTests
+{
+    [Test]
+    public void GetLifeLossMessage_SingleLife_ReturnsSingular()
+    {
+        string msg = SnakeSpellConstants.GetLifeLossMessage(1);
+        Assert.That(msg, Does.Contain("-1 life"));
+        Assert.That(msg, Does.Not.Contain("lives"));
+    }
+
+    [Test]
+    public void GetLifeLossMessage_MultipleLives_ReturnsPlural()
+    {
+        string msg = SnakeSpellConstants.GetLifeLossMessage(2);
+        Assert.That(msg, Does.Contain("-2 lives"));
+    }
+
+    [Test]
+    public void GetGameStartHint_ContainsLivesCount()
+    {
+        string msg = SnakeSpellConstants.GetGameStartHint(4);
+        Assert.That(msg, Does.Contain("4 lives"));
+    }
+
+    [Test]
+    public void GetGameStartHint_ContainsProtectMessage()
+    {
+        string msg = SnakeSpellConstants.GetGameStartHint(5);
+        Assert.That(msg, Does.Contain("Protect the wizard"));
+    }
+}
+
 public class BattlefieldStateTests
 {
     [Test]

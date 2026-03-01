@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SnakeSpellUIController : MonoBehaviour
 {
     [Header("HUD")]
-    [SerializeField] private TextMeshProUGUI livesText;
+    [SerializeField] private List<TextMeshProUGUI> heartIcons;
     [SerializeField] private TextMeshProUGUI waveText;
     [SerializeField] private TextMeshProUGUI scoreText;
 
@@ -27,6 +27,7 @@ public class SnakeSpellUIController : MonoBehaviour
     [SerializeField] private FeedbackOverlay feedbackOverlay;
 
     private SnakeSpellController controller;
+    private float pulseTimer;
 
     void Start()
     {
@@ -57,10 +58,25 @@ public class SnakeSpellUIController : MonoBehaviour
     {
         BattlefieldState bf = controller.Battlefield;
 
-        if (livesText != null)
+        if (heartIcons != null)
         {
-            livesText.text = $"\u2764 {bf.lives}";
-            livesText.color = bf.lives <= 1 ? AppColors.HardRed : AppColors.TextPrimary;
+            for (int i = 0; i < heartIcons.Count; i++)
+            {
+                if (heartIcons[i] == null) continue;
+
+                if (i < bf.lives)
+                {
+                    heartIcons[i].text = "\u2764";
+                    heartIcons[i].color = bf.lives <= 2
+                        ? GetPulsingColor(AppColors.HardRed)
+                        : AppColors.HardRed;
+                }
+                else
+                {
+                    heartIcons[i].text = "\u2661";
+                    heartIcons[i].color = new Color(1f, 1f, 1f, 0.3f);
+                }
+            }
         }
 
         if (waveText != null)
@@ -68,6 +84,13 @@ public class SnakeSpellUIController : MonoBehaviour
 
         if (scoreText != null)
             scoreText.text = bf.score.ToString();
+    }
+
+    private Color GetPulsingColor(Color baseColor)
+    {
+        pulseTimer += Time.deltaTime * 3f;
+        float alpha = 0.5f + 0.5f * Mathf.Sin(pulseTimer);
+        return new Color(baseColor.r, baseColor.g, baseColor.b, alpha);
     }
 
     private void UpdateQuestionPanel()

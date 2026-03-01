@@ -34,6 +34,9 @@ public class BattlefieldRenderer : MonoBehaviour
     [SerializeField] private GameObject snakeCalloutBanner;
     [SerializeField] private TMPro.TextMeshProUGUI snakeCalloutText;
 
+    [Header("Life Loss Flash")]
+    [SerializeField] private Image lifeLossFlash;
+
     // Object pools
     private Dictionary<int, RectTransform> activeSnakeObjects = new Dictionary<int, RectTransform>();
     private Dictionary<int, RectTransform> activeSpellObjects = new Dictionary<int, RectTransform>();
@@ -209,6 +212,21 @@ public class BattlefieldRenderer : MonoBehaviour
             snakeCalloutBanner.SetActive(controller.ShowCallout);
             if (controller.ShowCallout && snakeCalloutText != null)
                 snakeCalloutText.text = controller.CalloutText;
+        }
+
+        // Life-loss red flash
+        if (lifeLossFlash != null)
+        {
+            Color c = lifeLossFlash.color;
+            if (controller.ShowLifeLossFlash)
+            {
+                c.a = Mathf.MoveTowards(c.a, 0.4f, Time.deltaTime * 4f);
+            }
+            else if (c.a > 0f)
+            {
+                c.a = Mathf.MoveTowards(c.a, 0f, Time.deltaTime * 3f);
+            }
+            lifeLossFlash.color = c;
         }
     }
 

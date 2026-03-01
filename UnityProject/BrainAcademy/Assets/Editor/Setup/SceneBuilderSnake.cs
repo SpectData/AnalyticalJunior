@@ -25,10 +25,30 @@ public static class SceneBuilderSnake
         UIFactory.SetRect(hud, new Vector2(0, 0.93f), new Vector2(1, 1),
             new Vector2(0.5f, 1), Vector2.zero, Vector2.zero);
 
-        var livesText = UIFactory.CreateTMP(hud.transform, "LivesText",
-            "\u2764 3", fontSize: 28, color: Color.white);
-        UIFactory.SetRect(livesText.gameObject, new Vector2(0, 0), new Vector2(0.33f, 1),
+        // Individual heart icons
+        int maxLives = 4;
+        var heartsContainer = new GameObject("HeartsContainer",
+            typeof(RectTransform), typeof(HorizontalLayoutGroup));
+        heartsContainer.transform.SetParent(hud.transform, false);
+        UIFactory.SetRect(heartsContainer,
+            new Vector2(0, 0), new Vector2(0.33f, 1),
             new Vector2(0, 0.5f), Vector2.zero, Vector2.zero);
+
+        var hlg = heartsContainer.GetComponent<HorizontalLayoutGroup>();
+        hlg.spacing = 4;
+        hlg.childForceExpandWidth = true;
+        hlg.childForceExpandHeight = true;
+        hlg.childControlWidth = true;
+        hlg.childControlHeight = true;
+        hlg.childAlignment = UnityEngine.TextAnchor.MiddleCenter;
+        hlg.padding = new RectOffset(10, 0, 0, 0);
+
+        var heartTexts = new TMPro.TextMeshProUGUI[maxLives];
+        for (int i = 0; i < maxLives; i++)
+        {
+            heartTexts[i] = UIFactory.CreateTMP(heartsContainer.transform, $"Heart{i}",
+                "\u2764", fontSize: 36, color: new Color(0.91f, 0.30f, 0.24f));
+        }
 
         var waveText = UIFactory.CreateTMP(hud.transform, "WaveText",
             "Wave 1", fontSize: 28, color: Color.white);
@@ -101,8 +121,17 @@ public static class SceneBuilderSnake
             new Color(0, 0, 0, 0.6f), Vector2.zero);
         UIFactory.Stretch(goDim);
 
-        UIFactory.CreateTMP(gameOverOverlay.transform, "GameOverText",
-            "Game Over!", fontSize: 48, color: Color.white);
+        var goText = UIFactory.CreateTMP(gameOverOverlay.transform, "GameOverText",
+            "Game Over!", fontSize: 56, color: Color.white);
+        UIFactory.SetRect(goText.gameObject,
+            new Vector2(0.1f, 0.4f), new Vector2(0.9f, 0.7f),
+            new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
+
+        var goSubtext = UIFactory.CreateTMP(gameOverOverlay.transform, "GameOverSubtext",
+            "The snakes got the wizard!", fontSize: 28, color: new Color(1f, 1f, 1f, 0.8f));
+        UIFactory.SetRect(goSubtext.gameObject,
+            new Vector2(0.1f, 0.25f), new Vector2(0.9f, 0.4f),
+            new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
 
         // Snake type callout banner (top of battlefield)
         var calloutBanner = new GameObject("SnakeCalloutBanner",
@@ -175,6 +204,12 @@ public static class SceneBuilderSnake
         // Feedback overlay
         var (fbGo, fbComp, _) = UIFactory.CreateFeedbackOverlay(canvas.transform);
 
+        // Life-loss red flash overlay (full screen, starts invisible)
+        var lifeLossFlash = UIFactory.CreateImage(canvas.transform,
+            "LifeLossFlash", new Color(0.91f, 0.30f, 0.24f, 0f), Vector2.zero);
+        UIFactory.Stretch(lifeLossFlash);
+        lifeLossFlash.GetComponent<Image>().raycastTarget = false;
+
         // ── Controllers ─────────────────────────────────────────────────
         var ssCtrlGo = new GameObject("SnakeSpellController");
         ssCtrlGo.AddComponent<SnakeSpellController>();
@@ -182,7 +217,8 @@ public static class SceneBuilderSnake
         var uiCtrlGo = new GameObject("SnakeSpellUIController");
         var ssUI = uiCtrlGo.AddComponent<SnakeSpellUIController>();
 
-        UIFactory.Wire(ssUI, "livesText", livesText);
+        UIFactory.WireList(ssUI, "heartIcons",
+            new Object[] { heartTexts[0], heartTexts[1], heartTexts[2], heartTexts[3] });
         UIFactory.Wire(ssUI, "waveText", waveText);
         UIFactory.Wire(ssUI, "scoreText", scoreText);
         UIFactory.Wire(ssUI, "questionPanel", qPanel);
@@ -210,6 +246,7 @@ public static class SceneBuilderSnake
         UIFactory.Wire(bfRend, "gameOverOverlay", gameOverOverlay);
         UIFactory.Wire(bfRend, "snakeCalloutBanner", calloutBanner);
         UIFactory.Wire(bfRend, "snakeCalloutText", calloutText);
+        UIFactory.Wire(bfRend, "lifeLossFlash", lifeLossFlash.GetComponent<Image>());
 
         // Wire sprites (null-safe — fields stay null if sprites not yet generated)
         if (PrefabFactory.WizardSprite != null)
