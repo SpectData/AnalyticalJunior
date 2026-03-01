@@ -15,7 +15,7 @@
 ## Canvas Rendering
 
 - The Snake Spellcaster battlefield uses a `BattlefieldRenderer` MonoBehaviour with object pooling.
-- Coordinate system: X 0 (left/wizard) to 1000 (right/spawn), Y split into 3 lanes.
+- Coordinate system: Polar — wizard at centre, snakes spawn at radius 500 and approach inward. Angles 0–360°.
 - Snakes/spells are `Image` components instantiated from prefabs, positioned via `anchoredPosition`.
 - Sprites are loaded at setup time and wired to `BattlefieldRenderer` via `SerializedObject`.
 
