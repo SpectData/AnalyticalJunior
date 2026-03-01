@@ -30,14 +30,16 @@ public abstract class GameQuestion
 
     public class ReadingComprehension : GameQuestion
     {
+        public string passageId;
         public string passageTitle;
         public string passageText;
         public string passageType;
         public Question question;
 
-        public ReadingComprehension(string passageTitle, string passageText,
-            string passageType, Question question)
+        public ReadingComprehension(string passageId, string passageTitle,
+            string passageText, string passageType, Question question)
         {
+            this.passageId = passageId;
             this.passageTitle = passageTitle;
             this.passageText = passageText;
             this.passageType = passageType;

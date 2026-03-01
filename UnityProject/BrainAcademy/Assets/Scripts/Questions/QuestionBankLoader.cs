@@ -208,6 +208,44 @@ public class QuestionBankLoader
         string label = passage?.title ?? "Reading";
 
         return new GameQuestion.ReadingComprehension(
+            passageId: bq.passageId ?? "",
+            passageTitle: passage?.title ?? "",
+            passageText: passage?.text ?? "",
+            passageType: passage?.type ?? "comprehension",
+            question: new Question(
+                label: label,
+                questionText: bq.question,
+                answers: bq.options,
+                correctAnswer: bq.correctAnswer
+            )
+        );
+    }
+
+    public GameQuestion.ReadingComprehension GetReadingQuestionForPassage(string passageId)
+    {
+        if (string.IsNullOrEmpty(passageId))
+            return GetReadingQuestion();
+
+        var available = allQuestions
+            .Where(q => q.questionType == "long"
+                     && q.passageId == passageId
+                     && !usedIds.Contains(q.id))
+            .ToList();
+
+        if (available.Count == 0)
+            return null; // Passage exhausted — caller should switch passages
+
+        BankQuestion bq = available[Random.Range(0, available.Count)];
+        usedIds.Add(bq.id);
+
+        PassageData passage = null;
+        if (bq.passageId != null)
+            passages.TryGetValue(bq.passageId, out passage);
+
+        string label = passage?.title ?? "Reading";
+
+        return new GameQuestion.ReadingComprehension(
+            passageId: bq.passageId ?? "",
             passageTitle: passage?.title ?? "",
             passageText: passage?.text ?? "",
             passageType: passage?.type ?? "comprehension",

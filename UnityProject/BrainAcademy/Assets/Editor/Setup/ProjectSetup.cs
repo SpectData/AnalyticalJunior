@@ -34,6 +34,7 @@ public static class ProjectSetup
         SceneBuilderMenu.BuildMenuScene();
         SceneBuilderMenu.BuildDifficultyScene();
         SceneBuilderSnake.Build();
+        SceneBuilderReading.Build();
         SceneBuilderReview.Build();
         SceneBuilderResults.BuildSnakeResultsScene();
 
