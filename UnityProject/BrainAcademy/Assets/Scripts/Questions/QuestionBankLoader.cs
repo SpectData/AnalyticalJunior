@@ -25,6 +25,12 @@ public class QuestionBankLoader
         public string title;
         public string type;
         public string text;
+        public JArray blanks;              // cloze
+        public JArray gaps;                // sentence_insertion: gap labels
+        public JArray sentences;           // sentence_insertion: sentence options
+        public JObject correctMapping;     // sentence_insertion: gap→sentence
+        public JToken extraSentence;       // sentence_insertion: extra (unused) sentence
+        public JObject gapReasoning;       // sentence_insertion: per-gap explanations
     }
 
     private readonly List<BankQuestion> allQuestions = new List<BankQuestion>();
@@ -40,7 +46,12 @@ public class QuestionBankLoader
             return;
         }
 
-        JObject root = JObject.Parse(json.text);
+        LoadFromJson(json.text);
+    }
+
+    public void LoadFromJson(string jsonText)
+    {
+        JObject root = JObject.Parse(jsonText);
         string version = root["meta"]?["version"]?.ToString() ?? "1.0";
 
         if (version.StartsWith("2"))
@@ -94,11 +105,26 @@ public class QuestionBankLoader
                     type = p["type"]?.ToString(),
                     text = p["text"]?.ToString()
                 };
+
+                if (pd.type == "cloze")
+                {
+                    pd.blanks = (JArray)p["blanks"];
+                }
+                else if (pd.type == "sentence_insertion")
+                {
+                    pd.gaps = (JArray)p["gaps"];
+                    pd.sentences = (JArray)p["sentences"];
+                    pd.correctMapping = (JObject)p["correct_mapping"];
+                    pd.extraSentence = p["extra_sentence"];
+                    pd.gapReasoning = (JObject)p["gap_reasoning"];
+                }
+
                 if (pd.id != null)
                     passages[pd.id] = pd;
             }
         }
 
+        // Load MCQ questions (from comprehension/poem passages)
         JArray questionArr = (JArray)reading["questions"];
         if (questionArr != null)
         {
@@ -108,6 +134,103 @@ public class QuestionBankLoader
                 bq.questionType = "long";
                 bq.passageId = item["passage_id"]?.ToString();
                 allQuestions.Add(bq);
+            }
+        }
+
+        // Generate questions from cloze and sentence insertion passages
+        GenerateClozeQuestions();
+        GenerateSentenceInsertionQuestions();
+    }
+
+    private void GenerateClozeQuestions()
+    {
+        foreach (var pd in passages.Values)
+        {
+            if (pd.type != "cloze" || pd.blanks == null) continue;
+
+            foreach (JToken blank in pd.blanks)
+            {
+                string blankId = blank["id"]?.ToString() ?? "";
+                int blankNum = blank["blank_number"]?.Value<int>() ?? 0;
+
+                var options = new List<string>();
+                JArray optArr = (JArray)blank["options"];
+                if (optArr != null)
+                {
+                    foreach (JToken opt in optArr)
+                        options.Add(opt.ToString());
+                }
+
+                allQuestions.Add(new BankQuestion
+                {
+                    id = blankId,
+                    questionType = "long",
+                    passageId = pd.id,
+                    question = $"Fill in blank {blankNum}: Which word best completes the sentence?",
+                    options = options,
+                    correctAnswer = blank["correct_answer"]?.ToString() ?? "",
+                    explanation = blank["reasoning"]?.ToString() ?? "",
+                });
+            }
+        }
+    }
+
+    private void GenerateSentenceInsertionQuestions()
+    {
+        foreach (var pd in passages.Values)
+        {
+            if (pd.type != "sentence_insertion" || pd.gaps == null
+                || pd.sentences == null || pd.correctMapping == null)
+                continue;
+
+            // Build sentence lookup: key (number or label) → display text
+            var sentenceTexts = new List<string>();
+            var sentenceKeys = new List<string>();
+            foreach (JToken s in pd.sentences)
+            {
+                string key = s["number"]?.ToString() ?? s["label"]?.ToString() ?? "";
+                string text = s["text"]?.ToString() ?? "";
+                sentenceKeys.Add(key);
+                sentenceTexts.Add(text);
+            }
+
+            // Build options list with labels
+            var options = new List<string>();
+            for (int i = 0; i < sentenceKeys.Count; i++)
+                options.Add($"{sentenceKeys[i]}. {sentenceTexts[i]}");
+
+            foreach (JToken gapToken in pd.gaps)
+            {
+                string gap = gapToken.ToString();
+                string questionId = $"{pd.id}_GAP_{gap}";
+
+                // Find correct sentence for this gap
+                JToken correctVal = pd.correctMapping[gap];
+                string correctKey = correctVal?.ToString() ?? "";
+
+                // Find the matching option text
+                string correctOption = "";
+                for (int i = 0; i < sentenceKeys.Count; i++)
+                {
+                    if (sentenceKeys[i] == correctKey)
+                    {
+                        correctOption = options[i];
+                        break;
+                    }
+                }
+
+                string reasoning = pd.gapReasoning?[gap]?.ToString() ?? "";
+
+                allQuestions.Add(new BankQuestion
+                {
+                    id = questionId,
+                    questionType = "long",
+                    passageId = pd.id,
+                    question = $"Which sentence best fits gap {gap}?",
+                    options = new List<string>(options),
+                    correctAnswer = correctOption,
+                    explanation = reasoning,
+                });
             }
         }
     }
@@ -280,6 +403,18 @@ public class QuestionBankLoader
                 explanation: bq.explanation
             )
         );
+    }
+
+    public int GetQuestionCount(string questionType = null)
+    {
+        if (questionType == null)
+            return allQuestions.Count;
+        return allQuestions.Count(q => q.questionType == questionType);
+    }
+
+    public int GetPassageCount()
+    {
+        return passages.Count;
     }
 
     public void Reset()

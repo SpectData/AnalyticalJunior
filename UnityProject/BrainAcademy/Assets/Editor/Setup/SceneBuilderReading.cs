@@ -81,7 +81,7 @@ public static class SceneBuilderReading
         vlg.childControlHeight = true;
 
         var answerButtons = UIFactory.CreateAnswerButtons(
-            ansContainer.transform, PrefabFactory.AnswerButtonPrefab, 4);
+            ansContainer.transform, PrefabFactory.AnswerButtonPrefab, 7);
 
         // ── Feedback overlay ──────────────────────────────────────────────
         var (fbGo, fbComp, _) = UIFactory.CreateFeedbackOverlay(readingPanel.transform);
@@ -97,7 +97,9 @@ public static class SceneBuilderReading
         UIFactory.Wire(ctrl, "questionText", qText);
         UIFactory.WireList(ctrl, "answerButtons",
             new Object[] { answerButtons[0], answerButtons[1],
-                           answerButtons[2], answerButtons[3] });
+                           answerButtons[2], answerButtons[3],
+                           answerButtons[4], answerButtons[5],
+                           answerButtons[6] });
         UIFactory.Wire(ctrl, "feedbackOverlay", fbComp);
 
         EditorSceneManager.SaveScene(scene, "Assets/Scenes/SnakeSpellScene.unity");
